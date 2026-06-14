@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!-- saved from url=(0254)file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/admin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscriber Admin — Korea Startup Thesis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link href="./Subscriber Admin — Korea Startup Thesis_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111; --gray-1: #444; --gray-2: #777; --gray-3: #aaa;
+      --gray-4: #e5e5e5; --gray-5: #f5f5f5; --white: #fff;
+      --accent: #1a56db; --accent-light: #ebf1fd; --accent-dark: #0c3080;
+      --hero-bg: #0f1923; --hero-accent: #3b82f6;
+      --green: #16a34a; --green-light: #dcfce7;
+      --red: #dc2626; --red-light: #fef2f2;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #f0f2f5; color: var(--black); line-height: 1.6; min-height: 100vh; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; height: 52px;
+    }
+    .nav-left { display: flex; align-items: center; gap: 16px; }
+    .nav-logo { font-size: 15px; font-weight: 500; color: #fff; letter-spacing: -0.3px; }
+    .nav-badge {
+      font-size: 11px; font-weight: 500; background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.5); padding: 2px 9px; border-radius: 20px;
+    }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-link-light { font-size: 13px; color: rgba(255,255,255,0.5); }
+    .nav-link-light:hover { color: #fff; }
+    .btn-export {
+      font-size: 12px; font-weight: 500; padding: 6px 14px;
+      background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      cursor: pointer; transition: background 0.15s;
+    }
+    .btn-export:hover { background: rgba(255,255,255,0.18); }
+
+    /* LAYOUT */
+    .page { max-width: 1100px; margin: 0 auto; padding: 32px 32px 80px; }
+
+    /* PROTOTYPE NOTICE */
+    .notice {
+      background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-md);
+      padding: 12px 16px; margin-bottom: 28px;
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 13px; color: #92400e;
+    }
+    .notice-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+
+    /* PAGE TITLE */
+    .page-title { font-size: 20px; font-weight: 500; letter-spacing: -0.3px; margin-bottom: 4px; }
+    .page-sub { font-size: 13px; color: var(--gray-2); margin-bottom: 28px; }
+
+    /* STATS ROW */
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+    .stat-card {
+      background: #fff; border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 18px 20px;
+    }
+    .stat-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-3); margin-bottom: 8px; }
+    .stat-val { font-size: 26px; font-weight: 500; letter-spacing: -0.5px; color: var(--black); margin-bottom: 4px; }
+    .stat-delta { font-size: 12px; }
+    .stat-delta.up { color: var(--green); }
+    .stat-delta.neutral { color: var(--gray-3); }
+
+    /* TOOLBAR */
+    .toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 14px; gap: 12px;
+    }
+    .search-wrap { position: relative; flex: 1; max-width: 320px; }
+    .search-wrap input {
+      width: 100%; font-size: 13px; padding: 8px 12px 8px 34px;
+      border: 1px solid var(--gray-4); border-radius: var(--radius-md);
+      outline: none; background: #fff; color: var(--black);
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-icon {
+      position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+      color: var(--gray-3); font-size: 14px; pointer-events: none;
+    }
+    .filter-tabs { display: flex; gap: 4px; }
+    .filter-tab {
+      font-size: 12px; font-weight: 500; padding: 6px 14px;
+      border-radius: var(--radius-md); border: 1px solid var(--gray-4);
+      background: #fff; cursor: pointer; color: var(--gray-2); transition: all 0.15s;
+    }
+    .filter-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .filter-tab:hover:not(.active) { border-color: var(--gray-3); color: var(--black); }
+    .toolbar-right { display: flex; gap: 8px; }
+    .btn-sm {
+      font-size: 12px; font-weight: 500; padding: 7px 14px;
+      border-radius: var(--radius-md); cursor: pointer; border: 1px solid var(--gray-4);
+      background: #fff; color: var(--gray-1); transition: all 0.15s;
+    }
+    .btn-sm:hover { border-color: var(--gray-3); color: var(--black); }
+    .btn-sm.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-sm.primary:hover { background: var(--accent-dark); }
+
+    /* TABLE */
+    .table-wrap {
+      background: #fff; border: 1px solid var(--gray-4);
+      border-radius: var(--radius-lg); overflow: hidden;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead { background: var(--gray-5); border-bottom: 1px solid var(--gray-4); }
+    thead th {
+      text-align: left; font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray-3);
+      padding: 11px 16px;
+    }
+    thead th:first-child { padding-left: 20px; }
+    tbody td { padding: 13px 16px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: middle; }
+    tbody td:first-child { padding-left: 20px; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #fafafa; }
+
+    .email-cell { font-weight: 500; color: var(--black); }
+    .source-badge {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      border-radius: var(--radius-sm); background: var(--accent-light); color: var(--accent-dark);
+    }
+    .source-badge.organic { background: var(--green-light); color: var(--green); }
+    .source-badge.referral { background: #fef3c7; color: #92400e; }
+
+    .status-dot {
+      display: inline-flex; align-items: center; gap: 5px; font-size: 12px;
+    }
+    .status-dot::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+    }
+    .status-dot.active { color: var(--green); }
+    .status-dot.active::before { background: var(--green); }
+    .status-dot.unsub { color: var(--gray-3); }
+    .status-dot.unsub::before { background: var(--gray-3); }
+
+    .action-btn {
+      font-size: 11px; font-weight: 500; padding: 4px 10px;
+      border-radius: var(--radius-sm); border: 1px solid var(--gray-4);
+      background: #fff; cursor: pointer; color: var(--gray-2);
+      transition: all 0.15s;
+    }
+    .action-btn:hover { border-color: var(--red); color: var(--red); background: var(--red-light); }
+    .action-btn.restore:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
+
+    /* TABLE FOOTER */
+    .table-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px; border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+    }
+    .table-count { font-size: 12px; color: var(--gray-3); }
+    .pagination { display: flex; gap: 4px; }
+    .page-btn {
+      font-size: 12px; font-weight: 500; width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-sm); border: 1px solid var(--gray-4);
+      background: #fff; cursor: pointer; color: var(--gray-2);
+    }
+    .page-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* GROWTH CHART PLACEHOLDER */
+    .chart-section { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .chart-card {
+      background: #fff; border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+    .chart-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+    .chart-sub { font-size: 12px; color: var(--gray-3); margin-bottom: 18px; }
+    .bar-chart { display: flex; align-items: flex-end; gap: 6px; height: 80px; }
+    .bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .bar {
+      width: 100%; background: var(--accent-light); border-radius: 3px 3px 0 0;
+      border: 1px solid rgba(26,86,219,0.15);
+      transition: background 0.15s;
+    }
+    .bar:hover { background: var(--accent); }
+    .bar-label { font-size: 10px; color: var(--gray-3); white-space: nowrap; }
+
+    .source-list { display: flex; flex-direction: column; gap: 10px; }
+    .source-row { display: flex; align-items: center; gap: 10px; }
+    .source-name { font-size: 13px; color: var(--gray-1); width: 100px; flex-shrink: 0; }
+    .source-bar-wrap { flex: 1; height: 8px; background: var(--gray-5); border-radius: 4px; overflow: hidden; }
+    .source-bar-fill { height: 100%; border-radius: 4px; background: var(--accent); }
+    .source-pct { font-size: 12px; color: var(--gray-2); width: 36px; text-align: right; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/index.html" class="nav-logo">Korea Startup Thesis</a>
+    <span class="nav-badge">Admin</span>
+  </div>
+  <div class="nav-right">
+    <a href="file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/index.html" class="nav-link-light">← Back to site</a>
+    <button class="btn-export" onclick="exportCSV()">Export CSV</button>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="notice">
+    <span class="notice-icon">⚠</span>
+    <span>This is a <strong>UI prototype</strong>. Data shown is sample data. Connecting real subscriber storage requires a backend (Node.js, Supabase, etc.) or an email service API (Beehiiv, ConvertKit, Mailchimp).</span>
+  </div>
+
+  <h1 class="page-title">Subscribers</h1>
+  <p class="page-sub">Manage your Korea Startup Thesis subscriber list</p>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <p class="stat-label">Total subscribers</p>
+      <p class="stat-val">247</p>
+      <p class="stat-delta up">↑ +18 this week</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Active</p>
+      <p class="stat-val">231</p>
+      <p class="stat-delta up">93.5% of total</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Avg. open rate</p>
+      <p class="stat-val">48.2%</p>
+      <p class="stat-delta up">↑ +3.1% vs last issue</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-label">Unsubscribed</p>
+      <p class="stat-val">16</p>
+      <p class="stat-delta neutral">6.5% churn total</p>
+    </div>
+  </div>
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <div style="display:flex;gap:10px;align-items:center;flex:1;">
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="Search by email…" id="searchInput" oninput="filterTable()">
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="setFilter(&#39;all&#39;, this)">All <span style="color:var(--gray-3);font-weight:400">247</span></button>
+        <button class="filter-tab" onclick="setFilter(&#39;active&#39;, this)">Active <span style="color:var(--gray-3);font-weight:400">231</span></button>
+        <button class="filter-tab" onclick="setFilter(&#39;unsub&#39;, this)">Unsubscribed <span style="color:var(--gray-3);font-weight:400">16</span></button>
+      </div>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn-sm" onclick="exportCSV()">↓ Export CSV</button>
+      <button class="btn-sm primary" onclick="alert(&#39;Connect to email API to send a broadcast.&#39;)">Send broadcast</button>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-wrap">
+    <table id="subTable">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="selectAll" onchange="toggleAll(this)"></th>
+          <th>Email</th>
+          <th>Subscribed</th>
+          <th>Source</th>
+          <th>Opens</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">james.park@sequoia.com</td>
+        <td>2026-06-14</td>
+        <td><span class="source-badge article">Article</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;james.park@sequoia.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">sarah.kim@a16z.com</td>
+        <td>2026-06-14</td>
+        <td><span class="source-badge article">Article</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;sarah.kim@a16z.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">michael.chen@gv.com</td>
+        <td>2026-06-13</td>
+        <td><span class="source-badge organic">Organic</span></td>
+        <td>1/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;michael.chen@gv.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">yuna.lee@softbank.com</td>
+        <td>2026-06-13</td>
+        <td><span class="source-badge referral">Referral</span></td>
+        <td>1/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;yuna.lee@softbank.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">tom.harris@kpcb.com</td>
+        <td>2026-06-12</td>
+        <td><span class="source-badge organic">Organic</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;tom.harris@kpcb.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">anna.wu@lightspeed.com</td>
+        <td>2026-06-12</td>
+        <td><span class="source-badge article">Article</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;anna.wu@lightspeed.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">david.oh@nea.com</td>
+        <td>2026-06-11</td>
+        <td><span class="source-badge referral">Referral</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;david.oh@nea.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">grace.choi@benchmark.com</td>
+        <td>2026-06-11</td>
+        <td><span class="source-badge organic">Organic</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;grace.choi@benchmark.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">kevin.tang@greylock.com</td>
+        <td>2026-06-10</td>
+        <td><span class="source-badge article">Article</span></td>
+        <td>1/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;kevin.tang@greylock.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">lisa.moon@accel.com</td>
+        <td>2026-06-10</td>
+        <td><span class="source-badge organic">Organic</span></td>
+        <td>1/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;lisa.moon@accel.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">ryan.bae@tiger.com</td>
+        <td>2026-06-09</td>
+        <td><span class="source-badge referral">Referral</span></td>
+        <td>0/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;ryan.bae@tiger.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">jenny.seo@coatue.com</td>
+        <td>2026-06-09</td>
+        <td><span class="source-badge article">Article</span></td>
+        <td>1/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;jenny.seo@coatue.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="unsub">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">alex.nam@dragoneer.com</td>
+        <td>2026-06-08</td>
+        <td><span class="source-badge organic">Organic</span></td>
+        <td>0/2 issues</td>
+        <td><span class="status-dot unsub">Unsubscribed</span></td>
+        <td>
+          <button class="action-btn restore" onclick="toggleStatus(this, &#39;alex.nam@dragoneer.com&#39;)">Restore</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">chris.yoon@dst.com</td>
+        <td>2026-06-08</td>
+        <td><span class="source-badge referral">Referral</span></td>
+        <td>2/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;chris.yoon@dst.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    
+      <tr data-status="active">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">mia.han@thrive.com</td>
+        <td>2026-06-07</td>
+        <td><span class="source-badge organic">Organic</span></td>
+        <td>1/2 issues</td>
+        <td><span class="status-dot active">Active</span></td>
+        <td>
+          <button class="action-btn" onclick="toggleStatus(this, &#39;mia.han@thrive.com&#39;)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+    <div class="table-footer">
+      <span class="table-count" id="tableCount">Showing 15 of 247</span>
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">…</button>
+        <button class="page-btn">17</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="chart-section">
+    <div class="chart-card">
+      <p class="chart-title">Weekly growth</p>
+      <p class="chart-sub">New subscribers per week</p>
+      <div class="bar-chart" id="barChart">
+      <div class="bar-group">
+        <div class="bar" style="height:18px" title="12 new"></div>
+        <span class="bar-label">Apr 28</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:29px" title="19 new"></div>
+        <span class="bar-label">May 5</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:23px" title="15 new"></div>
+        <span class="bar-label">May 12</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:43px" title="28 new"></div>
+        <span class="bar-label">May 19</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:34px" title="22 new"></div>
+        <span class="bar-label">May 26</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:52px" title="34 new"></div>
+        <span class="bar-label">Jun 2</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:72px" title="47 new"></div>
+        <span class="bar-label">Jun 9</span>
+      </div>
+      <div class="bar-group">
+        <div class="bar" style="height:28px" title="18 new"></div>
+        <span class="bar-label">Jun 14</span>
+      </div></div>
+    </div>
+    <div class="chart-card">
+      <p class="chart-title">Traffic source</p>
+      <p class="chart-sub">Where subscribers found you</p>
+      <div class="source-list" id="sourceList">
+      <div class="source-row">
+        <span class="source-name">Article</span>
+        <div class="source-bar-wrap">
+          <div class="source-bar-fill" style="width:52%;background:var(--accent)"></div>
+        </div>
+        <span class="source-pct">52%</span>
+      </div>
+      <div class="source-row">
+        <span class="source-name">Organic</span>
+        <div class="source-bar-wrap">
+          <div class="source-bar-fill" style="width:31%;background:var(--green)"></div>
+        </div>
+        <span class="source-pct">31%</span>
+      </div>
+      <div class="source-row">
+        <span class="source-name">Referral</span>
+        <div class="source-bar-wrap">
+          <div class="source-bar-fill" style="width:17%;background:#f59e0b"></div>
+        </div>
+        <span class="source-pct">17%</span>
+      </div></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Sample data
+  const subscribers = [
+    { email: 'james.park@sequoia.com',    date: '2026-06-14', source: 'article',  opens: 2,  status: 'active' },
+    { email: 'sarah.kim@a16z.com',        date: '2026-06-14', source: 'article',  opens: 2,  status: 'active' },
+    { email: 'michael.chen@gv.com',       date: '2026-06-13', source: 'organic',  opens: 1,  status: 'active' },
+    { email: 'yuna.lee@softbank.com',     date: '2026-06-13', source: 'referral', opens: 1,  status: 'active' },
+    { email: 'tom.harris@kpcb.com',       date: '2026-06-12', source: 'organic',  opens: 2,  status: 'active' },
+    { email: 'anna.wu@lightspeed.com',    date: '2026-06-12', source: 'article',  opens: 2,  status: 'active' },
+    { email: 'david.oh@nea.com',          date: '2026-06-11', source: 'referral', opens: 2,  status: 'active' },
+    { email: 'grace.choi@benchmark.com',  date: '2026-06-11', source: 'organic',  opens: 2,  status: 'active' },
+    { email: 'kevin.tang@greylock.com',   date: '2026-06-10', source: 'article',  opens: 1,  status: 'active' },
+    { email: 'lisa.moon@accel.com',       date: '2026-06-10', source: 'organic',  opens: 1,  status: 'active' },
+    { email: 'ryan.bae@tiger.com',        date: '2026-06-09', source: 'referral', opens: 0,  status: 'active' },
+    { email: 'jenny.seo@coatue.com',      date: '2026-06-09', source: 'article',  opens: 1,  status: 'active' },
+    { email: 'alex.nam@dragoneer.com',    date: '2026-06-08', source: 'organic',  opens: 0,  status: 'unsub'  },
+    { email: 'chris.yoon@dst.com',        date: '2026-06-08', source: 'referral', opens: 2,  status: 'active' },
+    { email: 'mia.han@thrive.com',        date: '2026-06-07', source: 'organic',  opens: 1,  status: 'active' },
+  ];
+
+  const sourceLabels = { article: 'Article', organic: 'Organic', referral: 'Referral' };
+  let currentFilter = 'all';
+
+  function renderTable(data) {
+    const body = document.getElementById('tableBody');
+    body.innerHTML = data.map(s => `
+      <tr data-status="${s.status}">
+        <td><input type="checkbox" class="row-check"></td>
+        <td class="email-cell">${s.email}</td>
+        <td>${s.date}</td>
+        <td><span class="source-badge ${s.source}">${sourceLabels[s.source]}</span></td>
+        <td>${s.opens}/2 issues</td>
+        <td><span class="status-dot ${s.status}">${s.status === 'active' ? 'Active' : 'Unsubscribed'}</span></td>
+        <td>
+          ${s.status === 'active'
+            ? `<button class="action-btn" onclick="toggleStatus(this, '${s.email}')">Remove</button>`
+            : `<button class="action-btn restore" onclick="toggleStatus(this, '${s.email}')">Restore</button>`
+          }
+        </td>
+      </tr>
+    `).join('');
+    document.getElementById('tableCount').textContent = `Showing ${data.length} of 247`;
+  }
+
+  function filterTable() {
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = subscribers.filter(s => {
+      const matchSearch = s.email.toLowerCase().includes(q);
+      const matchFilter = currentFilter === 'all' || s.status === currentFilter;
+      return matchSearch && matchFilter;
+    });
+    renderTable(filtered);
+  }
+
+  function setFilter(f, btn) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterTable();
+  }
+
+  function toggleAll(cb) {
+    document.querySelectorAll('.row-check').forEach(c => c.checked = cb.checked);
+  }
+
+  function toggleStatus(btn, email) {
+    const sub = subscribers.find(s => s.email === email);
+    if (sub) {
+      sub.status = sub.status === 'active' ? 'unsub' : 'active';
+      filterTable();
+    }
+  }
+
+  function exportCSV() {
+    const rows = [['Email', 'Date', 'Source', 'Opens', 'Status']];
+    subscribers.forEach(s => rows.push([s.email, s.date, s.source, s.opens, s.status]));
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const a = document.createElement('a');
+    a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+    a.download = 'kst-subscribers.csv';
+    a.click();
+  }
+
+  // Weekly bar chart
+  const weeklyData = [
+    { week: 'Apr 28', count: 12 },
+    { week: 'May 5',  count: 19 },
+    { week: 'May 12', count: 15 },
+    { week: 'May 19', count: 28 },
+    { week: 'May 26', count: 22 },
+    { week: 'Jun 2',  count: 34 },
+    { week: 'Jun 9',  count: 47 },
+    { week: 'Jun 14', count: 18 },
+  ];
+  const maxVal = Math.max(...weeklyData.map(d => d.count));
+  const chart = document.getElementById('barChart');
+  weeklyData.forEach(d => {
+    const h = Math.round((d.count / maxVal) * 72);
+    chart.innerHTML += `
+      <div class="bar-group">
+        <div class="bar" style="height:${h}px" title="${d.count} new"></div>
+        <span class="bar-label">${d.week}</span>
+      </div>`;
+  });
+
+  // Source breakdown
+  const sources = [
+    { name: 'Article',  pct: 52, color: 'var(--accent)' },
+    { name: 'Organic',  pct: 31, color: 'var(--green)' },
+    { name: 'Referral', pct: 17, color: '#f59e0b' },
+  ];
+  const sl = document.getElementById('sourceList');
+  sources.forEach(s => {
+    sl.innerHTML += `
+      <div class="source-row">
+        <span class="source-name">${s.name}</span>
+        <div class="source-bar-wrap">
+          <div class="source-bar-fill" style="width:${s.pct}%;background:${s.color}"></div>
+        </div>
+        <span class="source-pct">${s.pct}%</span>
+      </div>`;
+  });
+
+  // Init
+  renderTable(subscribers);
+</script>
+
+
+
+</body></html>

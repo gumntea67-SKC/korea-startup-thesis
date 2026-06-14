@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+  <channel>
+    <title>Korea Startup Thesis</title>
+    <link>https://koreastartupthesis.com</link>
+    <description>Weekly deep dives into Korean startups for global VC and angel investors — data-driven analysis, founder stories, and the signals you won't find anywhere else.</description>
+    <language>en</language>
+    <copyright>© 2026 Korea Startup Thesis</copyright>
+    <managingEditor>hello@koreastartupthesis.com (Korea Startup Thesis)</managingEditor>
+    <pubDate>Sat, 14 Jun 2026 09:00:00 +0900</pubDate>
+    <lastBuildDate>Sat, 14 Jun 2026 09:00:00 +0900</lastBuildDate>
+    <ttl>10080</ttl>
+    <atom:link href="https://koreastartupthesis.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <image>
+      <url>https://koreastartupthesis.com/og/home.png</url>
+      <title>Korea Startup Thesis</title>
+      <link>https://koreastartupthesis.com</link>
+    </image>
+
+    <item>
+      <title>Rebellions: The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia</title>
+      <link>https://koreastartupthesis.com/rebellions-issue-001</link>
+      <guid isPermaLink="true">https://koreastartupthesis.com/rebellions-issue-001</guid>
+      <pubDate>Sat, 14 Jun 2026 09:00:00 +0900</pubDate>
+      <dc:creator>Korea Startup Thesis</dc:creator>
+      <category>Company Deep Dive</category>
+      <category>AI Semiconductor</category>
+      <category>Korea Startup</category>
+      <description><![CDATA[
+        Rebellions is a Korean fabless AI semiconductor startup that has built an inference-only ASIC
+        delivering 20.7% better power efficiency than Nvidia's H200. Five years after founding:
+        $850M raised, $2.34B valuation, ARM's first startup investment in APAC.
+        This issue covers the full story — founder background, technology deep dive,
+        competitive moat analysis, risks, and what to watch.
+      ]]></description>
+      <content:encoded><![CDATA[
+        <p><strong>Issue #001 — Company Deep Dive</strong></p>
+        <p>Nvidia's GPUs have a critical weakness: energy inefficiency at the inference stage.
+        Rebellions is a fabless semiconductor startup that has relentlessly targeted that single problem.</p>
+        <ul>
+          <li>Total raised: $850M</li>
+          <li>Pre-IPO valuation: $2.34B</li>
+          <li>Power efficiency vs. H200: +20.7%</li>
+          <li>Inference market 2030E: $475B</li>
+        </ul>
+        <p>Founder Park Sung-hyun: KAIST → MIT PhD → Intel Labs → Samsung → SpaceX → Morgan Stanley VP → Rebellions (2020)</p>
+        <p><a href="https://koreastartupthesis.com/rebellions-issue-001">Read the full deep dive →</a></p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>

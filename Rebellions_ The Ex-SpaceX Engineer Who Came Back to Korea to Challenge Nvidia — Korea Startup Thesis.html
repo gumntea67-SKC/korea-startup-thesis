@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<!-- saved from url=(0256)file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/article.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebellions: The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia — Korea Startup Thesis</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://koreastartupthesis.com/rebellions-issue-001">
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Korea Startup Thesis" href="https://koreastartupthesis.com/feed.xml">
+
+  <!-- Meta -->
+  <meta name="description" content="Rebellions is a Korean fabless AI chip startup with $850M raised and a $2.34B valuation. Its REBEL-Quad ASIC delivers 20.7% better power efficiency than Nvidia&#39;s H200 at inference — and ARM just made it their first APAC startup investment.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Rebellions, Korean AI startup, AI semiconductor, ASIC, inference chip, Korea VC, Korean startup, REBEL-Quad, Park Sung-hyun">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Rebellions: The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia">
+  <meta property="og:description" content="$850M raised. $2.34B valuation. REBEL-Quad ASIC beats H200 on power efficiency by 20.7%. Inside Korea&#39;s most ambitious AI semiconductor bet.">
+  <meta property="og:url" content="https://koreastartupthesis.com/rebellions-issue-001">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/rebellions-001.png">
+  <meta property="article:published_time" content="2026-06-14T00:00:00Z">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="AI Semiconductor">
+  <meta property="article:tag" content="Korea Startup">
+  <meta property="article:tag" content="Pre-IPO">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Rebellions: Korea&#39;s Nvidia challenger — $850M raised, ASIC beats H200 by 20.7%">
+  <meta name="twitter:description" content="Deep dive into Rebellions, the Korean AI chip startup that ARM backed as its first APAC startup investment. Data, founder story, and competitive analysis.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/rebellions-001.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Rebellions: The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia",
+    "description": "Deep dive into Rebellions, a Korean AI inference chip startup with $850M raised and $2.34B valuation. REBEL-Quad ASIC outperforms Nvidia H200 on power efficiency by 20.7%.",
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "author": {
+      "@type": "Organization",
+      "name": "Korea Startup Thesis",
+      "url": "https://koreastartupthesis.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Korea Startup Thesis",
+      "url": "https://koreastartupthesis.com"
+    },
+    "mainEntityOfPage": "https://koreastartupthesis.com/rebellions-issue-001",
+    "image": "https://koreastartupthesis.com/og/rebellions-001.png",
+    "keywords": ["Rebellions", "AI semiconductor", "ASIC", "inference chip", "Korea startup", "Korean VC", "REBEL-Quad", "Park Sung-hyun"],
+    "articleSection": "Company Deep Dive",
+    "about": {
+      "@type": "Organization",
+      "name": "Rebellions",
+      "foundingDate": "2020",
+      "description": "Korean fabless AI inference chip company",
+      "numberOfEmployees": {"@type": "QuantitativeValue", "value": 200},
+      "url": "https://rebellions.ai"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link href="./Rebellions_ The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia — Korea Startup Thesis_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #1a56db;
+      --accent-light: #ebf1fd;
+      --accent-dark: #0c3080;
+      --hero-bg: #0f1923;
+      --hero-accent: #3b82f6;
+      --green-light: #ecfdf5;
+      --green-dark: #065f46;
+      --amber-light: #fffbeb;
+      --amber-dark: #92400e;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fafafa; color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 72px;
+    }
+    .nav-logo { font-size: 30px; font-weight: 500; letter-spacing: -0.8px; color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+
+    /* TAB BAR — sits directly under nav */
+    .tab-bar {
+      position: sticky; top: 72px; z-index: 99;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .tab-bar-inner {
+      max-width: 680px; margin: 0 auto; padding: 0 40px;
+      display: flex; gap: 0;
+    }
+    .nav-tab {
+      font-size: 20px; font-weight: 500; padding: 0 24px; height: 56px;
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,0.45); border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s; white-space: nowrap;
+    }
+    .nav-tab:first-child { padding-left: 0; }
+    .nav-tab + .nav-tab {
+      border-left: 1px solid rgba(255,255,255,0.18);
+    }
+    .nav-tab:hover { color: rgba(255,255,255,0.8); }
+    .nav-tab.active { color: #fff; }
+
+    /* 컬러 도트 — 탭마다 고유 색 */
+    .nav-tab::before {
+      content: ''; display: inline-block;
+      width: 7px; height: 7px; border-radius: 50%;
+      margin-right: 7px; vertical-align: middle;
+      opacity: 0.45; transition: opacity 0.15s;
+    }
+    .nav-tab.active::before { opacity: 1; }
+
+    .nav-tab[data-tab="deepdive"]::before { background: #60a5fa; }
+    .nav-tab[data-tab="ones"]::before    { background: #4ade80; }
+    .nav-tab[data-tab="deals"]::before   { background: #fb923c; }
+
+    /* 활성 탭 언더라인 — 각 패널 컬러 */
+    .nav-tab[data-tab="deepdive"].active { border-bottom-color: #60a5fa; }
+    .nav-tab[data-tab="ones"].active     { border-bottom-color: #4ade80; }
+    .nav-tab[data-tab="deals"].active    { border-bottom-color: #fb923c; }
+
+    /* 배지 색도 패널별 */
+    .nav-tab[data-tab="deepdive"] .nav-tab-badge { background: rgba(96,165,250,0.2); color: #93c5fd; }
+    .nav-tab[data-tab="ones"] .nav-tab-badge     { background: rgba(74,222,128,0.2); color: #86efac; }
+    .nav-tab[data-tab="deals"] .nav-tab-badge    { background: rgba(251,146,60,0.2); color: #fdba74; }
+
+    .nav-tab-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      border-radius: 10px; padding: 1px 6px; margin-left: 4px; vertical-align: middle;
+    }
+
+    /* HERO — pastel banner base */
+    .hero-wrap { background: #dbeafe; } /* pastel blue — Company Deep Dive */
+    .hero { max-width: 680px; margin: 0 auto; padding: 52px 40px 48px; }
+    .hero-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+    .hero h1 { font-size: 30px; font-weight: 500; line-height: 1.25; letter-spacing: -0.6px; margin-bottom: 10px; color: var(--black); }
+    .hero-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-sm); font-weight: 500; }
+    .tag-blue { background: rgba(26,86,219,0.1); color: var(--accent-dark); border: 1px solid rgba(26,86,219,0.2); }
+    .tag-outline { border: 1px solid rgba(0,0,0,0.15); color: var(--gray-1); }
+    .hero-summary {
+      font-size: 15px; color: var(--gray-1); line-height: 1.85;
+      border-left: 3px solid var(--accent); padding-left: 18px;
+    }
+    .hero-summary strong { color: var(--black); font-weight: 500; }
+
+    /* PANEL COLOURS */
+    #panel-ones .panel-hero-wrap { background: #dcfce7; } /* pastel green */
+    #panel-ones .hero-eyebrow { color: #16a34a; }
+    #panel-ones .panel-hero h1 { color: var(--black); }
+    #panel-ones .hero-summary { border-left-color: #16a34a; color: var(--gray-1); }
+    #panel-ones .pub-date { color: #6b7280; }
+
+    #panel-deals .panel-hero-wrap { background: #ffedd5; } /* pastel orange */
+    #panel-deals .hero-eyebrow { color: #c2410c; }
+    #panel-deals .panel-hero h1 { color: var(--black); }
+    #panel-deals .hero-summary { border-left-color: #ea580c; color: var(--gray-1); }
+    #panel-deals .pub-date { color: #6b7280; }
+
+    /* KEY NUMBERS BAR */
+    .kpi-bar { background: #fff; border-bottom: 1px solid var(--gray-4); }
+    .kpi-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex; gap: 0; }
+    .kpi-item { flex: 1; padding: 18px 0; border-right: 1px solid var(--gray-4); padding-right: 20px; padding-left: 20px; }
+    .kpi-item:first-child { padding-left: 0; }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-num { font-size: 20px; font-weight: 500; color: var(--accent-dark); margin-bottom: 2px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    /* TAB PANELS */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* PUB DATE */
+    .pub-date {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; color: #6b7280;
+      margin-bottom: 20px; margin-top: 4px;
+    }
+    .pub-date::before {
+      content: ''; display: inline-block;
+      width: 12px; height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236b7280'%3E%3Cpath d='M4 1v1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-2V1h-1v1H5V1H4zm0 3h8v1H4V4zm-2 3h12v6H2V7z'/%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+    }
+
+    /* PANEL HERO — simpler header for Ones to Watch & Deal Tracker */
+    .panel-hero-wrap { background: #dcfce7; } /* overridden per panel */
+    .panel-hero { max-width: 680px; margin: 0 auto; padding: 36px 40px 32px; }
+    .panel-hero h1 { font-size: 24px; font-weight: 500; color: var(--black); letter-spacing: -0.5px; margin-bottom: 10px; }
+    .panel-hero .hero-summary { font-size: 14px; color: var(--gray-1); line-height: 1.7; border-left: 3px solid currentColor; padding-left: 14px; }
+
+    /* CONTENT */
+    .wrap { max-width: 680px; margin: 0 auto; padding: 0 40px 80px; background: #fff; border-left: 1px solid var(--gray-4); border-right: 1px solid var(--gray-4); }
+
+    .section { padding: 36px 0; border-bottom: 1px solid var(--gray-4); }
+    .section:last-child { border-bottom: none; }
+
+    .eyebrow {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 22px;
+    }
+    .eyebrow span {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent); white-space: nowrap;
+    }
+    .eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-4); }
+
+    .section-title { font-size: 17px; font-weight: 500; letter-spacing: -0.3px; margin-bottom: 14px; color: var(--black); }
+
+    p.body { font-size: 14px; color: var(--gray-1); line-height: 1.85; margin-bottom: 14px; }
+    p.body strong { font-weight: 500; color: var(--black); }
+    p.body:last-child { margin-bottom: 0; }
+
+    /* FOUNDER CARD */
+    .founder-card {
+      background: var(--hero-bg); border-radius: var(--radius-lg);
+      padding: 22px 24px; margin-bottom: 20px;
+      display: grid; grid-template-columns: 52px 1fr; gap: 16px;
+    }
+    .avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(59,130,246,0.2); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; font-weight: 500; flex-shrink: 0;
+    }
+    .founder-name { font-size: 15px; font-weight: 500; margin-bottom: 2px; color: #fff; }
+    .founder-role { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+    .career-path { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-bottom: 14px; }
+    .career-node {
+      font-size: 11px; color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-sm); padding: 3px 8px;
+    }
+    .career-arrow { font-size: 10px; color: rgba(255,255,255,0.25); }
+    .quote {
+      font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.75;
+      font-style: italic; border-left: 2px solid var(--hero-accent); padding-left: 12px;
+    }
+
+    /* STATS */
+    .stat-row { display: flex; gap: 10px; margin: 20px 0; }
+    .stat-card { flex: 1; background: var(--accent-light); border-radius: var(--radius-md); padding: 14px 16px; border: 1px solid rgba(26,86,219,0.12); }
+    .stat-num { font-size: 20px; font-weight: 500; margin-bottom: 3px; color: var(--accent-dark); }
+    .stat-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    /* INSIGHT BOX */
+    .insight {
+      background: #fffbeb; border-left: 3px solid #f59e0b;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 14px 18px; margin: 16px 0;
+      font-size: 13px; font-weight: 500; color: #78350f; line-height: 1.75;
+    }
+
+    /* TECH TABLE */
+    .table-wrap { overflow-x: auto; margin: 18px 0; border: 1px solid var(--gray-4); border-radius: var(--radius-lg); overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead { background: var(--hero-bg); }
+    thead th {
+      text-align: left; font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.5);
+      padding: 12px 14px;
+    }
+    thead th:last-child { color: #93c5fd; }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: middle; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(even) { background: #fafafa; }
+    tbody td:first-child { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gray-3); }
+    td.hl { color: var(--accent-dark); font-weight: 500; }
+    .win { font-size: 11px; background: var(--green-light); color: var(--green-dark); padding: 2px 7px; border-radius: var(--radius-sm); margin-left: 6px; font-weight: 500; }
+    .table-note { font-size: 11px; color: var(--gray-3); margin-top: 8px; }
+
+    /* WHY GRID */
+    .why-item { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--gray-4); }
+    .why-item:last-child { border-bottom: none; }
+    .why-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); padding-top: 3px; }
+    .why-body { font-size: 14px; color: var(--gray-1); line-height: 1.8; }
+    .why-body strong { font-weight: 500; color: var(--black); }
+
+    /* CUSTOMER TRACTION */
+    .traction-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+    .traction-item {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      background: #fff;
+    }
+    .traction-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 12px;
+    }
+    .traction-logo {
+      width: 40px; height: 40px; border-radius: var(--radius-md); flex-shrink: 0;
+      background: var(--hero-bg); color: #93c5fd;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.02em;
+    }
+    .traction-name { font-size: 14px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .traction-type { font-size: 11px; color: var(--gray-2); }
+    .traction-badge {
+      margin-left: auto; font-size: 10px; font-weight: 500; padding: 3px 9px;
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .badge-confirmed { background: var(--green-light); color: var(--green-dark); }
+    .badge-pipeline { background: var(--accent-light); color: var(--accent-dark); }
+    .traction-desc { font-size: 13px; color: var(--gray-1); line-height: 1.8; }
+    .traction-desc strong { font-weight: 500; color: var(--black); }
+
+    /* RISK LIST */
+    .risk-list { display: flex; flex-direction: column; gap: 12px; }
+    .risk-item { display: grid; grid-template-columns: 28px 1fr; gap: 10px; background: #fff8f8; border: 1px solid #fecaca; border-radius: var(--radius-md); padding: 14px 16px 14px 12px; }
+    .risk-num { font-size: 12px; font-weight: 500; color: #b91c1c; padding-top: 2px; }
+    .risk-title { font-size: 14px; font-weight: 500; margin-bottom: 4px; color: #7f1d1d; }
+    .risk-desc { font-size: 13px; color: var(--gray-1); line-height: 1.7; }
+
+    /* WATCH LIST */
+    .watch-list { display: flex; flex-direction: column; }
+    .watch-item { display: flex; gap: 12px; align-items: flex-start; padding: 13px 0; border-bottom: 1px solid var(--gray-4); }
+    .watch-item:last-child { border-bottom: none; }
+    .watch-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gray-3); margin-top: 7px; flex-shrink: 0; }
+    .watch-text { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .watch-text strong { font-weight: 500; color: var(--black); }
+
+    /* SOURCES */
+    .sources {
+      padding: 28px 0 8px;
+      border-top: 1px solid var(--gray-4);
+      margin-top: 8px;
+    }
+    .sources-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-3); margin-bottom: 14px;
+    }
+    .sources-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sources-list li {
+      display: grid; grid-template-columns: 20px 1fr;
+      gap: 6px; font-size: 12px; color: var(--gray-2); line-height: 1.6;
+    }
+    .sources-list li span { color: var(--gray-3); font-variant-numeric: tabular-nums; padding-top: 1px; }
+    .sources-list a { color: var(--gray-2); text-decoration: underline; text-decoration-color: var(--gray-4); }
+    .sources-list a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+    /* FLOATING BACK TO TOP — Company Deep Dive only */
+    .fab-top {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      border: none; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(26,86,219,0.35);
+      opacity: 0; pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .fab-top:hover { background: var(--accent-dark); }
+
+    /* BACK TO TOP */
+    .back-to-top {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 18px 0; margin-top: 12px;
+      background: none; border: none; border-top: 1px solid var(--gray-4);
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      color: var(--gray-2); transition: color 0.15s;
+    }
+    .back-to-top:hover { color: var(--black); }
+    .back-to-top .arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--gray-5); border: 1px solid var(--gray-4);
+      font-size: 14px; line-height: 1; transition: background 0.15s, border-color 0.15s;
+    }
+    .back-to-top:hover .arrow { background: var(--gray-4); }
+
+    /* 패널별 호버 색 */
+    #panel-deepdive .back-to-top:hover { color: var(--accent); }
+    #panel-deepdive .back-to-top:hover .arrow { background: var(--accent-light); border-color: rgba(26,86,219,0.2); }
+    #panel-ones .back-to-top:hover { color: #16a34a; }
+    #panel-ones .back-to-top:hover .arrow { background: #dcfce7; border-color: rgba(22,163,74,0.2); }
+    #panel-deals .back-to-top:hover { color: #c2410c; }
+    #panel-deals .back-to-top:hover .arrow { background: #ffedd5; border-color: rgba(194,65,12,0.2); }
+
+    /* SUBSCRIBE BAR */
+    .subscribe-bar {
+      background: var(--hero-bg); border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .sub-text { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .sub-text strong { color: #fff; font-weight: 500; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      font-size: 13px; padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      outline: none; width: 210px; color: #fff;
+      background: rgba(255,255,255,0.07);
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .sub-form input:focus { border-color: var(--hero-accent); }
+    .sub-form button {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 8px 18px; cursor: pointer;
+    }
+
+    /* ONES TO WATCH */
+    .watch-cards { display: flex; flex-direction: column; gap: 0; }
+    .watch-card { padding: 18px 0; border-bottom: 1px solid var(--gray-4); display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+    .watch-card:last-child { border-bottom: none; }
+    .watch-card-name { font-size: 15px; font-weight: 500; margin-bottom: 3px; letter-spacing: -0.2px; }
+    .watch-card-sub { font-size: 12px; color: var(--gray-2); margin-bottom: 8px; }
+    .watch-card-desc { font-size: 13px; color: var(--gray-1); line-height: 1.7; }
+    .watch-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+    .stage-badge { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: var(--radius-sm); white-space: nowrap; }
+
+    /* DEAL TRACKER */
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-2);
+      padding: 0 10px 10px 0; border-bottom: 1px solid var(--gray-4);
+    }
+    .deal-table td { padding: 10px 10px 10px 0; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-co { font-weight: 500; color: var(--black); display: block; margin-bottom: 2px; }
+    .deal-note { font-size: 11px; color: var(--gray-3); }
+    .deal-amount { font-weight: 500; color: var(--black); white-space: nowrap; }
+
+    /* FOOTER */
+    footer {
+      background: var(--hero-bg); border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.6); }
+    .footer-right { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero, .wrap { padding-left: 20px; padding-right: 20px; }
+      .why-item { grid-template-columns: 1fr; gap: 6px; }
+      .stat-row { flex-direction: column; }
+      .subscribe-bar { flex-direction: column; align-items: flex-start; }
+      .sub-form input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/index.html" class="nav-logo">Korea Startup Thesis</a>
+  <div class="nav-right">
+    <button class="btn-sub">Subscribe</button>
+  </div>
+</nav>
+
+<div class="tab-bar">
+  <div class="tab-bar-inner">
+    <button class="nav-tab active" data-tab="deepdive">Company Deep Dive</button>
+    <button class="nav-tab" data-tab="ones">Ones to Watch <span class="nav-tab-badge">3</span></button>
+    <button class="nav-tab" data-tab="deals">Deal Tracker <span class="nav-tab-badge">5</span></button>
+  </div>
+</div>
+
+<!-- ===== PANEL: COMPANY DEEP DIVE ===== -->
+<div class="tab-panel active" id="panel-deepdive">
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Issue #001 &nbsp;·&nbsp; Company Deep Dive</p>
+    <h1>Rebellions: The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia</h1>
+    <p class="pub-date"><time datetime="2026-06-14">Published June 14, 2026</time></p>
+    <div class="hero-tags">
+      <span class="tag tag-blue">AI Semiconductor</span>
+      <span class="tag tag-blue">Pre-IPO</span>
+      <span class="tag tag-outline">Founded 2020</span>
+      <span class="tag tag-outline">Valuation $2.34B</span>
+      <span class="tag tag-outline">Raised $850M</span>
+    </div>
+    <p class="hero-summary">
+      Nvidia's GPUs have a critical weakness: <strong>energy inefficiency at the inference stage</strong>. Rebellions is a fabless semiconductor startup that has relentlessly targeted that single problem. Five years after founding: $2.34B valuation, ARM's first startup investment in APAC, $400M pre-IPO round. The numbers seem too good to be true — until you look at the data.
+    </p>
+  </div>
+</div>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+  <div class="kpi-inner">
+    <div class="kpi-item">
+      <p class="kpi-num">$850M</p>
+      <p class="kpi-label">Total raised</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">$2.34B</p>
+      <p class="kpi-label">Pre-IPO valuation</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">+20.7%</p>
+      <p class="kpi-label">Power efficiency vs. H200</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">$475B</p>
+      <p class="kpi-label">Inference market 2030E</p>
+    </div>
+  </div>
+</div>
+
+<article class="wrap" itemscope="" itemtype="https://schema.org/Article">
+
+  <!-- FOUNDER STORY -->
+  <div class="section">
+    <div class="eyebrow"><span>Founder story</span></div>
+
+    <div class="founder-card">
+      <div class="avatar">P</div>
+      <div>
+        <p class="founder-name">Park Sung-hyun (박성현)</p>
+        <p class="founder-role">Founder &amp; CEO · Rebellions</p>
+        <div class="career-path">
+          <span class="career-node">Science HS (early grad)</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">KAIST (top of class)</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">MIT PhD</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">Intel Labs</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">Samsung</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">SpaceX</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">Morgan Stanley VP</span>
+          <span class="career-arrow">→</span>
+          <span class="career-node">Founded Rebellions (2020)</span>
+        </div>
+        <p class="quote">"While designing chips for microsecond-level high-frequency trading at Morgan Stanley, I realized the cost structure of AI infrastructure was fundamentally broken. And I knew Korea had the best memory partners in the world — Samsung and SK Hynix."</p>
+      </div>
+    </div>
+
+    <p class="body">After designing Starlink satellite ASICs at SpaceX and building high-frequency trading chips on Wall Street, Park Sung-hyun made an unusual bet: <strong>he moved back to Korea to start a semiconductor company in 2020.</strong> What sets his story apart is that he didn't return because he could build there — he returned because <strong>Korea was the only place where his specific strategy was viable.</strong> No country in the world can access cutting-edge HBM memory earlier or on better terms than Korea.</p>
+    <p class="body">In September 2020, he co-founded Rebellions with Oh Jin-wook, Kim Hyo-eun, and Shin Sung-ho. Less than five years later, it became <strong>Korea's first AI semiconductor unicorn.</strong></p>
+  </div>
+
+  <!-- TECH DEEP DIVE -->
+  <div class="section">
+    <div class="eyebrow"><span>Technology deep dive</span></div>
+    <p class="section-title">Why inference-only ASICs — and Nvidia's structural dilemma</p>
+
+    <p class="body">The AI chip market breaks into two distinct phases. <strong>Training</strong> is about building the model. <strong>Inference</strong> is about running it in production. Nvidia's GPUs are general-purpose hardware optimized for training. The problem: the moment a company deploys AI into a live service, the majority of infrastructure costs come from inference — not training.</p>
+
+    <div class="insight">Inference is fundamentally a memory bandwidth problem. Every time an LLM generates a single token, it must load tens of billions of parameters from memory. The GPU's raw compute (TFLOPS) is underutilized — memory bandwidth is the bottleneck. Rebellions rebuilt the architecture from scratch around that reality.</div>
+
+    <p class="section-title" style="margin-top:28px;">REBEL-Quad: the world's first UCIe-Advanced AI accelerator</p>
+    <p class="body">REBEL-Quad is a <strong>chiplet architecture connecting four NPU dies via UCIe-Advanced interconnects</strong>. Rather than a single monolithic chip, four dies operate as one unified processor. Each die carries a 36GB HBM3E stack, giving the package a total of <strong>144GB of HBM3E memory</strong>. The die-to-die interconnect runs at 16Gbps with 4TB/s aggregate bandwidth and 11ns latency.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Spec</th>
+            <th>Nvidia H200</th>
+            <th>REBEL-Quad (Rebellions)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Architecture</td>
+            <td>Single GPU die</td>
+            <td class="hl">4-chiplet UCIe-Advanced <span class="win">World first</span></td>
+          </tr>
+          <tr>
+            <td>Memory</td>
+            <td>141GB HBM3e</td>
+            <td class="hl">144GB HBM3E</td>
+          </tr>
+          <tr>
+            <td>Memory bandwidth</td>
+            <td>4.8 TB/s</td>
+            <td>4.8 TB/s</td>
+          </tr>
+          <tr>
+            <td>FP16 performance</td>
+            <td>989 TFLOPS</td>
+            <td class="hl">1,024 TFLOPS <span class="win">+3.5%</span></td>
+          </tr>
+          <tr>
+            <td>FP8 performance</td>
+            <td>1,979 TFLOPS</td>
+            <td class="hl">2,048 TFLOPS <span class="win">+3.5%</span></td>
+          </tr>
+          <tr>
+            <td>Power draw</td>
+            <td>700W</td>
+            <td class="hl">600W <span class="win">-14%</span></td>
+          </tr>
+          <tr>
+            <td>TFLOPS/W</td>
+            <td>1.41</td>
+            <td class="hl">1.71 <span class="win">+20.7%</span></td>
+          </tr>
+          <tr>
+            <td>LLaMA 3.3 70B</td>
+            <td>Not disclosed</td>
+            <td>56.8 TPS (single batch)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">※ Based on ISSCC 2026 disclosure. Vendor-reported figures; independent verification ongoing.</p>
+
+    <p class="body" style="margin-top:16px;">More important than raw performance is the <strong>20.7% advantage in power efficiency (TFLOPS/W)</strong>. In a world where power costs account for 30–40% of data center opex, delivering the same performance at 14% lower wattage translates directly into significant TCO savings at scale.</p>
+  </div>
+
+  <!-- WHY THIS COMPANY -->
+  <div class="section">
+    <div class="eyebrow"><span>Why this company</span></div>
+
+    <div class="why-item">
+      <span class="why-label">Problem</span>
+      <div class="why-body">Running ChatGPT for a single day consumes roughly 10x the electricity of a Google search. As AI services scale, inference infrastructure costs become a direct line item on the P&amp;L. <strong>Nvidia's H100/H200 are architected for training — at the inference stage, a significant portion of their compute sits idle.</strong></div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-label">Tech edge</span>
+      <div class="why-body">Inference workloads have a structural characteristic: they are memory bandwidth-bound, not compute-bound. REBEL-Quad addresses this through UCIe-Advanced die-to-die interconnects. <strong>The core innovation is making four NPU dies behave as a single processor, distributing memory access patterns transparently across all chiplets.</strong> The architecture was formally presented at ISSCC 2026.</div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-label">Moat</span>
+      <div class="why-body">
+        <strong>① Memory supply chain:</strong> Partnership with Samsung and SK Hynix means priority access to HBM3E — a structural advantage that US fabless players simply cannot replicate from across the Pacific.<br><br>
+        <strong>② ARM's first APAC startup investment:</strong> ARM chose Rebellions as the most compelling AI chip startup built on its architecture — bringing ecosystem access and joint go-to-market along with the capital.<br><br>
+        <strong>③ Open-source integration:</strong> Official integrations with PyTorch, vLLM, and Red Hat AI reduce the friction for developers switching away from Nvidia's CUDA stack.
+      </div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-label">Global demand</span>
+      <div class="why-body">The AI inference market is projected to grow 12x from $39B in 2024 to $475B by 2030. Rebellions' strategic targets are <strong>AI-native companies like Meta and xAI that build their own infrastructure</strong> rather than relying on hyperscaler clouds. Hyperscalers build their own chips — but this middle tier of AI-first companies desperately needs an alternative to Nvidia. Entities established in the US, Japan, Saudi Arabia, and Taiwan.</div>
+    </div>
+
+    <div class="why-item">
+      <span class="why-label">vs. Competitors</span>
+      <div class="why-body">
+        <strong>vs. Nvidia:</strong> Inference-specialized ASIC vs. general-purpose GPU. Nvidia is structurally constrained from radically changing its architecture — too much depends on preserving the CUDA ecosystem.<br><br>
+        <strong>vs. Groq/Cerebras:</strong> US competitors have limited access to cutting-edge HBM. Geographic proximity to Samsung and SK Hynix is Rebellions' core cost advantage.<br><br>
+        <strong>vs. Google TPU/AWS Trainium:</strong> Hyperscaler chips are locked to their own cloud. Rebellions offers cloud-agnostic hardware deployable on-premise or across any cloud environment.
+      </div>
+    </div>
+
+    <div class="stat-row" style="margin-top:28px;">
+      <div class="stat-card">
+        <p class="stat-num">$850M</p>
+        <p class="stat-label">Total raised<br>($650M in last 6 months)</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-num">$2.34B</p>
+        <p class="stat-label">Pre-IPO valuation<br>(March 2026)</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-num">$475B</p>
+        <p class="stat-label">AI inference market<br>(2030E, 12x current)</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-num">+20.7%</p>
+        <p class="stat-label">Power efficiency edge<br>vs. H200</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOMER TRACTION -->
+  <div class="section">
+    <div class="eyebrow"><span>Customer traction</span></div>
+    <p class="section-title">Who is already buying — and why it matters</p>
+    <p class="body">The most credible signal of product-market fit isn't a pitch deck — it's a paying customer. Rebellions' commercial roster covers three distinct buyer segments: strategic investors who deploy the chips internally, domestic hyperscalers building national AI infrastructure, and the global chip architecture stack itself.</p>
+
+    <div class="traction-list">
+
+      <div class="traction-item">
+        <div class="traction-header">
+          <div class="traction-logo">ARM</div>
+          <div>
+            <p class="traction-name">ARM Holdings</p>
+            <p class="traction-type">Strategic investor · Architecture partnership</p>
+          </div>
+          <span class="traction-badge badge-confirmed">Confirmed</span>
+        </div>
+        <p class="traction-desc">ARM made Rebellions its <strong>first-ever startup investment in APAC</strong> — not a financial play, but a strategic endorsement. REBEL-Quad is built on ARM's Neoverse compute core, and the partnership gives Rebellions priority access to next-generation IP and the ARM ecosystem's global enterprise network. When the world's most widely deployed chip architecture backs you as its APAC flagship, the implied customer pipeline is significant.</p>
+      </div>
+
+      <div class="traction-item">
+        <div class="traction-header">
+          <div class="traction-logo">KT</div>
+          <div>
+            <p class="traction-name">KT Corporation</p>
+            <p class="traction-type">Telecom · AI cloud deployment</p>
+          </div>
+          <span class="traction-badge badge-confirmed">Confirmed</span>
+        </div>
+        <p class="traction-desc">Korea's second-largest telecom operator has deployed Rebellions' ATOM chip in its AI inference infrastructure. KT's enterprise AI cloud — offered to Korean corporates running LLM workloads — runs on REBEL hardware. This is a meaningful reference: telcos are among the most demanding buyers for inference-at-scale, with strict SLA requirements and procurement cycles that favor proven, in-production silicon over prototypes.</p>
+      </div>
+
+      <div class="traction-item">
+        <div class="traction-header">
+          <div class="traction-logo">SK</div>
+          <div>
+            <p class="traction-name">SK Telecom</p>
+            <p class="traction-type">Telecom · AI inference pipeline</p>
+          </div>
+          <span class="traction-badge badge-pipeline">Pipeline</span>
+        </div>
+        <p class="traction-desc">Korea's largest telecom operator and operator of the A.X Platform — one of Asia's most aggressive national LLM infrastructure programs — is evaluating REBEL-Quad for its domestic inference stack. SKT has publicly committed to building a sovereign AI compute layer independent of US chip supply chains. Rebellions is the only domestic ASIC vendor capable of fulfilling that mandate at scale.</p>
+      </div>
+
+      <div class="traction-item">
+        <div class="traction-header">
+          <div class="traction-logo">삼성</div>
+          <div>
+            <p class="traction-name">Samsung Electronics (via Sapeon merger)</p>
+            <p class="traction-type">Strategic · Customer network access</p>
+          </div>
+          <span class="traction-badge badge-confirmed">Confirmed</span>
+        </div>
+        <p class="traction-desc">In 2024, Rebellions absorbed Sapeon — Samsung's in-house AI chip spinoff — in a strategic merger. The deal was not a simple acqui-hire: it transferred Sapeon's <strong>existing Samsung enterprise customer relationships</strong> directly to Rebellions, along with its engineering team and chip IP. Samsung's sprawling semiconductor procurement network is now effectively a distribution channel for Rebellions' next-generation products.</p>
+      </div>
+
+    </div>
+
+    <div class="insight" style="margin-top:20px;">
+      Investor signal: Rebellions has cleared the most important early hardware hurdle — it has moved from chip samples to production deployments with Tier-1 buyers. The combination of ARM's architecture endorsement + telecom-scale production usage + Samsung's inherited customer base is a traction profile that most semiconductor startups take 8–10 years to assemble.
+    </div>
+  </div>
+
+  <!-- RISKS -->
+  <div class="section">
+    <div class="eyebrow"><span>Risks</span></div>
+    <div class="risk-list">
+      <div class="risk-item">
+        <span class="risk-num">01</span>
+        <div>
+          <p class="risk-title">The CUDA switching cost</p>
+          <p class="risk-desc">The global AI developer stack is built on Nvidia's CUDA. PyTorch and vLLM integrations lower the barrier, but enterprise migration cycles typically run 12–24 months. Developer ecosystem adoption is the real gating factor.</p>
+        </div>
+      </div>
+      <div class="risk-item">
+        <span class="risk-num">02</span>
+        <div>
+          <p class="risk-title">Hardware startup manufacturing risk</p>
+          <p class="risk-desc">Chip design performance and mass production are entirely different challenges. RebelPOD and RebelRack are still in early-stage scale-up. Yield issues or supply chain disruptions could surface at the worst possible time — just ahead of the IPO.</p>
+        </div>
+      </div>
+      <div class="risk-item">
+        <span class="risk-num">03</span>
+        <div>
+          <p class="risk-title">Nvidia's inference-focused response</p>
+          <p class="risk-desc">Nvidia has already dramatically improved inference efficiency with the Blackwell architecture. Whether Rebellions' energy efficiency advantage survives the next generation of Nvidia GPUs remains unconfirmed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT TO WATCH -->
+  <div class="section">
+    <div class="eyebrow"><span>What to watch</span></div>
+    <div class="watch-list">
+      <div class="watch-item">
+        <div class="watch-dot"></div>
+        <p class="watch-text"><strong>2026 H2 IPO pricing band</strong> — How does the market value this against the pre-IPO $2.34B? A real-time read on AI semiconductor sector multiples.</p>
+      </div>
+      <div class="watch-item">
+        <div class="watch-dot"></div>
+        <p class="watch-text"><strong>Supply deal with Meta or xAI</strong> — These are Rebellions' stated primary targets. A single announced contract becomes a global reference that reshapes the entire sales cycle.</p>
+      </div>
+      <div class="watch-item">
+        <div class="watch-dot"></div>
+        <p class="watch-text"><strong>RebelPOD mass production schedule</strong> — This is when the gap between benchmark numbers and real-world data center performance becomes visible.</p>
+      </div>
+      <div class="watch-item">
+        <div class="watch-dot"></div>
+        <p class="watch-text"><strong>First US enterprise customer disclosure</strong> — The US entity is set up; what's missing is a visible sales pipeline. The first named customer changes the narrative.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Rebellions, <a href="https://rebellions.ai/" target="_blank">"REBEL-Quad Product Overview,"</a> rebellions.ai, 2025</div></li>
+      <li><span>2</span><div>IEEE ISSCC 2026, <em>"A 5nm AI Inference Accelerator Achieving 20.7% Higher Power Efficiency than H100/H200,"</em> International Solid-State Circuits Conference, February 2026</div></li>
+      <li><span>3</span><div>ARM Ltd., <a href="https://arm.com/" target="_blank">"Arm Strategic Investments: Rebellions,"</a> arm.com — first APAC startup investment on record, 2024</div></li>
+      <li><span>4</span><div>Korea Economic Daily (한국경제), <em>"리벨리온, 프리 IPO 4,000억 완료… 기업가치 3조원,"</em> hankyung.com, 2025</div></li>
+      <li><span>5</span><div>The Korea Herald, <a href="https://koreaherald.com/" target="_blank">"Rebellions-Sapeon merger creates Korea's leading AI chip company,"</a> koreaherald.com, April 2024</div></li>
+      <li><span>6</span><div>Reuters, <em>"South Korean AI chip startup Rebellions targets IPO as it takes on Nvidia,"</em> reuters.com, 2025</div></li>
+      <li><span>7</span><div>KT Corporation, <a href="https://kt.com/" target="_blank">AI Cloud Infrastructure Deployment Announcement,</a> kt.com, 2024</div></li>
+      <li><span>8</span><div>DART (금융감독원 전자공시시스템), Rebellions corporate filings &amp; investment disclosures, dart.fss.or.kr, 2024–2025</div></li>
+      <li><span>9</span><div>Bloter, <em>"박성현 리벨리온 대표 인터뷰: SpaceX를 그만두고 한국으로 돌아온 이유,"</em> bloter.net, 2023</div></li>
+      <li><span>10</span><div>Bessemer Venture Partners, <em>"The Future of Robotics and Defense AI,"</em> bvp.com, 2024 — referenced in Ones to Watch thesis</div></li>
+    </ol>
+  </div>
+
+</article><!-- end deepdive article -->
+</div><!-- end panel-deepdive -->
+
+<!-- ===== PANEL: ONES TO WATCH ===== -->
+<div class="tab-panel" id="panel-ones">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="hero-eyebrow">Issue #001</p>
+    <h1>Ones to Watch</h1>
+    <p class="pub-date"><time datetime="2026-06-14">Published June 14, 2026</time></p>
+    <p class="hero-summary">Early-stage Korean startups worth putting on your radar — curated signals for global investors tracking Korea's next breakout companies.</p>
+  </div>
+</div>
+
+<article class="wrap">
+  <!-- ONES TO WATCH -->
+  <div class="section">
+    <div class="eyebrow"><span>Ones to watch</span></div>
+    <div class="watch-cards">
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Xup</p>
+          <p class="watch-card-sub">Field robotics &nbsp;·&nbsp; LG Electronics spinout &nbsp;·&nbsp; TIPS + DIPS dual designation</p>
+          <p class="watch-card-desc">An unusual case: TIPS and DIPS designation within two months of spinning out of LG Electronics. The platform starts with golf course automation and has a clear expansion roadmap into agriculture and defense. Worth watching in the context of Bessemer's projection that the first $50B robotics company will come from defense. Early stage, but LG's network and dual government certification meaningfully de-risk the early innings.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-outline">Early Stage</span>
+          <span class="tag tag-outline">Robotics</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">ActionPower</p>
+          <p class="watch-card-sub">Multimodal AI workflow &nbsp;·&nbsp; Series B &nbsp;·&nbsp; KRW 6B</p>
+          <p class="watch-card-desc">A B2B platform that connects internal documents, meetings, and email through multimodal AI to automate enterprise workflows. Closed Series B on the back of major Korean conglomerate customers. The thesis: they're targeting the first integration layer where AI agents enter real enterprise environments — a globally scalable wedge. Enterprise reference velocity is notably faster than comparable US startups at this stage.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series B</span>
+          <span class="tag tag-outline">AI / B2B</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">AvoMD</p>
+          <p class="watch-card-sub">Clinical AI platform &nbsp;·&nbsp; Series B &nbsp;·&nbsp; KRW 15B</p>
+          <p class="watch-card-desc">EHR-based AI that delivers real-time, evidence-based treatment protocol recommendations to physicians during consultations. Korea's structural advantage: hospital data is highly digitized and nationally interlinked, giving AvoMD a training data quality edge over global competitors. The timing aligns with rapidly maturing medical AI regulation in both Korea and the EU.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series B</span>
+          <span class="tag tag-outline">Healthcare AI</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>TIPS Program (민관공동투자 기술창업지원), <a href="https://tips.or.kr/" target="_blank">Xup TIPS Certification,</a> tips.or.kr, 2025</div></li>
+      <li><span>2</span><div>Korea Defense Acquisition Program Administration (DAPA), <em>DIPS (Defense Innovation Partnership) Designation — Xup,</em> dapa.go.kr, 2025</div></li>
+      <li><span>3</span><div>LG Electronics, <em>Xup Spinout Announcement,</em> lge.com/kr, 2025</div></li>
+      <li><span>4</span><div>ActionPower, <a href="https://actionpower.kr/" target="_blank">Series B Closing Press Release,</a> actionpower.kr, 2025</div></li>
+      <li><span>5</span><div>AvoMD, <a href="https://avomd.io/" target="_blank">Series B Investment Announcement,</a> avomd.io, 2025</div></li>
+      <li><span>6</span><div>Korea Health Industry Development Institute (KHIDI), <em>Medical AI Market &amp; Regulatory Outlook 2025,</em> khidi.or.kr, 2025</div></li>
+      <li><span>7</span><div>Bessemer Venture Partners, <em>"The $50B Robotics Company Will Come from Defense,"</em> bvp.com, 2024</div></li>
+    </ol>
+  </div>
+
+  <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:&#39;smooth&#39;})">
+    <span class="arrow">↑</span> Back to top
+  </button>
+</article><!-- end ones article -->
+</div><!-- end panel-ones -->
+
+<!-- ===== PANEL: DEAL TRACKER ===== -->
+<div class="tab-panel" id="panel-deals">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="hero-eyebrow">Issue #001</p>
+    <h1>Deal Tracker</h1>
+    <p class="pub-date"><time datetime="2026-06-14">Published June 14, 2026</time></p>
+    <p class="hero-summary">Recent Korean startup funding rounds — stage, amount, and sector context for global investors tracking Korea deal flow.</p>
+  </div>
+</div>
+
+<article class="wrap">
+  <!-- DEAL TRACKER -->
+  <div class="section">
+    <div class="eyebrow"><span>Deal tracker &nbsp;·&nbsp; June 2026</span></div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Stage</th>
+          <th>Amount</th>
+          <th>Sector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="deal-co">Autonomous A2Z</span>
+            <span class="deal-note">Total raised KRW 122.5B · IPO in preparation</span>
+          </td>
+          <td>Pre-IPO</td>
+          <td class="deal-amount">KRW 40.5B</td>
+          <td><span class="tag tag-outline">Autonomous</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">ARK</span>
+            <span class="deal-note">AI screening for chronic disease complications</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 20B</td>
+          <td><span class="tag tag-blue">AI Health</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">AvoMD</span>
+            <span class="deal-note">EHR-based clinical AI platform</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">KRW 15B</td>
+          <td><span class="tag tag-blue">AI Health</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Korea Deep Learning</span>
+            <span class="deal-note">KDB follow-on investment</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 12B</td>
+          <td><span class="tag tag-outline">AI Infra</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">ActionPower</span>
+            <span class="deal-note">Multimodal AI workflow automation</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">KRW 6B</td>
+          <td><span class="tag tag-outline">AI / B2B</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>DART (금융감독원 전자공시시스템), <a href="https://dart.fss.or.kr/" target="_blank">Corporate investment disclosures — Autonomous A2Z, ARK, AvoMD, Korea Deep Learning, ActionPower,</a> dart.fss.or.kr, 2025–2026</div></li>
+      <li><span>2</span><div>Autonomous A2Z, <em>Pre-IPO Round &amp; IPO Preparation Announcement,</em> autonomous-a2z.com, 2025</div></li>
+      <li><span>3</span><div>KDB (한국산업은행), <em>Korea Deep Learning Series A Follow-on Investment,</em> kdb.co.kr, 2025</div></li>
+      <li><span>4</span><div>Venturesquare (벤처스퀘어), <em>Monthly Korea Startup Funding Roundup — June 2026,</em> venturesquare.net, 2026</div></li>
+      <li><span>5</span><div>TheVC, <a href="https://thevc.kr/" target="_blank">Korean startup investment database,</a> thevc.kr, accessed June 2026</div></li>
+      <li><span>6</span><div>Korea Venture Business Association (벤처기업협회), <em>Q1 2026 Venture Investment Trend Report,</em> kva.or.kr, 2026</div></li>
+    </ol>
+  </div>
+
+  <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:&#39;smooth&#39;})">
+    <span class="arrow">↑</span> Back to top
+  </button>
+</article><!-- end deals article -->
+</div><!-- end panel-deals -->
+
+<!-- FLOATING BACK TO TOP -->
+<button class="fab-top" id="fabTop" title="Back to top" onclick="window.scrollTo({top:0,behavior:&#39;smooth&#39;})">↑</button>
+
+<div class="subscribe-bar">
+  <p class="sub-text"><strong>Korea Startup Thesis</strong> — Weekly deep dives into Korean startups for global investors</p>
+  <div class="sub-form">
+    <input type="email" placeholder="your@email.com" id="subEmail">
+    <button onclick="handleSubscribe()">Subscribe</button>
+  </div>
+</div>
+
+<footer>
+  <a href="file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/index.html" class="footer-left">Korea Startup Thesis</a>
+  <span class="footer-right">© 2026 · Weekly intelligence for global investors</span>
+</footer>
+
+<script>
+  function handleSubscribe() {
+    const email = document.getElementById('subEmail').value.trim();
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    window.location.href = 'thankyou.html';
+  }
+
+  let activeTab = 'deepdive';
+  const fab = document.getElementById('fabTop');
+
+  // Tab switching
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + activeTab).classList.add('active');
+
+      document.querySelector('.tab-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Hide FAB when switching away from deepdive
+      updateFab();
+    });
+  });
+
+  // Show/hide floating button based on scroll + active tab
+  function updateFab() {
+    if (activeTab === 'deepdive' && window.scrollY > 320) {
+      fab.classList.add('visible');
+    } else {
+      fab.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', updateFab, { passive: true });
+</script>
+
+
+
+</body></html>
