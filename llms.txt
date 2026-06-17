@@ -1,0 +1,35 @@
+# Korea Startup Thesis
+> Weekly deep dives into Korean startups for global VC and angel investors.
+> Data-driven analysis, founder stories, competitive positioning, and deal flow intelligence.
+
+## About
+
+Korea Startup Thesis is an English-language investment newsletter covering the Korean startup ecosystem from a global investor's perspective. Each issue features one Company Deep Dive — a rigorous analysis of a Korean startup worth watching — plus a curated Ones to Watch section and Deal Tracker.
+
+The target reader is a global VC partner, angel investor, or LP who wants signal, not noise, on Korea's most compelling companies.
+
+## Issue Archive
+
+- [Issue #001 – Rebellions: The Ex-SpaceX Engineer Who Came Back to Korea to Challenge Nvidia](https://koreastartupthesis.com/rebellions-issue-001)
+  Published: 2026-06-14
+    Tags: AI Semiconductor, ASIC, Inference, Pre-IPO, Founded 2020
+      Summary: Rebellions is a Korean fabless AI chip startup that has built an inference-only ASIC (REBEL-Quad) that outperforms Nvidia's H200 on power efficiency by 20.7%. The company has raised $850M at a $2.34B valuation and is targeting a KOSDAQ IPO in late 2026.
+
+      ## Newsletter Structure
+
+      Each weekly issue contains:
+      1. Company Deep Dive - In-depth analysis of one Korean startup
+      2. Ones to Watch - 2-3 early-stage Korean startups worth monitoring
+      3. Deal Tracker - Recent Korean startup funding rounds with context
+
+      ## Subscribe
+
+      https://koreastartupthesis.com#subscribe
+
+      ## Contact
+
+      editor@koreastartupthesis.com
+
+      ## License
+
+      Content is for informational purposes only and does not constitute investment advice.
