@@ -242,21 +242,16 @@
 
 <nav>
   <div class="nav-left">
-    <a href="file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/index.html" class="nav-logo">Korea Startup Thesis</a>
+    <a href="./index.html" class="nav-logo">Korea Startup Thesis</a>
     <span class="nav-badge">Admin</span>
   </div>
   <div class="nav-right">
-    <a href="file:///C:/Users/gumnt/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Claude/local-agent-mode-sessions/4ab68306-ea9f-422d-89db-0f52dd43816d/164eca7b-8739-4fd2-b3d4-2ff605e4dcdd/local_43c72491-85b4-4d01-882e-d844050da28c/outputs/index.html" class="nav-link-light">← Back to site</a>
+    <a href="./index.html" class="nav-link-light">← Back to site</a>
     <button class="btn-export" onclick="exportCSV()">Export CSV</button>
   </div>
 </nav>
 
 <div class="page">
-
-  <div class="notice">
-    <span class="notice-icon">⚠</span>
-    <span>This is a <strong>UI prototype</strong>. Data shown is sample data. Connecting real subscriber storage requires a backend (Node.js, Supabase, etc.) or an email service API (Beehiiv, ConvertKit, Mailchimp).</span>
-  </div>
 
   <h1 class="page-title">Subscribers</h1>
   <p class="page-sub">Manage your Korea Startup Thesis subscriber list</p>
@@ -265,12 +260,12 @@
   <div class="stats-row">
     <div class="stat-card">
       <p class="stat-label">Total subscribers</p>
-      <p class="stat-val">247</p>
+      <p class="stat-val" id="stat-total">—</p>
       <p class="stat-delta up">↑ +18 this week</p>
     </div>
     <div class="stat-card">
       <p class="stat-label">Active</p>
-      <p class="stat-val">231</p>
+      <p class="stat-val" id="stat-active">—</p>
       <p class="stat-delta up">93.5% of total</p>
     </div>
     <div class="stat-card">
@@ -280,7 +275,7 @@
     </div>
     <div class="stat-card">
       <p class="stat-label">Unsubscribed</p>
-      <p class="stat-val">16</p>
+      <p class="stat-val" id="stat-unsub">—</p>
       <p class="stat-delta neutral">6.5% churn total</p>
     </div>
   </div>
@@ -318,187 +313,7 @@
           <th></th>
         </tr>
       </thead>
-      <tbody id="tableBody">
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">james.park@sequoia.com</td>
-        <td>2026-06-14</td>
-        <td><span class="source-badge article">Article</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;james.park@sequoia.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">sarah.kim@a16z.com</td>
-        <td>2026-06-14</td>
-        <td><span class="source-badge article">Article</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;sarah.kim@a16z.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">michael.chen@gv.com</td>
-        <td>2026-06-13</td>
-        <td><span class="source-badge organic">Organic</span></td>
-        <td>1/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;michael.chen@gv.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">yuna.lee@softbank.com</td>
-        <td>2026-06-13</td>
-        <td><span class="source-badge referral">Referral</span></td>
-        <td>1/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;yuna.lee@softbank.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">tom.harris@kpcb.com</td>
-        <td>2026-06-12</td>
-        <td><span class="source-badge organic">Organic</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;tom.harris@kpcb.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">anna.wu@lightspeed.com</td>
-        <td>2026-06-12</td>
-        <td><span class="source-badge article">Article</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;anna.wu@lightspeed.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">david.oh@nea.com</td>
-        <td>2026-06-11</td>
-        <td><span class="source-badge referral">Referral</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;david.oh@nea.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">grace.choi@benchmark.com</td>
-        <td>2026-06-11</td>
-        <td><span class="source-badge organic">Organic</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;grace.choi@benchmark.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">kevin.tang@greylock.com</td>
-        <td>2026-06-10</td>
-        <td><span class="source-badge article">Article</span></td>
-        <td>1/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;kevin.tang@greylock.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">lisa.moon@accel.com</td>
-        <td>2026-06-10</td>
-        <td><span class="source-badge organic">Organic</span></td>
-        <td>1/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;lisa.moon@accel.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">ryan.bae@tiger.com</td>
-        <td>2026-06-09</td>
-        <td><span class="source-badge referral">Referral</span></td>
-        <td>0/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;ryan.bae@tiger.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">jenny.seo@coatue.com</td>
-        <td>2026-06-09</td>
-        <td><span class="source-badge article">Article</span></td>
-        <td>1/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;jenny.seo@coatue.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="unsub">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">alex.nam@dragoneer.com</td>
-        <td>2026-06-08</td>
-        <td><span class="source-badge organic">Organic</span></td>
-        <td>0/2 issues</td>
-        <td><span class="status-dot unsub">Unsubscribed</span></td>
-        <td>
-          <button class="action-btn restore" onclick="toggleStatus(this, &#39;alex.nam@dragoneer.com&#39;)">Restore</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">chris.yoon@dst.com</td>
-        <td>2026-06-08</td>
-        <td><span class="source-badge referral">Referral</span></td>
-        <td>2/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;chris.yoon@dst.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    
-      <tr data-status="active">
-        <td><input type="checkbox" class="row-check"></td>
-        <td class="email-cell">mia.han@thrive.com</td>
-        <td>2026-06-07</td>
-        <td><span class="source-badge organic">Organic</span></td>
-        <td>1/2 issues</td>
-        <td><span class="status-dot active">Active</span></td>
-        <td>
-          <button class="action-btn" onclick="toggleStatus(this, &#39;mia.han@thrive.com&#39;)">Remove</button>
-        </td>
-      </tr>
-    </tbody>
+      <tbody id="tableBody"><tr><td colspan="7" style="text-align:center;padding:28px;color:#aaa">Loading subscribers…</td></tr></tbody>
     </table>
     <div class="table-footer">
       <span class="table-count" id="tableCount">Showing 15 of 247</span>
@@ -582,54 +397,88 @@
 </div>
 
 <script>
-  // Sample data
-  const subscribers = [
-    { email: 'james.park@sequoia.com',    date: '2026-06-14', source: 'article',  opens: 2,  status: 'active' },
-    { email: 'sarah.kim@a16z.com',        date: '2026-06-14', source: 'article',  opens: 2,  status: 'active' },
-    { email: 'michael.chen@gv.com',       date: '2026-06-13', source: 'organic',  opens: 1,  status: 'active' },
-    { email: 'yuna.lee@softbank.com',     date: '2026-06-13', source: 'referral', opens: 1,  status: 'active' },
-    { email: 'tom.harris@kpcb.com',       date: '2026-06-12', source: 'organic',  opens: 2,  status: 'active' },
-    { email: 'anna.wu@lightspeed.com',    date: '2026-06-12', source: 'article',  opens: 2,  status: 'active' },
-    { email: 'david.oh@nea.com',          date: '2026-06-11', source: 'referral', opens: 2,  status: 'active' },
-    { email: 'grace.choi@benchmark.com',  date: '2026-06-11', source: 'organic',  opens: 2,  status: 'active' },
-    { email: 'kevin.tang@greylock.com',   date: '2026-06-10', source: 'article',  opens: 1,  status: 'active' },
-    { email: 'lisa.moon@accel.com',       date: '2026-06-10', source: 'organic',  opens: 1,  status: 'active' },
-    { email: 'ryan.bae@tiger.com',        date: '2026-06-09', source: 'referral', opens: 0,  status: 'active' },
-    { email: 'jenny.seo@coatue.com',      date: '2026-06-09', source: 'article',  opens: 1,  status: 'active' },
-    { email: 'alex.nam@dragoneer.com',    date: '2026-06-08', source: 'organic',  opens: 0,  status: 'unsub'  },
-    { email: 'chris.yoon@dst.com',        date: '2026-06-08', source: 'referral', opens: 2,  status: 'active' },
-    { email: 'mia.han@thrive.com',        date: '2026-06-07', source: 'organic',  opens: 1,  status: 'active' },
-  ];
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
 
-  const sourceLabels = { article: 'Article', organic: 'Organic', referral: 'Referral' };
+  let subscribers = [];
   let currentFilter = 'all';
+  const sourceLabels = { article: 'Article', organic: 'Organic', referral: 'Referral', homepage: 'Homepage', website: 'Website' };
+  const sourceColors = { article: 'var(--accent)', organic: 'var(--green)', referral: '#f59e0b', homepage: 'var(--accent)', website: 'var(--accent)' };
+
+  async function loadSubscribers() {
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?select=*&order=created_at.desc`, {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`
+        }
+      });
+      if (!res.ok) throw new Error('Fetch failed: ' + res.status);
+      const data = await res.json();
+      subscribers = data.map(s => ({
+        id: s.id,
+        email: s.email,
+        date: s.created_at ? s.created_at.substring(0, 10) : '—',
+        source: s.source || 'organic',
+        status: s.status || 'active'
+      }));
+      updateStats();
+      filterTable();
+      updateCharts();
+    } catch(e) {
+      document.getElementById('tableBody').innerHTML =
+        '<tr><td colspan="7" style="text-align:center;padding:28px;color:#dc2626">Failed to load data. Check Supabase connection.</td></tr>';
+    }
+  }
+
+  function updateStats() {
+    const total = subscribers.length;
+    const active = subscribers.filter(s => s.status === 'active').length;
+    const unsub = subscribers.filter(s => s.status !== 'active').length;
+    const statEls = document.querySelectorAll('.stat-val');
+    if (document.getElementById('stat-total')) document.getElementById('stat-total').textContent = total;
+    if (document.getElementById('stat-active')) document.getElementById('stat-active').textContent = active;
+    if (document.getElementById('stat-unsub')) document.getElementById('stat-unsub').textContent = unsub;
+    const deltaEls = document.querySelectorAll('.stat-delta');
+    if (deltaEls[1]) deltaEls[1].textContent = total > 0 ? (Math.round(active/total*100) + '% of total') : '—';
+    if (deltaEls[3]) deltaEls[3].textContent = total > 0 ? (Math.round(unsub/total*100) + '% churn total') : '—';
+    const tabs = document.querySelectorAll('.filter-tab');
+    if (tabs[0]) tabs[0].innerHTML = `All <span style="color:var(--gray-3);font-weight:400">${total}</span>`;
+    if (tabs[1]) tabs[1].innerHTML = `Active <span style="color:var(--gray-3);font-weight:400">${active}</span>`;
+    if (tabs[2]) tabs[2].innerHTML = `Unsubscribed <span style="color:var(--gray-3);font-weight:400">${unsub}</span>`;
+  }
 
   function renderTable(data) {
     const body = document.getElementById('tableBody');
+    if (data.length === 0) {
+      body.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:28px;color:#aaa">No subscribers found.</td></tr>';
+      document.getElementById('tableCount').textContent = 'Showing 0';
+      return;
+    }
     body.innerHTML = data.map(s => `
-      <tr data-status="${s.status}">
+      <tr data-status="${s.status}" data-id="${s.id}">
         <td><input type="checkbox" class="row-check"></td>
         <td class="email-cell">${s.email}</td>
         <td>${s.date}</td>
-        <td><span class="source-badge ${s.source}">${sourceLabels[s.source]}</span></td>
-        <td>${s.opens}/2 issues</td>
-        <td><span class="status-dot ${s.status}">${s.status === 'active' ? 'Active' : 'Unsubscribed'}</span></td>
+        <td><span class="source-badge ${s.source}">${sourceLabels[s.source] || s.source}</span></td>
+        <td>—</td>
+        <td><span class="status-dot ${s.status === 'active' ? 'active' : 'unsub'}">${s.status === 'active' ? 'Active' : 'Unsubscribed'}</span></td>
         <td>
           ${s.status === 'active'
-            ? `<button class="action-btn" onclick="toggleStatus(this, '${s.email}')">Remove</button>`
-            : `<button class="action-btn restore" onclick="toggleStatus(this, '${s.email}')">Restore</button>`
+            ? `<button class="action-btn" onclick="toggleStatus(this, '${s.id}')">Remove</button>`
+            : `<button class="action-btn restore" onclick="toggleStatus(this, '${s.id}')">Restore</button>`
           }
         </td>
       </tr>
     `).join('');
-    document.getElementById('tableCount').textContent = `Showing ${data.length} of 247`;
+    document.getElementById('tableCount').textContent = `Showing ${data.length} of ${subscribers.length}`;
   }
 
   function filterTable() {
     const q = document.getElementById('searchInput').value.toLowerCase();
     const filtered = subscribers.filter(s => {
       const matchSearch = s.email.toLowerCase().includes(q);
-      const matchFilter = currentFilter === 'all' || s.status === currentFilter;
+      const matchFilter = currentFilter === 'all' || (currentFilter === 'active' ? s.status === 'active' : s.status !== 'active');
       return matchSearch && matchFilter;
     });
     renderTable(filtered);
@@ -646,66 +495,98 @@
     document.querySelectorAll('.row-check').forEach(c => c.checked = cb.checked);
   }
 
-  function toggleStatus(btn, email) {
-    const sub = subscribers.find(s => s.email === email);
-    if (sub) {
-      sub.status = sub.status === 'active' ? 'unsub' : 'active';
-      filterTable();
+  async function toggleStatus(btn, id) {
+    const sub = subscribers.find(s => s.id === id);
+    if (!sub) return;
+    const newStatus = sub.status === 'active' ? 'unsubscribed' : 'active';
+    btn.disabled = true;
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?id=eq.${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ status: newStatus })
+      });
+      if (res.ok) {
+        sub.status = newStatus;
+        updateStats();
+        filterTable();
+      } else {
+        btn.disabled = false;
+        alert('Failed to update. Please try again.');
+      }
+    } catch(e) {
+      btn.disabled = false;
+      alert('Connection error.');
     }
   }
 
   function exportCSV() {
-    const rows = [['Email', 'Date', 'Source', 'Opens', 'Status']];
-    subscribers.forEach(s => rows.push([s.email, s.date, s.source, s.opens, s.status]));
-    const csv = rows.map(r => r.join(',')).join('\n');
+    const rows = [['Email', 'Subscribed', 'Source', 'Status']];
+    subscribers.forEach(s => rows.push([s.email, s.date, s.source, s.status]));
+    const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
     const a = document.createElement('a');
     a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
-    a.download = 'kst-subscribers.csv';
+    a.download = 'kst-subscribers-' + new Date().toISOString().substring(0,10) + '.csv';
     a.click();
   }
 
-  // Weekly bar chart
-  const weeklyData = [
-    { week: 'Apr 28', count: 12 },
-    { week: 'May 5',  count: 19 },
-    { week: 'May 12', count: 15 },
-    { week: 'May 19', count: 28 },
-    { week: 'May 26', count: 22 },
-    { week: 'Jun 2',  count: 34 },
-    { week: 'Jun 9',  count: 47 },
-    { week: 'Jun 14', count: 18 },
-  ];
-  const maxVal = Math.max(...weeklyData.map(d => d.count));
-  const chart = document.getElementById('barChart');
-  weeklyData.forEach(d => {
-    const h = Math.round((d.count / maxVal) * 72);
-    chart.innerHTML += `
-      <div class="bar-group">
-        <div class="bar" style="height:${h}px" title="${d.count} new"></div>
-        <span class="bar-label">${d.week}</span>
-      </div>`;
-  });
+  function updateCharts() {
+    // Source breakdown
+    const counts = {};
+    subscribers.forEach(s => {
+      const src = s.source || 'organic';
+      counts[src] = (counts[src] || 0) + 1;
+    });
+    const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
+    const sl = document.getElementById('sourceList');
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    if (sl && sorted.length > 0) {
+      sl.innerHTML = sorted.map(([src, cnt]) => {
+        const pct = Math.round((cnt / total) * 100);
+        return `<div class="source-row">
+          <span class="source-name">${sourceLabels[src] || src}</span>
+          <div class="source-bar-wrap"><div class="source-bar-fill" style="width:${pct}%;background:${sourceColors[src] || 'var(--accent)'}"></div></div>
+          <span class="source-pct">${pct}%</span>
+        </div>`;
+      }).join('');
+    } else if (sl) {
+      sl.innerHTML = '<p style="color:#aaa;font-size:13px">No data yet.</p>';
+    }
 
-  // Source breakdown
-  const sources = [
-    { name: 'Article',  pct: 52, color: 'var(--accent)' },
-    { name: 'Organic',  pct: 31, color: 'var(--green)' },
-    { name: 'Referral', pct: 17, color: '#f59e0b' },
-  ];
-  const sl = document.getElementById('sourceList');
-  sources.forEach(s => {
-    sl.innerHTML += `
-      <div class="source-row">
-        <span class="source-name">${s.name}</span>
-        <div class="source-bar-wrap">
-          <div class="source-bar-fill" style="width:${s.pct}%;background:${s.color}"></div>
-        </div>
-        <span class="source-pct">${s.pct}%</span>
-      </div>`;
-  });
+    // Weekly signups (last 8 weeks)
+    const now = new Date();
+    const weeks = [];
+    for (let i = 7; i >= 0; i--) {
+      const wEnd = new Date(now);
+      wEnd.setDate(now.getDate() - i * 7);
+      const wStart = new Date(wEnd);
+      wStart.setDate(wEnd.getDate() - 7);
+      const label = wStart.toLocaleString('en-US', {month:'short'}) + ' ' + wStart.getDate();
+      const count = subscribers.filter(s => {
+        const d = new Date(s.date);
+        return d >= wStart && d < wEnd;
+      }).length;
+      weeks.push({ week: label, count });
+    }
+    const maxVal = Math.max(...weeks.map(d => d.count), 1);
+    const chart = document.getElementById('barChart');
+    if (chart) {
+      chart.innerHTML = weeks.map(d => {
+        const h = Math.max(Math.round((d.count / maxVal) * 72), d.count > 0 ? 4 : 1);
+        return `<div class="bar-group">
+          <div class="bar" style="height:${h}px" title="${d.count} new"></div>
+          <span class="bar-label">${d.week}</span>
+        </div>`;
+      }).join('');
+    }
+  }
 
-  // Init
-  renderTable(subscribers);
+  document.addEventListener('DOMContentLoaded', loadSubscribers);
 </script>
 
 
