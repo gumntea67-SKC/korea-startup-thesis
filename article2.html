@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toss: The Dentist Who Dismantled Korea's Banking Oligopoly — Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/toss-issue-002">
+  <link rel="alternate" type="application/rss+xml" title="Korea Startup Thesis" href="https://koreastartupthesis.com/feed.xml">
+
+  <meta name="description" content="Toss is used by 60% of South Korea's population. Founded by an ex-dentist who spent eight months fighting regulators, it crossed 2 trillion KRW in revenue in 2024 and is targeting a $10B+ US IPO. Here's why the story is far from over.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Toss, Viva Republica, Korea fintech, Korean neobank, Lee Seunggun, Korea IPO, fintech super app, Toss Bank, Korea startup">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Toss: The Dentist Who Dismantled Korea's Banking Oligopoly">
+  <meta property="og:description" content="30M users. 2T KRW revenue. First profit in 2024. Targeting a $10B+ US IPO. Inside Korea's most consequential fintech bet.">
+  <meta property="og:url" content="https://koreastartupthesis.com/toss-issue-002">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/toss-002.png">
+  <meta property="article:published_time" content="2026-06-24T00:00:00Z">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Fintech">
+  <meta property="article:tag" content="Neobank">
+  <meta property="article:tag" content="Pre-IPO">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Toss: Korea's fintech super-app — 30M users, 2T KRW revenue, $10B+ IPO">
+  <meta name="twitter:description" content="Deep dive into Toss (Viva Republica), the Korean fintech super-app used by 60% of the population. First full-year profit in 2024. US IPO in 2026.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/toss-002.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Toss: The Dentist Who Dismantled Korea's Banking Oligopoly",
+    "description": "Deep dive into Toss (Viva Republica), the Korean fintech super-app with 30M users, 2T KRW annual revenue, and a $10B+ US IPO target.",
+    "datePublished": "2026-06-24",
+    "dateModified": "2026-06-24",
+    "author": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "publisher": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "mainEntityOfPage": "https://koreastartupthesis.com/toss-issue-002",
+    "image": "https://koreastartupthesis.com/og/toss-002.png",
+    "keywords": ["Toss", "Viva Republica", "Korea fintech", "neobank", "Lee Seunggun", "Korea IPO"],
+    "articleSection": "Company Deep Dive",
+    "about": {
+      "@type": "Organization",
+      "name": "Viva Republica (Toss)",
+      "foundingDate": "2013",
+      "description": "Korean fintech super-app operator",
+      "url": "https://toss.im"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111; --gray-1: #444; --gray-2: #777; --gray-3: #aaa;
+      --gray-4: #e5e5e5; --gray-5: #f5f5f5; --white: #fff;
+      --accent: #1a56db; --accent-light: #ebf1fd; --accent-dark: #0c3080;
+      --hero-bg: #0f1923; --hero-accent: #3b82f6;
+      --green: #16a34a; --green-light: #dcfce7; --green-dark: #14532d;
+      --amber-light: #fffbeb; --amber-dark: #92400e;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fafafa; color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; color: #fff; letter-spacing: -0.3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-link-light { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nav-link-light:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: #2563eb; }
+
+    /* HERO */
+    .hero-wrap { background: #dbeafe; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 52px 40px 48px; }
+    .hero-eyebrow {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 14px; font-weight: 500;
+    }
+    .hero h1 {
+      font-size: 30px; font-weight: 500; line-height: 1.25;
+      letter-spacing: -0.6px; margin-bottom: 14px; color: var(--black);
+    }
+    .hero-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-sm); font-weight: 500; }
+    .tag-blue { background: rgba(26,86,219,0.1); color: var(--accent-dark); border: 1px solid rgba(26,86,219,0.2); }
+    .tag-outline { border: 1px solid rgba(0,0,0,0.15); color: var(--gray-1); }
+    .tag-green { background: var(--green-light); color: var(--green-dark); border: 1px solid rgba(22,163,74,0.2); }
+    .hero-summary {
+      font-size: 15px; color: var(--gray-1); line-height: 1.85;
+      border-left: 3px solid var(--accent); padding-left: 18px;
+    }
+    .hero-summary strong { color: var(--black); font-weight: 500; }
+    .pub-date { font-size: 12px; color: var(--gray-3); margin-top: 20px; }
+
+    /* KPI BAR */
+    .kpi-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); }
+    .kpi-inner {
+      max-width: 680px; margin: 0 auto; padding: 0 40px;
+      display: flex; gap: 0;
+    }
+    .kpi-item {
+      flex: 1; padding: 16px 20px;
+      border-right: 1px solid var(--gray-4);
+    }
+    .kpi-item:first-child { padding-left: 0; }
+    .kpi-item:last-child { border-right: none; padding-right: 0; }
+    .kpi-num { font-size: 20px; font-weight: 500; color: var(--accent-dark); margin-bottom: 2px; }
+    .kpi-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ARTICLE BODY */
+    .article-wrap { max-width: 680px; margin: 0 auto; padding: 48px 40px 80px; }
+
+    h2 {
+      font-size: 19px; font-weight: 500; letter-spacing: -0.3px;
+      margin-top: 48px; margin-bottom: 16px; color: var(--black);
+      padding-bottom: 10px; border-bottom: 1px solid var(--gray-4);
+    }
+    h3 {
+      font-size: 15px; font-weight: 500; margin-top: 28px; margin-bottom: 10px; color: var(--black);
+    }
+    p { font-size: 15px; color: var(--gray-1); line-height: 1.85; margin-bottom: 18px; }
+    p strong { color: var(--black); font-weight: 500; }
+    p em { font-style: italic; color: var(--gray-2); }
+
+    /* CALLOUT BOXES */
+    .callout {
+      border-radius: var(--radius-lg); padding: 20px 24px; margin: 28px 0;
+    }
+    .callout-blue { background: var(--accent-light); border: 1px solid rgba(26,86,219,0.15); }
+    .callout-green { background: var(--green-light); border: 1px solid rgba(22,163,74,0.2); }
+    .callout-amber { background: var(--amber-light); border: 1px solid rgba(234,179,8,0.3); }
+    .callout-gray { background: var(--gray-5); border: 1px solid var(--gray-4); }
+    .callout-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-3); margin-bottom: 12px; }
+    .callout p { margin-bottom: 0; font-size: 14px; }
+    .callout p + p { margin-top: 8px; }
+
+    /* DATA TABLE */
+    .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .data-table th {
+      text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--gray-3); padding: 8px 12px;
+      border-bottom: 1px solid var(--gray-4); background: var(--gray-5);
+    }
+    .data-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .data-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+    .data-table td { padding: 11px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); }
+    .data-table td strong { color: var(--black); font-weight: 500; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: #fafafa; }
+
+    /* METRIC ROW */
+    .metric-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0;
+    }
+    .metric-card {
+      background: var(--white); border: 1px solid var(--gray-4);
+      border-radius: var(--radius-lg); padding: 16px 18px;
+    }
+    .metric-val { font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .metric-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+    .metric-delta { font-size: 12px; margin-top: 4px; }
+    .up { color: var(--green); }
+    .neutral { color: var(--gray-3); }
+
+    /* TIMELINE */
+    .timeline { margin: 24px 0; }
+    .timeline-item {
+      display: flex; gap: 16px; padding: 14px 0;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-year {
+      font-size: 12px; font-weight: 500; color: var(--accent);
+      min-width: 44px; margin-top: 1px;
+    }
+    .timeline-content { font-size: 14px; color: var(--gray-1); line-height: 1.6; }
+    .timeline-content strong { color: var(--black); font-weight: 500; }
+
+    /* SECTION DIVIDER */
+    .divider { border: none; border-top: 1px solid var(--gray-4); margin: 40px 0; }
+
+    /* SUBSCRIBE BOX */
+    .subscribe-box {
+      background: var(--hero-bg); border-radius: var(--radius-lg);
+      padding: 32px 36px; margin-top: 48px; color: #fff;
+    }
+    .subscribe-box h3 { font-size: 18px; font-weight: 500; margin-bottom: 8px; color: #fff; }
+    .subscribe-box p { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; max-width: 380px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.08); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .sub-form input:focus { border-color: rgba(255,255,255,0.4); }
+    .sub-form button {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: #2563eb; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--gray-4);
+      padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+
+    /* BACK LINK */
+    .back-bar {
+      background: var(--white); border-bottom: 1px solid var(--gray-4);
+      padding: 0 40px;
+    }
+    .back-bar-inner {
+      max-width: 680px; margin: 0 auto;
+      display: flex; align-items: center; height: 40px;
+    }
+    .back-link { font-size: 12px; color: var(--gray-3); display: flex; align-items: center; gap: 4px; }
+    .back-link:hover { color: var(--black); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="./index.html" class="nav-logo">Korea Startup Thesis</a>
+  <div class="nav-right">
+    <a href="./index.html" class="nav-link-light">← Archive</a>
+    <button class="btn-sub" onclick="document.getElementById('subEmail').focus()">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-bar">
+  <div class="back-bar-inner">
+    <a href="./index.html" class="back-link">← All issues</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Issue #002 &nbsp;·&nbsp; Company Deep Dive &nbsp;·&nbsp; June 24, 2026</p>
+    <h1>Toss: The Dentist Who Dismantled Korea's Banking Oligopoly</h1>
+    <div class="hero-tags">
+      <span class="tag tag-blue">Fintech</span>
+      <span class="tag tag-green">First Profit 2024</span>
+      <span class="tag tag-outline">Pre-IPO</span>
+      <span class="tag tag-outline">Founded 2013</span>
+    </div>
+    <p class="hero-summary">
+      Sending money in Korea used to take <strong>30 clicks and three passwords</strong>. Lee Seung-gun — a dentist — spent eight months fighting regulators to change that with a three-tap wire transfer. A decade later, <strong>Toss is used by 60% of South Korea's population</strong>, crossed 2 trillion KRW in annual revenue in 2024, posted its first full-year profit, and is targeting a <strong>$10B+ US IPO in 2026</strong>. The thesis isn't about a single product. It's about what happens when you rebuild the entire financial stack from scratch in a market that never had a real alternative.
+    </p>
+    <p class="pub-date">Published June 24, 2026 · Korea Startup Thesis</p>
+  </div>
+</div>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+  <div class="kpi-inner">
+    <div class="kpi-item">
+      <p class="kpi-num">30M</p>
+      <p class="kpi-label">Registered users</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">₩2T+</p>
+      <p class="kpi-label">2024 Revenue (+43%)</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">$10B+</p>
+      <p class="kpi-label">Target IPO valuation</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">2024</p>
+      <p class="kpi-label">First full-year profit</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+
+  <h2>The Problem: A Market Built for Friction</h2>
+
+  <p>
+    To understand why Toss exists, you need to understand what Korean banking looked like before it. Korea has five dominant commercial banks — KB Kookmin, Shinhan, Hana, Woori, and NH Agricultural — that collectively control the vast majority of deposits and lending. They are profitable, entrenched, and not particularly motivated to improve user experience. Sending money between accounts required navigating a desktop application, downloading a security plugin, entering multiple passwords, and confirming via a secondary authentication device.
+  </p>
+
+  <p>
+    The problem wasn't unique to Korea, but Korea had a specific aggravating factor: <strong>regulatory capture</strong>. The incumbents had used their influence to construct a compliance environment that made new entrants nearly impossible to license. When Lee Seung-gun tried to obtain a small payments license in 2013, he was rejected eight times over eight months. Regulators kept citing rules that didn't exist in writing or applying standards inconsistently. He only got through by physically camping at the Financial Services Commission with lawyers.
+  </p>
+
+  <div class="callout callout-blue">
+    <p class="callout-title">The structural moat Toss is attacking</p>
+    <p>Korea's five largest banks collectively hold over 60% of retail deposits and were established between 1897 and 1967. They have never faced a serious domestic challenger. Their combined NIM advantage over Toss Bank currently stands at approximately 80–120 basis points — not because their cost of capital is lower, but because their customers have nowhere else to go.</p>
+  </div>
+
+  <h2>The Founder: Eight Rejections Before the First Approval</h2>
+
+  <p>
+    Lee Seung-gun graduated from Seoul National University School of Dentistry — Korea's most prestigious — and practiced as a dentist for a brief period before deciding his real interest was software. He had no banking background. He had no connections at the Financial Services Commission. What he had was a specific, visceral frustration with how difficult it was to send someone money.
+  </p>
+
+  <p>
+    His first product — a simple peer-to-peer wire transfer app requiring nothing more than a phone number and a single PIN — launched in 2015 after that eight-month approval fight. It spread almost entirely by word of mouth. Within three months, Toss had processed over 100 billion KRW in transfers. The banks noticed. Several attempted to build competing products; none launched in time to matter.
+  </p>
+
+  <p>
+    Lee's operating thesis from the beginning was not "build a payments company." It was <strong>"become the financial OS of Korean consumers."</strong> Every product since — credit scores, stock trading, insurance, banking — has been designed around a single user experience layer with Toss at the center.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">2013</span>
+      <span class="timeline-content"><strong>Founded</strong> — Lee Seung-gun incorporates Viva Republica. First FSC rejection received within 30 days.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2015</span>
+      <span class="timeline-content"><strong>Launch</strong> — Toss app goes live after 8 regulatory rejections. 100B KRW in transfers within first 3 months.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2018</span>
+      <span class="timeline-content"><strong>Unicorn</strong> — $80M Series D led by Kleiner Perkins and Ribbit Capital at $1.2B valuation.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2021</span>
+      <span class="timeline-content"><strong>Toss Bank launch</strong> — Digital bank license obtained. Toss Securities also launches. $410M Series G raised.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2023</span>
+      <span class="timeline-content"><strong>Revenue inflection</strong> — 1.96T KRW revenue (+47% YoY). First operating profit at the group level.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2024</span>
+      <span class="timeline-content"><strong>First full-year net profit</strong> — 21.3B KRW net income. Revenue grows 43% YoY. SEC discussions begin for US IPO.</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2025</span>
+      <span class="timeline-content"><strong>Acceleration</strong> — Revenue ~2.68T KRW (+38%). Net profit grows 847% YoY. Operating profit up 270%.</span>
+    </div>
+  </div>
+
+  <h2>The Business: Five Companies Inside One App</h2>
+
+  <p>
+    Toss is not a payments company. It is a holding company — Viva Republica — operating five distinct regulated financial businesses that share a single user interface. This is the structural reality that most Western observers miss when they describe it as a "super app." Each subsidiary is independently capitalized, independently licensed, and independently profitable (or on track to be):
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Subsidiary</th>
+        <th>License type</th>
+        <th>Key metric</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Toss Bank</strong></td>
+        <td>Internet-only bank</td>
+        <td>11.78M customers (+32.6% YoY)</td>
+        <td>Profitable (2024)</td>
+      </tr>
+      <tr>
+        <td><strong>Toss Securities</strong></td>
+        <td>Brokerage</td>
+        <td>~20% of group revenue</td>
+        <td>Profitable</td>
+      </tr>
+      <tr>
+        <td><strong>Toss Payments</strong></td>
+        <td>PG (payment gateway)</td>
+        <td>Largest PG by merchant count</td>
+        <td>Profitable</td>
+      </tr>
+      <tr>
+        <td><strong>Toss Insurance</strong></td>
+        <td>Insurance brokerage</td>
+        <td>Auto + life + health distribution</td>
+        <td>Growing</td>
+      </tr>
+      <tr>
+        <td><strong>Toss Credit Info</strong></td>
+        <td>Credit bureau</td>
+        <td>Alternative credit scoring</td>
+        <td>Core infrastructure</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The integration matters more than it looks. A user who opens a Toss Bank savings account is immediately shown their Toss Securities portfolio alongside it. A user who checks their credit score on the Toss app is automatically offered a pre-approved loan from Toss Bank at a better rate than the incumbent banks can match — because Toss has better behavioral data. The product is cross-selling at a scale that conventional financial institutions cannot replicate without cannibalizing their own fee structures.
+  </p>
+
+  <div class="callout callout-green">
+    <p class="callout-title">The engagement flywheel</p>
+    <p>Toss's 25M monthly active users open the app an average of <strong>10+ times per day</strong>. For context, major Korean banks report average app sessions of 1–2 per week. The engagement gap isn't explained by features alone — it's explained by Toss's position as the financial aggregation layer. Users check their consolidated net worth, spending, credit score, and investment performance in one place. Each check is a data point. Each data point improves the next offer. The flywheel compounds.</p>
+  </div>
+
+  <h2>The Numbers: What the P&L Actually Says</h2>
+
+  <p>
+    The headline story — first full-year profit in 2024 — understates what happened. The more important number is the trajectory. From a 216.6B KRW net loss in 2023 to a 21.3B KRW net profit in 2024 represents a ~238B KRW swing in twelve months. In 2025, net profit grew approximately 847% year-over-year to ~220B KRW.
+  </p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <p class="metric-val">₩2.68T</p>
+      <p class="metric-label">2025 Revenue</p>
+      <p class="metric-delta up">↑ +38% YoY</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">₩370B</p>
+      <p class="metric-label">2025 Operating Profit</p>
+      <p class="metric-delta up">↑ +270% YoY</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">₩220B</p>
+      <p class="metric-label">2025 Net Profit</p>
+      <p class="metric-delta up">↑ +847% YoY</p>
+    </div>
+  </div>
+
+  <p>
+    The operating leverage is becoming visible. Revenue grew 38% in 2025 while operating costs grew at a materially slower pace. Toss Bank's NIM — net interest margin — ran at approximately 3.2 percentage points for household loans, well above what the large commercial banks can offer borrowers. The credit default rate has stayed within acceptable bounds even as the loan book grew, which validates the proprietary credit scoring model built on behavioral data rather than traditional bureau scores.
+  </p>
+
+  <p>
+    The Q2 2025 standalone quarter showed ₩668B in consolidated revenue — a 41% year-over-year increase — suggesting the growth rate has not materially decelerated. At this run rate, the company exits 2025 at an annualized revenue pace approaching $2B USD.
+  </p>
+
+  <h2>The IPO: Why the US, and Why Now</h2>
+
+  <p>
+    Viva Republica dropped its Korean IPO plan in late 2024 and pivoted to a US listing. The rationale is straightforward: <strong>Korea's equity markets do not know how to price a financial services technology company</strong>. The KOSPI and KOSDAQ apply traditional bank P/B multiples to internet-native financial businesses, which consistently undervalues the embedded growth and network effects. Nubank on NYSE trades at a premium to book value that no Korean internet bank would receive on KOSDAQ.
+  </p>
+
+  <p>
+    The US IPO — targeting a raise of $2–3B at a $10B+ valuation — would make it the largest US debut by a Korean company since Coupang raised $4.6B in March 2021. SEC talks began in early 2026. A confidential S-1 filing was expected in Q1 2026 with a public offering targeting mid-year.
+  </p>
+
+  <div class="callout callout-amber">
+    <p class="callout-title">Valuation sanity check</p>
+    <p>At a $10B valuation against ~$1.8B in 2025 revenue, Toss would trade at roughly 5.5x EV/Revenue. Nubank currently trades at ~6x forward revenue. Block (formerly Square) trades at ~2x. Chime, the closest US private comp, was last valued at ~$25B at lower absolute revenue. The $10B number implies Toss deserves a premium to Block and a discount to Nubank — arguably defensible given Korea's smaller TAM but higher market penetration.</p>
+  </div>
+
+  <h2>The Bear Case: What Could Actually Go Wrong</h2>
+
+  <p>
+    Three real risks deserve attention, none of which are commonly discussed.
+  </p>
+
+  <p>
+    <strong>Regulatory reversal.</strong> Toss's growth has depended in part on a regulatory environment that loosened over a decade. Korea's FSC has shown willingness to re-tighten household lending caps, which directly affects Toss Bank's NIM and loan growth. In Q1 2026, Toss Bank's corporate loan balance declined 7.5% under new household debt guidelines. The company has responded by diversifying into SME lending, but the regulatory ceiling is real and non-trivial.
+  </p>
+
+  <p>
+    <strong>KakaoBank competition.</strong> KakaoBank — already publicly listed on KOSPI — hit record profits in 2025 and has 23M+ customers. It shares many of Toss's advantages (digital-native UX, no branch costs) while benefiting from the Kakao ecosystem's 47M monthly active users across Kakao Talk. Toss has higher engagement per user; KakaoBank has a larger distribution moat through the messaging layer.
+  </p>
+
+  <p>
+    <strong>International expansion cost.</strong> Toss has begun exploring Southeast Asia (notably Vietnam), which is structurally similar to early-2010s Korea in terms of underbanked population and bad incumbent UX. But replicating the regulatory fight in each new market is expensive and slow. If international expansion absorbs significant capital post-IPO without near-term revenue contribution, it will test US investor patience.
+  </p>
+
+  <h2>The Bull Case: The Inflection Has Already Happened</h2>
+
+  <p>
+    The bears focus on risks that are, to a meaningful degree, already priced. The overlooked upside is operational leverage at scale.
+  </p>
+
+  <p>
+    Toss spent 2016–2023 building infrastructure: obtaining licenses, hiring risk teams, building the credit bureau, absorbing early-year losses at Toss Bank. That investment phase is substantially complete. The five subsidiaries are now either profitable or on a defined path to profitability. What remains is harvesting the distribution: <strong>30 million registered users who already trust Toss with their financial data</strong>, across whom Toss has only begun to cross-sell.
+  </p>
+
+  <p>
+    The Toss Securities attachment rate among Toss Bank customers, for instance, remains low — which is an opportunity, not a ceiling. The auto-insurance distribution through Toss Insurance has barely launched. The credit bureau subsidiary is early-innings. Each of these is a revenue line that doesn't require new customer acquisition — it requires deepening engagement with users who are already in the app ten times a day.
+  </p>
+
+  <div class="callout callout-gray">
+    <p class="callout-title">What to watch before the IPO</p>
+    <p><strong>1. Q3/Q4 2025 NIM trend</strong> — Does Toss Bank sustain 3.2%+ NIM as household lending caps tighten? Compression here is the single most important leading indicator for bank-segment valuation.</p>
+    <p><strong>2. S-1 disclosure</strong> — The confidential filing will reveal cohort retention data and cross-sell attachment rates for the first time. These numbers will determine whether $10B is the floor or the ceiling.</p>
+    <p><strong>3. Southeast Asia capex guidance</strong> — How much post-IPO capital is earmarked for international expansion, and on what timeline? The answer determines whether Toss is a Korea profitability story or a global growth story — two very different valuation frameworks.</p>
+  </div>
+
+  <h2>The Bottom Line</h2>
+
+  <p>
+    Toss is not a bet on a product. It is a bet on a company that has built the financial infrastructure layer for a 52-million-person economy — and done so with better unit economics than the incumbents who had a century head start. The 2024 profit inflection wasn't a milestone; it was confirmation that the cost structure is sustainable. The 2025 acceleration was confirmation that the model compounds.
+  </p>
+
+  <p>
+    Whether the US IPO prices at $10B or $15B is a secondary question. The primary question — whether Toss will be the dominant financial services platform in Korea for the next two decades — has already been answered by the behavior of its 30 million users, who open the app more than any bank in the country has ever achieved.
+  </p>
+
+  <p>
+    The dentist got eight rejections and kept going. That stubbornness is now a $10 billion company.
+  </p>
+
+  <hr class="divider">
+
+  <!-- SUBSCRIBE BOX -->
+  <div class="subscribe-box">
+    <h3>Korea Startup Thesis</h3>
+    <p>One company, every week. Global investors, Korean startups. Subscribe to get the next issue.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="subEmail">
+      <button onclick="handleSubscribe('subEmail')">Subscribe free</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <a href="./index.html" class="footer-left">Korea Startup Thesis</a>
+  <span class="footer-right">© 2026 · Weekly intelligence for global investors</span>
+</footer>
+
+<script>
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe(inputId) {
+    const emailEl = document.getElementById(inputId);
+    const email = emailEl.value.trim();
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+    const btn = emailEl.parentElement.querySelector('button');
+    if (btn) { btn.textContent = 'Subscribing…'; btn.disabled = true; }
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article2' })
+      });
+      if (res.ok || res.status === 409) {
+        window.location.href = 'thankyou.html';
+      } else {
+        if (btn) { btn.textContent = 'Subscribe free'; btn.disabled = false; }
+        alert('Something went wrong. Please try again.');
+      }
+    } catch(e) {
+      if (btn) { btn.textContent = 'Subscribe free'; btn.disabled = false; }
+      alert('Connection error. Please try again.');
+    }
+  }
+</script>
+
+</body>
+</html>
