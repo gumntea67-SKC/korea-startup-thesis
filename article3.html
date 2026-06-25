@@ -232,17 +232,124 @@
     .footer-left { font-size: 13px; font-weight: 500; }
     .footer-right { font-size: 12px; color: var(--gray-3); }
 
+    /* TAB BAR */
+    .tab-bar {
+      position: sticky; top: 56px; z-index: 99;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .tab-bar-inner {
+      max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex;
+    }
+    .nav-tab {
+      font-size: 13px; font-weight: 500; padding: 0 20px; height: 44px;
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,0.45); border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s; white-space: nowrap;
+    }
+    .nav-tab:first-child { padding-left: 0; }
+    .nav-tab + .nav-tab { border-left: 1px solid rgba(255,255,255,0.12); }
+    .nav-tab:hover { color: rgba(255,255,255,0.8); }
+    .nav-tab.active { color: #fff; }
+    .nav-tab::before {
+      content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      margin-right: 6px; vertical-align: middle; opacity: 0.4; transition: opacity 0.15s;
+    }
+    .nav-tab.active::before { opacity: 1; }
+    .nav-tab[data-tab="deepdive"]::before { background: #60a5fa; }
+    .nav-tab[data-tab="ones"]::before     { background: #4ade80; }
+    .nav-tab[data-tab="deals"]::before    { background: #fb923c; }
+    .nav-tab[data-tab="deepdive"].active  { border-bottom-color: #60a5fa; }
+    .nav-tab[data-tab="ones"].active      { border-bottom-color: #4ade80; }
+    .nav-tab[data-tab="deals"].active     { border-bottom-color: #fb923c; }
+    .nav-tab-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      border-radius: 10px; padding: 1px 6px; margin-left: 4px; vertical-align: middle;
+    }
+    .nav-tab[data-tab="deepdive"] .nav-tab-badge { background: rgba(96,165,250,0.2); color: #93c5fd; }
+    .nav-tab[data-tab="ones"] .nav-tab-badge     { background: rgba(74,222,128,0.2); color: #86efac; }
+    .nav-tab[data-tab="deals"] .nav-tab-badge    { background: rgba(251,146,60,0.2); color: #fdba74; }
+
+    /* TAB PANELS */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* PANEL HERO (Ones / Deals) */
+    .panel-hero-wrap { }
+    #panel-ones .panel-hero-wrap  { background: #dcfce7; }
+    #panel-deals .panel-hero-wrap { background: #ffedd5; }
+    .panel-hero { max-width: 680px; margin: 0 auto; padding: 36px 40px 32px; }
+    .panel-hero h1 { font-size: 24px; font-weight: 500; color: var(--black); letter-spacing: -0.5px; margin-bottom: 10px; }
+    .panel-eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    #panel-ones .panel-eyebrow  { color: #16a34a; }
+    #panel-deals .panel-eyebrow { color: #c2410c; }
+    .panel-summary { font-size: 14px; color: var(--gray-1); line-height: 1.7; padding-left: 14px; margin-top: 10px; }
+    #panel-ones .panel-summary  { border-left: 3px solid #16a34a; }
+    #panel-deals .panel-summary { border-left: 3px solid #ea580c; }
+
+    /* SECTION EYEBROW (Ones / Deals) */
+    .section-eyebrow {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 22px;
+    }
+    .section-eyebrow span {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; white-space: nowrap;
+    }
+    #panel-ones .section-eyebrow span  { color: #16a34a; }
+    #panel-deals .section-eyebrow span { color: #c2410c; }
+    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-4); }
+
+    /* PANEL WRAP */
+    .panel-wrap { max-width: 680px; margin: 0 auto; padding: 0 40px 80px; }
+
+    /* ONES TO WATCH */
+    .watch-cards { display: flex; flex-direction: column; }
+    .watch-card { padding: 20px 0; border-bottom: 1px solid var(--gray-4); display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+    .watch-card:last-child { border-bottom: none; }
+    .watch-card-name { font-size: 15px; font-weight: 500; margin-bottom: 3px; letter-spacing: -0.2px; }
+    .watch-card-sub { font-size: 12px; color: var(--gray-2); margin-bottom: 8px; }
+    .watch-card-desc { font-size: 13px; color: var(--gray-1); line-height: 1.75; }
+    .watch-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+    /* DEAL TABLE */
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 4px; }
+    .deal-table th {
+      text-align: left; font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-2);
+      padding: 0 10px 10px 0; border-bottom: 1px solid var(--gray-4);
+    }
+    .deal-table td { padding: 11px 10px 11px 0; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-co { font-weight: 500; color: var(--black); display: block; margin-bottom: 2px; }
+    .deal-note { font-size: 11px; color: var(--gray-3); }
+    .deal-amount { font-weight: 500; color: var(--black); white-space: nowrap; }
+
+    /* SOURCES */
+    .sources { padding: 28px 0 8px; border-top: 1px solid var(--gray-4); margin-top: 8px; }
+    .sources-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-3); margin-bottom: 14px; }
+    .sources-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sources-list li { display: grid; grid-template-columns: 20px 1fr; gap: 6px; font-size: 12px; color: var(--gray-2); line-height: 1.6; }
+    .sources-list li span { color: var(--gray-3); padding-top: 1px; }
+    .sources-list a { color: var(--gray-2); text-decoration: underline; text-decoration-color: var(--gray-4); }
+    .sources-list a:hover { color: var(--accent); }
+
     /* BACK LINK */
-    .back-bar {
-      background: var(--white); border-bottom: 1px solid var(--gray-4);
-      padding: 0 40px;
-    }
-    .back-bar-inner {
-      max-width: 680px; margin: 0 auto;
-      display: flex; align-items: center; height: 40px;
-    }
-    .back-link { font-size: 12px; color: var(--gray-3); display: flex; align-items: center; gap: 4px; }
+    .back-link-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); padding: 0 40px; }
+    .back-link-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; height: 40px; }
+    .back-link { font-size: 12px; color: var(--gray-3); }
     .back-link:hover { color: var(--black); }
+
+    /* FAB */
+    .fab-top {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(26,86,219,0.35);
+      opacity: 0; pointer-events: none; transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .fab-top:hover { background: var(--accent-dark); }
   </style>
 </head>
 <body>
@@ -255,8 +362,19 @@
   </div>
 </nav>
 
-<div class="back-bar">
-  <div class="back-bar-inner">
+<div class="tab-bar">
+  <div class="tab-bar-inner">
+    <button class="nav-tab active" data-tab="deepdive">Company Deep Dive</button>
+    <button class="nav-tab" data-tab="ones">Ones to Watch <span class="nav-tab-badge">3</span></button>
+    <button class="nav-tab" data-tab="deals">Deal Tracker <span class="nav-tab-badge">5</span></button>
+  </div>
+</div>
+
+<!-- ===== PANEL: COMPANY DEEP DIVE ===== -->
+<div class="tab-panel active" id="panel-deepdive">
+
+<div class="back-link-bar">
+  <div class="back-link-inner">
     <a href="./index.html" class="back-link">← All issues</a>
   </div>
 </div>
@@ -620,7 +738,169 @@
     </div>
   </div>
 
+</div><!-- end article-wrap -->
+</div><!-- end panel-deepdive -->
+
+
+<!-- ===== PANEL: ONES TO WATCH ===== -->
+<div class="tab-panel" id="panel-ones">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #003 &nbsp;·&nbsp; June 26, 2026</p>
+    <h1>Ones to Watch</h1>
+    <p class="panel-summary">Early-stage Korean startups worth putting on your radar — curated signals for global investors tracking Korea's next breakout companies.</p>
+  </div>
 </div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Ones to watch &nbsp;·&nbsp; Issue #003</span></div>
+    <div class="watch-cards">
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Bone AI</p>
+          <p class="watch-card-sub">Defense robotics &nbsp;·&nbsp; Seed $12M &nbsp;·&nbsp; Seoul + Palo Alto &nbsp;·&nbsp; Founded 2024</p>
+          <p class="watch-card-desc">Founded by the co-founder of MarqVision, Bone AI combines AI software with hardware manufacturing to build drones, ground unmanned vehicles, and maritime unmanned vessels for defense customers. What makes it notable is the traction velocity: within its first year, it was generating $3M in revenue, landing seven-figure government contracts, and had already completed an acquisition (D-Makers) to internalize hardware IP. The $12M seed round — backed by Third Prime and Kolon Group, with the founder committing $1.5M personally — signals a founder with high conviction and strategic investors who want defense-tech exposure in Korea. Given the backdrop of Korea's defense budget expansion and the government's "ABCDEF" deep tech industrial strategy, Bone is worth watching as one of the first Korean defense-tech startups with cross-Pacific capital structure.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-outline">Seed</span>
+          <span class="tag tag-outline">Defense</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">WIRobotics</p>
+          <p class="watch-card-sub">Humanoid / exoskeleton robotics &nbsp;·&nbsp; Series B KRW 95B (~$68M) &nbsp;·&nbsp; May 2026</p>
+          <p class="watch-card-desc">WIRobotics closed a KRW 95B Series B in May 2026 — one of the largest robotics rounds in Korean history — on the back of its ALLEX humanoid platform, which is built around technologies designed to understand and augment human movement. Revenue has been doubling every year: ₩560M in 2023, ₩1.3B in 2024, ₩2.79B in 2025, with Q1 2026 alone already exceeding full-year 2024. The Series B follows a ₩13B Series A just two years prior, suggesting strong investor conviction in the trajectory. The physical AI narrative is global right now — Figure, 1X, Apptronik are all raising at multiples of WIRobotics' implied valuation — and the company's medical/rehabilitation heritage gives it a credible deployment pathway that pure-play humanoid startups lack.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series B</span>
+          <span class="tag tag-outline">Robotics</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Ticaros</p>
+          <p class="watch-card-sub">CAR-T immunotherapy &nbsp;·&nbsp; Series D KRW 20.8B &nbsp;·&nbsp; Bio/Oncology &nbsp;·&nbsp; 2026</p>
+          <p class="watch-card-desc">Korean biotech has historically struggled to translate academic research into clinical-stage assets that global pharma takes seriously. Ticaros is a notable exception: a CAR-T immunotherapy developer that closed a KRW 20.8B Series D in 2026, putting it at the late-stage end of Korea's oncology pipeline. CAR-T is a high-stakes, high-capital segment — US approvals (Kymriah, Yescarta) have created a global market but existing products target limited indications and carry significant manufacturing complexity. The Korea structural advantage here mirrors S2W's in cyber: hospitals, patient data, and clinical trial infrastructure are highly digitized and nationally coordinated, providing a research velocity advantage that matters in clinical AI and immunotherapy development. Ticaros reaching Series D without a Western acquirer signals either genuine independence ambitions or a pricing disagreement — worth watching to see which.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series D</span>
+          <span class="tag tag-outline">Bio / Oncology</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>TechCrunch, <a href="https://techcrunch.com/2025/11/17/bone-ai-raises-funding-to-challenge-asias-defense-giants-with-next-gen-ai-powered-robotics/" target="_blank">Bone AI raises $12M to challenge Asia's defense giants with AI-powered robotics,</a> techcrunch.com, November 2025</div></li>
+      <li><span>2</span><div>WIRobotics, <em>Series B KRW 95B Funding Announcement,</em> prnewswire.com, May 2026</div></li>
+      <li><span>3</span><div>KoreaTechDesk, <em>Physical AI Moves from Labs to Markets as Korea's Deep-Tech Funding Expands,</em> koreatechdesk.com, March 2026</div></li>
+      <li><span>4</span><div>Seoul Economic Daily, <em>Korean Startup Investment Tops 1 Trillion Won for Third Straight Month,</em> en.sedaily.com, June 2026</div></li>
+      <li><span>5</span><div>KoreaTechDesk, <em>AI Healthcare and Industrial AI Lead Korea's Latest Startup Funding Wave,</em> koreatechdesk.com, March 2026</div></li>
+    </ol>
+  </div>
+</div><!-- end panel-wrap -->
+</div><!-- end panel-ones -->
+
+
+<!-- ===== PANEL: DEAL TRACKER ===== -->
+<div class="tab-panel" id="panel-deals">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #003 &nbsp;·&nbsp; June 26, 2026</p>
+    <h1>Deal Tracker</h1>
+    <p class="panel-summary">Recent Korean startup funding rounds — stage, amount, and sector context for global investors tracking Korea deal flow.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Deal tracker &nbsp;·&nbsp; June 2026</span></div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Stage</th>
+          <th>Amount</th>
+          <th>Sector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="deal-co">WIRobotics</span>
+            <span class="deal-note">ALLEX humanoid platform · Revenue doubling YoY · 2yr since Series A</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">KRW 95B</td>
+          <td><span class="tag tag-blue">Physical AI</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Ticaros</span>
+            <span class="deal-note">CAR-T immunotherapy developer · Late-stage Korean oncology pipeline</span>
+          </td>
+          <td>Series D</td>
+          <td class="deal-amount">KRW 20.8B</td>
+          <td><span class="tag tag-outline">Bio / CAR-T</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">ARK</span>
+            <span class="deal-note">AI screening for chronic disease complications · Hospital system partnerships</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 20B</td>
+          <td><span class="tag tag-blue">AI Healthcare</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Bone AI</span>
+            <span class="deal-note">Defense drones + UGV · $3M revenue in year 1 · Kolon Group strategic investor</span>
+          </td>
+          <td>Seed</td>
+          <td class="deal-amount">$12M</td>
+          <td><span class="tag tag-outline">Defense AI</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Scon</span>
+            <span class="deal-note">Virtual entertainment & digital character IP · K-content expansion play</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 7.5B</td>
+          <td><span class="tag tag-outline">Content / IP</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--gray-3); margin-top:12px;">Korean startup investment topped ₩1T for the third consecutive month in May 2026 — the first sustained run above that threshold since the 2022 market downturn. 43% of seed-stage deals were concentrated in AI and robotics.</p>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Seoul Economic Daily, <a href="https://en.sedaily.com/finance/2026/06/03/korean-startup-investment-tops-1-trillion-won-for-third" target="_blank">Korean Startup Investment Tops 1 Trillion Won for Third Straight Month,</a> en.sedaily.com, June 2026</div></li>
+      <li><span>2</span><div>PR Newswire, <a href="https://www.prnewswire.com/news-releases/wirobotics-secures-approximately-krw-100-billion-usd-68-million-series-b-funding-302772164.html" target="_blank">WIRobotics Secures Approximately KRW 100 Billion Series B Funding,</a> prnewswire.com, May 2026</div></li>
+      <li><span>3</span><div>KoreaTechDesk, <em>AI Healthcare and Industrial AI Lead Korea's Latest Startup Funding Wave,</em> koreatechdesk.com, March 2026</div></li>
+      <li><span>4</span><div>TechCrunch, <em>Bone AI raises $12M to challenge Asia's defense giants,</em> techcrunch.com, November 2025</div></li>
+      <li><span>5</span><div>TheVC (더브이씨), <a href="https://thevc.kr" target="_blank">Korean startup investment database,</a> thevc.kr, accessed June 2026</div></li>
+      <li><span>6</span><div>Tracxn, <em>Startups in South Korea — 2026 Latest Funding Rounds,</em> tracxn.com, accessed June 2026</div></li>
+    </ol>
+  </div>
+</div><!-- end panel-wrap -->
+</div><!-- end panel-deals -->
+
+
+<button class="fab-top" id="fabTop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <footer>
   <span class="footer-left">Korea Startup Thesis</span>
@@ -633,10 +913,7 @@
 
   async function handleSubscribe() {
     const email = document.getElementById('subEmail').value.trim();
-    if (!email || !email.includes('@')) {
-      alert('Please enter a valid email address.');
-      return;
-    }
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
         method: 'POST',
@@ -648,15 +925,34 @@
         },
         body: JSON.stringify({ email, source: 'article3' })
       });
-      if (res.ok || res.status === 409) {
-        window.location.href = 'thankyou.html';
-      } else {
-        alert('Something went wrong. Please try again.');
-      }
-    } catch(e) {
-      alert('Something went wrong. Please try again.');
+      if (res.ok || res.status === 409) { window.location.href = 'thankyou.html'; }
+      else { alert('Something went wrong. Please try again.'); }
+    } catch(e) { alert('Something went wrong. Please try again.'); }
+  }
+
+  let activeTab = 'deepdive';
+  const fab = document.getElementById('fabTop');
+
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + activeTab).classList.add('active');
+      document.querySelector('.tab-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateFab();
+    });
+  });
+
+  function updateFab() {
+    if (activeTab === 'deepdive' && window.scrollY > 320) {
+      fab.classList.add('visible');
+    } else {
+      fab.classList.remove('visible');
     }
   }
+  window.addEventListener('scroll', updateFab, { passive: true });
 </script>
 </body>
 </html>
