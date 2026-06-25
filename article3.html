@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S2W: The KAIST Lab That Mapped the Dark Web for INTERPOL — Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/s2w-issue-003">
+  <link rel="alternate" type="application/rss+xml" title="Korea Startup Thesis" href="https://koreastartupthesis.com/feed.xml">
+
+  <meta name="description" content="S2W is a KAIST spin-off that built DarkBERT — the world's first dark web language model — and became INTERPOL's only Korean cybersecurity partner. It listed on KOSDAQ in 2025 with a 1,972:1 subscription ratio and is targeting Japan, Singapore, and the global B2G defense market.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="S2W, 에스투더블유, Korea cybersecurity, dark web AI, DarkBERT, QUAXAR, XARVIS, KAIST startup, KOSDAQ IPO, Korea AI, cyber threat intelligence">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="S2W: The KAIST Lab That Mapped the Dark Web for INTERPOL">
+  <meta property="og:description" content="From a university security lab to INTERPOL partner. DarkBERT. A 1,972:1 IPO subscription ratio. Inside Korea's most interesting B2G AI bet.">
+  <meta property="og:url" content="https://koreastartupthesis.com/s2w-issue-003">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/s2w-003.png">
+  <meta property="article:published_time" content="2026-06-26T00:00:00Z">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Cybersecurity">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="KOSDAQ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="S2W: Korea's dark web AI company — INTERPOL partner, KOSDAQ IPO, 'Palantir of Asia'">
+  <meta name="twitter:description" content="S2W built DarkBERT, became INTERPOL's first Korean cybersecurity partner, and listed on KOSDAQ with a 1,972:1 subscription ratio. Now targeting the global defense market.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/s2w-003.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "S2W: The KAIST Lab That Mapped the Dark Web for INTERPOL",
+    "description": "Deep dive into S2W, the Korean AI data intelligence company that built DarkBERT, partnered with INTERPOL, and listed on KOSDAQ with a 1,972:1 subscription ratio.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "author": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "publisher": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "mainEntityOfPage": "https://koreastartupthesis.com/s2w-issue-003",
+    "image": "https://koreastartupthesis.com/og/s2w-003.png",
+    "keywords": ["S2W", "DarkBERT", "dark web AI", "Korea cybersecurity", "INTERPOL", "KOSDAQ"],
+    "articleSection": "Company Deep Dive",
+    "about": {
+      "@type": "Organization",
+      "name": "S2W Inc.",
+      "foundingDate": "2018",
+      "description": "AI-powered data intelligence company specializing in cyber threat intelligence",
+      "url": "https://s2w.inc"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111; --gray-1: #444; --gray-2: #777; --gray-3: #aaa;
+      --gray-4: #e5e5e5; --gray-5: #f5f5f5; --white: #fff;
+      --accent: #1a56db; --accent-light: #ebf1fd; --accent-dark: #0c3080;
+      --hero-bg: #0f1923; --hero-accent: #3b82f6;
+      --green: #16a34a; --green-light: #dcfce7; --green-dark: #14532d;
+      --amber-light: #fffbeb; --amber-dark: #92400e;
+      --red-light: #fef2f2; --red-dark: #991b1b;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fafafa; color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; color: #fff; letter-spacing: -0.3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-link-light { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nav-link-light:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: #2563eb; }
+
+    /* HERO */
+    .hero-wrap { background: #e0f0ff; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 52px 40px 48px; }
+    .hero-eyebrow {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 14px; font-weight: 500;
+    }
+    .hero h1 {
+      font-size: 30px; font-weight: 500; line-height: 1.25;
+      letter-spacing: -0.6px; margin-bottom: 14px; color: var(--black);
+    }
+    .hero-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-sm); font-weight: 500; }
+    .tag-blue { background: rgba(26,86,219,0.1); color: var(--accent-dark); border: 1px solid rgba(26,86,219,0.2); }
+    .tag-outline { border: 1px solid rgba(0,0,0,0.15); color: var(--gray-1); }
+    .tag-green { background: var(--green-light); color: var(--green-dark); border: 1px solid rgba(22,163,74,0.2); }
+    .tag-red { background: var(--red-light); color: var(--red-dark); border: 1px solid rgba(153,27,27,0.2); }
+    .hero-summary {
+      font-size: 15px; color: var(--gray-1); line-height: 1.85;
+      border-left: 3px solid var(--accent); padding-left: 18px;
+    }
+    .hero-summary strong { color: var(--black); font-weight: 500; }
+    .pub-date { font-size: 12px; color: var(--gray-3); margin-top: 20px; }
+
+    /* KPI BAR */
+    .kpi-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); }
+    .kpi-inner {
+      max-width: 680px; margin: 0 auto; padding: 0 40px;
+      display: flex; gap: 0;
+    }
+    .kpi-item {
+      flex: 1; padding: 16px 20px;
+      border-right: 1px solid var(--gray-4);
+    }
+    .kpi-item:first-child { padding-left: 0; }
+    .kpi-item:last-child { border-right: none; padding-right: 0; }
+    .kpi-num { font-size: 20px; font-weight: 500; color: var(--accent-dark); margin-bottom: 2px; }
+    .kpi-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ARTICLE BODY */
+    .article-wrap { max-width: 680px; margin: 0 auto; padding: 48px 40px 80px; }
+
+    h2 {
+      font-size: 19px; font-weight: 500; letter-spacing: -0.3px;
+      margin-top: 48px; margin-bottom: 16px; color: var(--black);
+      padding-bottom: 10px; border-bottom: 1px solid var(--gray-4);
+    }
+    h3 {
+      font-size: 15px; font-weight: 500; margin-top: 28px; margin-bottom: 10px; color: var(--black);
+    }
+    p { font-size: 15px; color: var(--gray-1); line-height: 1.85; margin-bottom: 18px; }
+    p strong { color: var(--black); font-weight: 500; }
+    p em { font-style: italic; color: var(--gray-2); }
+
+    /* CALLOUT BOXES */
+    .callout {
+      border-radius: var(--radius-lg); padding: 20px 24px; margin: 28px 0;
+    }
+    .callout-blue { background: var(--accent-light); border: 1px solid rgba(26,86,219,0.15); }
+    .callout-green { background: var(--green-light); border: 1px solid rgba(22,163,74,0.2); }
+    .callout-amber { background: var(--amber-light); border: 1px solid rgba(234,179,8,0.3); }
+    .callout-gray { background: var(--gray-5); border: 1px solid var(--gray-4); }
+    .callout-red { background: var(--red-light); border: 1px solid rgba(153,27,27,0.2); }
+    .callout-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-3); margin-bottom: 12px; }
+    .callout p { margin-bottom: 0; font-size: 14px; }
+    .callout p + p { margin-top: 8px; }
+
+    /* DATA TABLE */
+    .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .data-table th {
+      text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--gray-3); padding: 8px 12px;
+      border-bottom: 1px solid var(--gray-4); background: var(--gray-5);
+    }
+    .data-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .data-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+    .data-table td { padding: 11px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); }
+    .data-table td strong { color: var(--black); font-weight: 500; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: #fafafa; }
+
+    /* METRIC ROW */
+    .metric-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0;
+    }
+    .metric-card {
+      background: var(--white); border: 1px solid var(--gray-4);
+      border-radius: var(--radius-lg); padding: 16px 18px;
+    }
+    .metric-val { font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .metric-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+    .metric-delta { font-size: 12px; margin-top: 4px; }
+    .up { color: var(--green); }
+    .neutral { color: var(--gray-3); }
+    .down { color: #dc2626; }
+
+    /* TIMELINE */
+    .timeline { margin: 24px 0; }
+    .timeline-item {
+      display: flex; gap: 16px; padding: 14px 0;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-year {
+      font-size: 12px; font-weight: 500; color: var(--accent);
+      min-width: 44px; margin-top: 1px;
+    }
+    .timeline-content { font-size: 14px; color: var(--gray-1); line-height: 1.6; }
+    .timeline-content strong { color: var(--black); font-weight: 500; }
+
+    /* SECTION DIVIDER */
+    .divider { border: none; border-top: 1px solid var(--gray-4); margin: 40px 0; }
+
+    /* SUBSCRIBE BOX */
+    .subscribe-box {
+      background: var(--hero-bg); border-radius: var(--radius-lg);
+      padding: 32px 36px; margin-top: 48px; color: #fff;
+    }
+    .subscribe-box h3 { font-size: 18px; font-weight: 500; margin-bottom: 8px; color: #fff; }
+    .subscribe-box p { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; max-width: 380px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.08); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .sub-form input:focus { border-color: rgba(255,255,255,0.4); }
+    .sub-form button {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: #2563eb; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--gray-4);
+      padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+
+    /* BACK LINK */
+    .back-bar {
+      background: var(--white); border-bottom: 1px solid var(--gray-4);
+      padding: 0 40px;
+    }
+    .back-bar-inner {
+      max-width: 680px; margin: 0 auto;
+      display: flex; align-items: center; height: 40px;
+    }
+    .back-link { font-size: 12px; color: var(--gray-3); display: flex; align-items: center; gap: 4px; }
+    .back-link:hover { color: var(--black); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="./index.html" class="nav-logo">Korea Startup Thesis</a>
+  <div class="nav-right">
+    <a href="./index.html" class="nav-link-light">← Archive</a>
+    <button class="btn-sub" onclick="document.getElementById('subEmail').focus()">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-bar">
+  <div class="back-bar-inner">
+    <a href="./index.html" class="back-link">← All issues</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Issue #003 &nbsp;·&nbsp; Company Deep Dive &nbsp;·&nbsp; June 26, 2026</p>
+    <h1>S2W: The KAIST Lab That Mapped the Dark Web for INTERPOL</h1>
+    <div class="hero-tags">
+      <span class="tag tag-blue">Cybersecurity AI</span>
+      <span class="tag tag-green">KOSDAQ IPO 2025</span>
+      <span class="tag tag-outline">B2G / Defense</span>
+      <span class="tag tag-outline">Founded 2018</span>
+    </div>
+    <p class="hero-summary">
+      Most companies claim to use AI. S2W built <strong>DarkBERT</strong> — a language model trained entirely on dark web data — published it at ACL 2023, and handed it to INTERPOL. The Seongnam-based startup spent its first seven years as the only Korean cybersecurity firm that foreign governments and intelligence agencies trusted enough to sign contracts with. It listed on KOSDAQ in September 2025 with a <strong>1,972-to-1 subscription ratio</strong>, pulling in ₩5.14 trillion in bids for a sub-₩100B deal. Now it is pursuing what it calls the <strong>"Palantir of Asia" playbook</strong> — Japan, Singapore, Southeast Asia — and betting that the dark web intelligence moat it has spent seven years building is worth far more outside Korea than inside it.
+    </p>
+    <p class="pub-date">Published June 26, 2026 · Korea Startup Thesis</p>
+  </div>
+</div>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+  <div class="kpi-inner">
+    <div class="kpi-item">
+      <p class="kpi-num">1,972:1</p>
+      <p class="kpi-label">IPO subscription ratio</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">₩19.5B</p>
+      <p class="kpi-label">2026E Revenue (+93%)</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">90%</p>
+      <p class="kpi-label">DarkBERT accuracy</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">#1</p>
+      <p class="kpi-label">Korean INTERPOL partner</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-wrap">
+
+  <h2>The Problem: Intelligence That Lives Where No One Looks</h2>
+
+  <p>
+    Most of the world's most valuable threat intelligence isn't on Google. It lives on Tor-routed dark web forums where ransomware gangs auction stolen credentials, on Telegram channels where nation-state operators coordinate, and in cryptocurrency transaction graphs where money-laundering flows are traceable if you know how to read them. Enterprises and governments are perpetually a step behind because the data is structurally inaccessible — it requires constant scraping across thousands of constantly-changing onion addresses, translation of jargon that shifts weekly, and graph analysis connecting pseudonymous identities across platforms.
+  </p>
+
+  <p>
+    Existing solutions in 2018 were largely built by Western cybersecurity firms — Recorded Future, Flashpoint, Digital Shadows — that had designed their products for enterprise IT security teams, not for law enforcement or national intelligence operations. They were expensive, English-centric, and not optimized for the specific threats most relevant to Asian governments: <strong>North Korean crypto theft operations, Chinese APT groups, and Asian-language cybercrime forums</strong> that Western tools barely indexed. The gap wasn't a product gap. It was a data and research gap.
+  </p>
+
+  <div class="callout callout-blue">
+    <p class="callout-title">Why the dark web is structurally different from the surface web</p>
+    <p>Dark web forums use constantly evolving slang, encrypted messaging norms, and are deliberately designed to evade automated crawling. A standard BERT model trained on Wikipedia and news text achieves under 60% accuracy classifying illegal content on dark web forums. DarkBERT, trained on 5.83GB of actual dark web text, achieves 90%. That gap is not a model architecture improvement — it's a data moat.</p>
+  </div>
+
+  <h2>The Founders: When a Security Professor Needs a CEO</h2>
+
+  <p>
+    S2W's origin story is unusually clean for a deep-tech startup: a researcher who had the insight but not the business experience found someone who had the business experience but was looking for a deep-tech problem worth his time.
+  </p>
+
+  <p>
+    <strong>Shin Seung-won</strong> is a professor at KAIST's Graduate School of Information Security, widely considered Korea's top academic authority on dark web analysis. His lab had been crawling and indexing dark web data for years, producing research that Korean law enforcement agencies increasingly relied on but couldn't operationalize at scale. The data existed; the productization didn't. In 2018, Shin approached <strong>Seo Sang-deok</strong> — a KAIST electrical engineering graduate who had subsequently gotten an MBA from Michigan and had prior startup experience — with a direct proposition: co-found a company around the lab's dark web research.
+  </p>
+
+  <p>
+    Seo's background is unusual for a deep-tech CEO. He is not a researcher. He is explicitly an operator: someone who can translate academic IP into government contracts, manage investor relations, and build the kind of institutional credibility that gets a Korean startup into INTERPOL's partner program. S2W was incorporated in September 2018 in Seongnam, near KAIST's Seoul campus, with the lab's dark web corpus and research methodology as its primary asset.
+  </p>
+
+  <div class="callout callout-gray">
+    <p class="callout-title">Founder profiles</p>
+    <p><strong>Seo Sang-deok (CEO):</strong> KAIST EE → Michigan MBA. Operator background with prior startup experience. Selected as a WEF Technology Pioneer in 2023. Drives B2G sales and global expansion strategy.</p>
+    <p><strong>Shin Seung-won (Co-founder / CSO):</strong> KAIST professor, Korea's leading dark web researcher. Provides the academic credibility and research pipeline that underpins S2W's technical moat. ACL 2023 co-author on DarkBERT paper.</p>
+  </div>
+
+  <h2>The n번방 Moment: From Lab Project to National Priority</h2>
+
+  <p>
+    S2W's profile inside Korea changed permanently in 2020 with the investigation of what became known as the <em>n번방</em> (Room N) case — one of the most widely covered criminal investigations in Korean history. A Telegram-based network had been operating across dozens of encrypted chat rooms, systematically blackmailing and sexually exploiting women and minors. The operators were sophisticated enough to use cryptocurrency for payments and to cycle through new channels rapidly to evade detection.
+  </p>
+
+  <p>
+    Korean law enforcement was struggling to map the network's structure. S2W's XARVIS platform — which had been quietly indexing Telegram groups, tracing cryptocurrency flows, and building identity graphs across anonymous channels — was brought in. The platform's ability to connect pseudonymous Telegram identities to real-world blockchain transactions, and to cross-reference activity patterns across channels that had already been shut down, provided the investigative leads that eventually led to arrests. The investigation resulted in a 40-year sentence for the principal operator — the longest sentence for a digital sex crime in Korean history at the time.
+  </p>
+
+  <p>
+    The n번방 case did something that no product demo could: it demonstrated at national scale that S2W's data infrastructure was operational, not theoretical. It also established a template the company has since replicated — selling not a software license but an investigative capability to institutions that need intelligence outcomes, not dashboards.
+  </p>
+
+  <div class="callout callout-amber">
+    <p class="callout-title">Why the n번방 case mattered for the business</p>
+    <p>Government contracts in the security sector are driven by demonstrated outcomes, not specifications. A single high-profile case reference — one that is publicly known, judicially confirmed, and politically significant — is worth years of pilot programs. S2W has used the n번방 reference in every subsequent B2G sales motion. It is the reason the company won contracts in Japan, Singapore, and Taiwan before most Western cybersecurity firms had heard of it.</p>
+  </div>
+
+  <h2>The Technology: DarkBERT and the AI Moat</h2>
+
+  <p>
+    S2W's most technically significant asset is <strong>DarkBERT</strong>, the world's first large language model trained specifically on dark web data. The model was developed jointly with KAIST and published at ACL 2023 — the most competitive venue in natural language processing — under the title <em>"DarkBERT: A Language Model for the Dark Side of the Internet."</em>
+  </p>
+
+  <p>
+    The technical approach is straightforward in concept but expensive in execution: take RoBERTa (Facebook's optimized BERT variant), and continue pre-training it on 5.83GB of filtered dark web text rather than Wikipedia and news corpora. Training ran for approximately 15 days on 8 NVIDIA A100 GPUs. The result is a model that understands the lexical conventions, coded language, and structural patterns of dark web communication at a level that general-purpose LLMs cannot match.
+  </p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <p class="metric-val">90%</p>
+      <p class="metric-label">Accuracy classifying illegal dark web content</p>
+      <p class="metric-delta up">vs &lt;60% for general LLMs</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">5.83GB</p>
+      <p class="metric-label">Dark web training corpus</p>
+      <p class="metric-delta neutral">After filtering</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">ACL '23</p>
+      <p class="metric-label">Published at top NLP venue</p>
+      <p class="metric-delta neutral">Peer-reviewed, reproducible</p>
+    </div>
+  </div>
+
+  <p>
+    The academic publication is not incidental to the business. In B2G sales — particularly to defense ministries, intelligence agencies, and international organizations — peer-reviewed, reproducible research is a procurement prerequisite in a way that it never is in commercial software sales. DarkBERT's ACL paper functions as a technical certification. It is the reason S2W can sit across from a procurement officer at Singapore's Ministry of Defense and explain its methodology in terms that a technical review committee can validate independently.
+  </p>
+
+  <p>
+    The model is now the intelligence backbone of S2W's core products. DarkBERT powers DarkCHAT (an AI chatbot interface for querying dark web intelligence), DarkINTEL (an incident monitoring and filtering layer), and the cross-domain analysis engine that connects activity across dark web forums, Telegram, and cryptocurrency transaction graphs.
+  </p>
+
+  <h2>The Product Stack: Two Platforms, Two Markets</h2>
+
+  <p>
+    S2W has rationalized its product line around two distinct platforms serving two distinct buyer profiles. Understanding the separation is important for evaluating the company's unit economics and expansion thesis.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Primary buyer</th>
+        <th>Core function</th>
+        <th>Key capability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>XARVIS</strong></td>
+        <td>Law enforcement, intelligence agencies, governments</td>
+        <td>Dark web & Telegram monitoring, cybercrime investigation</td>
+        <td>DarkBERT-powered entity resolution, crypto tracing, DarkCHAT</td>
+      </tr>
+      <tr>
+        <td><strong>QUAXAR</strong></td>
+        <td>Enterprise security teams, CISOs</td>
+        <td>Cyber Threat Intelligence (CTI) platform</td>
+        <td>DRP + ASM + TI unified, external attack surface monitoring</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    XARVIS is S2W's flagship and its primary moat. It collects and indexes dark web forums, dark web marketplaces, Telegram, and other hidden channels in real time. Its DarkBERT-powered analysis layer classifies content, extracts entities, and builds relationship graphs that connect pseudonymous identities across platforms. The INTERPOL contract is built on XARVIS. So are contracts with Japanese and Taiwanese government agencies.
+  </p>
+
+  <p>
+    QUAXAR is the enterprise play — a Cyber Threat Intelligence platform that integrates digital risk protection, attack surface management, and threat intelligence into a single interface. It is a more competitive market (Recorded Future, CrowdStrike Falcon, Mandiant Advantage are all alternatives), but it serves as a revenue diversifier and enterprise pipeline that can be sold alongside, or as an entry point toward, XARVIS for customers whose threat profiles escalate over time.
+  </p>
+
+  <div class="callout callout-blue">
+    <p class="callout-title">The B2G advantage: why government contracts compound differently than enterprise SaaS</p>
+    <p>Enterprise SaaS churns. Government contracts renew. A B2G relationship at a law enforcement agency or defense ministry that starts with a pilot typically deepens over years as the agency's reliance on the platform increases and switching costs rise. S2W's Japan contract — initially a limited engagement — was renewed in 2026 at significantly higher value. Government buyers also provide something commercial customers rarely do: referenceable credibility that unlocks other government buyers in adjacent jurisdictions.</p>
+  </div>
+
+  <h2>The Customers: From INTERPOL to Singapore MoD</h2>
+
+  <p>
+    S2W's customer roster is its most defensible asset and the clearest signal of product-market fit in a market where most competitors are pitching aspirationally. The company has signed contribution agreements or active contracts with:
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <p class="timeline-year">INTERPOL</p>
+      <div class="timeline-content">
+        <strong>First and only Korean cybersecurity company in the Gateway Initiative</strong> — INTERPOL's public-private intelligence cooperation program. S2W provides dark web data and DarkBERT-powered analysis to support multinational cybercrime investigations. The contribution agreement was formalized in January 2022; S2W was invited to speak at the 2025 INTERPOL conference. The relationship gives S2W access to intelligence from 195 member countries, creating a feedback loop that improves its own data coverage.
+      </div>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-year">Japan</p>
+      <div class="timeline-content">
+        <strong>Multi-agency engagement, contract renewed and expanded in 2026.</strong> S2W signed its first Japan government agency contract before its KOSDAQ listing and has since expanded. A local subsidiary is being established in H1 2026 to serve as the regional base. Japan is S2W's most advanced international market — the country has been rapidly increasing its cybersecurity budget under the Kishida and subsequent administrations, and its government agencies have been more willing than most Asian counterparts to rely on foreign-developed AI tools when those tools have strong academic validation.
+      </div>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-year">Singapore</p>
+      <div class="timeline-content">
+        <strong>Singapore Ministry of Defense</strong> — one of the most credentialed defense buyers in Southeast Asia. The Singapore MoD contract validates S2W's positioning as a legitimate defense-sector vendor, not just a commercial cybersecurity tool. Singapore serves as the planned hub for S2W's Southeast Asia expansion.
+      </div>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-year">Taiwan</p>
+      <div class="timeline-content">
+        <strong>Taiwan Stock Exchange.</strong> Financial sector cyber intelligence — monitoring for market manipulation, insider trading leak signals, and financial crime on dark web channels. The Taiwan contract demonstrates S2W's ability to sell into regulated financial institutions, expanding the addressable market beyond pure law enforcement.
+      </div>
+    </div>
+    <div class="timeline-item">
+      <p class="timeline-year">Korea</p>
+      <div class="timeline-content">
+        <strong>Korean National Police Agency, defense agencies, multiple financial institutions.</strong> The domestic base is well-established but not the growth story — Korea is a reference market, not the expansion thesis.
+      </div>
+    </div>
+  </div>
+
+  <h2>The IPO: A 1,972-to-1 Bet on the Dark Web</h2>
+
+  <p>
+    S2W listed on KOSDAQ on September 19, 2025, under ticker <strong>488280</strong>, via the technology-growth company special listing track (기술성장기업 특례상장) — a pathway designed for pre-profit companies with validated technology. The IPO was not a quiet event.
+  </p>
+
+  <p>
+    The offering price was set at <strong>₩13,200</strong> — the upper bound of the desired range. In the general subscription conducted September 10–11, S2W recorded a competition ratio of <strong>1,972 to 1</strong>, with subscription deposits totaling ₩5.14 trillion (approximately $3.7 billion) against an offering that raised roughly $70–80M. The ratio placed it among the most sought-after Korean tech IPOs of 2025.
+  </p>
+
+  <p>
+    Why did a relatively small cybersecurity company with operating losses attract that level of retail and institutional interest? Three reasons are apparent in hindsight. First, the B2G customer roster was unusually credible for a company of S2W's size — INTERPOL and Singapore MoD are not names that appear in most Korean startup cap tables. Second, the "Palantir of Asia" positioning resonated in a market that had watched Palantir's US market cap appreciate from its 2020 DPO price to over $100B. Third, and most practically: there was no comparable listed pure-play in Korean dark web AI. S2W had no domestic comp.
+  </p>
+
+  <div class="callout callout-green">
+    <p class="callout-title">The Palantir of Asia comparison — how fair is it?</p>
+    <p>Palantir built its business on US government contracts (CIA, NSA, DoD) that provided both revenue and the institutional legitimacy to expand into commercial markets. S2W is running the same playbook in Asia: start with B2G intelligence contracts in jurisdictions with serious cybersecurity budgets (Japan, Singapore, Korea), use those references to open commercial doors, and build a data moat through the government work that makes the commercial product better. The analogy holds structurally. The execution risk is whether Asian B2G contract cycles and budget sizes can sustain the same growth trajectory that Palantir achieved with US defense spending.</p>
+  </div>
+
+  <h2>Financials: The Path to the First Profit</h2>
+
+  <p>
+    S2W has been loss-making since inception — a predictable profile for a company that spent its first seven years building expensive proprietary data infrastructure and pursuing long government contract sales cycles. The financial inflection point is now visible.
+  </p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <p class="metric-val">+5.0%</p>
+      <p class="metric-label">2025 Revenue growth (YoY)</p>
+      <p class="metric-delta neutral">Base year establishment</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">+93%</p>
+      <p class="metric-label">2026E Revenue growth</p>
+      <p class="metric-delta up">₩19.5B forecast</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">2026</p>
+      <p class="metric-label">First profit forecast year</p>
+      <p class="metric-delta up">₩1.2B operating profit</p>
+    </div>
+  </div>
+
+  <p>
+    The 2026 revenue forecast of ₩19.5B (~$14M) and operating profit of ₩1.2B represents the company's projected inflection from cash-burning infrastructure project to self-sustaining intelligence business. The 93% revenue growth forecast is largely driven by the Japan contract expansion, the SAIP enterprise AI platform rollout across Korean financial and manufacturing clients, and initial revenue from the Singapore and Southeast Asia pipeline.
+  </p>
+
+  <p>
+    The more important financial signal is operating loss trajectory. In 2025, operating loss increased 25.4% YoY — a concerning headline that becomes less concerning in context: it represents investment ahead of the Japan and Singapore expansion rather than structural unit economics deterioration. Net loss fell 62.5% in the same period, suggesting the one-time IPO-related costs and financing structure are working in the right direction. The 2025 reporting period was essentially the last full year before the growth inflection.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>2025A</th>
+        <th>2026E</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Revenue</td>
+        <td>~₩10.1B</td>
+        <td><strong>₩19.5B</strong></td>
+        <td class="up">+93%</td>
+      </tr>
+      <tr>
+        <td>Operating profit / (loss)</td>
+        <td>(loss)</td>
+        <td><strong>₩1.2B</strong></td>
+        <td class="up">First profit</td>
+      </tr>
+      <tr>
+        <td>Net loss trend</td>
+        <td>−62.5% vs 2024</td>
+        <td>Continued improvement</td>
+        <td class="up">Narrowing</td>
+      </tr>
+      <tr>
+        <td>Market cap (KOSDAQ)</td>
+        <td>~₩140–300B (volatile)</td>
+        <td>—</td>
+        <td class="neutral">P/S ~10–15x 2026E</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>The Bear Case</h2>
+
+  <p>
+    Any honest analysis of S2W requires stating the risks clearly. There are three that matter.
+  </p>
+
+  <h3>Revenue concentration</h3>
+  <p>
+    S2W's revenue is heavily concentrated in a small number of large government contracts. The Japan renewal in 2026 is encouraging, but if that contract or the Singapore MoD engagement were to not renew or be rebid competitively, the growth thesis would require significant revision. The 93% 2026 revenue growth forecast is only plausible if current pipeline contracts close on schedule.
+  </p>
+
+  <h3>Competition from well-capitalized Western firms</h3>
+  <p>
+    Recorded Future (acquired by Mastercard for $2.65B in 2024), CrowdStrike, and Mandiant all have dark web monitoring products and far larger sales and marketing budgets than S2W. As Asian government cybersecurity budgets grow, these firms will compete more aggressively in the same jurisdictions S2W is targeting. S2W's edge — DarkBERT, academic credibility, the n번방 reference, INTERPOL partnership — is real but not permanent. The window for establishing market position before well-resourced Western competitors take it seriously is finite.
+  </p>
+
+  <h3>KOSDAQ stock volatility</h3>
+  <p>
+    S2W's KOSDAQ market cap has ranged between roughly ₩140B and ₩300B since listing — a 2x band of uncertainty that reflects how thin the liquidity is and how sensitive the stock is to any piece of contract news. For global investors evaluating the company, the public market valuation is a reference point rather than a reliable anchor. The IPO subscription frenzy created an opening-day premium that has since partially unwound. This is normal for Korean tech listings but creates a challenging entry point for institutional capital.
+  </p>
+
+  <div class="callout callout-red">
+    <p class="callout-title">The key question for international investors</p>
+    <p>Can S2W replicate Palantir's B2G compounding in Asia before a better-capitalized Western competitor decides Asia is worth prioritizing? The answer depends almost entirely on contract execution in Japan and Singapore over the next 18 months. If those two markets produce the reference customers S2W needs, the moat widens. If not, the company faces a much harder competitive environment with a balance sheet that, post-IPO, is substantially less flush than Palantir's was when it began its growth phase.</p>
+  </div>
+
+  <h2>The Thesis: A Data Moat That Governments Can't Build Themselves</h2>
+
+  <p>
+    Here is why S2W is interesting to watch despite the risks: governments cannot build what S2W has built.
+  </p>
+
+  <p>
+    Dark web intelligence infrastructure requires years of continuous crawling, model training, identity resolution, and operational refinement. A defense ministry can hire security researchers, but it cannot accumulate seven years of dark web corpus data and the INTERPOL-validated investigative track record that comes with it. The product S2W sells is not primarily software — it is accumulated institutional knowledge about how criminal and state-level threat actors operate across hidden channels, packaged into a platform that produces investigative outcomes. That is structurally difficult to replicate quickly, and it is exactly the category of intelligence capability that governments with growing cyber budgets are willing to pay for.
+  </p>
+
+  <p>
+    The "Palantir of Asia" framing, for all its hubris, captures something real: Palantir's durable competitive position came not from its software architecture but from the operational depth it developed working inside US intelligence agencies over years. S2W is attempting the same accumulation process in Asia, starting with Korea and INTERPOL, extending into Japan and Singapore, and building a reference network of government customers whose endorsement becomes self-reinforcing. The company is earlier in this process than Palantir was when it went public, and the execution risk is real.
+  </p>
+
+  <p>
+    But the underlying thesis is sound: <strong>dark web intelligence is a market that will grow faster than the broader cybersecurity sector</strong>, government buyers in Asia are under-served by existing Western vendors, and S2W has the only peer-reviewed dark web AI model, the only Korean INTERPOL partnership, and a founder team that has demonstrated the ability to win contracts in markets it had no presence in three years ago. For global investors building a Korea exposure, that combination is rare.
+  </p>
+
+  <hr class="divider">
+
+  <div class="subscribe-box">
+    <h3>Every week, one Korean startup. No noise.</h3>
+    <p>Korea Startup Thesis is a free weekly deep dive for global VC and angel investors. Next issue: coming Friday.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="subEmail">
+      <button onclick="handleSubscribe()">Subscribe free</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-left">Korea Startup Thesis</span>
+  <span class="footer-right">© 2026 · Weekly intelligence for global investors</span>
+</footer>
+
+<script>
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe() {
+    const email = document.getElementById('subEmail').value.trim();
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article3' })
+      });
+      if (res.ok || res.status === 409) {
+        window.location.href = 'thankyou.html';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch(e) {
+      alert('Something went wrong. Please try again.');
+    }
+  }
+</script>
+</body>
+</html>
