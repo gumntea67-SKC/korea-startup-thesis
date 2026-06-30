@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioNexus: The Genomics Veteran Building Korea's AI Drug Discovery Engine — Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/bionexus-issue-004">
+  <link rel="alternate" type="application/rss+xml" title="Korea Startup Thesis" href="https://koreastartupthesis.com/feed.xml">
+
+  <meta name="description" content="BioNexus is a Korean AI biodata startup building the orchestration layer for drug discovery — an 'AI Scientist' that generates research hypotheses from 300,000 papers in hours. Founded by a 20-year Theragen Bio veteran with 8 B2G government contracts in 18 months.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="BioNexus, 바이오넥서스, Korea AI biotech, AI drug discovery, Nexus Co-Scientist, Kim Tae-hyung, Korea startup, AI scientist, bio big data, KRIBB, KOBIC">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="BioNexus: The Genomics Veteran Building Korea's AI Drug Discovery Engine">
+  <meta property="og:description" content="20 years mapping Korea's genome. 8 government contracts in 18 months. A platform that compresses drug hypothesis generation from years to hours. Is BioNexus the infrastructure layer for Korea's bio decade?">
+  <meta property="og:url" content="https://koreastartupthesis.com/bionexus-issue-004">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/bionexus-004.png">
+  <meta property="article:published_time" content="2026-07-01T00:00:00Z">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="AI Drug Discovery">
+  <meta property="article:tag" content="Biotech">
+  <meta property="article:tag" content="B2G">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="BioNexus: Korea's AI Scientist for Drug Discovery">
+  <meta name="twitter:description" content="8 government contracts in 18 months. Nexus Co-Scientist generates hundreds of drug hypotheses in hours. Is this Korea's infrastructure play for the $43.9B AI drug discovery market?">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/bionexus-004.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "BioNexus: The Genomics Veteran Building Korea's AI Drug Discovery Engine",
+    "description": "Deep dive into BioNexus, the Korean AI biodata startup building an agentic research platform that compresses drug discovery from years to months through 8 B2G government contracts.",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "publisher": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "mainEntityOfPage": "https://koreastartupthesis.com/bionexus-issue-004",
+    "image": "https://koreastartupthesis.com/og/bionexus-004.png",
+    "keywords": ["BioNexus", "AI drug discovery", "Korean biotech", "Nexus Co-Scientist", "bio big data"],
+    "articleSection": "Company Deep Dive",
+    "about": {
+      "@type": "Organization",
+      "name": "BioNexus",
+      "foundingDate": "2024-11",
+      "description": "AI-based biodata intelligence and agentic drug discovery platform",
+      "url": "https://bionexus.kr"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111; --gray-1: #444; --gray-2: #777; --gray-3: #aaa;
+      --gray-4: #e5e5e5; --gray-5: #f5f5f5; --white: #fff;
+      --accent: #1a56db; --accent-light: #ebf1fd; --accent-dark: #0c3080;
+      --hero-bg: #0f1923; --hero-accent: #3b82f6;
+      --green: #16a34a; --green-light: #dcfce7; --green-dark: #14532d;
+      --amber-light: #fffbeb; --amber-dark: #92400e;
+      --red-light: #fef2f2; --red-dark: #991b1b;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fafafa; color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; color: #fff; letter-spacing: -0.3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-link-light { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nav-link-light:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: #2563eb; }
+
+    /* HERO */
+    .hero-wrap { background: #e8f4fd; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 52px 40px 48px; }
+    .hero-eyebrow {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 14px; font-weight: 500;
+    }
+    .hero h1 {
+      font-size: 30px; font-weight: 500; line-height: 1.25;
+      letter-spacing: -0.6px; margin-bottom: 14px; color: var(--black);
+    }
+    .hero-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-sm); font-weight: 500; }
+    .tag-blue { background: rgba(26,86,219,0.1); color: var(--accent-dark); border: 1px solid rgba(26,86,219,0.2); }
+    .tag-outline { border: 1px solid rgba(0,0,0,0.15); color: var(--gray-1); }
+    .tag-green { background: var(--green-light); color: var(--green-dark); border: 1px solid rgba(22,163,74,0.2); }
+    .tag-red { background: var(--red-light); color: var(--red-dark); border: 1px solid rgba(153,27,27,0.2); }
+    .hero-summary {
+      font-size: 15px; color: var(--gray-1); line-height: 1.85;
+      border-left: 3px solid var(--accent); padding-left: 18px;
+    }
+    .hero-summary strong { color: var(--black); font-weight: 500; }
+    .pub-date { font-size: 12px; color: var(--gray-3); margin-top: 20px; }
+
+    /* KPI BAR */
+    .kpi-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); }
+    .kpi-inner {
+      max-width: 680px; margin: 0 auto; padding: 0 40px;
+      display: flex; gap: 0;
+    }
+    .kpi-item {
+      flex: 1; padding: 16px 20px;
+      border-right: 1px solid var(--gray-4);
+    }
+    .kpi-item:first-child { padding-left: 0; }
+    .kpi-item:last-child { border-right: none; padding-right: 0; }
+    .kpi-num { font-size: 20px; font-weight: 500; color: var(--accent-dark); margin-bottom: 2px; }
+    .kpi-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* TAB BAR */
+    .tab-bar {
+      position: sticky; top: 56px; z-index: 99;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .tab-bar-inner {
+      max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex;
+    }
+    .nav-tab {
+      font-size: 13px; font-weight: 500; padding: 0 20px; height: 44px;
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,0.45); border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s; white-space: nowrap;
+    }
+    .nav-tab:first-child { padding-left: 0; }
+    .nav-tab + .nav-tab { border-left: 1px solid rgba(255,255,255,0.12); }
+    .nav-tab:hover { color: rgba(255,255,255,0.8); }
+    .nav-tab.active { color: #fff; }
+    .nav-tab::before {
+      content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      margin-right: 6px; vertical-align: middle; opacity: 0.4; transition: opacity 0.15s;
+    }
+    .nav-tab.active::before { opacity: 1; }
+    .nav-tab[data-tab="deepdive"]::before { background: #60a5fa; }
+    .nav-tab[data-tab="ones"]::before     { background: #4ade80; }
+    .nav-tab[data-tab="deals"]::before    { background: #fb923c; }
+    .nav-tab[data-tab="deepdive"].active  { border-bottom-color: #60a5fa; }
+    .nav-tab[data-tab="ones"].active      { border-bottom-color: #4ade80; }
+    .nav-tab[data-tab="deals"].active     { border-bottom-color: #fb923c; }
+    .nav-tab-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      border-radius: 10px; padding: 1px 6px; margin-left: 4px; vertical-align: middle;
+    }
+    .nav-tab[data-tab="deepdive"] .nav-tab-badge { background: rgba(96,165,250,0.2); color: #93c5fd; }
+    .nav-tab[data-tab="ones"] .nav-tab-badge     { background: rgba(74,222,128,0.2); color: #86efac; }
+    .nav-tab[data-tab="deals"] .nav-tab-badge    { background: rgba(251,146,60,0.2); color: #fdba74; }
+
+    /* TAB PANELS */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ARTICLE BODY */
+    .article-wrap { max-width: 680px; margin: 0 auto; padding: 48px 40px 80px; }
+
+    h2 {
+      font-size: 19px; font-weight: 500; letter-spacing: -0.3px;
+      margin-top: 48px; margin-bottom: 16px; color: var(--black);
+      padding-bottom: 10px; border-bottom: 1px solid var(--gray-4);
+    }
+    h3 {
+      font-size: 15px; font-weight: 500; margin-top: 28px; margin-bottom: 10px; color: var(--black);
+    }
+    p { font-size: 15px; color: var(--gray-1); line-height: 1.85; margin-bottom: 18px; }
+    p strong { color: var(--black); font-weight: 500; }
+    p em { font-style: italic; color: var(--gray-2); }
+
+    /* CALLOUT BOXES */
+    .callout {
+      border-radius: var(--radius-lg); padding: 20px 24px; margin: 28px 0;
+    }
+    .callout-blue { background: var(--accent-light); border: 1px solid rgba(26,86,219,0.15); }
+    .callout-green { background: var(--green-light); border: 1px solid rgba(22,163,74,0.2); }
+    .callout-amber { background: var(--amber-light); border: 1px solid rgba(234,179,8,0.3); }
+    .callout-gray { background: var(--gray-5); border: 1px solid var(--gray-4); }
+    .callout-red { background: var(--red-light); border: 1px solid rgba(153,27,27,0.2); }
+    .callout-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-3); margin-bottom: 12px; }
+    .callout p { margin-bottom: 0; font-size: 14px; }
+    .callout p + p { margin-top: 8px; }
+
+    /* DATA TABLE */
+    .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .data-table th {
+      text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--gray-3); padding: 8px 12px;
+      border-bottom: 1px solid var(--gray-4); background: var(--gray-5);
+    }
+    .data-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .data-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+    .data-table td { padding: 11px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); }
+    .data-table td strong { color: var(--black); font-weight: 500; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: #fafafa; }
+
+    /* METRIC ROW */
+    .metric-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0;
+    }
+    .metric-card {
+      background: var(--white); border: 1px solid var(--gray-4);
+      border-radius: var(--radius-lg); padding: 16px 18px;
+    }
+    .metric-val { font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .metric-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+    .metric-delta { font-size: 12px; margin-top: 4px; }
+    .up { color: var(--green); }
+    .neutral { color: var(--gray-3); }
+    .down { color: #dc2626; }
+
+    /* TIMELINE */
+    .timeline { margin: 24px 0; }
+    .timeline-item {
+      display: flex; gap: 16px; padding: 14px 0;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-year {
+      font-size: 12px; font-weight: 500; color: var(--accent);
+      min-width: 56px; margin-top: 1px;
+    }
+    .timeline-content { font-size: 14px; color: var(--gray-1); line-height: 1.6; }
+    .timeline-content strong { color: var(--black); font-weight: 500; }
+
+    /* SECTION DIVIDER */
+    .divider { border: none; border-top: 1px solid var(--gray-4); margin: 40px 0; }
+
+    /* SUBSCRIBE BOX */
+    .subscribe-box {
+      background: var(--hero-bg); border-radius: var(--radius-lg);
+      padding: 32px 36px; margin-top: 48px; color: #fff;
+    }
+    .subscribe-box h3 { font-size: 18px; font-weight: 500; margin-bottom: 8px; color: #fff; }
+    .subscribe-box p { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; max-width: 380px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.08); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .sub-form input:focus { border-color: rgba(255,255,255,0.4); }
+    .sub-form button {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: #2563eb; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--gray-4);
+      padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+
+    /* PANEL HERO (Ones / Deals) */
+    .panel-hero-wrap { }
+    #panel-ones .panel-hero-wrap  { background: #dcfce7; }
+    #panel-deals .panel-hero-wrap { background: #ffedd5; }
+    .panel-hero { max-width: 680px; margin: 0 auto; padding: 36px 40px 32px; }
+    .panel-hero h1 { font-size: 24px; font-weight: 500; color: var(--black); letter-spacing: -0.5px; margin-bottom: 10px; }
+    .panel-eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    #panel-ones .panel-eyebrow  { color: #16a34a; }
+    #panel-deals .panel-eyebrow { color: #c2410c; }
+    .panel-summary { font-size: 14px; color: var(--gray-1); line-height: 1.7; padding-left: 14px; margin-top: 10px; }
+    #panel-ones .panel-summary  { border-left: 3px solid #16a34a; }
+    #panel-deals .panel-summary { border-left: 3px solid #ea580c; }
+
+    /* SECTION EYEBROW */
+    .section-eyebrow {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 22px;
+    }
+    .section-eyebrow span {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; white-space: nowrap;
+    }
+    #panel-ones .section-eyebrow span  { color: #16a34a; }
+    #panel-deals .section-eyebrow span { color: #c2410c; }
+    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-4); }
+
+    /* PANEL WRAP */
+    .panel-wrap { max-width: 680px; margin: 0 auto; padding: 0 40px 80px; }
+
+    /* ONES TO WATCH */
+    .watch-cards { display: flex; flex-direction: column; }
+    .watch-card { padding: 20px 0; border-bottom: 1px solid var(--gray-4); display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+    .watch-card:last-child { border-bottom: none; }
+    .watch-card-name { font-size: 15px; font-weight: 500; margin-bottom: 3px; letter-spacing: -0.2px; }
+    .watch-card-sub { font-size: 12px; color: var(--gray-2); margin-bottom: 8px; }
+    .watch-card-desc { font-size: 13px; color: var(--gray-1); line-height: 1.75; }
+    .watch-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+    /* DEAL TABLE */
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 4px; }
+    .deal-table th {
+      text-align: left; font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-2);
+      padding: 0 10px 10px 0; border-bottom: 1px solid var(--gray-4);
+    }
+    .deal-table td { padding: 11px 10px 11px 0; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-co { font-weight: 500; color: var(--black); display: block; margin-bottom: 2px; }
+    .deal-note { font-size: 11px; color: var(--gray-3); }
+    .deal-amount { font-weight: 500; color: var(--black); white-space: nowrap; }
+
+    /* SOURCES */
+    .sources { padding: 28px 0 8px; border-top: 1px solid var(--gray-4); margin-top: 8px; }
+    .sources-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-3); margin-bottom: 14px; }
+    .sources-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sources-list li { display: grid; grid-template-columns: 20px 1fr; gap: 6px; font-size: 12px; color: var(--gray-2); line-height: 1.6; }
+    .sources-list li span { color: var(--gray-3); padding-top: 1px; }
+    .sources-list a { color: var(--gray-2); text-decoration: underline; text-decoration-color: var(--gray-4); }
+    .sources-list a:hover { color: var(--accent); }
+
+    /* BACK LINK */
+    .back-link-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); padding: 0 40px; }
+    .back-link-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; height: 40px; }
+    .back-link { font-size: 12px; color: var(--gray-3); }
+    .back-link:hover { color: var(--black); }
+
+    /* FAB */
+    .fab-top {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(26,86,219,0.35);
+      opacity: 0; pointer-events: none; transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Korea Startup Thesis</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link-light">← All Issues</a>
+    <button class="btn-sub" onclick="document.getElementById('subEmailNav').focus(); document.querySelector('.subscribe-box')?.scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<!-- BACK LINK -->
+<div class="back-link-bar">
+  <div class="back-link-inner">
+    <a href="index.html" class="back-link">← Korea Startup Thesis</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Issue #004 &nbsp;·&nbsp; Company Deep Dive &nbsp;·&nbsp; July 1, 2026</p>
+    <h1>BioNexus: The Genomics Veteran Who Wants to Make AI the Co-Author of Every Drug Discovery</h1>
+    <div class="hero-tags">
+      <span class="tag tag-blue">AI Drug Discovery</span>
+      <span class="tag tag-outline">B2G</span>
+      <span class="tag tag-outline">Pre-Seed / Bootstrapped</span>
+      <span class="tag tag-outline">Bio Platform</span>
+    </div>
+    <p class="hero-summary">
+      In November 2024, <strong>Tae-hyung Kim</strong> left Theragen Bio after 20 years — having participated in Korea's first human genome map and a whale genome project — and founded BioNexus on a single thesis: that an AI system designed to <em>think like a scientist</em> could compress drug hypothesis generation from years to hours. Eighteen months later, the company has 8 government contracts, partnerships with Korea's NIH and CDC equivalents, and a product that claims to give one researcher the output of a hundred. <strong>No external VC funding. No unicorn narrative. Just B2G traction and a founder with a 20-year head start on the data that matters.</strong>
+    </p>
+    <p class="pub-date">Published July 1, 2026</p>
+  </div>
+</div>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+  <div class="kpi-inner">
+    <div class="kpi-item">
+      <p class="kpi-num">₩3B</p>
+      <p class="kpi-label">2026E Revenue Target</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">8</p>
+      <p class="kpi-label">B2G Contracts (18 mo.)</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">10×</p>
+      <p class="kpi-label">Researcher Productivity</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">$43.9B</p>
+      <p class="kpi-label">AI Drug Discovery by 2035</p>
+    </div>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <div class="tab-bar-inner">
+    <button class="nav-tab active" data-tab="deepdive">Company Deep Dive</button>
+    <button class="nav-tab" data-tab="ones">Ones to Watch <span class="nav-tab-badge">3</span></button>
+    <button class="nav-tab" data-tab="deals">Deal Tracker <span class="nav-tab-badge">5</span></button>
+  </div>
+</div>
+
+
+<!-- ===== PANEL: DEEP DIVE ===== -->
+<div class="tab-panel active" id="panel-deepdive">
+<div class="article-wrap">
+
+  <h2>The Problem: Biology's Data Mountain Has Outgrown Its Researchers</h2>
+
+  <p>
+    The human genome was fully sequenced in 2003. Since then, genomic data has roughly doubled every seven months. PubMed adds approximately 4,000 new papers every day. The global biobank movement — led in Asia by Korea, Japan, and China — has created petabyte-scale repositories of clinical and omics data that no team of researchers can meaningfully engage with in a single career.
+  </p>
+
+  <p>
+    The scientific response to this overload has been radical specialization: researchers narrowing their focus to ever-smaller domains, publishing into silos that rarely cross-pollinate. The result is a structural inefficiency in drug discovery that has made it one of the most capital-intensive, time-intensive processes in any industry. The average approved drug costs <strong>$2.6 billion</strong> and takes <strong>12 years</strong> to develop — and that figure has been climbing for two decades despite substantial investment in computational tools.
+  </p>
+
+  <p>
+    Tae-hyung Kim saw this from closer than almost anyone. As division head at Theragen Bio — the Korean company that produced Korea's first human genome map in 2007 — he spent 20 years building the country's bio-data infrastructure from the ground up. He participated in the whale genome project. He watched as the research data mountain became too large for researchers to mine effectively, even with existing bioinformatics tools. When he founded BioNexus in November 2024, he was not chasing a trend. He was solving a problem he had watched compound for two decades.
+  </p>
+
+  <h2>The Product Stack: Not a Search Engine. An AI Scientist.</h2>
+
+  <p>
+    The most important thing to understand about BioNexus is what it is <em>not</em>. It is not a literature search tool. It is not a protein structure predictor. It is not a data repository. The company has deliberately positioned one layer above those categories — into what the industry is beginning to call the "agentic research" space.
+  </p>
+
+  <p>
+    The distinction matters because of where the bottleneck actually sits in drug discovery. Finding relevant papers is not the hard part — PubMed search has been adequate for that for years. The hard part is the cognitive step between information and hypothesis: synthesizing 300,000 papers across molecular biology, genetics, and clinical literature into a novel, testable idea about why a specific pathway might be implicated in a disease variant. That step — which a senior researcher might accomplish once or twice a year at best — is what BioNexus is trying to automate.
+  </p>
+
+  <div class="callout callout-blue">
+    <p class="callout-title">The BioNexus Product Stack</p>
+    <p><strong>NexusScience</strong> — Core reasoning engine modeled on scientific thought processes. Where AlphaFold predicts protein structure, NexusScience reasons about experimental design and hypothesis validity.</p>
+    <p><strong>NexusRAG</strong> — Retrieval system tuned for biomedical literature, prioritizing recency, citation weight, and domain-specific relevance over raw keyword matching.</p>
+    <p><strong>Nexus Co-Scientist</strong> — The flagship product. A multi-agent platform where distinct AI agents with different roles — hypothesis generation, critique, ranking — collaborate to produce prioritized research hypotheses. Claims to generate hundreds of novel hypotheses on a given disease target in hours.</p>
+    <p><strong>NexusDrugLab</strong> — Drug target and candidate analysis platform. Maps candidate molecules to hypotheses generated by Co-Scientist, enabling rapid prioritization of which to advance to wet-lab validation.</p>
+  </div>
+
+  <p>
+    CEO Kim's productivity claim — that one researcher using Nexus Co-Scientist can do the work of 100 — is striking. The underlying math is tractable: if hypothesis generation is a cognitive task that takes a senior researcher three months and an AI system five hours, and if the AI's hypothesis quality is within a factor of two of the human's, the ROI calculation for an academic lab or a CRO is straightforward. The caveat is that "hypothesis quality" is hard to measure until experiments validate or reject the idea, which creates an inherently long evaluation cycle for the product.
+  </p>
+
+  <h2>Traction: Eight Government Contracts in Eighteen Months</h2>
+
+  <p>
+    BioNexus's most credible early signal is not the product — it is the customer roster. Within 18 months of founding, the company holds eight B2G contracts with some of the most data-rich institutions in Korean life sciences:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Institution</th>
+        <th>Korean Equivalent of</th>
+        <th>Contract Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>KCDC</strong> (Korea Disease Control and Prevention Agency)</td>
+        <td>US CDC</td>
+        <td>LLM-based data curation</td>
+      </tr>
+      <tr>
+        <td><strong>National Institute of Health</strong> (국립보건연구원)</td>
+        <td>US NIH</td>
+        <td>Rare disease variant analysis</td>
+      </tr>
+      <tr>
+        <td><strong>KOBIC</strong> (Korean Bioinformatics Center)</td>
+        <td>NCBI (GenBank)</td>
+        <td>Bio big data platform construction</td>
+      </tr>
+      <tr>
+        <td><strong>KRIBB</strong> (Korea Research Institute of Bioscience and Biotechnology)</td>
+        <td>Broad Institute equivalent</td>
+        <td>AI-assisted research analysis</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    This is revenue-generating work, not research collaborations or unpaid pilots. For a 1.5-year-old startup with 13 employees, a government contract network spanning Korea's CDC, NIH, primary bioinformatics center, and premier biotech research institute is structurally unusual. It exists because of two overlapping advantages: Kim's personal network across two decades inside these institutions, and the Korean government's aggressive push to build AI capacity in life sciences following its 2024 National Bio Strategy.
+  </p>
+
+  <p>
+    The government tailwind extends beyond contracts. In April 2026, Kim was appointed to the <strong>National Bio-Innovation Committee</strong> (국가바이오혁신위원회) — the advisory body helping shape Korea's national life sciences strategy through 2030. This is not an honorary position. It places BioNexus's founder inside the room where Korea's next tranche of national bio research funding is being designed, weeks before it is announced publicly.
+  </p>
+
+  <div class="callout callout-green">
+    <p class="callout-title">The data access advantage</p>
+    <p>Korea runs one of the world's most digitized healthcare systems — high EMR adoption, national biobank programs, and government-coordinated clinical data infrastructure. The KOBIC and NIH contracts give BioNexus access to genomic and bioinformatics datasets that are not available on PubMed or Hugging Face. That proprietary training data is a moat that is structurally hard to replicate, even with equivalent software.</p>
+  </div>
+
+  <h2>The Timeline</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">Nov 2024</span>
+      <div class="timeline-content"><strong>BioNexus founded</strong> in Suwon, Gyeonggi. Kim Tae-hyung leaves 20-year career at Theragen Bio with a single thesis: agentic AI can solve drug discovery's hypothesis bottleneck.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Q1 2025</span>
+      <div class="timeline-content"><strong>First B2G contracts signed</strong> with KCDC and the National Institute of Health — less than three months after founding. Revenue target for 2025: ₩1B.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Q2–Q4 2025</span>
+      <div class="timeline-content"><strong>Contract network expands</strong> to KOBIC and KRIBB. Total: 8 B2G contracts across Korea's primary bio research institutions. Team grows to 13 employees.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Apr 2026</span>
+      <div class="timeline-content"><strong>Kim appointed to Korea's National Bio-Innovation Committee</strong> — the government body advising the country's life sciences strategy through 2030. First meeting covered AI drug development commercialization.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">May 2026</span>
+      <div class="timeline-content"><strong>Rokkit Genomics partnership</strong> for AI healthcare commercialization — specifically AI-powered single-cell RNA analysis and biomarker discovery. First private-sector commercial partnership.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2026E</span>
+      <div class="timeline-content"><strong>Revenue target ₩3B</strong> (3× over 2025). Company still bootstrapped — no external VC funding raised as of publication. Government contracts remain the primary revenue engine.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2030 Target</span>
+      <div class="timeline-content"><strong>₩100B revenue, ₩30B operating profit</strong>. Requires 3× annual growth from 2026. The target implies a successful transition from B2G platform to commercial biotech SaaS — the hardest part of the journey.</div>
+    </div>
+  </div>
+
+  <h2>The Global Context: Where BioNexus Sits in the AI Drug Discovery Stack</h2>
+
+  <p>
+    The global AI drug discovery market is projected to grow from $3.1B in 2025 to $43.9B by 2035 — a 14× expansion driven by the convergence of large language models with decades of accumulated biomedical data. The competitive landscape has bifurcated into two distinct tiers.
+  </p>
+
+  <h3>Tier 1: Structural biology + big pharma partnerships</h3>
+  <p>
+    At the top of the market, Alphabet's Isomorphic Labs — spun out of Google DeepMind — raised over $2B in 2025 and is working directly with GSK, Novartis, and Eli Lilly to apply its AlphaFold successor in active drug programs. Eli Lilly's $2.75B deal with Insilico Medicine for AI-generated drug candidates represents the largest AI-pharma commercial commitment to date. Nvidia and Merck signed a $1B AI drug development lab agreement in early 2026. At this tier, the product is structural prediction and molecular generation — compute-intensive, partnership-dependent, and accessible only to companies with large R&D budgets.
+  </p>
+
+  <h3>Tier 2: Research orchestration (where BioNexus plays)</h3>
+  <p>
+    BioNexus is not competing in the structural biology tier. The company's positioning is deliberately one layer above the structural ML work: it builds the <em>research orchestration layer</em> — the system that decides which hypotheses are worth testing, in what order, with what experimental design. This is the layer that Isomorphic Labs and DeepMind have largely left to their pharma partners to manage. BioNexus is betting there is a standalone, platform-grade business in that orchestration layer — serving academic institutions, CROs, and mid-tier pharma companies that cannot afford Isomorphic partnerships.
+  </p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <p class="metric-val">$3.1B</p>
+      <p class="metric-label">AI Drug Discovery Market 2025</p>
+      <p class="metric-delta up">→ $43.9B by 2035</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">$2.6B</p>
+      <p class="metric-label">Average Drug Dev Cost</p>
+      <p class="metric-delta neutral">12 years avg cycle</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">1–3 mo.</p>
+      <p class="metric-label">BioNexus Target Discovery Time</p>
+      <p class="metric-delta up">vs. 2–3 year baseline</p>
+    </div>
+  </div>
+
+  <h2>Competitive Moat and Risks</h2>
+
+  <h3>The moat</h3>
+  <p>
+    BioNexus's sustainable competitive advantage, if it exists, is not software — it is data access and institutional relationships. The KOBIC and NIH contracts provide access to Korean genomic and clinical datasets that are not publicly available, creating a proprietary training data advantage that even well-funded competitors cannot easily replicate. Kim's 20-year network across Korean bio institutions means that new contract relationships develop faster than they would for an outside founder. And his position on the National Bio-Innovation Committee provides advance visibility into where government research funding will be directed — a structural information edge.
+  </p>
+
+  <h3>The risks</h3>
+  <p>
+    Three genuine risks deserve attention. First, <strong>revenue concentration</strong>: the company's current business is almost entirely B2G, with one private-sector partnership (Rokkit Genomics) as the first step toward commercial diversification. If government procurement priorities shift or the renewal rate on existing contracts is lower than expected, the revenue base is fragile. Second, <strong>platform commoditization</strong>: Naver, Kakao, and Samsung all have life sciences AI initiatives, and any of them could build an equivalent orchestration layer for internal use and then license externally, directly competing with BioNexus's commercial target customers. Third, <strong>validation lag</strong>: the product's core value proposition — hypothesis quality — can only be validated by wet-lab experimental results, which take months. This creates a long customer evaluation cycle that slows commercial expansion.
+  </p>
+
+  <div class="callout callout-amber">
+    <p class="callout-title">The key question for investors</p>
+    <p>Can BioNexus transition from B2G platform to commercial SaaS before a better-capitalized competitor decides the research orchestration layer is worth owning? The answer will become clear in the next 18 months as the company either raises its first external round — signaling VC conviction in the commercial thesis — or extends its runway through expanded government contracts while delaying the commercialization test.</p>
+  </div>
+
+  <h2>The Thesis: Infrastructure for Korea's Bio Decade</h2>
+
+  <p>
+    Korea's government has designated life sciences as one of its three "national strategic industries" through 2030. The country runs one of the world's most digitized healthcare systems, with 97% electronic medical record adoption, world-class national biobank programs, and clinical trial infrastructure that gives Korean researchers data access advantages over peers in most countries. The data exists. The analytical capacity to turn that data into drug development velocity largely does not.
+  </p>
+
+  <p>
+    BioNexus is positioning itself as the company that bridges those two: a platform that converts Korea's genomic and clinical data endowment into research productivity. The government contract network suggests that Korea's public research institutions agree with the premise. The Rokkit Genomics partnership suggests that private-sector interest follows.
+  </p>
+
+  <p>
+    The most important signal to watch is whether the company raises external venture capital in 2026. A seed or Series A round from a Korean VC with life sciences expertise — SV Investment, IMM Healthcare, or a pharma-linked strategic investor — would validate the commercial thesis and extend runway for the B2G-to-SaaS transition. The absence of a raise by year-end would raise questions about whether commercial traction beyond government contracts is achievable at the pace the revenue model requires.
+  </p>
+
+  <p>
+    BioNexus is pre-commercial at scale, thinly staffed, and playing in a market where hyperscalers are actively investing. But the founder's institutional depth, the proprietary data access, the government relationship network, and Korea's structural bio policy push create a combination that is genuinely unusual in early-stage biotech. For global investors building Korea exposure: this is a company to monitor in the category of <strong>seed-stage bets with structural tailwinds and a founder who has spent 20 years building the unfair advantage.</strong>
+  </p>
+
+  <hr class="divider">
+
+  <div class="subscribe-box">
+    <h3>Every week, one Korean startup. No noise.</h3>
+    <p>Korea Startup Thesis is a free weekly deep dive for global VC and angel investors. Next issue: coming Friday.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="subEmail">
+      <button onclick="handleSubscribe()">Subscribe free</button>
+    </div>
+  </div>
+
+  <div class="sources" style="margin-top: 40px;">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Bizwatch, <a href="https://v.daum.net/v/20260511072137114" target="_blank">신약 가설 세우고 검증까지…바이오넥서스 'AI 과학자 도전' (BioNexus: Challenging the AI Scientist Role in Drug Discovery),</a> bizwatch.co.kr, May 2026</div></li>
+      <li><span>2</span><div>Digital Daily, <em>[인터뷰] 김태형 바이오넥서스 대표 "AI 과학자 1명이 100명 일 할 수 있다",</em> ddaily.co.kr, May 2026</div></li>
+      <li><span>3</span><div>Asia Economy, <em>로킷제노믹스, 바이오넥서스와 AI 기반 단일세포 분석 사업화 협력,</em> asiae.co.kr, May 2026</div></li>
+      <li><span>4</span><div>Medical World News, <em>국가바이오혁신위원회 공식 출범 — "글로벌 바이오 중심국가 도약",</em> medicalworldnews.co.kr, April 2026</div></li>
+      <li><span>5</span><div>THE VC, <a href="https://thevc.kr/bionexus" target="_blank">바이오넥서스 기업정보 — 투자, 매출, 기업가치,</a> thevc.kr, accessed July 2026</div></li>
+      <li><span>6</span><div>GMI Insights, <em>AI in Drug Discovery Market Size — Global Analysis, 2025–2034,</em> gminsights.com, 2025</div></li>
+      <li><span>7</span><div>IntuitionLabs, <em>Big Pharma & Hyperscaler AI Deals: 2026 Industry Tracker,</em> intuitionlabs.ai, 2026</div></li>
+    </ol>
+  </div>
+
+</div><!-- end article-wrap -->
+</div><!-- end panel-deepdive -->
+
+
+<!-- ===== PANEL: ONES TO WATCH ===== -->
+<div class="tab-panel" id="panel-ones">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #004 &nbsp;·&nbsp; July 1, 2026</p>
+    <h1>Ones to Watch</h1>
+    <p class="panel-summary">Early-stage Korean startups worth putting on your radar — curated signals for global investors tracking Korea's next breakout companies.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Ones to watch &nbsp;·&nbsp; Issue #004</span></div>
+    <div class="watch-cards">
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Holidayrobotics</p>
+          <p class="watch-card-sub">Industrial humanoid robotics &nbsp;·&nbsp; Series A KRW 150B &nbsp;·&nbsp; Valuation KRW 950B &nbsp;·&nbsp; 2026</p>
+          <p class="watch-card-desc">Holidayrobotics closed the largest Series A in Korean physical AI history — KRW 150B at a KRW 950B valuation — making it Korea's first near-unicorn in the humanoid robotics category. The company builds AI-native humanoid robots designed for industrial environments: factory floors, warehouses, logistics hubs. Jensen Huang's June 2026 Korea visit, during which he met with Holidayrobotics and several Korean conglomerates to discuss physical AI collaboration, confirmed the company is operating at the intersection of Korea's two largest strategic themes. The KRW 950B valuation looks stretched against current revenue, but humanoid robotics valuations globally are being priced on optionality, not multiples. What makes Holidayrobotics notable vs. US peers (Figure, 1X) is the manufacturing cost structure: Korea's existing industrial robotics supply chain — Hyundai Robotics, Rainbow Robotics — creates component access and talent density that Silicon Valley humanoid startups are rebuilding from scratch.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series A</span>
+          <span class="tag tag-outline">Physical AI</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">MustBio</p>
+          <p class="watch-card-sub">Next-gen immuno-oncology &nbsp;·&nbsp; Series C KRW 35B &nbsp;·&nbsp; ADC / Solid Tumors &nbsp;·&nbsp; 2026</p>
+          <p class="watch-card-desc">Korean biotech has historically struggled to translate academic oncology research into clinical-stage assets that global pharma takes seriously. MustBio is building a case that this is changing: the company closed a KRW 35B Series C to accelerate development of next-generation antibody-drug conjugates (ADCs) targeting solid tumors where existing checkpoint inhibitors — pembrolizumab, nivolumab — have limited efficacy. ADC is the fastest-growing segment in oncology drug development globally, with the Daiichi Sankyo–AstraZeneca Enhertu deal ($5.5B in 2023) and Pfizer's $43B Seagen acquisition establishing ADC as the category big pharma wants to own. MustBio reaching Series C without a strategic acquirer signals either genuine independence ambitions or a valuation disagreement — either way, it puts the company at a stage where a major licensing deal becomes plausible over the next 24 months. For global biotech investors tracking Korea's oncology pipeline, this is the name closest to a global-scale outcome.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series C</span>
+          <span class="tag tag-outline">Oncology / ADC</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">BioResearchAI (바이오리서치에이아이)</p>
+          <p class="watch-card-sub">Pharma R&D automation &nbsp;·&nbsp; Pre-Series A &nbsp;·&nbsp; B2B SaaS &nbsp;·&nbsp; Seoul</p>
+          <p class="watch-card-desc">Where BioNexus targets the hypothesis generation step, BioResearchAI attacks the downstream research workflow — the manual, time-consuming tasks of literature review, regulatory document preparation, and clinical trial data structuring that Korean biotech CROs spend a significant fraction of their budget on. The company's "Effortless" platform automates these workflows using domain-tuned LLMs trained on Korean regulatory and clinical data. The total addressable market is narrow (Korean pharma R&D workflow automation) but the company's B2B SaaS positioning — charging per seat at CROs and biotech companies rather than competing for government contracts — differentiates it from peers like BioNexus. At Pre-Series A stage, BioResearchAI is earlier and higher-risk than BioNexus or MustBio. The signal to watch is whether it can convert its current pharma partnerships into contractual revenue that justifies a Series A raise in H2 2026.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-outline">Pre-Series A</span>
+          <span class="tag tag-outline">AI / SaaS</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Future Chosun, <em>2026년 대규모 투자 이어지는 '피지컬 AI'…로봇 분야가 47% 차지 (Physical AI Investment Surges in 2026 — Robotics Leads at 47%),</em> futurechosun.com, 2026</div></li>
+      <li><span>2</span><div>Asia Economy, <em>국내 피지컬 AI 스타트업, 절반은 로봇 분야 (Half of Korea's Physical AI Startups Are in Robotics),</em> asiae.co.kr, June 2026</div></li>
+      <li><span>3</span><div>KoreaTechDesk, <em>Physical AI Moves from Labs to Markets as Korea's Deep-Tech Funding Expands,</em> koreatechdesk.com, March 2026</div></li>
+      <li><span>4</span><div>THE VC, <a href="https://thevc.kr/bioresearchai" target="_blank">바이오리서치에이아이 기업정보,</a> thevc.kr, accessed July 2026</div></li>
+      <li><span>5</span><div>IntuitionLabs, <em>AI Biotech Funding: A 2025 Analysis of VC Investment Trends,</em> intuitionlabs.ai, 2025</div></li>
+    </ol>
+  </div>
+</div><!-- end panel-wrap -->
+</div><!-- end panel-ones -->
+
+
+<!-- ===== PANEL: DEAL TRACKER ===== -->
+<div class="tab-panel" id="panel-deals">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #004 &nbsp;·&nbsp; July 1, 2026</p>
+    <h1>Deal Tracker</h1>
+    <p class="panel-summary">Recent Korean startup funding rounds — stage, amount, and sector context for global investors tracking Korea deal flow.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Deal tracker &nbsp;·&nbsp; June–July 2026</span></div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Stage</th>
+          <th>Amount</th>
+          <th>Sector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="deal-co">Holidayrobotics</span>
+            <span class="deal-note">Industrial humanoid robots · KRW 950B valuation · Jensen Huang Korea visit June 2026</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 150B</td>
+          <td><span class="tag tag-blue">Physical AI</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">MustBio</span>
+            <span class="deal-note">Next-gen ADC (antibody-drug conjugates) for solid tumors · Global pharma licensing pipeline</span>
+          </td>
+          <td>Series C</td>
+          <td class="deal-amount">KRW 35B</td>
+          <td><span class="tag tag-outline">Bio / Oncology</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">WIRobotics</span>
+            <span class="deal-note">ALLEX humanoid platform · Revenue doubling YoY · Medical/rehab heritage differentiates from pure-play peers</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">KRW 95B</td>
+          <td><span class="tag tag-blue">Physical AI</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Ticaros</span>
+            <span class="deal-note">CAR-T immunotherapy · Late-stage Korean oncology pipeline · Global pharma M&A watch list</span>
+          </td>
+          <td>Series D</td>
+          <td class="deal-amount">KRW 20.8B</td>
+          <td><span class="tag tag-outline">Bio / CAR-T</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">ARK</span>
+            <span class="deal-note">AI early screening for chronic disease complications · Hospital system partnerships across Korea</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 20B</td>
+          <td><span class="tag tag-blue">AI Healthcare</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--gray-3); margin-top:12px;">Korea's physical AI sector is attracting disproportionate capital in H1 2026 — 47% of physical AI startup investment went to robotics companies. Biotech is rebounding after a difficult 2024–2025, led by ADC oncology and AI-native drug discovery plays. The government's ₩3.46T (record) 2026 startup support budget is beginning to show up in later-stage deal sizes.</p>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Future Chosun, <a href="https://futurechosun.com/archives/153009" target="_blank">2026년 대규모 투자 이어지는 '피지컬 AI'…로봇 분야가 47% 차지,</a> futurechosun.com, 2026</div></li>
+      <li><span>2</span><div>KoreaTechDesk, <em>Korea Welcomes 2026 Venture Blueprint: ₩1.6T Fund of Funds,</em> koreatechdesk.com, 2026</div></li>
+      <li><span>3</span><div>KoreaTechDesk, <em>AI Healthcare and Industrial AI Lead Korea's Latest Startup Funding Wave,</em> koreatechdesk.com, March 2026</div></li>
+      <li><span>4</span><div>PR Newswire, <a href="https://www.prnewswire.com/news-releases/wirobotics-secures-approximately-krw-100-billion-usd-68-million-series-b-funding-302772164.html" target="_blank">WIRobotics Secures Approximately KRW 100 Billion Series B Funding,</a> prnewswire.com, May 2026</div></li>
+      <li><span>5</span><div>THE VC, <a href="https://thevc.kr" target="_blank">Korea startup investment database,</a> thevc.kr, accessed July 2026</div></li>
+    </ol>
+  </div>
+</div><!-- end panel-wrap -->
+</div><!-- end panel-deals -->
+
+
+<!-- FAB -->
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+  <span class="footer-left">Korea Startup Thesis</span>
+  <span class="footer-right">© 2026 · Weekly intelligence for global investors</span>
+</footer>
+
+<script>
+  // Subscribe handler
+  function handleSubscribe() {
+    const email = document.getElementById('subEmail').value.trim();
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+    const supabaseUrl = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+    fetch(`${supabaseUrl}/rest/v1/subscribers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': supabaseKey, 'Authorization': `Bearer ${supabaseKey}` },
+      body: JSON.stringify({ email, source: 'article4', subscribed_at: new Date().toISOString() })
+    }).then(() => { window.location.href = 'thankyou.html'; }).catch(() => { window.location.href = 'thankyou.html'; });
+  }
+
+  // Tab switching
+  let activeTab = 'deepdive';
+  const fab = document.getElementById('fabTop');
+
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + activeTab).classList.add('active');
+      document.querySelector('.tab-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateFab();
+    });
+  });
+
+  function updateFab() {
+    if (activeTab === 'deepdive' && window.scrollY > 320) {
+      fab.classList.add('visible');
+    } else {
+      fab.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', updateFab, { passive: true });
+</script>
+</body>
+</html>
