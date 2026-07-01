@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEEPX: The Apple M1 Architect Who Came Back to Build the ARM of Edge AI — Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/deepx-issue-005">
+  <link rel="alternate" type="application/rss+xml" title="Korea Startup Thesis" href="https://koreastartupthesis.com/feed.xml">
+
+  <meta name="description" content="DEEPX is the Korean edge AI chip startup whose CEO designed Apple's M1. Its DX-M1 NPU delivers 25 TOPS at under 5W — validated by 300+ companies — and Hyundai chose it as the 'edge brain' for its next-gen robots. Now raising Series D at a ₩2.65T valuation as it targets a 2026 IPO.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="DEEPX, 딥엑스, edge AI chip, NPU, DX-M1, Lokwon Kim, Korea semiconductor, AI chip startup, Hyundai robotics, physical AI, edge inference, Korea IPO">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="DEEPX: The Apple M1 Architect Who Came Back to Build the ARM of Edge AI">
+  <meta property="og:description" content="CEO Lokwon Kim co-designed Apple's M1 chip, then returned to Korea with a single thesis: the edge is where the AI war is won. 300+ customer validations, Hyundai Robotics as anchor customer, Series D at ₩2.65T valuation. Here's the full picture.">
+  <meta property="og:url" content="https://koreastartupthesis.com/deepx-issue-005">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/deepx-005.png">
+  <meta property="article:published_time" content="2026-07-02T00:00:00Z">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="AI Semiconductor">
+  <meta property="article:tag" content="Edge AI">
+  <meta property="article:tag" content="NPU">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="DEEPX: Korea's edge AI chip bet — Apple M1 roots, Hyundai anchor, ₩2.65T valuation">
+  <meta name="twitter:description" content="300+ customer validations. April 2026 orders exceeded all of 2025 revenue. Hyundai chose it as the 'edge brain' for its robots. Series D raising ₩600B. Here's why DEEPX matters.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/deepx-005.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "DEEPX: The Apple M1 Architect Who Came Back to Build the ARM of Edge AI",
+    "description": "Deep dive into DEEPX, the Korean AI chip startup whose DX-M1 NPU delivers 25 TOPS at under 5W. Validated by 300+ companies, anchored by Hyundai Robotics, and raising Series D at a ₩2.65 trillion valuation.",
+    "datePublished": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "author": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "publisher": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "mainEntityOfPage": "https://koreastartupthesis.com/deepx-issue-005",
+    "image": "https://koreastartupthesis.com/og/deepx-005.png",
+    "keywords": ["DEEPX", "edge AI", "NPU", "DX-M1", "Lokwon Kim", "Korea semiconductor", "Hyundai robotics"],
+    "articleSection": "Company Deep Dive",
+    "about": {
+      "@type": "Organization",
+      "name": "DEEPX",
+      "foundingDate": "2018",
+      "description": "Edge AI semiconductor company building NPU chips for on-device inference in robotics, smart factories, and autonomous systems",
+      "url": "https://deepx.ai"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111; --gray-1: #444; --gray-2: #777; --gray-3: #aaa;
+      --gray-4: #e5e5e5; --gray-5: #f5f5f5; --white: #fff;
+      --accent: #1a56db; --accent-light: #ebf1fd; --accent-dark: #0c3080;
+      --hero-bg: #0f1923; --hero-accent: #3b82f6;
+      --green: #16a34a; --green-light: #dcfce7; --green-dark: #14532d;
+      --amber-light: #fffbeb; --amber-dark: #92400e;
+      --red-light: #fef2f2; --red-dark: #991b1b;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fafafa; color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; color: #fff; letter-spacing: -0.3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-link-light { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nav-link-light:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: #2563eb; }
+
+    .hero-wrap { background: #e8edf5; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 52px 40px 48px; }
+    .hero-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+    .hero h1 { font-size: 30px; font-weight: 500; line-height: 1.25; letter-spacing: -0.6px; margin-bottom: 14px; color: var(--black); }
+    .hero-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-sm); font-weight: 500; }
+    .tag-blue { background: rgba(26,86,219,0.1); color: var(--accent-dark); border: 1px solid rgba(26,86,219,0.2); }
+    .tag-outline { border: 1px solid rgba(0,0,0,0.15); color: var(--gray-1); }
+    .tag-green { background: var(--green-light); color: var(--green-dark); border: 1px solid rgba(22,163,74,0.2); }
+    .tag-red { background: var(--red-light); color: var(--red-dark); border: 1px solid rgba(153,27,27,0.2); }
+    .hero-summary { font-size: 15px; color: var(--gray-1); line-height: 1.85; border-left: 3px solid var(--accent); padding-left: 18px; }
+    .hero-summary strong { color: var(--black); font-weight: 500; }
+    .pub-date { font-size: 12px; color: var(--gray-3); margin-top: 20px; }
+
+    .kpi-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); }
+    .kpi-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex; gap: 0; }
+    .kpi-item { flex: 1; padding: 16px 20px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:first-child { padding-left: 0; }
+    .kpi-item:last-child { border-right: none; padding-right: 0; }
+    .kpi-num { font-size: 20px; font-weight: 500; color: var(--accent-dark); margin-bottom: 2px; }
+    .kpi-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    .tab-bar { position: sticky; top: 56px; z-index: 99; background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .tab-bar-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex; }
+    .nav-tab { font-size: 13px; font-weight: 500; padding: 0 20px; height: 44px; background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.45); border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; white-space: nowrap; }
+    .nav-tab:first-child { padding-left: 0; }
+    .nav-tab + .nav-tab { border-left: 1px solid rgba(255,255,255,0.12); }
+    .nav-tab:hover { color: rgba(255,255,255,0.8); }
+    .nav-tab.active { color: #fff; }
+    .nav-tab::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 6px; vertical-align: middle; opacity: 0.4; transition: opacity 0.15s; }
+    .nav-tab.active::before { opacity: 1; }
+    .nav-tab[data-tab="deepdive"]::before { background: #60a5fa; }
+    .nav-tab[data-tab="ones"]::before     { background: #4ade80; }
+    .nav-tab[data-tab="deals"]::before    { background: #fb923c; }
+    .nav-tab[data-tab="deepdive"].active  { border-bottom-color: #60a5fa; }
+    .nav-tab[data-tab="ones"].active      { border-bottom-color: #4ade80; }
+    .nav-tab[data-tab="deals"].active     { border-bottom-color: #fb923c; }
+    .nav-tab-badge { display: inline-block; font-size: 10px; font-weight: 500; border-radius: 10px; padding: 1px 6px; margin-left: 4px; vertical-align: middle; }
+    .nav-tab[data-tab="deepdive"] .nav-tab-badge { background: rgba(96,165,250,0.2); color: #93c5fd; }
+    .nav-tab[data-tab="ones"] .nav-tab-badge     { background: rgba(74,222,128,0.2); color: #86efac; }
+    .nav-tab[data-tab="deals"] .nav-tab-badge    { background: rgba(251,146,60,0.2); color: #fdba74; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .article-wrap { max-width: 680px; margin: 0 auto; padding: 48px 40px 80px; }
+    h2 { font-size: 19px; font-weight: 500; letter-spacing: -0.3px; margin-top: 48px; margin-bottom: 16px; color: var(--black); padding-bottom: 10px; border-bottom: 1px solid var(--gray-4); }
+    h3 { font-size: 15px; font-weight: 500; margin-top: 28px; margin-bottom: 10px; color: var(--black); }
+    p { font-size: 15px; color: var(--gray-1); line-height: 1.85; margin-bottom: 18px; }
+    p strong { color: var(--black); font-weight: 500; }
+    p em { font-style: italic; color: var(--gray-2); }
+
+    .callout { border-radius: var(--radius-lg); padding: 20px 24px; margin: 28px 0; }
+    .callout-blue { background: var(--accent-light); border: 1px solid rgba(26,86,219,0.15); }
+    .callout-green { background: var(--green-light); border: 1px solid rgba(22,163,74,0.2); }
+    .callout-amber { background: var(--amber-light); border: 1px solid rgba(234,179,8,0.3); }
+    .callout-gray { background: var(--gray-5); border: 1px solid var(--gray-4); }
+    .callout-red { background: var(--red-light); border: 1px solid rgba(153,27,27,0.2); }
+    .callout-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-3); margin-bottom: 12px; }
+    .callout p { margin-bottom: 0; font-size: 14px; }
+    .callout p + p { margin-top: 8px; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .data-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray-3); padding: 8px 12px; border-bottom: 1px solid var(--gray-4); background: var(--gray-5); }
+    .data-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .data-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+    .data-table td { padding: 11px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); }
+    .data-table td strong { color: var(--black); font-weight: 500; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: #fafafa; }
+
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    .metric-card { background: var(--white); border: 1px solid var(--gray-4); border-radius: var(--radius-lg); padding: 16px 18px; }
+    .metric-val { font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .metric-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+    .metric-delta { font-size: 12px; margin-top: 4px; }
+    .up { color: var(--green); }
+    .neutral { color: var(--gray-3); }
+    .down { color: #dc2626; }
+
+    .timeline { margin: 24px 0; }
+    .timeline-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--gray-4); }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-year { font-size: 12px; font-weight: 500; color: var(--accent); min-width: 56px; margin-top: 1px; }
+    .timeline-content { font-size: 14px; color: var(--gray-1); line-height: 1.6; }
+    .timeline-content strong { color: var(--black); font-weight: 500; }
+
+    .divider { border: none; border-top: 1px solid var(--gray-4); margin: 40px 0; }
+
+    .subscribe-box { background: var(--hero-bg); border-radius: var(--radius-lg); padding: 32px 36px; margin-top: 48px; color: #fff; }
+    .subscribe-box h3 { font-size: 18px; font-weight: 500; margin-bottom: 8px; color: #fff; }
+    .subscribe-box p { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; max-width: 380px; }
+    .sub-form input { flex: 1; font-size: 14px; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); background: rgba(255,255,255,0.08); color: #fff; outline: none; }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .sub-form input:focus { border-color: rgba(255,255,255,0.4); }
+    .sub-form button { font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff; border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap; }
+    .sub-form button:hover { background: #2563eb; }
+
+    footer { border-top: 1px solid var(--gray-4); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+
+    #panel-ones .panel-hero-wrap  { background: #dcfce7; }
+    #panel-deals .panel-hero-wrap { background: #ffedd5; }
+    .panel-hero { max-width: 680px; margin: 0 auto; padding: 36px 40px 32px; }
+    .panel-hero h1 { font-size: 24px; font-weight: 500; color: var(--black); letter-spacing: -0.5px; margin-bottom: 10px; }
+    .panel-eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    #panel-ones .panel-eyebrow  { color: #16a34a; }
+    #panel-deals .panel-eyebrow { color: #c2410c; }
+    .panel-summary { font-size: 14px; color: var(--gray-1); line-height: 1.7; padding-left: 14px; margin-top: 10px; }
+    #panel-ones .panel-summary  { border-left: 3px solid #16a34a; }
+    #panel-deals .panel-summary { border-left: 3px solid #ea580c; }
+
+    .section-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+    .section-eyebrow span { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+    #panel-ones .section-eyebrow span  { color: #16a34a; }
+    #panel-deals .section-eyebrow span { color: #c2410c; }
+    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-4); }
+
+    .panel-wrap { max-width: 680px; margin: 0 auto; padding: 0 40px 80px; }
+
+    .watch-cards { display: flex; flex-direction: column; }
+    .watch-card { padding: 20px 0; border-bottom: 1px solid var(--gray-4); display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+    .watch-card:last-child { border-bottom: none; }
+    .watch-card-name { font-size: 15px; font-weight: 500; margin-bottom: 3px; letter-spacing: -0.2px; }
+    .watch-card-sub { font-size: 12px; color: var(--gray-2); margin-bottom: 8px; }
+    .watch-card-desc { font-size: 13px; color: var(--gray-1); line-height: 1.75; }
+    .watch-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 4px; }
+    .deal-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-2); padding: 0 10px 10px 0; border-bottom: 1px solid var(--gray-4); }
+    .deal-table td { padding: 11px 10px 11px 0; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-co { font-weight: 500; color: var(--black); display: block; margin-bottom: 2px; }
+    .deal-note { font-size: 11px; color: var(--gray-3); }
+    .deal-amount { font-weight: 500; color: var(--black); white-space: nowrap; }
+
+    .sources { padding: 28px 0 8px; border-top: 1px solid var(--gray-4); margin-top: 8px; }
+    .sources-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-3); margin-bottom: 14px; }
+    .sources-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sources-list li { display: grid; grid-template-columns: 20px 1fr; gap: 6px; font-size: 12px; color: var(--gray-2); line-height: 1.6; }
+    .sources-list li span { color: var(--gray-3); padding-top: 1px; }
+    .sources-list a { color: var(--gray-2); text-decoration: underline; text-decoration-color: var(--gray-4); }
+    .sources-list a:hover { color: var(--accent); }
+
+    .back-link-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); padding: 0 40px; }
+    .back-link-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; height: 40px; }
+    .back-link { font-size: 12px; color: var(--gray-3); }
+    .back-link:hover { color: var(--black); }
+
+    .fab-top {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(26,86,219,0.35);
+      opacity: 0; pointer-events: none; transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Korea Startup Thesis</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link-light">← All Issues</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-box')?.scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link-bar">
+  <div class="back-link-inner">
+    <a href="index.html" class="back-link">← Korea Startup Thesis</a>
+  </div>
+</div>
+
+<div class="hero-wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Issue #005 &nbsp;·&nbsp; Company Deep Dive &nbsp;·&nbsp; July 2, 2026</p>
+    <h1>DEEPX: The Apple M1 Architect Who Came Back to Build the ARM of Edge AI</h1>
+    <div class="hero-tags">
+      <span class="tag tag-blue">Edge AI Chip</span>
+      <span class="tag tag-blue">NPU</span>
+      <span class="tag tag-outline">Pre-IPO</span>
+      <span class="tag tag-outline">Physical AI</span>
+      <span class="tag tag-outline">Series D</span>
+    </div>
+    <p class="hero-summary">
+      <strong>Lokwon Kim</strong> was one of eight engineers managing 3,000 developers when Apple designed the M1 chip. He brought the idea for his own edge AI company to Apple executives. They passed. So he returned to Korea, founded DEEPX in Pangyo in 2018, and spent six years building an NPU portfolio that delivers <strong>25 TOPS at under 5 watts</strong> — a power-performance profile that makes Nvidia Jetson directly comparable. In April 2026 alone, DEEPX closed purchase orders equal to its entire 2025 revenue. Hyundai Robotics chose the DX-M1 as the "edge brain" for its next-gen robot platform. <strong>Series D is raising ₩600B at a ₩2.65 trillion pre-money valuation.</strong> The edge AI war is moving to hardware nobody talks about — and DEEPX is building the chip that runs it.
+    </p>
+    <p class="pub-date">Published July 2, 2026</p>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-inner">
+    <div class="kpi-item">
+      <p class="kpi-num">₩2.65T</p>
+      <p class="kpi-label">Series D Pre-Money Val.</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">300+</p>
+      <p class="kpi-label">Customer Validations</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">18×</p>
+      <p class="kpi-label">2026E Revenue Growth</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">&lt;5W</p>
+      <p class="kpi-label">DX-M1 Power at 25 TOPS</p>
+    </div>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <div class="tab-bar-inner">
+    <button class="nav-tab active" data-tab="deepdive">Company Deep Dive</button>
+    <button class="nav-tab" data-tab="ones">Ones to Watch <span class="nav-tab-badge">3</span></button>
+    <button class="nav-tab" data-tab="deals">Deal Tracker <span class="nav-tab-badge">5</span></button>
+  </div>
+</div>
+
+
+<!-- ===== PANEL: DEEP DIVE ===== -->
+<div class="tab-panel active" id="panel-deepdive">
+<div class="article-wrap">
+
+  <h2>The Thesis: The Edge Is Where the AI War Is Won</h2>
+
+  <p>
+    The narrative around AI semiconductors has been dominated by data center hardware: Nvidia's H100, AMD's MI300, and a wave of Korean challengers — Rebellions, FuriosaAI — targeting inference workloads for large language models. That is a real and valuable market. It is also already crowded, capital-intensive, and shaped by foundry relationships that take years to build.
+  </p>
+
+  <p>
+    DEEPX is playing a different game. The company's core thesis is that the strategically decisive battle in AI semiconductors will be won at the edge — in the billions of devices that cannot connect to a cloud, cannot wait for round-trip latency, and cannot afford the power draw of a data center GPU. <strong>Cameras, robots, factories, autonomous vehicles, smart city infrastructure.</strong> These devices need AI that runs on-device, in real time, on a power budget measured in watts rather than kilowatts.
+  </p>
+
+  <p>
+    "The main battlegrounds in the AI era will move to the edge," CEO Lokwon Kim said in 2024. "Just as ARM dominated the CPU market with smartphones, the semiconductor company that dominates edge will dominate the AI market." The framing is deliberate. Kim is not trying to beat Nvidia. He is trying to build the ARM of the AI era — an architecture that wins by being everywhere Nvidia cannot go.
+  </p>
+
+  <h2>The Founder: The Man Who Helped Build Apple's M1</h2>
+
+  <p>
+    Lokwon Kim's professional biography reads like a roadmap for building a world-class semiconductor company. He worked at IBM TJ Watson Research Center, Cisco, and Broadcom before joining Apple — where he became one of eight core leaders managing a 3,000-person team during the development of the NPU inside the iPhone, and later co-designed the Apple M1, Apple's breakthrough in-house PC chip. He experienced the full cycle: architecture decisions, foundry negotiations, yield management, mass production ramp.
+  </p>
+
+  <p>
+    Kim brought his edge AI chip idea to Apple executives before leaving. They passed — Apple's business model depends on building chips exclusively for Apple devices, which is the opposite of what Kim wanted to build. So he returned to Korea in 2018 with an explicit goal: to be the "Morris Chang of Korea." Chang, the founder of TSMC, returned to Taiwan after working at Texas Instruments to build a foundry that gave the global semiconductor industry a new structural pillar. Kim wants DEEPX to play an analogous role in edge AI silicon — a company that makes the category accessible to device makers who cannot afford to design their own chips and cannot run Nvidia's Hopper in their products.
+  </p>
+
+  <div class="callout callout-blue">
+    <p class="callout-title">Why "ARM of Edge AI" is the right mental model</p>
+    <p>ARM didn't compete with Intel in CPUs. It built a low-power architecture for a different market — mobile — and won that market before Intel realized the threat. DEEPX is not trying to displace Nvidia in data centers. It is building an NPU optimized for the edge market: sub-5W power, $100-class price point, designed specifically for inference rather than training. Nvidia's Jetson line covers this market, but at higher power and cost. DEEPX's thesis is that there is 10-100x more volume at the edge than in data centers, and that a company that owns the dominant edge AI architecture will be more durable than one winning in the data center.</p>
+  </div>
+
+  <h2>The Chip Portfolio: Four Chips, One Architecture</h2>
+
+  <p>
+    Most fabless NPU startups launch a single chip and iterate. DEEPX launched four at once — a deliberate architectural decision that reflects Kim's Apple experience. Different devices need fundamentally different compute profiles, and a single-chip company cannot serve CCTV cameras and industrial robots with the same silicon.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Chip</th>
+        <th>Performance</th>
+        <th>Power</th>
+        <th>Target Application</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>DX-V1</strong></td>
+        <td>Sub-5 TOPS</td>
+        <td>&lt;1W</td>
+        <td>CCTV cameras, simple vision modules</td>
+      </tr>
+      <tr>
+        <td><strong>DX-V3</strong></td>
+        <td>~10 TOPS</td>
+        <td>&lt;3W</td>
+        <td>Smart cameras, video analytics</td>
+      </tr>
+      <tr>
+        <td><strong>DX-M1</strong> ★</td>
+        <td><strong>25 TOPS</strong></td>
+        <td><strong>&lt;5W</strong></td>
+        <td>Robots, smart factories, autonomous vehicles</td>
+      </tr>
+      <tr>
+        <td><strong>DX-H1</strong></td>
+        <td>22 POPS/server</td>
+        <td>High</td>
+        <td>Edge servers, workstations, multi-camera hubs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The DX-M1 is the commercial pivot. It entered mass production at the end of 2025, went to market validated by more than 300 companies across four years of customer development, and is positioned as a direct alternative to Nvidia's Jetson Orin Nano — with a 2–3× lower power envelope for comparable inference workloads. DEEPX claims design area one-third the size of competing NPUs and manufacturing cost similarly reduced by one-third, enabled by two proprietary technologies: <strong>IQ8</strong> (an INT8 model compression technique that maintains accuracy while reducing compute) and <strong>Smart Memory Access</strong> (minimizes DRAM usage, critical for battery-powered and thermally constrained devices).
+  </p>
+
+  <p>
+    The DX-M2 is the next card: designed on Samsung's 2nm process, targeting mass production in early 2027. If Samsung's 2nm yield reaches Kim's publicly stated 70%+ target in early production, DEEPX will have a chip that leapfrogs the current generation of edge AI silicon on performance density.
+  </p>
+
+  <h2>The Anchor Customer: Hyundai Robotics Chooses DEEPX as Its "Edge Brain"</h2>
+
+  <p>
+    The most strategically significant event in DEEPX's recent history was not a funding announcement. It was a joint press release from CES Foundry 2026: Hyundai Motor Group's Robotics LAB, after three years of co-development (beginning with a 2023 MOU), has designated the DX-M1 as the "edge AI brain" for its next-generation on-device robot platform.
+  </p>
+
+  <p>
+    The technical context matters. Hyundai's robots — including <strong>DAL-e</strong>, its delivery robot, and <strong>Facey</strong>, its facial recognition technology — need to process vision AI tasks in real time without cloud connectivity. The DX-M1 enables the robot to recognize its surroundings, make autonomous navigation decisions, and respond to environmental changes without any network round trip, using less than 5 watts in operation. For a mobile robot, the power constraint is existential — it determines battery life and heat management across the entire platform.
+  </p>
+
+  <p>
+    The Hyundai partnership is more than a design win. It is a reference customer that de-risks the commercial story for every subsequent conversation DEEPX has with robot OEMs, automotive Tier 1s, and smart factory integrators. When Hyundai's robotics division — one of the most sophisticated in Korea — co-develops a chip platform over three years and commits to commercial production, it creates a validation signal that no amount of trade show demos can replicate.
+  </p>
+
+  <div class="callout callout-green">
+    <p class="callout-title">The Physical AI timing advantage</p>
+    <p>Jensen Huang's June 2026 Korea visit — his second in seven months — brought Nvidia's physical AI narrative to a domestic audience that includes Hyundai, Kia, Samsung, LG, and the full stack of Korean industrial conglomerates. The DEEPX-Hyundai partnership was announced at CES Foundry 2026 in January, positioning DEEPX at the center of the physical AI conversation months before Jensen's visit. That positioning matters: Korean industrial buyers who are now searching for domestic edge AI silicon have a clear reference point.</p>
+  </div>
+
+  <h2>Traction: Revenue Is Small, But the Velocity Signal Is Unmistakable</h2>
+
+  <p>
+    DEEPX's 2025 revenue was ₩33억 (₩3.3B, approximately $2.3M) — modest for a company with over ₩20B in annual operating losses. The financial picture at this stage is a standard chip startup profile: years of R&D spending before mass production, then a sharp revenue ramp once customer design-ins convert to purchase orders.
+  </p>
+
+  <p>
+    The signal that the ramp has begun: in April 2026 alone, DEEPX closed 18 purchase contracts from global customers — totaling a value roughly equal to all of 2025 revenue. These were not government demonstration projects or Korean conglomerate captive orders. They were commercial POs from global customers across smart factory, robotics, and AI sectors. The company's 2026 revenue target is ₩600억 (₩60B, ~$41M) — an 18× step-up from 2025 — driven primarily by DX-M1 volume orders ramping through H2 2026.
+  </p>
+
+  <div class="metric-row">
+    <div class="metric-card">
+      <p class="metric-val">₩3.3B</p>
+      <p class="metric-label">2025 Revenue</p>
+      <p class="metric-delta up">→ ₩60B target 2026</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">350+</p>
+      <p class="metric-label">Active PoC Pipeline</p>
+      <p class="metric-delta neutral">Global customers</p>
+    </div>
+    <div class="metric-card">
+      <p class="metric-val">3 CES</p>
+      <p class="metric-label">Innovation Awards 2024</p>
+      <p class="metric-delta neutral">Hardware / Robotics / Embedded</p>
+    </div>
+  </div>
+
+  <h2>The Funding Picture: Korea's NPU Race Reaches Critical Mass</h2>
+
+  <p>
+    DEEPX is raising a Series D at a ₩2.65 trillion pre-money valuation ($1.8B), targeting ₩600B (~$415M) in new capital with an expected close in Q3 2026. Anchor investors are being assembled from Korea's major financial groups — KB Financial, Shinhan Financial, and NH Financial have each been reported as considering ₩100B commitments — alongside follow-on participation from existing investor AJU IB Investment. Skylake Equity Partners is also among the investors.
+  </p>
+
+  <p>
+    The ₩2.65T valuation represents a dramatic re-rating from the ₩700B valuation of the 2024 Series C — a 3.8× increase driven by the DX-M1 mass production milestone, the Hyundai design win, and the peer group premium established by Korean NPU competitors raising at even higher multiples. Rebellions (data center focus) and FuriosaAI (data center / LLM inference) have been valued at ₩3.4T and ₩3T respectively in recent rounds. The Korean AI chip category is being priced on optionality and first-mover advantage, not near-term revenue multiples.
+  </p>
+
+  <p>
+    An IPO follows the Series D — likely in 2026 or early 2027, on KOSDAQ or KOSPI. Korea's chipmaker IPO pipeline has created a competitive dynamic: Rebellions and FuriosaAI are also preparing for public listings, which creates urgency for DEEPX to establish its differentiation story (edge vs. data center) clearly before the public market has to make allocation decisions across all three.
+  </p>
+
+  <h2>The Timeline</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">2018</span>
+      <div class="timeline-content"><strong>DEEPX founded</strong> in Pangyo, Seongnam. Lokwon Kim leaves Apple with the concept that ARM-style disruption in CPUs can be replicated in edge AI silicon. Spends two years on core architecture.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2020–23</span>
+      <div class="timeline-content"><strong>Four-chip architecture built and validated.</strong> DX-V1, DX-V3, DX-M1, DX-H1 all enter customer testing. 700 companies engaged during product development process to optimize architecture. Series A and B funding raised.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Jan 2024</span>
+      <div class="timeline-content"><strong>CES 2024: Three Innovation Awards</strong> in Computer Hardware, Embedded Technology, and Robotics. First major international validation of DX-M1 architecture. 300+ customer validation requests logged.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2023–24</span>
+      <div class="timeline-content"><strong>Hyundai MOU signed.</strong> Three-year co-development partnership begins: Hyundai Robotics LAB designs control software on top of DEEPX's edge AI chip for next-gen robot platform.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2024</span>
+      <div class="timeline-content"><strong>Series C at ₩700B valuation</strong>, led by AJU IB Investment, Timefio Asset Management, Skylake Equity Partners, BNW Investment. First major institutional funding round.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Late 2025</span>
+      <div class="timeline-content"><strong>DX-M1 enters mass production.</strong> First revenue-generating chip orders ship. 2025 full-year revenue: ₩3.3B. Annual operating loss: ~₩20B — standard for a chip company pre-ramp.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Jan 2026</span>
+      <div class="timeline-content"><strong>CES Foundry 2026: Hyundai partnership enters commercialization phase.</strong> DX-M1 designated as "edge AI brain" for Hyundai's DAL-e delivery robot and Facey facial recognition. Jensen Huang's NVIDIA also present; physical AI becomes the CES narrative.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Apr 2026</span>
+      <div class="timeline-content"><strong>Monthly orders exceed full-year 2025 revenue.</strong> 18 purchase contracts from global customers in a single month. Revenue ramp confirmed. 350+ company PoC pipeline active.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Jun 2026</span>
+      <div class="timeline-content"><strong>Series D at ₩2.65T valuation announced.</strong> ₩600B raise targeting Q3 close. KB, Shinhan, NH Financial all in discussions. Jensen Huang's second Korea visit in seven months reinforces physical AI investment thesis for domestic buyers.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2027</span>
+      <div class="timeline-content"><strong>DX-M2 targets mass production</strong> on Samsung 2nm process. Initial yield target: 70%+. If achieved, represents generational improvement in power-performance density. IPO expected to follow Series D close.</div>
+    </div>
+  </div>
+
+  <h2>Competitive Landscape: The Three-Way Korean NPU Race</h2>
+
+  <p>
+    Korea's AI chip ecosystem has produced three companies at material scale simultaneously — a coincidence of talent, government support, and Samsung foundry access that has no equivalent outside the US:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Focus</th>
+        <th>Valuation</th>
+        <th>Key Customer / Partner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Rebellions</strong></td>
+        <td>Data center NPU (LLM inference)</td>
+        <td>~₩3.4T</td>
+        <td>KT, SK Telecom, strategic merger with Sapeon (Samsung)</td>
+      </tr>
+      <tr>
+        <td><strong>FuriosaAI</strong></td>
+        <td>Data center NPU (LLM inference)</td>
+        <td>~₩3T</td>
+        <td>Naver, LG CNS, Kakao</td>
+      </tr>
+      <tr>
+        <td><strong>DEEPX</strong></td>
+        <td>Edge AI NPU (on-device inference)</td>
+        <td>₩2.65T (pre-D)</td>
+        <td>Hyundai Robotics, POSCO DX, Jahwa Electronics</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The positioning distinction matters enormously for investors. Rebellions and FuriosaAI are competing in the same market — large-scale LLM inference — against each other, against Nvidia's H100/H200, and against every hyperscaler's proprietary chip program. DEEPX is in a different market: on-device edge inference, where Nvidia Jetson is the primary incumbent but the overall market is orders of magnitude larger in unit volume.
+  </p>
+
+  <p>
+    Globally, the competitive landscape includes Hailo (Israeli, edge AI, similar positioning), Google Edge TPU, Intel Neural Network Processor, and Mythic (analog inference). None of these has won a major Korean industrial anchor customer. DEEPX's Hyundai partnership creates a reference that is hard for foreign competitors to replicate in the Korean market — and potentially gives DEEPX an introduction pathway into Hyundai's global supplier network.
+  </p>
+
+  <h2>Risks: The Gap Between Design Wins and Volume</h2>
+
+  <h3>Revenue ramp risk</h3>
+  <p>
+    The 18× revenue step-up from ₩3.3B to ₩60B in a single year is achievable only if the current PoC pipeline converts to production orders at high rates. Chip design wins typically take 6-18 months from validation to volume production ramp. If customer qualification cycles slip or if supply chain issues at Samsung affect DX-M1 availability, the 2026 target could slip significantly.
+  </p>
+
+  <h3>Samsung foundry dependency</h3>
+  <p>
+    Both the current DX-M1 and the next-gen DX-M2 are manufactured at Samsung. TSMC dominates the leading-edge foundry market at 3nm and below; Samsung's yield and capacity have historically been less predictable than TSMC's. The DX-M2's 2nm Samsung process is technically ambitious — Kim's stated 70% initial yield target is the minimum viable threshold for economical production. If Samsung's 2nm yields miss materially, DEEPX's timeline advantage over future competitors narrows.
+  </p>
+
+  <h3>Nvidia's competitive response</h3>
+  <p>
+    Nvidia's Jetson line is not standing still. The Jetson Orin family covers much of the edge AI performance range, and Nvidia's developer ecosystem — CUDA, TensorRT, Isaac for robotics — is vastly more mature than DEEPX's DXNN SDK. The primary DEEPX advantage is power efficiency and unit cost; if Nvidia narrows those gaps with Jetson successors, DEEPX's differentiation story weakens.
+  </p>
+
+  <div class="callout callout-amber">
+    <p class="callout-title">The critical question for global investors</p>
+    <p>Can DEEPX convert the Hyundai anchor into a global industrial customer base before the Series D capital runs out and before Nvidia's next Jetson generation reclaims the power efficiency gap? The answer depends on how fast the PoC pipeline converts to production POs, and on whether the DX-M2/Samsung 2nm bet produces a chip that is genuinely ahead of anything Nvidia can offer at the edge in 2027.</p>
+  </div>
+
+  <h2>The Thesis: The Edge Has 100× the Volume — and One Clear Domestic Leader</h2>
+
+  <p>
+    Gartner estimates that by 2027, 70% of new IoT devices will embed AI capabilities. That implies billions of chips shipped annually into cameras, robots, vehicles, and industrial equipment — a market that dwarfs data center AI in unit volume, even if it is smaller in per-chip ASP. DEEPX is building for that market, with a portfolio validated by 300+ companies, an anchor partnership with one of Asia's most sophisticated robotics programs, and a CEO who has done this before at the largest consumer chip company in the world.
+  </p>
+
+  <p>
+    The company is pre-revenue at scale, burning ~₩20B per year, and dependent on a single foundry's 2nm execution. These are real risks. But the structural thesis — that edge AI inference is a large, underserved market where a power-efficient, low-cost NPU can build an ARM-style position — is intact, and the evidence from April 2026's order flow suggests the commercial turning point has arrived.
+  </p>
+
+  <p>
+    For global investors tracking Korea's AI hardware ecosystem: DEEPX is the company to watch if your thesis is that physical AI — robots, factories, autonomous systems — represents the next $1T wave in AI deployment. The edge AI chip is the component that makes physical AI real. <strong>DEEPX is building it. Hyundai is deploying it. The Series D is the last round before an IPO that will test whether Korea's industrial capital agrees.</strong>
+  </p>
+
+  <hr class="divider">
+
+  <div class="subscribe-box">
+    <h3>Every week, one Korean startup. No noise.</h3>
+    <p>Korea Startup Thesis is a free weekly deep dive for global VC and angel investors. Next issue: coming Friday.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="subEmail">
+      <button onclick="handleSubscribe()">Subscribe free</button>
+    </div>
+  </div>
+
+  <div class="sources" style="margin-top: 40px;">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Dealsite, <a href="https://dealsite.co.kr/articles/164141" target="_blank">매출 터진 딥엑스…기업가치 2조6500억 (DEEPX Revenue Surges — Valuation Hits ₩2.65T),</a> dealsite.co.kr, June 2026</div></li>
+      <li><span>2</span><div>Hyundai Motor Group Newsroom, <a href="https://www.hyundainews.com/releases/4666" target="_blank">Hyundai Motor Group's Robotics LAB Unveils Physical AI Implementation Plan with DEEPX at CES Foundry 2026,</a> hyundainews.com, January 2026</div></li>
+      <li><span>3</span><div>PR Newswire, <a href="https://www.prnewswire.com/news-releases/hyundai-motor-kias-robotics-lab-and-deepx-begin-commercialization-for-next-generation-on-device-ai-robot-platform-302631644.html" target="_blank">Hyundai Motor, Kia's Robotics LAB and DEEPX Begin Commercialization for Next-Generation On-Device AI Robot Platform,</a> prnewswire.com, 2026</div></li>
+      <li><span>4</span><div>DEEPX, <a href="https://deepx.ai/ai-chips-for-all-deepx-ceo-lokwon-kims-vision-to-democratize-ai-technology/" target="_blank">AI chips for all: DEEPX CEO Lokwon Kim's vision to democratize AI technology,</a> deepx.ai, 2024</div></li>
+      <li><span>5</span><div>DEEPX, <a href="https://deepx.ai/deepx-verifies-npu-technology-with-over-300-corporations-aiming-for-global-leadership/" target="_blank">AI Semiconductor Validation: 300+ Industry Tests on DeepX DX-M1,</a> deepx.ai</div></li>
+      <li><span>6</span><div>Asia Economy, <a href="https://www.asiae.co.kr/en/article/enterprise-CEO/2026060508461141987" target="_blank">[Interview] DeepX CEO Kim Nokwon: "Confident in 70% Samsung 2nm Yield... 100x Revenue Growth in 4 Years",</a> asiae.co.kr, June 2026</div></li>
+      <li><span>7</span><div>Thelec, <em>딥엑스, 올해 매출 목표 600억원… 전년비 18배 '퀀텀점프' (DEEPX 2026 Revenue Target ₩60B — 18× YoY),</em> thelec.kr, 2026</div></li>
+      <li><span>8</span><div>Reuters / Investing.com, <em>Korean AI chip startup DEEPX, Hyundai work on robots powered by generative AI,</em> investing.com, 2026</div></li>
+    </ol>
+  </div>
+
+</div>
+</div><!-- end panel-deepdive -->
+
+
+<!-- ===== PANEL: ONES TO WATCH ===== -->
+<div class="tab-panel" id="panel-ones">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #005 &nbsp;·&nbsp; July 2, 2026</p>
+    <h1>Ones to Watch</h1>
+    <p class="panel-summary">Early-stage Korean startups worth putting on your radar — curated signals for global investors tracking Korea's next breakout companies.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Ones to watch &nbsp;·&nbsp; Issue #005</span></div>
+    <div class="watch-cards">
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Rebellions</p>
+          <p class="watch-card-sub">Data center NPU (LLM inference) &nbsp;·&nbsp; ₩3.4T valuation &nbsp;·&nbsp; Pre-IPO &nbsp;·&nbsp; Seoul</p>
+          <p class="watch-card-desc">Rebellions is DEEPX's Korean NPU peer — and the most strategically interesting because of what happened in early 2026: it announced a merger with Sapeon, Samsung Electronics' in-house NPU unit. That transaction, if completed, would give Rebellions access to Samsung's foundry capacity on preferential terms, Samsung's enterprise sales channel, and a balance sheet that fundamentally changes the competitive equation. The company's ATOM chip targets data center inference — the Nvidia H100/H200 market — with a design led by engineers from SpaceX and leading US semiconductor firms. The ₩3.4T valuation reflects both the quality of the team and the optionality that a Samsung structural partnership provides. For global investors who want Korea AI chip exposure without the edge-specific thesis of DEEPX, Rebellions is the purest data center AI inference bet in the Korean market.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Pre-IPO</span>
+          <span class="tag tag-outline">AI Chip</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Nota AI (노타)</p>
+          <p class="watch-card-sub">AI model optimization / edge deployment &nbsp;·&nbsp; Series B &nbsp;·&nbsp; B2B SaaS &nbsp;·&nbsp; Seoul</p>
+          <p class="watch-card-desc">If DEEPX is the hardware, Nota AI is the software that makes AI models run efficiently on chips like the DX-M1. The company's NetsPresso platform automates the notoriously complex process of compressing and optimizing large AI models for deployment on edge devices — taking a model trained in PyTorch, quantizing it, pruning it, and converting it to run on specific NPU architectures with minimal accuracy loss. This problem is large and underappreciated: without model optimization, a standard computer vision model that runs well on a GPU may be 3–5× too large and too slow for an edge chip. Nota's software runs the optimization pipeline automatically, reducing a process that takes AI engineers weeks into a matter of hours. The company has integrations with multiple NPU vendors and is well-positioned to become the Arm-style "middleware" layer in the edge AI stack — owning the toolchain regardless of which hardware wins the chip war below it.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series B</span>
+          <span class="tag tag-outline">AI Software</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">SAIGE Research (세이지리서치)</p>
+          <p class="watch-card-sub">Industrial AI / predictive maintenance &nbsp;·&nbsp; Series B &nbsp;·&nbsp; B2B &nbsp;·&nbsp; Seongnam</p>
+          <p class="watch-card-desc">SAIGE Research builds AI-powered predictive maintenance and quality control systems for industrial manufacturers — the software that runs on edge AI chips like the DX-M1 inside smart factories. As Korea's manufacturing base (steel, semiconductors, automotive) invests heavily in AI-driven efficiency, SAIGE occupies the application layer of the physical AI stack: it takes real-time sensor and machine vision data from factory equipment, runs AI inference on-site using edge hardware, and alerts operators before equipment failures occur or before quality defects leave the line. The company counts POSCO (Korea's dominant steelmaker), Doosan, and several Samsung Display factories among its customers. Revenue has been compounding at 70%+ annually for three consecutive years — unusual durability for B2B industrial software. The risk is vertical focus: industrial AI deployments are slow to expand across geographies and manufacturing categories. But the same characteristic — deep integration with production-critical systems — creates switching costs that few software categories can match.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">Series B</span>
+          <span class="tag tag-outline">Industrial AI</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Korea Startup Thesis, <a href="article.html">Issue #001: Rebellions — The SpaceX Founder Building Korea's Answer to Nvidia,</a> koreastartupthesis.com, June 2026</div></li>
+      <li><span>2</span><div>Dealsite, <em>리벨리온·업스테이지 다음…2조 딥엑스의 3000억 (After Rebellions and Upstage — ₩2T DEEPX raises ₩300B),</em> dealsite.co.kr, 2026</div></li>
+      <li><span>3</span><div>KoreaTechDesk, <em>Physical AI Moves from Labs to Markets as Korea's Deep-Tech Funding Expands,</em> koreatechdesk.com, March 2026</div></li>
+      <li><span>4</span><div>Nota AI, <a href="https://nota.ai" target="_blank">NetsPresso — AI Model Compression and Optimization Platform,</a> nota.ai, accessed July 2026</div></li>
+    </ol>
+  </div>
+</div>
+</div><!-- end panel-ones -->
+
+
+<!-- ===== PANEL: DEAL TRACKER ===== -->
+<div class="tab-panel" id="panel-deals">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #005 &nbsp;·&nbsp; July 2, 2026</p>
+    <h1>Deal Tracker</h1>
+    <p class="panel-summary">Recent Korean startup funding rounds — stage, amount, and sector context for global investors tracking Korea deal flow.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Deal tracker &nbsp;·&nbsp; June–July 2026</span></div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Stage</th>
+          <th>Amount</th>
+          <th>Sector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="deal-co">DEEPX</span>
+            <span class="deal-note">DX-M1 edge AI NPU · Hyundai Robotics anchor · IPO pipeline · ₩2.65T pre-money valuation</span>
+          </td>
+          <td>Series D</td>
+          <td class="deal-amount">₩600B</td>
+          <td><span class="tag tag-blue">AI Chip</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Rebellions</span>
+            <span class="deal-note">Data center NPU for LLM inference · Merger with Samsung's Sapeon announced · ₩3.4T valuation</span>
+          </td>
+          <td>Pre-IPO</td>
+          <td class="deal-amount">₩300B+</td>
+          <td><span class="tag tag-blue">AI Chip</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">FuriosaAI</span>
+            <span class="deal-note">RNGD chip for LLM inference · Naver / Kakao customers · ₩3T valuation · IPO imminent</span>
+          </td>
+          <td>Pre-IPO</td>
+          <td class="deal-amount">₩300B+</td>
+          <td><span class="tag tag-blue">AI Chip</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Holidayrobotics</span>
+            <span class="deal-note">Industrial humanoid robots · Jensen Huang Korea visit June 2026 · ₩950B valuation</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">KRW 150B</td>
+          <td><span class="tag tag-outline">Physical AI</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">MustBio</span>
+            <span class="deal-note">ADC antibody-drug conjugates for solid tumors · Global pharma licensing pipeline</span>
+          </td>
+          <td>Series C</td>
+          <td class="deal-amount">KRW 35B</td>
+          <td><span class="tag tag-outline">Bio / Oncology</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--gray-3); margin-top:12px;">Korea's AI chip sector is concentrating capital at a historic rate. Three domestic NPU companies — DEEPX, Rebellions, FuriosaAI — are all raising or completing late-stage rounds simultaneously, with a combined pre-money valuation approaching ₩9 trillion. Physical AI (robots, edge inference) is absorbing the same capital velocity as data center AI. The government's ₩3.46T 2026 startup budget is accelerating the timeline for all three to IPO.</p>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>Dealsite, <a href="https://dealsite.co.kr/articles/164141" target="_blank">매출 터진 딥엑스…기업가치 2조6500억,</a> dealsite.co.kr, June 2026</div></li>
+      <li><span>2</span><div>Dealsite, <em>리벨리온 이기려는 퓨리오사…프리IPO 3조 고수 (FuriosaAI holds ₩3T pre-IPO valuation against Rebellions),</em> dealsite.co.kr, 2026</div></li>
+      <li><span>3</span><div>Future Chosun, <em>2026년 대규모 투자 이어지는 '피지컬 AI',</em> futurechosun.com, 2026</div></li>
+      <li><span>4</span><div>KoreaTechDesk, <em>Korea Welcomes 2026 Venture Blueprint: ₩1.6T Fund of Funds,</em> koreatechdesk.com, 2026</div></li>
+      <li><span>5</span><div>THE VC, <a href="https://thevc.kr" target="_blank">Korea startup investment database,</a> thevc.kr, accessed July 2026</div></li>
+    </ol>
+  </div>
+</div>
+</div><!-- end panel-deals -->
+
+
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+  <span class="footer-left">Korea Startup Thesis</span>
+  <span class="footer-right">© 2026 · Weekly intelligence for global investors</span>
+</footer>
+
+<script>
+  function handleSubscribe() {
+    const email = document.getElementById('subEmail').value.trim();
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+    const supabaseUrl = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+    fetch(`${supabaseUrl}/rest/v1/subscribers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': supabaseKey, 'Authorization': `Bearer ${supabaseKey}` },
+      body: JSON.stringify({ email, source: 'article5', subscribed_at: new Date().toISOString() })
+    }).then(() => { window.location.href = 'thankyou.html'; }).catch(() => { window.location.href = 'thankyou.html'; });
+  }
+
+  let activeTab = 'deepdive';
+  const fab = document.getElementById('fabTop');
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + activeTab).classList.add('active');
+      document.querySelector('.tab-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateFab();
+    });
+  });
+  function updateFab() {
+    if (activeTab === 'deepdive' && window.scrollY > 320) { fab.classList.add('visible'); }
+    else { fab.classList.remove('visible'); }
+  }
+  window.addEventListener('scroll', updateFab, { passive: true });
+</script>
+</body>
+</html>
