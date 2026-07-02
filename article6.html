@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedicalPark: The Surgeon Who Built Korea's Full-Stack Breast Diagnostics Company — and Just Unlocked Europe — Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/medicalpark-issue-006">
+  <link rel="alternate" type="application/rss+xml" title="Korea Startup Thesis" href="https://koreastartupthesis.com/feed.xml">
+
+  <meta name="description" content="MedicalPark CEO Park Hee-bung is a practicing surgeon who spent 25 years building the breast cancer biopsy device the market forgot to make. CE, FDA, JPAL, ANVISA — and now CE MDR, unlocking EU 27 countries. The full story of Korea's only full-stack breast diagnostics company.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="MedicalPark, 메디칼파크, Bexcore, 벡스코어, vacuum assisted breast biopsy, VABB, Park Hee-bung, 박희붕, Korean medical device, CE MDR, breast cancer diagnostics, MammouS, ABUS, Korea medtech">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="MedicalPark: The Surgeon Who Built Korea's Full-Stack Breast Diagnostics Company — and Just Unlocked Europe">
+  <meta property="og:description" content="CEO Park Hee-bung is a practicing surgeon with an MD, PhD who spent 25 years building devices based on clinical experience. CE (2015), FDA (2018), CE MDR (June 2026). Now selling in 25+ countries with a product line that covers the entire breast cancer screening workflow.">
+  <meta property="og:url" content="https://koreastartupthesis.com/medicalpark-issue-006">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/medicalpark-006.png">
+  <meta property="article:published_time" content="2026-07-03T00:00:00Z">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Medical Device">
+  <meta property="article:tag" content="Women's Health">
+  <meta property="article:tag" content="Breast Cancer Diagnostics">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="MedicalPark: A surgeon's 25-year bet on breast diagnostics — just unlocked EU with CE MDR">
+  <meta name="twitter:description" content="CE (2015) → FDA (2018) → CE MDR (June 2026). Full product line from ultrasound imaging to biopsy. 25+ countries. The Korean medtech company nobody covers.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/medicalpark-006.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "MedicalPark: The Surgeon Who Built Korea's Full-Stack Breast Diagnostics Company — and Just Unlocked Europe",
+    "description": "MedicalPark CEO Park Hee-bung is a practicing surgeon who spent 25 years building the breast cancer biopsy device the market forgot to make. CE MDR certified June 2026. Selling in 25+ countries with the only Korean full-stack breast diagnostics portfolio.",
+    "datePublished": "2026-07-03",
+    "dateModified": "2026-07-03",
+    "author": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "publisher": {"@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com"},
+    "mainEntityOfPage": "https://koreastartupthesis.com/medicalpark-issue-006",
+    "image": "https://koreastartupthesis.com/og/medicalpark-006.png",
+    "keywords": ["MedicalPark", "Bexcore", "VABB", "breast biopsy", "CE MDR", "Korean medical device", "women's health", "Park Hee-bung"],
+    "articleSection": "Company Deep Dive",
+    "about": {
+      "@type": "Organization",
+      "name": "MedicalPark",
+      "foundingDate": "1999",
+      "description": "Korean medical device company specializing in breast cancer diagnostic and biopsy devices, including the Bexcore VABB system and MammouS ABUS ultrasound platform",
+      "url": "https://imedicalpark.com"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111; --gray-1: #444; --gray-2: #777; --gray-3: #aaa;
+      --gray-4: #e5e5e5; --gray-5: #f5f5f5; --white: #fff;
+      --accent: #b5446e; --accent-light: #fdf0f5; --accent-dark: #7a1d42;
+      --hero-bg: #1a0d12; --hero-accent: #d4547a;
+      --green: #16a34a; --green-light: #dcfce7; --green-dark: #14532d;
+      --amber-light: #fffbeb; --amber-dark: #92400e;
+      --red-light: #fef2f2; --red-dark: #991b1b;
+      --blue-light: #eff6ff; --blue-dark: #1e3a8a;
+      --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fafafa; color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; color: #fff; letter-spacing: -0.3px; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-link-light { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nav-link-light:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: #c43e69; }
+
+    .hero-wrap { background: #fdf5f3; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 52px 40px 48px; }
+    .hero-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+    .hero h1 { font-size: 30px; font-weight: 500; line-height: 1.25; letter-spacing: -0.6px; margin-bottom: 14px; color: var(--black); }
+    .hero-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-sm); font-weight: 500; }
+    .tag-rose { background: #fce7ef; color: var(--accent-dark); border: 1px solid rgba(181,68,110,0.2); }
+    .tag-outline { border: 1px solid rgba(0,0,0,0.15); color: var(--gray-1); }
+    .tag-blue { background: var(--blue-light); color: var(--blue-dark); border: 1px solid rgba(30,58,138,0.15); }
+    .tag-green { background: var(--green-light); color: var(--green-dark); border: 1px solid rgba(22,163,74,0.2); }
+    .tag-red { background: var(--red-light); color: var(--red-dark); border: 1px solid rgba(153,27,27,0.2); }
+    .hero-summary { font-size: 15px; color: var(--gray-1); line-height: 1.85; border-left: 3px solid var(--accent); padding-left: 18px; }
+    .hero-summary strong { color: var(--black); font-weight: 500; }
+    .pub-date { font-size: 12px; color: var(--gray-3); margin-top: 20px; }
+
+    .kpi-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); }
+    .kpi-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex; }
+    .kpi-item { flex: 1; padding: 16px 20px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:first-child { padding-left: 0; }
+    .kpi-item:last-child { border-right: none; padding-right: 0; }
+    .kpi-num { font-size: 20px; font-weight: 500; color: var(--accent-dark); margin-bottom: 2px; }
+    .kpi-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    .tab-bar { position: sticky; top: 56px; z-index: 99; background: var(--hero-bg); border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .tab-bar-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; display: flex; }
+    .nav-tab { font-size: 13px; font-weight: 500; padding: 0 20px; height: 44px; background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.45); border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; white-space: nowrap; }
+    .nav-tab:first-child { padding-left: 0; }
+    .nav-tab + .nav-tab { border-left: 1px solid rgba(255,255,255,0.12); }
+    .nav-tab:hover { color: rgba(255,255,255,0.8); }
+    .nav-tab.active { color: #fff; }
+    .nav-tab::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 6px; vertical-align: middle; opacity: 0.4; transition: opacity 0.15s; }
+    .nav-tab.active::before { opacity: 1; }
+    .nav-tab[data-tab="deepdive"]::before { background: #f9a8c9; }
+    .nav-tab[data-tab="ones"]::before     { background: #4ade80; }
+    .nav-tab[data-tab="deals"]::before    { background: #fb923c; }
+    .nav-tab[data-tab="deepdive"].active  { border-bottom-color: #f9a8c9; }
+    .nav-tab[data-tab="ones"].active      { border-bottom-color: #4ade80; }
+    .nav-tab[data-tab="deals"].active     { border-bottom-color: #fb923c; }
+    .nav-tab-badge { display: inline-block; font-size: 10px; font-weight: 500; border-radius: 10px; padding: 1px 6px; margin-left: 4px; vertical-align: middle; }
+    .nav-tab[data-tab="deepdive"] .nav-tab-badge { background: rgba(249,168,201,0.2); color: #f9a8c9; }
+    .nav-tab[data-tab="ones"] .nav-tab-badge     { background: rgba(74,222,128,0.2); color: #86efac; }
+    .nav-tab[data-tab="deals"] .nav-tab-badge    { background: rgba(251,146,60,0.2); color: #fdba74; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .article-wrap { max-width: 680px; margin: 0 auto; padding: 48px 40px 80px; }
+    h2 { font-size: 19px; font-weight: 500; letter-spacing: -0.3px; margin-top: 48px; margin-bottom: 16px; color: var(--black); padding-bottom: 10px; border-bottom: 1px solid var(--gray-4); }
+    h3 { font-size: 15px; font-weight: 500; margin-top: 28px; margin-bottom: 10px; color: var(--black); }
+    p { font-size: 15px; color: var(--gray-1); line-height: 1.85; margin-bottom: 18px; }
+    p strong { color: var(--black); font-weight: 500; }
+    p em { font-style: italic; color: var(--gray-2); }
+
+    .callout { border-radius: var(--radius-lg); padding: 20px 24px; margin: 28px 0; }
+    .callout-rose  { background: #fef0f5; border: 1px solid rgba(181,68,110,0.15); }
+    .callout-blue  { background: var(--blue-light); border: 1px solid rgba(30,58,138,0.12); }
+    .callout-green { background: var(--green-light); border: 1px solid rgba(22,163,74,0.2); }
+    .callout-amber { background: var(--amber-light); border: 1px solid rgba(234,179,8,0.3); }
+    .callout-gray  { background: var(--gray-5); border: 1px solid var(--gray-4); }
+    .callout-red   { background: var(--red-light); border: 1px solid rgba(153,27,27,0.2); }
+    .callout-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-3); margin-bottom: 12px; }
+    .callout p { margin-bottom: 0; font-size: 14px; }
+    .callout p + p { margin-top: 8px; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .data-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray-3); padding: 8px 12px; border-bottom: 1px solid var(--gray-4); background: var(--gray-5); }
+    .data-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+    .data-table td { padding: 11px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); }
+    .data-table td strong { color: var(--black); font-weight: 500; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: #fafafa; }
+
+    .metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    .metric-card { background: var(--white); border: 1px solid var(--gray-4); border-radius: var(--radius-lg); padding: 16px 18px; }
+    .metric-val { font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 2px; }
+    .metric-label { font-size: 11px; color: var(--gray-3); text-transform: uppercase; letter-spacing: 0.06em; }
+    .metric-delta { font-size: 12px; margin-top: 4px; }
+    .up { color: var(--green); }
+    .neutral { color: var(--gray-3); }
+    .down { color: #dc2626; }
+
+    .timeline { margin: 24px 0; }
+    .timeline-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--gray-4); }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-year { font-size: 12px; font-weight: 500; color: var(--accent); min-width: 56px; margin-top: 1px; }
+    .timeline-content { font-size: 14px; color: var(--gray-1); line-height: 1.6; }
+    .timeline-content strong { color: var(--black); font-weight: 500; }
+
+    .divider { border: none; border-top: 1px solid var(--gray-4); margin: 40px 0; }
+
+    .subscribe-box { background: var(--hero-bg); border-radius: var(--radius-lg); padding: 32px 36px; margin-top: 48px; color: #fff; }
+    .subscribe-box h3 { font-size: 18px; font-weight: 500; margin-bottom: 8px; color: #fff; }
+    .subscribe-box p { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; max-width: 380px; }
+    .sub-form input { flex: 1; font-size: 14px; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); background: rgba(255,255,255,0.08); color: #fff; outline: none; }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.35); }
+    .sub-form input:focus { border-color: rgba(255,255,255,0.4); }
+    .sub-form button { font-size: 13px; font-weight: 500; background: var(--hero-accent); color: #fff; border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap; }
+    .sub-form button:hover { background: #c43e69; }
+
+    footer { border-top: 1px solid var(--gray-4); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+
+    #panel-ones .panel-hero-wrap  { background: #dcfce7; }
+    #panel-deals .panel-hero-wrap { background: #ffedd5; }
+    .panel-hero { max-width: 680px; margin: 0 auto; padding: 36px 40px 32px; }
+    .panel-hero h1 { font-size: 24px; font-weight: 500; color: var(--black); letter-spacing: -0.5px; margin-bottom: 10px; }
+    .panel-eyebrow { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    #panel-ones .panel-eyebrow  { color: #16a34a; }
+    #panel-deals .panel-eyebrow { color: #c2410c; }
+    .panel-summary { font-size: 14px; color: var(--gray-1); line-height: 1.7; padding-left: 14px; margin-top: 10px; }
+    #panel-ones .panel-summary  { border-left: 3px solid #16a34a; }
+    #panel-deals .panel-summary { border-left: 3px solid #ea580c; }
+
+    .section-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+    .section-eyebrow span { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+    #panel-ones .section-eyebrow span  { color: #16a34a; }
+    #panel-deals .section-eyebrow span { color: #c2410c; }
+    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--gray-4); }
+
+    .panel-wrap { max-width: 680px; margin: 0 auto; padding: 0 40px 80px; }
+
+    .watch-cards { display: flex; flex-direction: column; }
+    .watch-card { padding: 20px 0; border-bottom: 1px solid var(--gray-4); display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+    .watch-card:last-child { border-bottom: none; }
+    .watch-card-name { font-size: 15px; font-weight: 500; margin-bottom: 3px; letter-spacing: -0.2px; }
+    .watch-card-sub { font-size: 12px; color: var(--gray-2); margin-bottom: 8px; }
+    .watch-card-desc { font-size: 13px; color: var(--gray-1); line-height: 1.75; }
+    .watch-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 4px; }
+    .deal-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-2); padding: 0 10px 10px 0; border-bottom: 1px solid var(--gray-4); }
+    .deal-table td { padding: 11px 10px 11px 0; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-co { font-weight: 500; color: var(--black); display: block; margin-bottom: 2px; }
+    .deal-note { font-size: 11px; color: var(--gray-3); }
+    .deal-amount { font-weight: 500; color: var(--black); white-space: nowrap; }
+
+    .sources { padding: 28px 0 8px; border-top: 1px solid var(--gray-4); margin-top: 8px; }
+    .sources-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-3); margin-bottom: 14px; }
+    .sources-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .sources-list li { display: grid; grid-template-columns: 20px 1fr; gap: 6px; font-size: 12px; color: var(--gray-2); line-height: 1.6; }
+    .sources-list li span { color: var(--gray-3); padding-top: 1px; }
+    .sources-list a { color: var(--gray-2); text-decoration: underline; text-decoration-color: var(--gray-4); }
+    .sources-list a:hover { color: var(--accent); }
+
+    .back-link-bar { background: var(--white); border-bottom: 1px solid var(--gray-4); padding: 0 40px; }
+    .back-link-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; height: 40px; }
+    .back-link { font-size: 12px; color: var(--gray-3); }
+    .back-link:hover { color: var(--black); }
+
+    .fab-top {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(181,68,110,0.35);
+      opacity: 0; pointer-events: none; transform: translateY(10px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Korea Startup Thesis</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link-light">← All Issues</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-box')?.scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link-bar">
+  <div class="back-link-inner">
+    <a href="index.html" class="back-link">← Korea Startup Thesis</a>
+  </div>
+</div>
+
+<div class="hero-wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Issue #006 &nbsp;·&nbsp; Company Deep Dive &nbsp;·&nbsp; July 3, 2026</p>
+    <h1>MedicalPark: The Surgeon Who Built Korea's Full-Stack Breast Diagnostics Company — and Just Unlocked Europe</h1>
+    <div class="hero-tags">
+      <span class="tag tag-rose">Medical Device</span>
+      <span class="tag tag-rose">Women's Health</span>
+      <span class="tag tag-outline">CE MDR 2026</span>
+      <span class="tag tag-outline">FDA Cleared</span>
+      <span class="tag tag-outline">Global Export</span>
+    </div>
+    <p class="hero-summary">
+      Most medical device founders come from business or engineering. <strong>Park Hee-bung (박희붕) came from the operating room.</strong> A practicing surgeon with an MD, PhD from Yonsei University, he spent years performing breast biopsies with devices made by Hologic and Becton Dickinson — and repeatedly hitting the same frustration: the tools were overbuilt for what most cases needed, expensive to import, and optimized for US hospital workflows that didn't fit Korean or Asian practice. So he spent 25 years building the alternatives. Today, MedicalPark's <strong>Bexcore</strong> vacuum-assisted biopsy system is exported to 25+ countries with CE, FDA, JPAL, and ANVISA certifications. The <strong>MammouS</strong> automated breast ultrasound platform completes the diagnosis-to-biopsy workflow. And in June 2026, TÜV Rheinland issued CE MDR certification — the European Union's new, significantly harder regulatory standard — <strong>unlocking official sales across all 27 EU member states</strong>. This is not a unicorn story. It is the story of a surgeon-founder building quietly, correctly, and for the long term.
+    </p>
+    <p class="pub-date">Published July 3, 2026</p>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-inner">
+    <div class="kpi-item">
+      <p class="kpi-num">25+</p>
+      <p class="kpi-label">Export Countries</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">4+</p>
+      <p class="kpi-label">Global Certifications</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">EU 27</p>
+      <p class="kpi-label">Countries Unlocked (MDR)</p>
+    </div>
+    <div class="kpi-item">
+      <p class="kpi-num">$3.9B</p>
+      <p class="kpi-label">Global Market by 2034</p>
+    </div>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <div class="tab-bar-inner">
+    <button class="nav-tab active" data-tab="deepdive">Company Deep Dive</button>
+    <button class="nav-tab" data-tab="ones">Ones to Watch <span class="nav-tab-badge">3</span></button>
+    <button class="nav-tab" data-tab="deals">Deal Tracker <span class="nav-tab-badge">5</span></button>
+  </div>
+</div>
+
+
+<!-- ===== PANEL: DEEP DIVE ===== -->
+<div class="tab-panel active" id="panel-deepdive">
+<div class="article-wrap">
+
+  <h2>The Thesis: Surgeons Know What Surgeons Need</h2>
+
+  <p>
+    The conventional wisdom in medtech is that device companies are built by engineers who find clinical partners, or by scientists who translate lab discoveries into products. Park Hee-bung inverted this. He is the clinician — a board-certified surgical specialist with a medical doctorate, practicing at his own breast and thyroid surgical clinic (박희붕외과검진센터) — who decided that the only way to get the right tools was to build them himself.
+  </p>
+
+  <p>
+    This matters because the breast biopsy market has a structural problem that outsiders rarely see. The dominant players — Hologic, Devicor Medical Products (a Danaher subsidiary), and Becton Dickinson — built their products around the US hospital system: high throughput, institutional procurement, relatively price-insensitive. Their systems are excellent for that context. They are poorly matched to the realities of breast clinics in Korea, Southeast Asia, the Middle East, and Eastern Europe, where the clinical workflows are different, capital budgets are tighter, and the mix of cases skews toward smaller, earlier-stage lesions where an overbuilt $80,000 system is not the right tool.
+  </p>
+
+  <p>
+    MedicalPark's Bexcore was designed from the inside out — by a surgeon who understood what a breast clinic in Yongin actually needed, and then validated that understanding across 25+ export markets over two decades. The result is a company that most global medtech investors have never heard of, and that is now certified to sell its products on every major regulated continent.
+  </p>
+
+  <h2>The Founder: A Practicing Surgeon Who Never Stopped Practicing</h2>
+
+  <p>
+    Park Hee-bung's dual identity — CEO of a medical device manufacturer and active clinical surgeon — is unusual in any market and nearly unique in Korea. Most founder-CEOs of device companies eventually step back from clinical work as the company grows. Park has maintained both roles deliberately, using ongoing surgical practice as continuous product feedback. When the Bexcore needs a design iteration, the person making that call has performed the procedure that week.
+  </p>
+
+  <p>
+    His academic background is from Yonsei University, one of Korea's most respected medical programs. His clinical specialty is breast and thyroid surgery — the exact category where Bexcore is used. The company's location in Yongin (Gyeonggi Province, adjacent to Seoul) places it close to Korea's medical research cluster and major hospital networks.
+  </p>
+
+  <p>
+    The founding story has the texture of many great medtech companies: a clinician repeatedly frustrated by inadequate tools, a decision to stop complaining and start designing, and then a decade of iteration before the product was right. MedicalPark was founded in 1999. Bexcore entered the Korean market before gaining international certifications in 2015. That trajectory — 16 years from founding to first major international approval — is slow by venture capital standards and entirely normal by medtech standards.
+  </p>
+
+  <div class="callout callout-rose">
+    <p class="callout-title">Why surgeon-founders win in medtech</p>
+    <p>The FDA's own data shows that medical device recalls most frequently stem from design flaws that clinical experts would have caught early. Surgeon-founders have an inherent advantage: they are the end-user. They understand failure modes not from reading literature but from experiencing them. Park Hee-bung designed Bexcore around the specific clinical context of breast clinics in Asia — needle gauge, probe ergonomics, guidance modality, and case cost structure. Those design decisions, made by someone who performs the procedure, explain why the product has retained commercial viability in 25+ markets for over a decade without the marketing budget of a Hologic.</p>
+  </div>
+
+  <h2>The Product Portfolio: From Image to Answer</h2>
+
+  <p>
+    MedicalPark has built what it calls a "full-stack" breast diagnostics product line — a portfolio covering the complete clinical workflow from initial imaging through tissue confirmation. This is strategically important: it means MedicalPark can sell a complete department solution rather than a single device, increasing both average contract value and switching costs.
+  </p>
+
+  <h3>Bexcore — Vacuum-Assisted Breast Biopsy System</h3>
+
+  <p>
+    The flagship product and the one that established MedicalPark's global reputation. Bexcore is a vacuum-assisted breast biopsy (VABB) system — a device that uses negative pressure to obtain multiple tissue samples from a single needle insertion, dramatically reducing the procedure time and patient discomfort compared to conventional core needle biopsy. The system consists of the capital equipment (the VABB console) and a range of disposable components:
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Regulatory Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Bexcore Needle</strong></td>
+        <td>Single-use biopsy probe for the VABB system</td>
+        <td>CE (2015), CE MDR (Jun 2026), FDA, JPAL, ANVISA</td>
+      </tr>
+      <tr>
+        <td><strong>Bexcore Fast Kit</strong></td>
+        <td>Rapid-insertion disposable biopsy kit</td>
+        <td>CE (2015), CE MDR (Jun 2026), FDA, JPAL, ANVISA</td>
+      </tr>
+      <tr>
+        <td><strong>Caloc</strong></td>
+        <td>Biopsy cavity marker / clip</td>
+        <td>CE, FDA</td>
+      </tr>
+      <tr>
+        <td><strong>Ducto-Easy</strong></td>
+        <td>Ductal lavage assistive tool</td>
+        <td>CE</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>MammouS — Automated Breast Ultrasound (ABUS)</h3>
+
+  <p>
+    The second pillar of MedicalPark's portfolio is the MammouS system, an Automated Breast Ultrasound (ABUS) platform for 3D volumetric breast imaging. ABUS is increasingly important in the Korean and Asian market because Asian women tend to have denser breast tissue than the average Western patient — a characteristic that significantly reduces the diagnostic sensitivity of traditional mammography (X-ray). Ultrasound is the preferred supplemental screening modality for dense breasts, and automated 3D ultrasound removes the operator-dependency that limits conventional hand-held ultrasound.
+  </p>
+
+  <p>
+    MammouS positions MedicalPark as a solution provider that can support a breast clinic from first screening (MammouS ABUS) through diagnosis (Bexcore biopsy) — the complete pathway from "something looks abnormal" to "here is the tissue diagnosis." Few Korean device companies have achieved this kind of portfolio coherence in a single specialty.
+  </p>
+
+  <h3>Extended product lines</h3>
+
+  <p>
+    Beyond the breast-specific portfolio, MedicalPark has also commercialized surgical energy devices (for use in breast and thyroid procedures), a single-use laryngoscope (삽관용후두경) for intubation, and a patient monitoring device combining blood pressure measurement and SpO2 (blood oxygen saturation). These products leverage the company's manufacturing and regulatory infrastructure and serve adjacent clinical markets without requiring new channel development.
+  </p>
+
+  <h2>The June 2026 Milestone: What CE MDR Actually Means</h2>
+
+  <p>
+    On June 10, 2026, MedicalPark held a certification ceremony at its Yongin headquarters with <strong>TÜV Rheinland</strong>, one of Europe's most respected notified bodies, to mark the award of CE MDR certification for the Bexcore Needle and Bexcore Fast Kit. For non-specialists, this warrants explanation.
+  </p>
+
+  <p>
+    The European Union's Medical Device Regulation (MDR) replaced the older Medical Device Directive (MDD) and represents the most significant tightening of European regulatory standards in a generation. Where the MDD required manufacturers to demonstrate conformity with general safety and performance requirements, the MDR additionally requires robust clinical evidence specific to the device, a permanent post-market clinical follow-up system, enhanced UDI traceability, and a stricter notified body review process. Thousands of devices that held MDD certification have failed or delayed MDR transition — including products from much larger companies than MedicalPark.
+  </p>
+
+  <p>
+    MedicalPark's MDR certification is therefore not a routine update. It is evidence that the company's clinical data package, quality management system, and post-market surveillance infrastructure meet the current gold standard for European medical device regulation. TÜV Rheinland's Asia-Pacific Vice President Vincent Uecker noted at the ceremony that MedicalPark had "thoroughly prepared and met the demanding MDR criteria in an environment where European regulatory barriers have significantly risen."
+  </p>
+
+  <div class="callout callout-blue">
+    <p class="callout-title">MDR in numbers: Why this certification is hard</p>
+    <p>As of 2025, an estimated 50–60% of devices with legacy MDD certificates have not completed MDR transition. The transition requires clinical evaluation reports that meet the MEDDEV 2.7/1 Rev 4 standard, a Post-Market Clinical Follow-Up (PMCF) plan, a Summary of Safety and Clinical Performance (SSCP) for Class III devices, and full UDI implementation. For a device like Bexcore — a Class IIb invasive device — this is a multi-year process involving clinical literature reviews, real-world evidence collection, and extensive QMS upgrades. Companies that have achieved it gain a durable competitive advantage in the EU market because the barrier to entry for competing products has permanently risen.</p>
+  </div>
+
+  <p>
+    The practical commercial impact: MedicalPark can now sell Bexcore Needle and Bexcore Fast Kit directly through European distributors in all 27 EU member states, with full regulatory standing. It can also sell into the substantial set of non-EU countries (Norway, Switzerland, Israel, Turkey, and others) that accept CE marking. The June 2026 certification converts the EU from a market MedicalPark sold into informally to one it can develop systematically, with marketing authorizations that don't expire and full institutional procurement eligibility.
+  </p>
+
+  <h2>The Regulatory Moat: A 25-Year Certification Stack</h2>
+
+  <p>
+    One of the most underappreciated competitive advantages in medtech is the regulatory moat — the accumulated set of market authorizations that take years to build and cannot be replicated quickly by a new entrant. MedicalPark has spent 25 years building exactly this.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-year">1999</span>
+      <div class="timeline-content"><strong>Company founded</strong> in Yongin, Gyeonggi. Park Hee-bung begins development of vacuum-assisted breast biopsy concept based on clinical experience as a practicing surgeon.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2014–15</span>
+      <div class="timeline-content"><strong>Bexcore commercial launch + CE MDD certification.</strong> Product enters Korean market and achieves first European certification under the Medical Device Directive. First international export relationships established.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2018</span>
+      <div class="timeline-content"><strong>US FDA clearance obtained.</strong> CEO announces plan for ultrasound-guided VABB system expansion. ANVISA (Brazil) and JPAL (Japan) certifications also achieved, opening Latin American and Japanese markets.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">2021</span>
+      <div class="timeline-content"><strong>Designated "차세대 세계일류상품"</strong> (Next-Generation World-Class Product) by the Korean government. Recognition criteria: 3-year export CAGR exceeding the national average; predicted to reach top-5 global market share within 7 years.</div>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-year">Jun 2026</span>
+      <div class="timeline-content"><strong>CE MDR certification from TÜV Rheinland</strong> for Bexcore Needle and Bexcore Fast Kit. Certification ceremony held at Yongin headquarters. Unlocks EU 27 countries for official commercial sales and all CE-recognizing global markets.</div>
+    </div>
+  </div>
+
+  <p>
+    The geographic coverage this stack provides is substantial: Korea (MFDS), EU 27 (CE MDR), USA (FDA), Japan (JPAL/PMDA), Brazil (ANVISA), plus the ~40 countries worldwide that accept CE marking without additional local approval. For a company of MedicalPark's size, this is an unusually complete global regulatory footprint.
+  </p>
+
+  <h2>Market Context: Why Breast Biopsy Is a Durable Growth Story</h2>
+
+  <p>
+    The global breast biopsy devices market was valued at approximately $2.4 billion in 2024 and is projected to reach $3.9 billion by 2034, growing at a 5.7% CAGR. The demand drivers are structural and demographically durable:
+  </p>
+
+  <p>
+    <strong>Rising screening rates globally.</strong> As breast cancer awareness campaigns succeed and screening programs expand in middle-income countries, the number of screening-detected abnormalities requiring biopsy increases proportionally. Every additional mammogram or ultrasound that identifies a suspicious lesion is a potential Bexcore procedure.
+  </p>
+
+  <p>
+    <strong>Shift from surgical to percutaneous biopsy.</strong> The clinical standard of care has moved away from open surgical biopsy toward minimally invasive percutaneous techniques, of which VABB is the most accurate and patient-friendly. This shift is ongoing in many Asian and Eastern European markets where surgical biopsy was still common practice until recently — creating a multi-year conversion opportunity.
+  </p>
+
+  <p>
+    <strong>Dense breast tissue prevalence in Asia.</strong> Asian women have higher rates of dense breast tissue than Western populations, which reduces the sensitivity of mammography and increases reliance on ultrasound guidance — the primary guidance modality for Bexcore. This structural feature of the target market is a sustained demand driver.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Competitor</th>
+        <th>Country</th>
+        <th>Key Product</th>
+        <th>Market Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Hologic</strong></td>
+        <td>USA</td>
+        <td>Eviva, ATEC</td>
+        <td>Global market leader; dominant in US and Western Europe</td>
+      </tr>
+      <tr>
+        <td><strong>Devicor Medical (Danaher)</strong></td>
+        <td>USA</td>
+        <td>Mammotome</td>
+        <td>#2 globally; strong in institutional and academic centers</td>
+      </tr>
+      <tr>
+        <td><strong>Becton Dickinson</strong></td>
+        <td>USA</td>
+        <td>Finesse Ultra, Achieve</td>
+        <td>Core needle focus; broad hospital distribution</td>
+      </tr>
+      <tr>
+        <td><strong>MedicalPark</strong></td>
+        <td>Korea</td>
+        <td>Bexcore</td>
+        <td>Korean challenger; competitive in Asia, LatAm, MENA; full-stack positioning</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    MedicalPark is not trying to displace Hologic in the US academic medical center market. It is capturing the mid-tier hospital and outpatient clinic segment in markets where Hologic's pricing is prohibitive and local service networks are thin. Korea, Southeast Asia, the Middle East, Eastern Europe, and Latin America — these are the markets where a CE+FDA+ANVISA+JPAL-certified Korean device with competitive pricing and direct manufacturer support has a structural advantage.
+  </p>
+
+  <h2>The Investment Angle: A Different Kind of Medtech Opportunity</h2>
+
+  <p>
+    MedicalPark is not raising a Series D at a ₩2 trillion valuation. It is not in the Korean IPO pipeline alongside Rebellions and DEEPX. It is a founder-owned, export-driven medical device manufacturer that has grown organically over 25 years and just completed the hardest regulatory certification in its target market.
+  </p>
+
+  <p>
+    For global investors, this company represents a category that is systematically undercovered in Korea startup media: the <strong>bootstrapped medtech exporter</strong>. These companies rarely appear in VC deal flow because they don't raise VC — they grow on product revenue, reinvest in regulatory expansion, and compound value slowly and durably. They frequently appear as acquisition targets for the Holics and Danahers of the world, whose own R&D pipelines are expensive and slow, and who find it more efficient to acquire a validated, certified product with existing distribution rather than build their own.
+  </p>
+
+  <div class="callout callout-green">
+    <p class="callout-title">The acquisition optionality argument</p>
+    <p>Three of the top five global breast biopsy companies (Hologic, Devicor/Danaher, Becton Dickinson) have historically grown their device portfolios through acquisition of exactly the type of company MedicalPark is: a mid-sized, internationally certified specialist with a validated product, established distribution, and a complementary geographic footprint. MedicalPark's full-stack positioning (imaging + biopsy), its CE MDR certification, its 25+ country commercial presence, and its surgeon-founder intellectual foundation make it a structurally attractive strategic target. The 2021 Korean government designation as a "Next-Generation World-Class Product" company, with an explicit prediction of top-5 global market share within 7 years, suggests the government's own analysis arrives at the same conclusion.</p>
+  </div>
+
+  <h2>Risks: The Quiet Company's Quiet Risks</h2>
+
+  <h3>Scale and visibility</h3>
+  <p>
+    MedicalPark's organic growth model means revenue scale is modest relative to the company's regulatory achievements. The company has no disclosed VC backing, limited analyst coverage, and minimal English-language marketing presence. For international distributors, this can create uncertainty about the supplier's durability — a concern that CE MDR certification partially addresses (it implies organizational infrastructure) but doesn't fully resolve.
+  </p>
+
+  <h3>Competition in the mid-tier</h3>
+  <p>
+    The same markets MedicalPark targets — Asia, MENA, Latin America — are also where Chinese device manufacturers are expanding aggressively. China's medtech exporters have benefited from domestic scale and government support, and several have CE-certified VABB products. If Chinese competitors achieve MDR transition and compete on price in MedicalPark's core markets, the company's cost position will face structural pressure.
+  </p>
+
+  <h3>Hospital procurement cycles</h3>
+  <p>
+    Medical device sales in institutional settings have long cycles, high relationship dependency, and are often disrupted by hospital system consolidation. MedicalPark's distributor-based international model means the company has limited direct visibility into end-user relationships. Distributor transitions — which are common in emerging market medtech — can reset years of relationship-building.
+  </p>
+
+  <div class="callout callout-amber">
+    <p class="callout-title">The critical question for international investors</p>
+    <p>Can MedicalPark convert the CE MDR milestone into a step-change in European distribution — either through new distributor relationships or through the enhanced credibility that MDR certification provides to existing partners — before Chinese competitors complete their own MDR transitions? The window is 18–36 months. The company that establishes clinical reference sites in Germany, France, and the UK in that window will own the European mid-tier breast biopsy market for years.</p>
+  </div>
+
+  <h2>The Bottom Line: The Company Worth Knowing Before Everyone Else Does</h2>
+
+  <p>
+    Korea's startup media covers unicorns, AI chip companies, and biotech licensing deals. It rarely covers the quiet manufacturers who build international businesses one certification at a time, over decades, led by founders who never left the clinical environment that gave them their edge.
+  </p>
+
+  <p>
+    MedicalPark is that company. Park Hee-bung spent 25 years building a product portfolio that a practicing surgeon would actually want to use, accumulated the global regulatory approvals to sell it everywhere that matters, and in June 2026, completed the hardest certification milestone on the list. The company is not on a path to a ₩1 trillion IPO. It is on a path to being the product that Hologic or Danaher decides is cheaper to buy than to build.
+  </p>
+
+  <p>
+    <strong>For global investors tracking Korean medtech: MedicalPark is the right company to understand now, before a deal announcement makes it obvious.</strong>
+  </p>
+
+  <hr class="divider">
+
+  <div class="subscribe-box">
+    <h3>Every week, one Korean startup. No noise.</h3>
+    <p>Korea Startup Thesis is a free weekly deep dive for global VC and angel investors. Next issue: coming Friday.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="subEmail">
+      <button onclick="handleSubscribe()">Subscribe free</button>
+    </div>
+  </div>
+
+  <div class="sources" style="margin-top: 40px;">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>한국경제, <a href="https://www.hankyung.com/article/202606107299i" target="_blank">메디칼파크 유방생검기기 유럽 의료기기 인증 획득,</a> hankyung.com, June 10, 2026</div></li>
+      <li><span>2</span><div>뉴스와이어, <a href="https://www.newswire.co.kr/newsRead.php?no=934761" target="_blank">벡스코어, 2021년도 '세계일류상품'으로 선정,</a> newswire.co.kr, November 19, 2021</div></li>
+      <li><span>3</span><div>TradeKorea, <a href="https://www.tradekorea.com/product/detail/P804129/Vacuum-Assisted-Breast-Biopsy--VABB--system--bexcore-.html" target="_blank">Vacuum Assisted Breast Biopsy (VABB) system 'bexcore',</a> tradekorea.com</div></li>
+      <li><span>4</span><div>Transparency Market Research, <a href="https://www.globenewswire.com/news-releases/2024/08/14/2930311/0/en/Breast-Biopsy-Devices-Market-Size-is-Set-for-Strong-Growth-Reaching-USD-3-9-Billion-by-2034.html" target="_blank">Breast Biopsy Devices Market Size — USD 3.9 Billion by 2034,</a> GlobeNewswire, August 2024</div></li>
+      <li><span>5</span><div>MedicalPark, <a href="https://imedicalpark.com" target="_blank">메디칼파크 공식 웹사이트,</a> imedicalpark.com</div></li>
+      <li><span>6</span><div>한국경제, <a href="https://www.hankyung.com/article/201810236120f" target="_blank">메디칼파크 "엑스레이 중심의 유방 검사, 초음파로 대체하는 흐름 우리가 이끌 것",</a> hankyung.com, October 2018</div></li>
+      <li><span>7</span><div>Zillinks, <a href="https://app.zillinks.com/company/SyzOZp9pAO" target="_blank">(주)메디칼파크 기업정보,</a> zillinks.com</div></li>
+    </ol>
+  </div>
+
+</div>
+</div><!-- end panel-deepdive -->
+
+
+<!-- ===== PANEL: ONES TO WATCH ===== -->
+<div class="tab-panel" id="panel-ones">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #006 &nbsp;·&nbsp; July 3, 2026</p>
+    <h1>Ones to Watch</h1>
+    <p class="panel-summary">Three Korean medtech and biotech companies worth putting on your radar — curated for global investors tracking Korea's next breakout companies in healthcare.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Ones to watch &nbsp;·&nbsp; Issue #006</span></div>
+    <div class="watch-cards">
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">NextBiomedical (넥스트바이오메디컬)</p>
+          <p class="watch-card-sub">Colonoscopy polypectomy device · KOSDAQ listed · FDA clinical · Seongnam</p>
+          <p class="watch-card-desc">NextBiomedical is MedicalPark's closest Korean peer by business model — a surgeon-founded device company building a novel disposable for a procedure dominated by US incumbents. Its flagship product, Nexphere F, is a water-jet polypectomy device for colon polyp removal during colonoscopy. The device delivers a submucosal fluid cushion to lift the polyp before removal, significantly reducing the risk of perforation — the primary complication that has limited the adoption of endoscopic submucosal dissection (ESD) in community settings. Nexphere F has received Korean MFDS approval, European CE certification, and is currently in FDA clinical trials. A Japanese partnership is anticipated to close in 2026. The company is also on the shortlist of candidates for the Korean National Growth Fund's next medtech track allocation — a designation that would accelerate institutional awareness domestically and could provide the balance sheet strength to accelerate US regulatory and commercialization timelines. For investors tracking the Korean medtech device sector, NextBiomedical represents the same archetype as MedicalPark: clinical insight translated into international product, building a regulatory moat one certification at a time.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">KOSDAQ</span>
+          <span class="tag tag-outline">Medical Device</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Prrogen (프로젠)</p>
+          <p class="watch-card-sub">GLP-1/GLP-2 dual agonist · Phase 2a · Biotech · Korea</p>
+          <p class="watch-card-desc">Prrogen presented Phase 2a clinical results for its GLP-1/GLP-2 dual agonist PG-102 at the American Diabetes Association (ADA 2026) annual meeting in New Orleans, positioning the company in the most competitive category in global pharmaceuticals: next-generation obesity and metabolic disease drugs. The GLP-1 market has been transformed by Novo Nordisk's semaglutide (Ozempic/Wegovy) and Eli Lilly's tirzepatide (Mounjaro/Zepbound), creating immense interest in the next wave of mechanisms. Prrogen's dual GLP-1/GLP-2 approach targets both metabolic benefit (via GLP-1) and intestinal barrier function and lean mass preservation (via GLP-2) — a differentiation argument that addresses the primary clinical concern about current GLP-1 drugs: significant muscle mass loss in users. Presenting at ADA is itself a credentialing milestone; the organization's review committee is rigorous about what clinical data it accepts for presentation. If PG-102's Phase 2a data shows the muscle-preservation signal that the mechanism predicts, the company becomes a licensing target for any of the major pharma players building out their metabolic franchise beyond semaglutide.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-rose">Phase 2a</span>
+          <span class="tag tag-outline">Biotech</span>
+        </div>
+      </div>
+
+      <div class="watch-card">
+        <div>
+          <p class="watch-card-name">Mediwhale (메디웨일)</p>
+          <p class="watch-card-sub">AI retinal cardiovascular screening · CE MDR approved · Digital health · Seoul</p>
+          <p class="watch-card-desc">Mediwhale's Dr. Nune product uses AI analysis of retinal fundus photographs to predict cardiovascular risk — detecting signs of hypertension, atherosclerosis, and diabetes risk from a 30-second, non-invasive eye scan that requires no blood draw or hospital visit. The retinal vasculature is the only place in the body where blood vessels can be directly observed non-invasively, and decades of clinical research have established correlations between retinal vessel patterns and systemic cardiovascular disease. Mediwhale has translated this research into a regulatory-cleared AI device: the company achieved CE MDR certification for Dr. Nune (the cardiovascular risk screening indication) — the same certification MedicalPark just completed for Bexcore, and equally difficult to obtain. This puts Mediwhale in a small and valuable cohort of Korean AI medical device companies with current European regulatory standing. The commercial model targets occupational health screening, insurance underwriting, and primary care settings where a rapid, non-invasive cardiovascular risk stratification tool has high value. The market timing is favorable: GLP-1 drug proliferation is expanding the patient population actively managing metabolic risk, creating demand for accessible monitoring tools.</p>
+        </div>
+        <div class="watch-card-right">
+          <span class="tag tag-blue">CE MDR</span>
+          <span class="tag tag-outline">Digital Health</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>DailyInvest, <a href="http://www.dailyinvest.kr/news/articleView.html?idxno=70406" target="_blank">[종목 포커스] 넥스트바이오메디컬, 넥스피어F 임상과 글로벌 파트너십이 관건,</a> dailyinvest.kr</div></li>
+      <li><span>2</span><div>한국경제, <a href="https://www.hankyung.com/article/202606107200i" target="_blank">프로젠, 美당뇨학회서 GLP1 이중작용제 2형 당뇨 임상 2a상 결과 발표,</a> hankyung.com, June 10, 2026</div></li>
+      <li><span>3</span><div>VentureSquare, <a href="https://www.venturesquare.net/1080409" target="_blank">메디웨일 '닥터눈', 유럽 CE MDR 획득… 심혈관 위험 '예측' 의료기기 인정,</a> venturesquare.net</div></li>
+      <li><span>4</span><div>한국경제, <a href="https://www.hankyung.com/article/202606307370i" target="_blank">국민성장펀드 다음 타깃은 '의료기기'…유망주 4곳은,</a> hankyung.com, June 30, 2026</div></li>
+    </ol>
+  </div>
+</div>
+</div><!-- end panel-ones -->
+
+
+<!-- ===== PANEL: DEAL TRACKER ===== -->
+<div class="tab-panel" id="panel-deals">
+
+<div class="panel-hero-wrap">
+  <div class="panel-hero">
+    <p class="panel-eyebrow">Issue #006 &nbsp;·&nbsp; July 3, 2026</p>
+    <h1>Deal Tracker</h1>
+    <p class="panel-summary">Recent Korean healthcare and biotech funding rounds — stage, amount, and sector context for global investors tracking Korea deal flow.</p>
+  </div>
+</div>
+
+<div class="panel-wrap">
+  <div style="padding: 36px 0 0;">
+    <div class="section-eyebrow"><span>Deal tracker &nbsp;·&nbsp; Q2–Q3 2026</span></div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Stage</th>
+          <th>Amount</th>
+          <th>Sector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="deal-co">Ticaros (티카로스)</span>
+            <span class="deal-note">CAR-T cell therapy for solid tumors · Yonsei / KAIST spin-out · Clinical stage</span>
+          </td>
+          <td>Series D</td>
+          <td class="deal-amount">₩20.8B</td>
+          <td><span class="tag tag-rose">Bio / Oncology</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">ARK (에이알케이)</span>
+            <span class="deal-note">AI-based screening for chronic disease complications · B2B hospital SaaS · Seoul</span>
+          </td>
+          <td>Series A</td>
+          <td class="deal-amount">₩20B</td>
+          <td><span class="tag tag-blue">Digital Health</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Prrogen (프로젠)</span>
+            <span class="deal-note">GLP-1/GLP-2 dual agonist PG-102 · ADA 2026 Phase 2a data · Metabolic disease</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">₩15B+</td>
+          <td><span class="tag tag-rose">Biotech</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">ActionPower (액션파워)</span>
+            <span class="deal-note">Multimodal AI workflow automation · LLM-native enterprise platform · Seoul</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">₩6B</td>
+          <td><span class="tag tag-blue">Enterprise AI</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-co">Mediwhale (메디웨일)</span>
+            <span class="deal-note">AI retinal CV risk screening · CE MDR cleared · Dr. Nune commercial rollout</span>
+          </td>
+          <td>Series B</td>
+          <td class="deal-amount">Undisclosed</td>
+          <td><span class="tag tag-blue">Digital Health</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--gray-3); margin-top:12px;">The Korean healthcare sector is absorbing capital at two speeds simultaneously: large late-stage rounds in oncology (CAR-T, ADC, GLP-1) are following global pharma licensing logic, while earlier-stage digital health and device companies are building toward the National Growth Fund's expected medtech allocation — a potential structural catalyst for the entire sector in H2 2026.</p>
+  </div>
+
+  <div class="sources">
+    <p class="sources-title">Sources</p>
+    <ol class="sources-list">
+      <li><span>1</span><div>KoreaTechDesk, <a href="https://koreatechdesk.com/korea-startup-funding-march-2026-ai-healthcare-industrial-ai" target="_blank">AI Healthcare and Industrial AI Lead Korea's Latest Startup Funding Wave,</a> koreatechdesk.com, March 2026</div></li>
+      <li><span>2</span><div>한국경제, <a href="https://www.hankyung.com/article/202606107200i" target="_blank">프로젠, 美당뇨학회서 GLP1 이중작용제 2형 당뇨 임상 2a상 결과 발표,</a> hankyung.com, June 10, 2026</div></li>
+      <li><span>3</span><div>한국경제, <a href="https://www.hankyung.com/article/202606307370i" target="_blank">국민성장펀드 다음 타깃은 '의료기기'…유망주 4곳은,</a> hankyung.com, June 30, 2026</div></li>
+      <li><span>4</span><div>VentureSquare, <a href="https://www.venturesquare.net/1080409" target="_blank">메디웨일 '닥터눈', 유럽 CE MDR 획득,</a> venturesquare.net</div></li>
+      <li><span>5</span><div>Eugene Investment & Securities, <em>비상장기업 투자 동향 2026-01호,</em> eugenefn.com, January 2026</div></li>
+    </ol>
+  </div>
+</div>
+</div><!-- end panel-deals -->
+
+
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+  <span class="footer-left">Korea Startup Thesis</span>
+  <span class="footer-right">© 2026 · Weekly intelligence for global investors</span>
+</footer>
+
+<script>
+  function handleSubscribe() {
+    const email = document.getElementById('subEmail').value.trim();
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+    const supabaseUrl = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+    fetch(`${supabaseUrl}/rest/v1/subscribers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': supabaseKey, 'Authorization': `Bearer ${supabaseKey}` },
+      body: JSON.stringify({ email, source: 'article6', subscribed_at: new Date().toISOString() })
+    }).then(() => { window.location.href = 'thankyou.html'; }).catch(() => { window.location.href = 'thankyou.html'; });
+  }
+
+  let activeTab = 'deepdive';
+  const fab = document.getElementById('fabTop');
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + activeTab).classList.add('active');
+      document.querySelector('.tab-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateFab();
+    });
+  });
+  function updateFab() {
+    if (activeTab === 'deepdive' && window.scrollY > 320) { fab.classList.add('visible'); }
+    else { fab.classList.remove('visible'); }
+  }
+  window.addEventListener('scroll', updateFab, { passive: true });
+</script>
+</body>
+</html>
