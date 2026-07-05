@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable | Korea Startup Thesis</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://koreastartupthesis.com/article7.html">
+
+  <!-- Meta -->
+  <meta name="description" content="CEO Jeon Hong-jin is a practicing psychiatrist at Samsung Seoul Hospital who spent 27 years documenting why mental health remains unmeasurable — then built a VR biofeedback chair to fix it. NEP certified. ₩3.2B Series A. 118-patient clinical evidence.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Meditrics, MindChair, 메디트릭스, 전홍진, Korea digital therapeutics, mental health startup Korea, VR biofeedback, DTx Korea, Samsung hospital startup">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable">
+  <meta property="og:description" content="CEO Jeon Hong-jin is a practicing psychiatrist at Samsung Seoul Hospital who spent 27 years documenting why mental health remains unmeasurable — then built a VR biofeedback chair to fix it.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article7.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article7.png">
+  <meta property="article:published_time" content="2026-07-06T09:00:00+09:00">
+  <meta property="article:author" content="Korea Startup Thesis">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Digital Therapeutics">
+  <meta property="article:tag" content="Mental Health">
+  <meta property="article:tag" content="Korea Startup">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable">
+  <meta name="twitter:description" content="VR biofeedback chair for depression and anxiety. NEP certified. ₩3.2B Series A. 118-patient clinical evidence. CES 2025.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article7.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable",
+    "description": "CEO Jeon Hong-jin built the world's first VR-biofeedback-motion chair for depression and anxiety after 27 years of psychiatric research at Samsung Seoul Hospital.",
+    "datePublished": "2026-07-06T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article7.html",
+    "image": "https://koreastartupthesis.com/og/article7.png",
+    "about": [
+      { "@type": "Organization", "name": "Meditrics", "alternateName": "메디트릭스" }
+    ],
+    "keywords": "Meditrics, MindChair, digital therapeutics, mental health, Korea startup, VR biofeedback"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #7c3aed;
+      --accent-light: #ede9fe;
+      --accent-dark: #4c1d95;
+      --nav-dark: #0d0b16;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    /* HERO */
+    .hero {
+      background: #f3f0fa;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: #0d0b16; margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    /* KPI BAR */
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item {
+      padding: 24px 28px;
+      border-right: 1px solid var(--gray-4);
+    }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    /* TABS */
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+      padding: 0 0;
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+      transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* TAB CONTENT */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body {
+      max-width: 680px; margin: 0 auto;
+      padding: 40px 40px 80px;
+    }
+
+    /* PROSE */
+    .prose h2 {
+      font-size: 18px; font-weight: 500; letter-spacing: -0.3px;
+      margin: 40px 0 12px; color: var(--black);
+    }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p {
+      font-size: 15px; line-height: 1.8; color: #333;
+      margin-bottom: 18px;
+    }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p {
+      font-size: 16px; line-height: 1.7; color: var(--accent-dark);
+      font-style: italic; margin: 0;
+    }
+
+    /* MILESTONE TABLE */
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 80px; }
+
+    /* SIGNAL BOX */
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    /* ONES TO WATCH */
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item {
+      padding: 24px 0; border-bottom: 1px solid var(--gray-4);
+    }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    /* DEAL TRACKER */
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    /* SUBSCRIBE SECTION */
+    .subscribe-section {
+      background: var(--nav-dark);
+      padding: 48px 40px;
+      margin-top: 0;
+    }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--gray-4);
+      padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    /* FAB */
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+      z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    /* BACK LINK */
+    .back-link {
+      max-width: 760px; margin: 0 auto;
+      padding: 16px 40px 0;
+    }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 16px; font-size: 12px; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.getElementById('sub-email').focus(); document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #007 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable</h1>
+    <div class="hero-meta">
+      <span>July 6, 2026</span>
+      <span>Digital Therapeutics</span>
+      <span>Mental Health Tech</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">₩3.2B</div>
+    <div class="kpi-label">Series A raised</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">118</div>
+    <div class="kpi-label">patients, 4-week clinical evidence</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">NEP</div>
+    <div class="kpi-label">Korea national new-product certification</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">$659M</div>
+    <div class="kpi-label">Korea DTx market size, 2025</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab('deep-dive', this)">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab('ones-to-watch', this)">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab('deal-tracker', this)">Deal Tracker</button>
+</div>
+
+<!-- TAB 1: COMPANY DEEP DIVE -->
+<div id="tab-deep-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Problem No One Could Measure</h2>
+      <p>When a patient comes in with high blood pressure, you put a cuff on their arm and get a number. With diabetes, you prick a finger and read a glucose level. The numbers guide the prescription, monitor the treatment, and tell you whether the drug is working.</p>
+      <p>Now imagine you're a psychiatrist. Your patient says they feel depressed. You administer the PHQ-9 questionnaire — a 9-item self-report. You observe their behavior. You ask about sleep, appetite, energy. Everything you know about this patient's mental state comes through language and self-perception. There is no equivalent of the blood pressure cuff. There is no number.</p>
+      <p>This was the frustration that drove <strong>Jeon Hong-jin</strong> for 27 years. As a Professor of Psychiatry at Samsung Seoul Hospital and Associate Dean for Research at Sungkyunkwan University Medical School, he built one of Korea's most-cited research programs on depression and anxiety — and never stopped asking why mental health, unlike every other branch of medicine, remained stubbornly unmeasurable.</p>
+      <p>In June 2022, after three decades in academic medicine, he founded <strong>Meditrics (메디트릭스)</strong>. The product he set out to build was a device that would do for depression what the glucometer did for diabetes: give patients and clinicians an objective number, in real time, and turn that number into a therapeutic intervention.</p>
+
+      <div class="pull-quote">
+        <p>"Blood pressure and blood sugar can be measured by a machine — but mental health is a subjective domain. Meditrics exists to change that."</p>
+      </div>
+
+      <h2>The Founder's Credential Stack</h2>
+      <p>Jeon Hong-jin is not a typical tech founder. He is one of Korea's most prominent psychiatric researchers — the kind of clinician-scientist who publishes in JAMA Psychiatry while also running a full patient load. He holds both an MD and PhD, and his institutional affiliations are a signal of standing in Korean academic medicine that global investors should not underestimate.</p>
+      <p>Samsung Seoul Hospital (삼성서울병원) consistently ranks as Korea's top or second-ranked hospital. The Sungkyunkwan University Medical School that houses it is the country's most research-productive. Jeon serves simultaneously as a clinical professor, Associate Dean for Research at the medical school, and Director of the hospital's Digital Therapy Research Center — a triple role that gives him direct access to patients, research infrastructure, and institutional purchasing channels.</p>
+      <p>The founding of Meditrics was enabled by the Ministry of Health and Welfare's "K-DEM Station" research-centered hospital commercialization program, which brought together 27 companies and researchers to develop digital therapeutics and electronic medicine. Meditrics was one of the startups that emerged from this program — a signal of government-backed clinical legitimacy that is unusual for a seed-stage company.</p>
+
+      <h2>MindChair: How It Works</h2>
+      <p>The flagship product is the <strong>MindChair (마인드체어)</strong>, classified by Korea's MFDS as a 의료용바이오피드백장치 (medical biofeedback device). It is not an app or a wearable. It is a physical chair.</p>
+      <p>The patient sits in a motion chair equipped with biometric sensors that measure real-time physiological signals — electroencephalography (EEG), galvanic skin response, heart rate variability, and respiration. The patient puts on VR goggles and enters an immersive environment designed to guide relaxation and biofeedback training. As the patient's physiological state changes, the motion chair responds — tilting, vibrating, and adjusting to reinforce the feedback loop. The VR environment visualizes the patient's own autonomic nervous system in real time, teaching them to regulate the signals they can now see.</p>
+      <p>The result is a device that does four things simultaneously: <strong>self-assessment</strong> (baseline measurement of depression and anxiety levels), <strong>treatment</strong> (biofeedback relaxation protocol), <strong>monitoring</strong> (session-by-session tracking), and <strong>sleep intervention</strong> (autonomic regulation for insomnia). The hardware was co-developed with <strong>CJ 4DPlex</strong> (Korea's 4D cinema motion platform company), <strong>Medicore</strong>, and <strong>BrainU</strong>.</p>
+      <p>The clinical case for MindChair was established in a 118-patient trial. Participants with clinically significant depression and anxiety underwent four weeks of MindChair sessions. The results showed statistically significant improvement across depression scores, anxiety scores, and sleep quality measures. This is the clinical foundation for the regulatory approval process now underway with the MFDS (식약처).</p>
+
+      <h2>The Business Model: From ICU to Living Room</h2>
+      <p>Meditrics is building what it calls a three-tier distribution model, designed to follow the patient journey across the Korean healthcare system:</p>
+      <p><strong>Tier 1 (B2B, 3차 병원):</strong> The initial placement target is tertiary hospitals — specifically psychiatry departments, oncology centers (where cancer patients frequently experience comorbid depression and anxiety), and comprehensive health checkup centers. These are high-dwell-time, medically supervised environments where a prescription-grade VR biofeedback chair can be deployed, billable, and monitored.</p>
+      <p><strong>Tier 2 (B2B, 2차 종합병원):</strong> The expansion layer is general hospitals with inpatient psychiatry and neurology wards. Higher volume, somewhat lower acuity.</p>
+      <p><strong>Tier 3 (B2B1C, 1차 의료기관):</strong> The long-term opportunity is primary care — family medicine clinics, pediatric offices, rehabilitation centers, and private health checkup centers. This layer converts MindChair from a hospital device into a widely distributed wellness infrastructure point.</p>
+      <p>Running in parallel to the hardware rollout, Meditrics is developing a mobile digital therapeutic — a smartphone and smartwatch version of the biofeedback protocol that enables home-based treatment after an initial hospital session. A consumer wellness version (OTC, no prescription required) is also in development for the post-MFDS-approval phase.</p>
+      <p>The logic is borrowed from how continuous glucose monitors moved from hospital wards to wrists: establish clinical credibility at the hospital level, then push the technology toward the patient's daily life.</p>
+
+      <h2>Traction and Validation</h2>
+
+      <table class="milestone-table">
+        <thead>
+          <tr><th>Year</th><th>Milestone</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2022</td><td>Founded via MOHW K-DEM Station; 식약처 품목질의(product inquiry) approved; prototype development begins with CJ 4DPlex, Medicore, BrainU</td></tr>
+          <tr><td>2023</td><td>딥테크팁스(Deep Tech TIPS) selected; 예비창업패키지 최우수기업 (Outstanding Pre-Startup Package Company)</td></tr>
+          <tr><td>2024</td><td>Samsung Electronics C-Lab Outside selected; 창업중심대학 (Sungkyunkwan); NEP (신제품인증) national certification received; 118-patient clinical trial completed</td></tr>
+          <tr><td>2025</td><td>CES 2025 Las Vegas — 200+ attendees experienced MindChair at Samsung C-Lab booth; Series A ₩3.2B closed; MFDS approval process underway</td></tr>
+          <tr><td>2026</td><td>Mobile DTx development active; international expansion plans (US, Japan, EU) in motion</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The Regulatory Tailwind: Korea's DTx Law</h2>
+      <p>In December 2023, Korea's National Assembly passed the <strong>Digital Medical Products Act (DMPA)</strong>, which took effect in January 2025. Korea became the first country in the world to enact a standalone law specifically governing digital therapeutic devices — creating a defined regulatory approval pathway, a reimbursement category, and a national certification framework for DTx companies that had not previously existed.</p>
+      <p>Before the DMPA, Korean DTx companies operated in regulatory ambiguity: a software-based therapy could be classified as a medical device, a wellness product, or nothing at all, depending on which desk at the MFDS happened to review the application. The DMPA eliminated that ambiguity. It also created the political infrastructure for insurance reimbursement — the make-or-break element for any B2B healthcare device in Korea's single-payer system.</p>
+      <p>For Meditrics, the timing is close to optimal. The company completed its clinical trial and obtained NEP certification before the DMPA took effect. It is now pursuing formal MFDS device approval under the new framework, positioning it to be among the first hardware DTx companies to receive approval and billing codes under the new law.</p>
+
+      <h2>Why This Matters for Global Investors</h2>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Investment Signal Checklist</div>
+        <ul class="signal-list">
+          <li>Korea's digital mental health market is growing at 18.5% CAGR — from $555M (2024) to $3.6B by 2035. Global mental health apps market hits $40.9B by 2035.</li>
+          <li>Korea has some of the highest depression and suicide rates in the OECD; 25% of adults have experienced a depressive or anxiety disorder, but only 12.1% ever sought treatment — structural demand for accessible intervention.</li>
+          <li>Reimbursement pathway now exists via the January 2025 Digital Medical Products Act — the critical missing piece for B2B DTx monetization in Korea's public healthcare system.</li>
+          <li>Hardware moat: most mental health tech companies are apps. Meditrics is a certified medical device requiring clinical deployment — harder to copy, stickier once placed, and positioned to command insurance billing codes.</li>
+          <li>Founder-clinician advantage: Jeon's access to Samsung Seoul Hospital's patient population, research protocols, and institutional procurement channels provides a clinical validation loop that a non-medical founder could not replicate.</li>
+          <li>Samsung C-Lab pedigree accelerates US/Japan/EU introductions via Samsung's existing MedTech distribution relationships.</li>
+        </ul>
+      </div>
+
+      <h2>Risks to Watch</h2>
+      <p>MFDS device approval is still pending as of this writing. The timeline for prescription-grade hardware approval in Korea is historically 18–36 months from clinical trial completion, and any delays affect the reimbursement clock. Hardware B2B sales cycles are measured in quarters, not weeks — hospital procurement committees are slow and capital-constrained. Revenue at ₩498M (2024) is pre-commercial; the Series A runway buys time for approval, not sustained growth.</p>
+      <p>Competitive risk comes from pure-software DTx platforms (much faster to scale, lower marginal cost) and from global incumbents that may enter the Korean market following the DMPA's passage. Meditrics's defense is clinical credibility — the 27-year research pedigree, the Samsung Seoul Hospital anchoring, and the hardware's biometric data moat that pure-software competitors cannot easily replicate.</p>
+
+      <p style="font-size:13px; color: var(--gray-2); margin-top:40px; padding-top:20px; border-top: 1px solid var(--gray-4);">
+        Sources: 청년의사 (July 2022), 한국경제 Plus (January 2025), Saramin company financial data (2024), Korea Digital Medical Products Act (DMPA) January 2025, Expert Market Research / OpenPR Korea DTx market estimates, PMC/Journal of Yeungnam Medical Science DTx review.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: ONES TO WATCH -->
+<div id="tab-ones-to-watch" class="tab-content">
+  <div class="article-body">
+    <div class="prose">
+      <h2>Three companies in Korea's mental health tech stack worth watching</h2>
+      <p>Meditrics sits at the hardware-clinical end of a broader digital mental health ecosystem that is maturing rapidly in Korea. Here are three companies that complement, compete with, or are converging toward similar territory.</p>
+    </div>
+
+    <div class="otw-grid">
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">WELT Corp</span>
+          <span class="otw-stage">Series C</span>
+        </div>
+        <div class="otw-tagline">Korea's insomnia DTx — approved, reimbursed, and scaling</div>
+        <div class="otw-body">
+          WELT Corp is the company closest to proving that prescription digital therapeutics can build a sustainable business in Korea. Founded by physician Sean Kang, who trained at Harvard's School of Public Health, WELT-I became Korea's second approved digital therapeutic in April 2023 — a cognitive behavioral therapy app for insomnia prescribed and billed like a drug. The company subsequently raised €19 million in Series C funding and has been expanding into Japan and Southeast Asia. The significance: WELT-I demonstrated that the MFDS approval + insurance reimbursement loop actually works for software-based DTx. Meditrics is attempting to prove the same loop for hardware.
+        </div>
+        <div class="otw-signal">
+          <strong>Signal:</strong> €19M Series C. Korea's insomnia market is a natural on-ramp for Meditrics's sleep module — watch for potential clinical collaboration.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">Atommerce (아토머스)</span>
+          <span class="otw-stage">Series C planned H2 2026</span>
+        </div>
+        <div class="otw-tagline">Korea's largest mental health platform — going employer-first</div>
+        <div class="otw-body">
+          Atommerce built the largest virtual therapy and digital mental health benefit platform in Korea, operating at the intersection of B2C counseling and B2B employer wellness. With $23.2M raised through Series B and a Series C on the calendar for H2 2026, it is the closest thing Korea has to a full-stack digital mental health company. Where Meditrics is building diagnostic and therapeutic hardware for clinical settings, Atommerce is building access infrastructure for the population that will never walk into a psychiatrist's office — the addressable market below the clinical threshold, which is vastly larger.
+        </div>
+        <div class="otw-signal">
+          <strong>Signal:</strong> Series C round expected H2 2026. Employer mental health benefits is one of the fastest-growing segments in Korean HR tech as chaebols respond to government wellness mandates.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">MindCafe (마인드카페)</span>
+          <span class="otw-stage">Scaled B2C</span>
+        </div>
+        <div class="otw-tagline">Korea's largest digital mental health community — 2M+ users</div>
+        <div class="otw-body">
+          MindCafe is Korea's largest digital mental health counseling platform, connecting users with licensed therapists and peer support communities at consumer price points. With over 2 million registered users, it occupies the top-of-funnel in Korea's mental health access stack — the place where Koreans first acknowledge they might need support, before they walk into a clinical setting. The platform is the behavioral evidence layer that systemic players like Meditrics and Atommerce are ultimately trying to serve with hardware and employer benefits: the 24.4 million Korean adults who have experienced depression or anxiety but have never sought formal treatment.
+        </div>
+        <div class="otw-signal">
+          <strong>Signal:</strong> The gap between the 25% of Korean adults with a mental health diagnosis and the 12.1% who seek treatment represents roughly 12 million reachable users. MindCafe's B2C data is the demand signal that infrastructure investors should be watching.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 3: DEAL TRACKER -->
+<div id="tab-deal-tracker" class="tab-content">
+  <div class="article-body">
+    <div class="prose">
+      <h2>Notable deals — Korea digital health &amp; adjacent, recent</h2>
+      <p>The deals below span Korea's digital health and adjacent investment landscape. Context: Korea's Digital Medical Products Act (DMPA, Jan 2025) has triggered a wave of healthcare startup activity as both institutional investors and domestic hospital systems respond to the new reimbursement framework.</p>
+    </div>
+
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Round</th>
+          <th>Amount</th>
+          <th>What They Do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">Meditrics (메디트릭스)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">₩3.2B</td>
+          <td>
+            VR-biofeedback-motion chair (MindChair) for depression and anxiety. NEP certified. MFDS approval in process. The focal company of this issue.
+            <div class="deal-note">Why it matters: First hardware DTx with clinical evidence and NEP certification to enter the post-DMPA approval pipeline.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">ARK</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">₩20B</td>
+          <td>
+            AI systems for early screening of chronic disease complications. Targeting diabetic retinopathy, cardiovascular risk, and renal decline via retinal imaging AI.
+            <div class="deal-note">Why it matters: The same DMPA framework that opens doors for Meditrics is simultaneously creating reimbursement pathways for AI-based chronic disease screening. ARK's ₩20B Series A is a read-through on institutional confidence in the new regulatory regime.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">WELT Corp</div>
+            <div class="deal-round">Series C</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">€19M (~₩28B)</td>
+          <td>
+            WELT-I: Korea's 2nd approved prescription DTx for insomnia (CBT-I). Founded by Harvard-trained physician Sean Kang.
+            <div class="deal-note">Why it matters: Proves the Korea MFDS approval + insurance reimbursement loop for software DTx. The template Meditrics is following for hardware.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Ticaros (티카로스)</div>
+            <div class="deal-round">Series D</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">₩20.8B</td>
+          <td>
+            CAR-T immunotherapy developer targeting hematologic malignancies. One of Korea's most advanced cell therapy platforms.
+            <div class="deal-note">Why it matters: Late-stage Korea biotech activity signals that institutional capital is moving up the risk curve — a constructive backdrop for earlier-stage digital health raises.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Atommerce (아토머스)</div>
+            <div class="deal-round">Series C (planned)</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">TBD</td>
+          <td>
+            Korea's largest digital mental health + virtual therapy platform. $23.2M raised through Series B. Series C targeting H2 2026.
+            <div class="deal-note">Why it matters: If Atommerce closes at a premium valuation, it re-rates the entire Korean mental health tech sector — including Meditrics's next fundraise.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:32px;">
+      <p style="font-size:13px; color: var(--gray-2);">Deal data sourced from KoreaTechDesk, company announcements, and public regulatory filings. Amounts in KRW unless otherwise noted. "Planned" rounds are reported from company communications and have not been confirmed closed.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Get next week's deep dive in your inbox</h3>
+    <p>One Korean startup, every week — founder story, tech analysis, and the signals global investors are missing.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="sub-email">
+      <button onclick="handleSubscribe()">Subscribe free</button>
+    </div>
+    <p class="sub-meta">No spam · Unsubscribe anytime</p>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-left"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="footer-nav">
+    <a href="index.html#archive">Archive</a>
+    <a href="index.html">About</a>
+  </div>
+  <span class="footer-right">© 2026</span>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+
+<script>
+  // Tab switching
+  function switchTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + tabId).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({top: document.querySelector('.tabs-nav').offsetTop - 60, behavior: 'smooth'});
+  }
+
+  // FAB show/hide on scroll
+  const fab = document.getElementById('fab');
+  window.addEventListener('scroll', () => {
+    fab.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // Subscribe handler
+  function handleSubscribe() {
+    const email = document.getElementById('sub-email').value.trim();
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+    fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email: email, source: 'article7' })
+    })
+    .then(res => {
+      if (res.ok || res.status === 409) {
+        window.location.href = 'thankyou.html';
+      } else {
+        throw new Error('Subscription failed');
+      }
+    })
+    .catch(() => {
+      window.location.href = 'thankyou.html';
+    });
+  }
+</script>
+</body>
+</html>
