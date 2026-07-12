@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article10.html">
+
+  <meta name="description" content="Most immunotherapy companies chase PD-1 and CTLA-4. Centrics Bio found a different door: CD300c, an activating receptor on macrophages that no one had turned into a drug. CB301, their lead antibody, just published peer-reviewed NSCLC data — and Merck is watching.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Centrics Bio, 센트릭스바이오, CB301, CD300c, macrophage, immunotherapy, immune checkpoint, Korea biotech, Jae-Won Jeon, 전재원, NSCLC, Alzheimer, CB201, myeloid, tumor microenvironment">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer">
+  <meta property="og:description" content="CD300c. Novel myeloid checkpoint. CB301 NSCLC preclinical data published in Frontiers in Oncology. ₩20B KDDF grant. Merck interest. A Seoul biotech that found a gap in the immune checkpoint map.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article10.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article10.png">
+  <meta property="article:published_time" content="2026-07-12T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Immunotherapy">
+  <meta property="article:tag" content="Biotech">
+  <meta property="article:tag" content="Macrophage Biology">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer">
+  <meta name="twitter:description" content="CD300c is a macrophage activating receptor most drug companies ignored. Centrics Bio built a drug around it. Peer-reviewed NSCLC data. ₩20B KDDF grant. Merck and Eli Lilly paying attention.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article10.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer",
+    "description": "Most immunotherapy companies fight over PD-1 and CTLA-4. Centrics Bio found a different door: CD300c, an activating receptor on macrophages that no one had turned into a cancer drug.",
+    "datePublished": "2026-07-12T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article10.html",
+    "about": [{ "@type": "Organization", "name": "Centrics Bio", "alternateName": "센트릭스바이오" }],
+    "keywords": "Centrics Bio, CD300c, macrophage immunotherapy, CB301, Korea biotech, myeloid checkpoint"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #be123c;
+      --accent-light: #ffe4e8;
+      --accent-dark: #9f1239;
+      --nav-dark: #130a0a;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #fdf4f5;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 60px; }
+
+    .pipeline-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+    .pipeline-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; background: var(--gray-5);
+    }
+    .pipeline-card-title { font-size: 14px; font-weight: 500; color: var(--black); margin-bottom: 6px; }
+    .pipeline-card-body { font-size: 12px; color: var(--gray-1); line-height: 1.6; }
+    .pipeline-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-bottom: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-round.strategic { background: #e0f2fe; color: #0c4a6e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(190,18,60,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .pipeline-grid { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #010 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer</h1>
+    <div class="hero-meta">
+      <span>July 12, 2026</span>
+      <span>Immunotherapy</span>
+      <span>Biotech</span>
+      <span>Myeloid Biology</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">CD300c</div>
+    <div class="kpi-label">Novel myeloid immune checkpoint — first-in-class antibody target</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">+37%</div>
+    <div class="kpi-label">Survival gain in NSCLC orthotopic model (26 vs 19 days vs control)</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">₩20B</div>
+    <div class="kpi-label">KDDF government grant for CB301 IND-enabling toxicology</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">2</div>
+    <div class="kpi-label">Disease areas — oncology (CB301) and Alzheimer's disease (CB201)</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Gap in the Immune Checkpoint Map</h2>
+      <p>When immuno-oncology exploded after the approval of ipilimumab (anti-CTLA-4) in 2011 and pembrolizumab (anti-PD-1) in 2014, nearly every biotech in the world pivoted to T cell checkpoints. The logic was sensible: block the brakes on T cells, let them kill tumors. But the checkpoint map has a blind spot. T cells need a permissive tumor microenvironment (TME) to do their job — and the TME is controlled, in large part, by macrophages.</p>
+      <p>In most solid tumors, macrophages have been co-opted. What should be pro-inflammatory (M1) cells that trigger immune attack get reprogrammed by tumors into immunosuppressive (M2) cells that shield the cancer from T cells, secrete growth factors, and suppress cytotoxic activity. No approved drug directly repolarizes the macrophage population from M2 to M1 at the receptor level. That is the precise gap Centrics Bio (센트릭스바이오) is trying to fill.</p>
+      <p>Founded in Seoul in June 2017 by CEO Jae-Won Jeon (전재원), Centrics Bio has spent seven years building its thesis around a single protein: <strong>CD300c</strong>, an activating receptor expressed on the surface of human monocytes and macrophages. CD300c had been characterized in the academic literature, but no one had turned it into a drug. Centrics Bio did.</p>
+
+      <div class="pull-quote">
+        <p>"CD300c is not another PD-1. It works upstream — on the myeloid compartment — and it reprograms the tumor's immunosuppressive architecture before T cells even arrive."</p>
+      </div>
+
+      <h2>The Mechanism: Macrophage Reprogramming via CD300c</h2>
+      <p>CD300 proteins are a family of receptors expressed on immune cells involved in both stimulatory and inhibitory signaling. Within the family, CD300a acts as an inhibitory checkpoint (similar in concept to PD-1 on T cells), while <strong>CD300c acts as an activating receptor</strong> — and is the target Centrics Bio has drug-ified.</p>
+      <p>When CB301, their lead monoclonal antibody (also referred to in academic literature as "CL7"), binds to CD300c on monocytes and macrophages, it triggers two intracellular signaling cascades: <strong>MAPK</strong> and <strong>NF-κB</strong>. The result is a shift from an M2-like, immunosuppressive phenotype to M1-like, pro-inflammatory macrophages — precisely what a tumor-infiltrated TME needs to become vulnerable again to immune attack.</p>
+      <p>The mechanism is distinct from PD-1/PD-L1 and CTLA-4 inhibitors in an important way: those drugs work on the T cell side of the synapse, removing inhibitory signals. CB301 works on the myeloid side, actively reprogramming the TME to become pro-inflammatory — potentially making it synergistic with, rather than redundant to, existing checkpoint inhibitors.</p>
+
+      <h2>The Data: NSCLC Preclinical Results</h2>
+      <p>In November 2025, Centrics Bio published peer-reviewed preclinical data in <em>Frontiers in Oncology</em> (Vol. 15, DOI: 10.3389/fonc.2025.1698857), in collaboration with Kyung Hee University's Department of Physiology (Professor Hyunsu Bae). The study used an orthotopic NSCLC (non-small cell lung cancer) mouse model — the gold standard for lung cancer preclinical work, injecting Lewis lung carcinoma cells directly into the left lung.</p>
+      <p>The findings were notable across several dimensions. CL7 administered at 10 mg/kg twice weekly produced:</p>
+
+      <table class="milestone-table">
+        <thead>
+          <tr><th>Endpoint</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Survival</td>
+            <td>Median 26 days (CL7) vs. 19 days (PBS control) — <strong>+37% gain</strong>, statistically significant by log-rank test</td>
+          </tr>
+          <tr>
+            <td>Tumor growth</td>
+            <td>Significant suppression of bioluminescence signal vs. control; reduced PCNA (proliferation marker) expression in lung tissue</td>
+          </tr>
+          <tr>
+            <td>M1 macrophages</td>
+            <td>Significant increase in M1 (CD45+CD11b+CD86+) population by flow cytometry; M2 and dendritic cell counts unchanged</td>
+          </tr>
+          <tr>
+            <td>CD8+ T cells</td>
+            <td>Significant increase in activated cytotoxic CD8+ T cells (GranzymeB+)</td>
+          </tr>
+          <tr>
+            <td>Regulatory T cells (Tregs)</td>
+            <td>Significant reduction — associated with decreased Foxp3, CTLA4, IL-10, and VEGFA expression</td>
+          </tr>
+          <tr>
+            <td>Inflammatory markers</td>
+            <td>Significant upregulation of TNF-α and IL-1β; upregulation of M1 markers Nos2 and Cd86</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>An earlier study in a colorectal (CT26) model established the foundational mechanism; the NSCLC publication extends the proof of concept to a more clinically relevant orthotopic setting. Together, the data describe a drug that enters a tumor, reprograms macrophages, reduces Tregs, and unlocks CD8+ T cell cytotoxicity — all through a single receptor target.</p>
+
+      <div class="pull-quote">
+        <p>CB301 shifts the tumor microenvironment from immunosuppressive to pro-inflammatory — not by removing a brake on T cells, but by re-activating the innate immune system from the macrophage level up.</p>
+      </div>
+
+      <h2>The Pipeline: Two Shots on Goal</h2>
+      <p>Centrics Bio's two-program strategy targets distinct disease areas through the same foundational understanding of CD300-family biology. Both assets remain in preclinical/IND-enabling stages as of mid-2026, with clinical entry expected in the near term.</p>
+
+      <div class="pipeline-grid">
+        <div class="pipeline-card">
+          <div class="pipeline-badge">Immuno-Oncology</div>
+          <div class="pipeline-card-title">CB301 (CL7)</div>
+          <div class="pipeline-card-body">Anti-CD300c monoclonal antibody. Targets myeloid cells to promote M1 macrophage polarization via MAPK/NF-κB. Preclinical data in NSCLC (orthotopic) and colorectal cancer. KDDF-funded IND-enabling toxicology study underway. Merck interest reported.</div>
+        </div>
+        <div class="pipeline-card">
+          <div class="pipeline-badge">CNS / Neurodegeneration</div>
+          <div class="pipeline-card-title">CB201</div>
+          <div class="pipeline-card-body">Targets immune cells in the brain (microglia/macrophage lineage) via CD300-family mechanism. In Alzheimer's animal models, CB201 activates macrophage-mediated clearance of amyloid-beta, improving memory and behavioral function. Eli Lilly reportedly tracking the program.</div>
+        </div>
+      </div>
+
+      <p>The dual-indication strategy is strategically coherent: both programs exploit Centrics Bio's core expertise in myeloid cell biology. CB201 for Alzheimer's takes the same insight — that activating the macrophage-lineage system clears pathological accumulation — and applies it to the CNS. If CB201's microglia activation hypothesis holds, the company has a non-overlapping, high-value second asset in one of pharma's most competitive disease areas.</p>
+
+      <h2>Team and Government Backing</h2>
+      <p>CEO Jae-Won Jeon (전재원) founded the company in 2017 and co-authored the Frontiers in Oncology publication as the corresponding author on the company's side, a signal of how deeply science-embedded the leadership is. In 2025, the company made a high-signal executive hire: <strong>Dr. Hong Seung-seo (홍승서)</strong>, a Celltrion (셀트리온) veteran, joined as CSO and COO — bringing commercial-stage antibody development experience to a company approaching its IND phase.</p>
+      <p>On the funding side, Centrics Bio has secured two government grants that validate the science at a national level. The Korea Drug Development Fund (KDDF) — funded jointly by the Ministry of Science and ICT, Ministry of Trade, Industry and Energy, and Ministry of Health and Welfare — awarded CB301 a ₩20 billion (~$14.5M USD) research grant specifically for IND-enabling toxicology studies, under grant RS-2021-DD121403. A separate Korea Dementia Research Center grant (RS-2023-KH-136029) supports the CB201 Alzheimer's program. These are competitive, peer-reviewed grants — their selection signals that Korea's national drug development apparatus views both programs as credible.</p>
+      <p>The company participated in BIO USA 2025 seeking global partnerships, and media reports citing CEO Jeon indicate that <strong>Merck</strong> has expressed interest in CB301 and <strong>Eli Lilly</strong> in CB201 — though no formal partnership has been announced.</p>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Why This Company Is Worth Watching</div>
+        <ul class="signal-list">
+          <li><strong>Differentiated mechanism:</strong> CD300c is a first-in-class target. No approved drug or clinical-stage competitor directly exploits this myeloid activating receptor for oncology.</li>
+          <li><strong>Peer-reviewed data:</strong> Publication in <em>Frontiers in Oncology</em> (November 2025) provides independent scientific validation of the CB301 mechanism and preclinical efficacy in a rigorous orthotopic model.</li>
+          <li><strong>Synergy potential:</strong> M1 macrophage reprogramming + Treg depletion + CD8+ T cell activation — CB301's multi-pronged TME effect positions it as a compelling combination partner with existing PD-1/PD-L1 inhibitors.</li>
+          <li><strong>Validated at national level:</strong> ₩20B KDDF grant and Korea Dementia Research Center funding mean Korea's competitive public science apparatus has already vetted both assets.</li>
+          <li><strong>Experienced CSO:</strong> Dr. Hong Seung-seo's Celltrion background means clinical and manufacturing expertise is now in the building ahead of the IND filing.</li>
+          <li><strong>Big pharma signals:</strong> Reported interest from Merck (CB301) and Eli Lilly (CB201) is directionally positive, even if no deal has closed yet.</li>
+        </ul>
+      </div>
+
+      <h2>The Investment Thesis</h2>
+      <p>Centrics Bio is pre-clinical and pre-revenue — the risks of drug development apply in full. CD300c-dependence needs to be confirmed in humanized models; dose-response characterization is ongoing; clinical translation from mouse to human remains the hardest step in immunotherapy. The company has not publicly announced a Series A or institutional venture round beyond government grants, which means burn and runway visibility is limited for outside observers.</p>
+      <p>But the thesis is coherent and the scientific gap is real. Most cancer immunotherapy companies are fighting over the same T cell targets, hitting diminishing returns in a crowded space. Centrics Bio is working one layer upstream — in the myeloid compartment — with peer-reviewed data showing that reactivating macrophages can reshape the entire immune architecture of a tumor. CB201 adds a second, non-overlapping shot at a disease (Alzheimer's) where the neuroinflammation and amyloid clearance biology has been increasingly validated as a therapeutic pathway.</p>
+      <p>For global VC and angel investors monitoring Korea's biotech ecosystem, Centrics Bio represents a company that solved a mechanistic problem most Western drug developers aren't looking at — and is now approaching the clinical inflection point that could make it an acquisition or licensing target for the very pharma giants already paying attention.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">MustBio (머스트바이오)</div>
+          <div class="otw-stage">Series C · Immuno-Oncology</div>
+        </div>
+        <div class="otw-tagline">IL-2 and IL-21 fusion proteins that hit the tumor microenvironment precisely</div>
+        <div class="otw-body">Founded in 2021, MustBio has built two platforms: BICSTA (multi-specific antibody engineering) and STARKINE (immune cytokine precision delivery). The lead candidate MB5 is an αPD-1/IL-2v fusion — a design that co-delivers an immune checkpoint blocker and an immune activator to the same T cells. In October 2025, Celltrion signed a co-development and licensing deal with MustBio for MB7, a triple-fusion αPD-1/αVEGF/IL-21v candidate. In March 2026, the company closed a $23.5M Series C led by Korea Investment Partners, with Atinum Investment and BNH as new backers. Total raised: $42.6M.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> Celltrion's decision to co-develop MB7 is the most concrete signal of platform credibility. Series C capital funds MB5 into the clinic. The IL-21 program (MB7) is differentiated — IL-21 is a less crowded cytokine target than IL-2.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">OliX Pharmaceuticals (올릭스)</div>
+          <div class="otw-stage">Listed · RNAi Therapeutics</div>
+        </div>
+        <div class="otw-tagline">Korea's RNAi leader, now backed by L'Oréal and a US hedge fund for skin and hair programs</div>
+        <div class="otw-body">OliX is Korea's most advanced RNAi (RNA interference) therapeutics company, with a pipeline spanning dermatology, ophthalmology, and pulmonology. In February 2025, Eli Lilly signed an exclusive global licensing deal worth up to $630M for OLX75016, an siRNA candidate targeting metabolic dysfunction-associated steatohepatitis (MASH) and obesity — the largest Korean biotech licensing deal of that year. In June 2026, OliX raised ₩110B (~$80M) through a third-party share allotment to BOLD (L'Oréal's CVC fund) and Weiss Asset Management, a US hedge fund. The L'Oréal investment specifically signals intent to advance siRNA programs in skin and hair — a new indication axis alongside the Lilly MASH deal.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> The L'Oréal BOLD investment is unusual — CVC money from a global cosmetics giant into a Korean biotech signals that RNAi for skin conditions is now commercial-tier technology, not just research. OliX's multi-indication approach reduces single-program risk significantly.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">AprilBio (에이프릴바이오)</div>
+          <div class="otw-stage">Clinical · Multi-Modality Platform</div>
+        </div>
+        <div class="otw-tagline">The Korean biotech that just raised ₩347B to build a multi-modality drug engine</div>
+        <div class="otw-body">AprilBio's foundational technology is SAFA (Serum Albumin-Fused Antibody Fragments) — a half-life extension platform that makes antibody fragments stay in circulation longer. The REMAP platform extends this further into a multi-modality framework integrating antibodies, peptides, ADCs, siRNA, and antibody-oligonucleotide conjugates (AOCs). In June 2026, TKG Taekwang Group and IMM Investment Group co-led a ₩346.8B (~$247M) investment, bringing total cash to ₩437B (~$311M). The deal was structured partly as an acquisition — TKG Taekwang is building a biopharma arm and AprilBio is the cornerstone asset. Use of funds: parallel clinical development across multiple modalities and international licensing outreach.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> ₩437B in cash is runway measured in years, not months. The TKG affiliation provides manufacturing infrastructure. The shift from SAFA to a multi-modality REMAP platform is the kind of platform evolution that attracts licensing partners across multiple drug classes.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Round / Type</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">LigaChem Biosciences (리가켐바이오)</div>
+            <div class="deal-round gov">National Growth Fund</div>
+          </td>
+          <td class="deal-amount">₩500B<br><small>~$357M</small></td>
+          <td>Government Strategic<br><small>Jun 2026</small></td>
+          <td class="deal-note">Korea National Growth Fund's first direct investment in a publicly listed biotech. Capital supports LCB02A, a Claudin 18.2-targeting ADC entering global Phase 1. KDB contributed ₩250B; Pan Orion (Orion Holdings) ₩125B.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">AprilBio (에이프릴바이오)</div>
+            <div class="deal-round">Strategic + Financial</div>
+          </td>
+          <td class="deal-amount">₩347B<br><small>~$247M</small></td>
+          <td>Equity Investment<br><small>Jun 2026</small></td>
+          <td class="deal-note">TKG Taekwang Group and IMM Investment Group co-led the round. TKG is building a biopharma vertical; AprilBio is the platform anchor. Total cash position raised to ₩437B (~$311M).</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">OliX Pharmaceuticals (올릭스)</div>
+            <div class="deal-round strategic">Strategic CVC</div>
+          </td>
+          <td class="deal-amount">₩110B<br><small>~$80M</small></td>
+          <td>Third-party Allotment<br><small>Jun 2026</small></td>
+          <td class="deal-note">BOLD (L'Oréal's CVC fund) and Weiss Asset Management (US hedge fund) co-invested. L'Oréal backing specifically tied to skin/hair siRNA programs. Eli Lilly's $630M MASH licensing deal (Feb 2025) remains the flagship partnership.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">TwelveLabs (트웰브랩스)</div>
+            <div class="deal-round">Series B</div>
+          </td>
+          <td class="deal-amount">$100M</td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Video intelligence AI startup (Seoul + San Francisco). NEA, Naver Ventures, Amazon among investors. Platform enables semantic video search and understanding at scale — enterprise and developer markets.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">MustBio (머스트바이오)</div>
+            <div class="deal-round">Series C</div>
+          </td>
+          <td class="deal-amount">$23.5M</td>
+          <td>Venture<br><small>Mar 2026</small></td>
+          <td class="deal-note">Korea Investment Partners led; Atinum and BNH new investors. Funds MB5 (αPD-1/IL-2v) into the clinic. Oct 2025: Celltrion co-development deal for MB7 triple-fusion candidate. Total raised: $42.6M.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Subscribe -->
+<section class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Korea Startup Thesis</h3>
+    <p>Weekly intelligence on Korean startups for global VC and angel investors. No noise — just the deals, science, and founders that matter.</p>
+    <form class="sub-form" onsubmit="handleSubscribe(event)">
+      <input type="email" id="sub-email" placeholder="your@email.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-meta" id="sub-msg">Free · One email per week · Unsubscribe anytime</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+  </nav>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe ↑</button>
+
+<script>
+  // Tab switching
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // FAB scroll reveal
+  window.addEventListener('scroll', () => {
+    const fab = document.getElementById('fab');
+    if (window.scrollY > 400) fab.classList.add('visible');
+    else fab.classList.remove('visible');
+  });
+
+  // Subscribe form
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe(e) {
+    e.preventDefault();
+    const email = document.getElementById('sub-email').value.trim();
+    const msg = document.getElementById('sub-msg');
+    msg.textContent = 'Subscribing…';
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article10' })
+      });
+      if (res.ok || res.status === 409) {
+        msg.textContent = '✓ You\'re subscribed. See you next week.';
+        document.getElementById('sub-email').value = '';
+      } else {
+        msg.textContent = 'Something went wrong. Please try again.';
+      }
+    } catch {
+      msg.textContent = 'Network error. Please try again.';
+    }
+  }
+</script>
+</body>
+</html>
