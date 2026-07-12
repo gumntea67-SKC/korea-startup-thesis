@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea's Full-Stack Drug Design Engine | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article9.html">
+
+  <meta name="description" content="CEO Ko Junsu built Arontier on a thesis that most AI drug discovery companies get wrong: physics first, machine learning second. The AD3 platform now designs antibodies, protein binders, and small molecules — and in 2026 found an obesity drug target equivalent to bariatric surgery, published at AACR, and boosted mRNA expression 10x with a single AI design pass.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Arontier, 아론티어, AI drug discovery, Korea biotech, AD3 platform, Ko Junsu, 고준수, protein design, antibody design, CAF, cancer-associated fibroblast, small molecule AI, Korea AI pharma">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea's Full-Stack Drug Design Engine">
+  <meta property="og:description" content="AD3 platform. AACR 2023 + 2026. Obesity drug target found by AI. mRNA expression 10x. HLB ₩50B investment. Samsung Medical Center + Yonsei + Dongkook partnerships. Korea's deepest AI drug design stack.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article9.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article9.png">
+  <meta property="article:published_time" content="2026-07-10T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="AI Drug Discovery">
+  <meta property="article:tag" content="Biotech">
+  <meta property="article:tag" content="Drug Design">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea's Full-Stack Drug Design Engine">
+  <meta name="twitter:description" content="Physics + ML for antibodies, proteins, and small molecules. AACR 2023 + 2026. HLB ₩50B. Samsung Medical Center. Obesity target found by AI. Korea's most scientifically deep drug design startup.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article9.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea's Full-Stack Drug Design Engine",
+    "description": "CEO Ko Junsu built Arontier on a conviction that physics, not data volume, is the key variable in AI drug design. The AD3 platform designs across all major therapeutic modalities — and 2026 has been the company's most productive year yet.",
+    "datePublished": "2026-07-10T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article9.html",
+    "about": [{ "@type": "Organization", "name": "Arontier", "alternateName": "아론티어" }],
+    "keywords": "Arontier, AI drug discovery, Korea biotech, AD3 platform, protein design, antibody design, CAF, cancer-associated fibroblast"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #3b5bdb;
+      --accent-light: #e8edfc;
+      --accent-dark: #1e3a8a;
+      --nav-dark: #0a0d1a;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #f0f4ff;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 60px; }
+
+    .modality-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .modality-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; background: var(--gray-5);
+    }
+    .modality-card-title { font-size: 13px; font-weight: 500; color: var(--black); margin-bottom: 8px; }
+    .modality-card-body { font-size: 12px; color: var(--gray-1); line-height: 1.6; }
+    .modality-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-bottom: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .partner-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .partner-tag {
+      font-size: 12px; padding: 5px 12px;
+      border: 1px solid var(--gray-4); border-radius: 20px; color: var(--gray-1);
+    }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(59,91,219,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .modality-grid { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #009 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea's Full-Stack Drug Design Engine</h1>
+    <div class="hero-meta">
+      <span>July 10, 2026</span>
+      <span>AI Drug Discovery</span>
+      <span>Biotech</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">3</div>
+    <div class="kpi-label">Drug modalities: antibodies, proteins, small molecules</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">AACR ×2</div>
+    <div class="kpi-label">Presentations: 2023 (CAF) + 2026 (eRNA targets)</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">10×</div>
+    <div class="kpi-label">mRNA expression boost via AI design platform (2026)</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">₩50B</div>
+    <div class="kpi-label">HLB Group strategic investment (2024)</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab('deep-dive', this)">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab('ones-to-watch', this)">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab('deal-tracker', this)">Deal Tracker</button>
+</div>
+
+<!-- TAB 1: COMPANY DEEP DIVE -->
+<div id="tab-deep-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Problem With "Data-Driven" Drug Discovery</h2>
+      <p>The dominant narrative in AI drug discovery — from Isomorphic Labs to Insilico Medicine — is that larger datasets and more powerful models will eventually crack the problem of drug design. Feed the AI enough protein structures, enough bioassay data, enough chemical fingerprints, and it will learn the rules of biology well enough to design drugs that work.</p>
+      <p><strong>Ko Junsu (고준수)</strong> built Arontier (아론티어) on a different premise. His background is bioinformatics — a field that sits at the intersection of computational biology and statistics — and his conviction, formed during postdoctoral work at Seoul National University and early-career research at Theragen Etex Bio Institute and Future Medicine, is that data alone cannot substitute for physical understanding. Molecules bind to proteins according to the laws of physics: electrostatics, hydrophobics, entropy, conformational energy. These are not patterns that can be extracted from data; they are principles that must be encoded directly into the model.</p>
+      <p>The company Arontier built from this premise — founded originally as FURAME in November 2017, renamed in October 2018 — is now one of Korea's most scientifically rigorous AI drug design companies. It is not the largest, and it is not the most funded. But its AD3 platform covers a range of therapeutic modalities — antibodies, protein binders, and small molecules — that no other Korean AI drug company attempts under one roof, and its 2026 pipeline of scientific outputs suggests the approach is working.</p>
+
+      <div class="pull-quote">
+        <p>"Our drug design technology integrates fundamental principles of physics with advanced machine learning algorithms to intricately craft antibodies, protein binders, peptidomimetics, and small-molecule drugs."</p>
+      </div>
+
+      <h2>The AD3 Platform: One Engine, Three Modalities</h2>
+      <p>AD3 (Advanced Drug Design platform, available at ad3.io) is Arontier's public-facing platform, launched in October 2022. It is a web-based service that supports the full drug development cycle — from target identification through hit discovery, lead optimization, and preclinical candidate validation — across all three major therapeutic design categories:</p>
+
+      <div class="modality-grid">
+        <div class="modality-card">
+          <div class="modality-badge">Biologics</div>
+          <div class="modality-card-title">Antibody Design</div>
+          <div class="modality-card-body">Generative and language model-based CDR backbone design. Deimmunization modules reduce immunogenicity. Paratope-based functional classification enables epitope-specific antibody generation — designing for a specific binding site, not just any antibody that binds.</div>
+        </div>
+        <div class="modality-card">
+          <div class="modality-badge">Proteins / Peptides</div>
+          <div class="modality-card-title">Protein & Peptide Binder Design</div>
+          <div class="modality-card-body">De novo design of proteins with predefined functions. Deep learning for generative protein backbone design, protein conformational space exploration, protein-protein interaction prediction, and molecular dynamics simulations to validate stability and binding.</div>
+        </div>
+        <div class="modality-card">
+          <div class="modality-badge">Small Molecules</div>
+          <div class="modality-card-title">Small-Molecule Drug Design</div>
+          <div class="modality-card-body">AI-driven exploration of protein conformational heterogeneity combined with generative molecular design and medicinal chemistry expertise. High-throughput virtual screening for swift candidate discovery. Collaboration with Synthenta for synthesis verification (2026).</div>
+        </div>
+      </div>
+
+      <p>The physics-first approach is clearest in the protein and small-molecule work. Conventional machine learning models for drug-target interaction predict binding based on structural similarity to known binders — a pattern-matching approach. Arontier's approach models the energy landscape of the drug-target system directly, incorporating conformational flexibility and thermodynamic stability into the design process. This is harder to build but produces candidates that are more likely to survive experimental validation.</p>
+
+      <h2>The Leadership: A Team Built for Depth</h2>
+      <p>Arontier is unusually explicit about its team structure, and the depth is worth noting. Ko Junsu (CEO, Co-founder) holds a Ph.D. in Bioinformatics from Seoul National University. His Co-founder, Insuk Sohn (CSO), holds a Ph.D. in Statistics from Korea University and was formerly Senior Researcher at both Samsung Medical Center and Samsung Cancer Research Institute, with post-doctoral training at Duke University Medical Center. The pairing — computational biology plus biostatistics and cancer research — gives Arontier a more clinical orientation than most AI drug startups.</p>
+      <p>The leadership bench is similarly specialized. CTO Juyong Lee (Ph.D. Physical Chemistry, SNU) provides the physics modeling foundation. AI Team Leader Changha Hwang (Ph.D. Statistics, University of Michigan; former Professor at Dankook University) leads the machine learning architecture. Drug Design Leader Woonghee Shin (Ph.D. Chemistry, SNU; formerly at Korea University) bridges the computational and medicinal chemistry worlds. Platform Leader Eagu Kim (Ph.D. Computer Science, University of Arizona; formerly at Theragen Etex Bio Institute) runs the technical infrastructure. CAF Team Leader Keunwoo Lee (Ph.D. Health Sciences, Sungkyunkwan University) leads the cancer-associated fibroblast program — the company's most distinctive scientific focus.</p>
+      <p>COO Taehyoung Kim (M.S. Drug Delivery System, KAIST; formerly Director at ILJIN Group and Team Leader at Dong-A ST) brings pharmaceutical industry operational experience. CFO Minsu Park (KICPA-qualified; formerly Vice President at Robo3, listed on KONEX; financial advisory at Makinarocks) provides the capital markets expertise needed as Arontier approaches its next funding phase.</p>
+
+      <h2>Cancer-Associated Fibroblasts: The Research Program That Differentiates</h2>
+      <p>Of all Arontier's scientific programs, the cancer-associated fibroblast (CAF) work is the one most likely to create a durable competitive moat. CAFs are stromal cells in the tumor microenvironment that support cancer progression: they secrete growth factors, remodel the extracellular matrix, suppress immune function, and help tumors resist treatment. They are not the cancer cell itself — which is why they have historically been overlooked by drug developers focused on oncogene-targeted therapies — but they are increasingly recognized as a critical factor in why solid tumors are so hard to eliminate.</p>
+      <p>Arontier presented anti-CAF drug candidates and mechanism data at AACR 2023 in Washington. In April 2026, at AACR 2026, the company went further: it unveiled an AI platform for discovering RNA-based (eRNA, enhancer RNA) targets within the CAF population — a next-generation approach that moves beyond protein targets to regulatory RNA elements that control gene expression in the tumor microenvironment. This is frontier biology. The intersection of AI-driven target discovery, CAF biology, and RNA therapeutics is an area where global pharmaceutical companies have invested heavily and where validated targets are scarce.</p>
+
+      <h2>2026: The Platform Producing Results Across Multiple Fronts</h2>
+      <p>The first half of 2026 has been Arontier's most productive period in terms of public scientific output — which is the leading indicator, in this business, of partnership and licensing interest.</p>
+      <p>In <strong>March 2026</strong>, Biotimes reported that Arontier's AI design platform had achieved a 10-fold increase in mRNA expression using a proprietary mRNA sequence optimization algorithm. mRNA design is a technically demanding problem — the same mRNA sequence can produce very different protein expression levels depending on secondary structure, codon usage, and stability characteristics. Achieving a 10x improvement through pure AI design, without altering the encoded protein sequence, is a significant result with direct commercial applications in mRNA therapeutics and vaccines.</p>
+      <p>Also in March 2026, Seoul Economic Daily reported that Arontier had identified a new drug target capable of replicating the metabolic effects of bariatric surgery (비만수술) — without a surgical procedure. Weight loss surgery works by altering gut hormone signaling and metabolic set points through mechanisms that are not fully understood; the GLP-1 agonist wave (Ozempic, Wegovy) partially replicates these effects but through a single pathway. Arontier's AI-discovered target appears to act through a different mechanism, one that could in principle produce bariatric surgery-equivalent metabolic remodeling with a small-molecule or biologic drug. The global obesity drug market is one of the largest in pharmaceutical history; a target with this mechanism would attract significant licensing interest.</p>
+      <p>Also that month, Arontier announced a collaboration with <strong>Synthenta</strong>, a medicinal chemistry services company, for an integrated AI small-molecule design and synthesis workflow — closing the loop between computational design and wet-lab validation. In January, the company announced a partnership with <strong>Organoid Sciences</strong> for AI-based non-clinical evaluation technology, adding organoid-based testing to its preclinical toolkit.</p>
+
+      <h2>The Funding and Partnership History</h2>
+      <p>Arontier has raised in two disclosed equity rounds: Series A in November 2020, and Series B in December 2021 (₩87억 total disclosed). In July 2024, the HLB Group (a major Korean pharmaceutical conglomerate) made a ₩50 billion strategic investment, with HLB파나진 taking a 12.5% stake. HLB's involvement is both financial and operational: HLB파나진 has jointly developed a spatial proteomics-based cancer diagnosis model with Arontier AI, and launched a commercial spatial proteomics analysis service in December 2025 using technology derived from this collaboration.</p>
+
+      <table class="milestone-table">
+        <thead><tr><th>Year</th><th>Milestone</th></tr></thead>
+        <tbody>
+          <tr><td>2017</td><td>Founded as FURAME (November)</td></tr>
+          <tr><td>2018</td><td>R&D Center established (February); renamed Arontier (October)</td></tr>
+          <tr><td>2019</td><td>Selected for MSIT AI drug development platform project; joint research with KRICT on anti-cancer drug</td></tr>
+          <tr><td>2020</td><td>Series A investment (November); joint research with Yonsei University Health System on anti-diabetes drug</td></tr>
+          <tr><td>2021</td><td>Series B investment (December); selected for National new drug development project (Ministry of Health &amp; Welfare / 보건복지부); digital pathology AI project (MOHW); joint research with Neuracle Science</td></tr>
+          <tr><td>2022</td><td>AD3 platform launched (October); MOU with Samsung Medical Center on AI drug + RNA cancer vaccine; MSIT industry-university grant + AI innovative drug project</td></tr>
+          <tr><td>2023</td><td>AACR 2023 — anti-CAF candidates &amp; mechanism; MOUs with KMEDI Hub, Future Medicine, NEX-I, HLB bioStep; joint research with Samjin Pharm; selected as MSIT Innovative Future Medical Research Center</td></tr>
+          <tr><td>2024</td><td>MOU with Dongkook Pharmaceutical; MSIT AI-driven bio data leading technology project; HLB Group ₩50B strategic investment (July)</td></tr>
+          <tr><td>2025</td><td>ADC Smart Manufacturing national R&D project (ADC design AI model); KMEDI Hub drug discovery workshop; HLB파나진 spatial proteomics service launch (co-developed AI cancer diagnosis model)</td></tr>
+          <tr><td>2026</td><td>Organoid Sciences MOU for AI-based non-clinical evaluation (January); mRNA expression 10× improvement via AI platform (March); bariatric surgery-equivalent obesity drug target discovered (March); Synthenta AI small-molecule design + synthesis collaboration (March); AACR 2026 — CAF-based eRNA target discovery AI platform (April); BioKorea 2026 featured (May)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The Partner Ecosystem</h2>
+      <p>Arontier's partnership list is a map of who in Korea's pharma and research establishment has committed resources to its platform:</p>
+      <div class="partner-grid">
+        <span class="partner-tag">Samsung Medical Center</span>
+        <span class="partner-tag">Yonsei University Health System</span>
+        <span class="partner-tag">HLB Group</span>
+        <span class="partner-tag">HLB파나진</span>
+        <span class="partner-tag">Dongkook Pharmaceutical</span>
+        <span class="partner-tag">Samjin Pharmaceutical</span>
+        <span class="partner-tag">Organoid Sciences</span>
+        <span class="partner-tag">Synthenta</span>
+        <span class="partner-tag">KMEDI Hub</span>
+        <span class="partner-tag">KRICT</span>
+        <span class="partner-tag">Neuracle Science</span>
+        <span class="partner-tag">Future Medicine</span>
+        <span class="partner-tag">NEX-I</span>
+        <span class="partner-tag">HLB bioStep</span>
+      </div>
+
+      <h2>Why This Matters for Global Investors</h2>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Investment Signal Checklist</div>
+        <ul class="signal-list">
+          <li>The physics-first approach to AI drug design is the differentiated architectural choice in a crowded market. Companies that bake physics into the model — not just into the training data — produce candidates with better predicted binding energetics. This is the approach that Isomorphic Labs (Google DeepMind spinout) and Schrödinger use at global scale; Arontier is the closest equivalent in Korea.</li>
+          <li>Multi-modality coverage (antibodies + protein binders + small molecules) under one platform is rare. Most Korean AI drug companies specialize in one modality. Arontier's breadth makes it a more natural partner for large pharmaceutical companies that work across modalities — and a more defensible licensing target.</li>
+          <li>The CAF + eRNA program addresses a target class that global oncology investment is moving toward. Tumor microenvironment remodeling is the next frontier after checkpoint inhibitors; CAF-targeting drugs that can reprogram the immunosuppressive stroma are one of the most sought-after target classes in oncology BD. Presenting at AACR 2023 and 2026 gives Arontier a peer-reviewed track record that large pharma requires before licensing discussions begin.</li>
+          <li>The obesity target discovery in March 2026 puts Arontier in the single hottest therapeutic area in global pharma. If the target is validated and mechanistically distinct from GLP-1, it becomes immediately licensable to any of the dozen companies racing to develop next-generation obesity drugs beyond the GLP-1 class.</li>
+          <li>The mRNA 10x expression result is a direct play on the mRNA therapeutics market that Moderna and BioNTech built. Sequence-level optimization that dramatically improves expression — without changing the encoded protein — is commercially valuable to every mRNA vaccine and therapeutic developer.</li>
+          <li>HLB Group's ₩50B strategic stake aligns Arontier with a major Korean pharma group that has both the capital and the clinical infrastructure to move drug candidates toward IND applications. This reduces the typical valley-of-death risk between AI design and clinical translation.</li>
+        </ul>
+      </div>
+
+      <h2>Risks to Watch</h2>
+      <p>Arontier's scientific output in 2026 is impressive, but the company has not yet disclosed a clinical-stage asset. The pipeline between AI-designed candidate and IND application remains unpublished — meaning outside investors cannot assess how many candidates have survived experimental validation. The 10x mRNA expression result and the obesity target discovery are platform-level outputs, not lead compounds with clinical data.</p>
+      <p>The company's disclosed funding — Series A, Series B at ₩87억 combined, plus HLB's ₩50B — suggests a relatively lean capitalization for a company with this scientific scope. A Series C raise or pre-IPO round would be the event that brings Arontier's valuation, pipeline, and investor quality into full public view.</p>
+      <p>The AD3 platform's competitive position will also need to be defended against well-funded global entrants. Isomorphic Labs, Recursion, Exscientia, and Insilico Medicine are all actively seeking partnerships in Asia, and their platforms have substantially more disclosed clinical validation. Arontier's differentiation is depth of physics integration and Korea-specific partnership access — not breadth of global clinical data.</p>
+
+      <p style="font-size:13px; color: var(--gray-2); margin-top:40px; padding-top:20px; border-top: 1px solid var(--gray-4);">
+        Sources: Arontier official website (arontier.co), Arontier History and Leadership pages, Biotimes (바이오타임즈, March 10 2026), Seoul Economic Daily (서울경제, March 12 2026), Medifonews (메디포뉴스, April 21 2026), Bizhankook (비즈한국, May 4 2026), Hitnews (히트뉴스), BusinessPost, THE VC (thevc.kr), AACR 2023 + 2026 program.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: ONES TO WATCH -->
+<div id="tab-ones-to-watch" class="tab-content">
+  <div class="article-body">
+    <div class="prose">
+      <h2>Three companies shaping Korea's AI drug discovery ecosystem</h2>
+      <p>Arontier operates in a cohort of Korean startups applying AI to drug discovery — a sector that is expanding rapidly as global pharmaceutical companies recognize that internal AI capabilities cannot match the output of dedicated AI-native drug design companies. Here are three peers whose trajectories intersect with or illuminate Arontier's position.</p>
+    </div>
+
+    <div class="otw-grid">
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">Galux (갈럭스)</span>
+          <span class="otw-stage">Series B · $29M</span>
+        </div>
+        <div class="otw-tagline">Korea's AI protein design company with an AstraZeneca validation — and $47M total raised</div>
+        <div class="otw-body">
+          Galux raised a $29 million Series B in February 2026, bringing total funding to $47 million, from a consortium including Korea Development Bank, Mirae Asset Securities, and Korea Investment & Securities alongside existing investors. The company's platform, GaluxDesign, specializes in de novo antibody and protein design — an area that directly overlaps with Arontier's antibody design and protein binder capabilities. The competitive distinction: Galux has disclosed a collaboration with AstraZeneca to test whether GaluxDesign can design proteins with predefined functional properties — giving it a globally recognized pharmaceutical validation that Arontier has not yet publicly matched. At BIO USA 2026 in San Diego, Galux held approximately 30 partnership meetings with global pharma companies. Galux's AstraZeneca partnership and larger disclosed funding make it the better-capitalized public comparator for Arontier's antibody design programs.
+        </div>
+        <div class="otw-signal">
+          <strong>Signal:</strong> AstraZeneca validation + KDB backing + BIO USA presence = institutional buy-in for Korea's AI protein design thesis. Watch Galux's next partnership announcement for a pricing anchor on Korea AI drug design deals.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">Standigm (스탠다임)</span>
+          <span class="otw-stage">Series C · $71.2M total</span>
+        </div>
+        <div class="otw-tagline">AI drug discovery with clinical-stage candidates — metabolic disease, neurodegeneration, aging</div>
+        <div class="otw-body">
+          Standigm has raised $71.2 million in total and is the most financially mature Korean AI drug discovery company with disclosed clinical activity. Its platforms Standigm ASK (target identification) and Standigm BEST (compound generation and optimization) address target discovery and lead optimization — the same pipeline stages that Arontier's AD3 covers, but with a different technical architecture (knowledge graph + ML rather than physics + ML). Standigm's therapeutic focus areas — metabolic diseases, aging, neurodegeneration, and inflammation — are more commercially crowded than Arontier's CAF and obesity programs, but they are also better validated by existing clinical precedent. The comparison between Standigm's $71.2M raise and Arontier's disclosed ₩87억 + ₩50B HLB investment illustrates how much capital advantage can accrue to companies that pursue broader indications with higher clinical probability.
+        </div>
+        <div class="otw-signal">
+          <strong>Signal:</strong> Standigm's $71.2M is the benchmark for what Series C AI drug discovery capitalization looks like in Korea. If Arontier's CAF or obesity programs produce a clinical candidate, a comparable raise would be achievable at current market valuations.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">LigaChem Biosciences (리가켐바이오)</span>
+          <span class="otw-stage">KOSDAQ-listed · ₩500B national fund</span>
+        </div>
+        <div class="otw-tagline">Korea's ADC powerhouse just received the largest government biotech investment in Korean history</div>
+        <div class="otw-body">
+          LigaChem Biosciences is not an AI drug discovery company — it is Korea's leading antibody-drug conjugate (ADC) developer and one of the country's most globally recognized biotech companies, with partnerships with major international pharmaceutical companies. In June 2026, it became the first biotech company to receive a direct investment from Korea's National Growth Fund (국가성장펀드), securing ₩500 billion (approximately $357 million) from a consortium led by Korea Development Bank (₩250B), Pan Orion / Orion Holdings (₩125B), and a financial investor (₩125B). LigaChem is relevant to Arontier investors for two reasons: first, Arontier participates in the national ADC manufacturing R&D project (ADC design AI model), positioning it as a potential technology supplier to ADC developers like LigaChem. Second, the ₩500B government investment signals that Korea's sovereign capital is actively seeking to back deep science commercialization in pharma — a tailwind for every Korean biotech with a credible clinical pathway.
+        </div>
+        <div class="otw-signal">
+          <strong>Signal:</strong> The ₩500B LigaChem investment is the largest government biotech direct investment in Korean history. It validates the national strategy of backing clinical-stage deep science — and creates a precedent for Arontier's eventual Series C or pre-IPO raise.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 3: DEAL TRACKER -->
+<div id="tab-deal-tracker" class="tab-content">
+  <div class="article-body">
+    <div class="prose">
+      <h2>Korea AI pharma &amp; biotech deals — July 2026</h2>
+      <p>Korea's biotech investment market in the first half of 2026 has been defined by two concurrent trends: a historic concentration of capital into a small number of large deals (the number of deals fell 5% year-over-year while total investment rose 205%), and an accelerating government commitment to backing clinical-stage science directly — not just through grants and early-stage funds. The deals below reflect both trends.</p>
+    </div>
+
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Round</th>
+          <th>Amount</th>
+          <th>What They Do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">LigaChem Biosciences (리가켐바이오)</div>
+            <div class="deal-round gov">National Growth Fund</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">₩500B<br><span style="font-size:11px;color:var(--gray-2)">~$357M</span></td>
+          <td>
+            Korea's leading ADC (antibody-drug conjugate) developer. First direct biotech investment from the Korea National Growth Fund — a sovereign vehicle that previously backed only semiconductor companies (Rebellions, FuriosaAI). Investors: KDB ₩250B + Pan Orion ₩125B + financial investor ₩125B. Funds Phase 3 trials, regulatory submissions, and next-generation ADC platform development.
+            <div class="deal-note">Why it matters: The first sovereign biotech direct investment in Korean history is a policy signal, not just a capital event. If the government is willing to invest ₩500B directly in a listed biotech, the risk premium it assigns to Korean pharma has changed structurally.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Galux (갈럭스)</div>
+            <div class="deal-round">Series B</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">$29M<br><span style="font-size:11px;color:var(--gray-2)">₩42B</span></td>
+          <td>
+            AI-driven protein and antibody design platform (GaluxDesign). Total funding $47M. Investors: KDB, Mirae Asset Securities, Korea Investment &amp; Securities (new); InterVest, DAYLI Partners, PATHWAY (existing). AstraZeneca collaboration confirmed. BIO USA 2026 presence.
+            <div class="deal-note">Why it matters: The largest disclosed equity round for a Korean AI drug design company in early 2026. Sets a pricing benchmark for platform-stage (pre-IND) AI drug design companies in Korea. Arontier's next funding round will be compared against this.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Arontier (아론티어)</div>
+            <div class="deal-round">Strategic investment</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">₩50B</td>
+          <td>
+            HLB Group (HLB파나진 ₩40B + HLB인베스트먼트 ₩10B) acquired 12.5% stake in Arontier (July 2024). AD3 platform: antibody, protein, and small-molecule AI design. CAF cancer biology + eRNA targeting. mRNA design (10x expression, 2026). Obesity drug target discovered (2026).
+            <div class="deal-note">Why it matters: Strategic stakes from pharma conglomerates are more valuable than pure financial VC in this sector — they provide GMP manufacturing access, clinical infrastructure, and regulatory expertise that accelerates the path from AI candidate to IND.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">TwelveLabs</div>
+            <div class="deal-round">Series C</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">$100M</td>
+          <td>
+            AI video understanding and search platform — not a drug company, but the largest Korea-founded AI software round in the first half of 2026. Founded by CEO Jae Lee, with engineering and AI talent from Korea and Silicon Valley. Provides multimodal video search, classification, and generation APIs.
+            <div class="deal-note">Why it matters: TwelveLabs' $100M round at a multi-billion-dollar valuation demonstrates that Korean AI infrastructure companies can command global institutional pricing — a tailwind for all Korean AI startups, including those in AI drug design.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Standigm (스탠다임)</div>
+            <div class="deal-round">Total raised</div>
+          </td>
+          <td></td>
+          <td class="deal-amount">$71.2M</td>
+          <td>
+            AI drug discovery platform (Standigm ASK + Standigm BEST) for target identification and lead optimization. Focus: metabolic diseases, aging, neurodegeneration, inflammation. Clinical-stage pipeline in development.
+            <div class="deal-note">Why it matters: $71.2M total is the financial maturity benchmark for Korean AI drug discovery companies with clinical aspirations. Standigm's fundraising trajectory is the most directly comparable to what Arontier's Series C would need to achieve.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:32px;">
+      <p style="font-size:13px; color: var(--gray-2);">Deal data sourced from Korea Biomedical Review (koreabiomed.com), Seoul Economic Daily (en.sedaily.com), WowTale, Biotimes, BusinessWire, and company announcements. Government investment figures are in KRW. USD conversions approximate at prevailing exchange rates.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Get next week's deep dive in your inbox</h3>
+    <p>One Korean startup, every week — founder story, tech analysis, and the signals global investors are missing.</p>
+    <div class="sub-form">
+      <input type="email" placeholder="your@email.com" id="sub-email">
+      <button onclick="handleSubscribe()">Subscribe free</button>
+    </div>
+    <p class="sub-meta">No spam · Unsubscribe anytime</p>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-left"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="footer-nav">
+    <a href="index.html#archive">Archive</a>
+    <a href="index.html">About</a>
+  </div>
+  <span class="footer-right">© 2026</span>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+
+<script>
+  function switchTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + tabId).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({top: document.querySelector('.tabs-nav').offsetTop - 60, behavior: 'smooth'});
+  }
+
+  const fab = document.getElementById('fab');
+  window.addEventListener('scroll', () => {
+    fab.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  function handleSubscribe() {
+    const email = document.getElementById('sub-email').value.trim();
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+    const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+    fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ email, source: 'article9' })
+    }).then(res => { if (res.ok || res.status === 409) window.location.href = 'thankyou.html'; else throw new Error(); })
+      .catch(() => { window.location.href = 'thankyou.html'; });
+  }
+</script>
+</body>
+</html>
