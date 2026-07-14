@@ -328,6 +328,21 @@
       .nav-issue-date { display: none; }
     }
 
+  
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
   </style>
   <!-- Vercel Analytics -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
@@ -741,8 +756,13 @@
   }
 
   const fab = document.getElementById('fab');
+  const fabTop = document.getElementById('fabTop');
   window.addEventListener('scroll', () => {
     fab.classList.toggle('visible', window.scrollY > 400);
+    if (fabTop) {
+      if (window.scrollY > 400) fabTop.classList.add('visible');
+      else fabTop.classList.remove('visible');
+    }
   });
 
   function handleSubscribe() {
@@ -758,5 +778,7 @@
       .catch(() => { window.location.href = 'thankyou.html'; });
   }
 </script>
+
+<button class="fab-top" id="fabTop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 </body>
 </html>
