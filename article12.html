@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgene: The Incheon Lab Going Where CRISPR Can't | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article12.html">
+
+  <meta name="description" content="CRISPR can't penetrate mitochondria. Edgene can. Korea's deeptech bet on protein-based mitochondrial gene editing just proved it works in vivo — and is targeting ₩20B to enter clinical trials by 2029.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Edgene, 엣진, mitochondrial gene editing, LHON, esTALED, TALED, Kim Jin-soo, 김진수, KAIST, gene therapy, rare disease, Korea biotech, TIPS deep tech, IBS">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Edgene: The Incheon Lab Going Where CRISPR Can't">
+  <meta property="og:description" content="CRISPR cannot penetrate the double membrane of the mitochondria. Edgene can. The Korean deeptech startup just proved its protein-based gene editing treats blindness in mice — and is raising ₩20B+ to take it into humans.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article12.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article12.png">
+  <meta property="article:published_time" content="2026-07-17T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Biotech">
+  <meta property="article:tag" content="Gene Editing">
+  <meta property="article:tag" content="Rare Disease">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Edgene: The Incheon Lab Going Where CRISPR Can't">
+  <meta name="twitter:description" content="CRISPR can't fix mitochondrial DNA. Edgene can. ₩8.5B raised, world's first LHON treatment proof-of-concept, 2029 clinical target.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article12.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Edgene: The Incheon Lab Going Where CRISPR Can't",
+    "description": "CRISPR cannot penetrate the double membrane of the mitochondria. Edgene's protein-based esTALED technology can — and in December 2025, the Incheon deeptech startup proved it restores vision in a mouse model of Leber's hereditary optic neuropathy, the world's first in-vivo proof of mitochondrial gene correction treating disease.",
+    "datePublished": "2026-07-17T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article12.html",
+    "about": [{ "@type": "Organization", "name": "Edgene", "alternateName": "엣진" }],
+    "keywords": "Edgene, mitochondrial gene editing, esTALED, LHON, KAIST, Kim Jin-soo, Korea biotech, rare disease, gene therapy"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #059669;
+      --accent-light: #d1fae5;
+      --accent-dark: #047857;
+      --nav-dark: #052e16;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #ecfdf5;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 80px; }
+
+    .pipeline-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+    .pipeline-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; background: var(--gray-5);
+    }
+    .pipeline-card-title { font-size: 14px; font-weight: 500; color: var(--black); margin-bottom: 6px; }
+    .pipeline-card-body { font-size: 12px; color: var(--gray-1); line-height: 1.6; }
+    .pipeline-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-bottom: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-round.strategic { background: #e0f2fe; color: #0c4a6e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(5,150,105,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .pipeline-grid { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+
+    /* ALL ISSUES NAV */
+    .all-issues-section {
+      border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+      padding: 40px;
+    }
+    .all-issues-inner { max-width: 760px; margin: 0 auto; }
+    .all-issues-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .all-issues-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-2);
+    }
+    .all-issues-link { font-size: 12px; color: var(--gray-2); }
+    .all-issues-link:hover { color: var(--black); }
+    .all-issues-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .nav-issue-item {
+      display: grid; grid-template-columns: 36px 1fr auto;
+      gap: 10px; align-items: baseline;
+      padding: 10px 12px; border-radius: var(--radius-md);
+      transition: background 0.12s;
+    }
+    .nav-issue-item:hover { background: var(--gray-4); }
+    .nav-issue-active { background: var(--accent-light) !important; }
+    .nav-issue-num {
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .nav-issue-active .nav-issue-num { color: var(--accent-dark); }
+    .nav-issue-title {
+      font-size: 12px; color: var(--black); line-height: 1.4;
+      overflow: hidden; display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+    .nav-issue-active .nav-issue-title { font-weight: 500; color: var(--accent-dark); }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .all-issues-section { padding: 28px 20px; }
+      .all-issues-grid { grid-template-columns: 1fr; }
+      .nav-issue-item { grid-template-columns: 36px 1fr; }
+      .nav-issue-date { display: none; }
+    }
+
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #012 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>Edgene: The Incheon Lab Going Where CRISPR Can't</h1>
+    <div class="hero-meta">
+      <span>July 17, 2026</span>
+      <span>Biotech</span>
+      <span>Gene Editing</span>
+      <span>Rare Disease</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">₩8.5B</div>
+    <div class="kpi-label">Cumulative funding raised (bridge + government grants) since founding in 2022</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">World #1</div>
+    <div class="kpi-label">First company to prove protein-based mitochondrial gene editing treats disease in a living animal</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">84%</div>
+    <div class="kpi-label">Share of mitochondrial genetic diseases caused by single-nucleotide mutations — all addressable by esTALED</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">2029</div>
+    <div class="kpi-label">Target year for first-in-human clinical trial of LHON (레버씨 시신경 위축증) gene correction therapy</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Wall CRISPR Cannot Cross</h2>
+      <p>CRISPR-Cas9 is the most celebrated gene editing technology of the past decade. It earned Jennifer Doudna and Emmanuelle Charpentier the 2020 Nobel Prize and has since been deployed against sickle cell disease, beta-thalassemia, and cancer. But CRISPR has a structural limitation that has resisted all attempts to overcome it: <strong>it cannot edit the genome inside mitochondria</strong>.</p>
+      <p>The reason is mechanical. CRISPR works by using a guide RNA molecule to direct a cutting protein to a specific DNA sequence. Guide RNA is a nucleic acid — and nucleic acids cannot cross the double membrane that surrounds the mitochondria. No delivery mechanism has succeeded in transporting guide RNA into the mitochondrial matrix in sufficient quantity to enable editing. This is not a dosage problem or an off-target problem. It is a physical barrier.</p>
+      <p>Mitochondria are not incidental. They are the energy factories of every human cell — and their genome encodes 13 proteins critical to cellular respiration. Mutations in mitochondrial DNA cause diseases that strike at the most fundamental cellular processes: blindness, infant brain death (Leigh syndrome, 리 증후군), muscular degeneration, and a form of mitochondrial diabetes (MIDD) affecting roughly 1% of all diabetic patients globally. These diseases have no approved gene therapy. They are, in the precise medical sense of the term, untreatable.</p>
+      <p><strong>Edgene (엣진)</strong> is betting it can change that. The Incheon-based deeptech startup, founded in May 2022 by world-renowned gene editing scientist <strong>Prof. Kim Jin-soo (김진수)</strong> of KAIST and managed by CEO <strong>Kim Young-ho (김영호)</strong>, has developed a protein-based mitochondrial gene editing system that bypasses the RNA delivery problem entirely. In December 2025, the company became the first in the world to demonstrate that this technology can treat a mitochondrial genetic disease in a living animal — restoring vision function in a mouse model of Leber's Hereditary Optic Neuropathy (LHON, 레버씨 시신경 위축증).</p>
+
+      <div class="pull-quote">
+        <p>"Traditional gene therapy adds a functioning copy of a broken gene. We go in and fix the mutation itself — directly, at the source. The difference between patching a roof and replacing the broken tiles."</p>
+      </div>
+
+      <h2>The Founder: Korea's Most Cited Gene Editing Scientist</h2>
+      <p>Prof. Kim Jin-soo is not a typical startup founder. He is arguably the most accomplished gene editing scientist in Asia. He founded <strong>Toolgen (툴젠)</strong> — Korea's first gene scissors company — in 1999, and built it into a KOSDAQ-listed biotechnology firm with a global patent portfolio covering CRISPR and related nuclease technologies. He then spent years at the Institute for Basic Science (IBS, 기초과학연구원), where he led the Genome Editing Research Unit and developed the technology that would become Edgene's core platform.</p>
+      <p>In November 2025, Clarivate named Prof. Kim one of the world's most highly cited researchers in biology and biochemistry — a recognition of the breadth and influence of his academic output. He is also the inventor of the patent portfolio that Edgene holds under an exclusive license from IBS: the original TALED (Transcription Activator-Like Effector Deaminase) and improved esTALED technologies for mitochondrial base editing.</p>
+      <p>CEO Kim Young-ho joined Edgene in 2023, recruited by Prof. Kim to lead the company's commercial and operational function. Kim Young-ho previously managed Toolgen's path to its KOSDAQ IPO — meaning Edgene's leadership pairing covers both the deep science and the commercialization playbook that a clinical-stage biotech requires.</p>
+      <p>The founding sequence is important context. Prof. Kim created Edgene as an intentionally separate entity from Toolgen. Toolgen edits nuclear DNA using CRISPR. Edgene edits mitochondrial DNA using protein-based technology that CRISPR cannot replicate. The two companies occupy different biological territories and require different capital structures, incentive systems, and regulatory pathways — hence the independent spinout.</p>
+
+      <h2>The Technology: esTALED — Protein Over RNA</h2>
+      <p>The core insight of Edgene's platform is that the guide-RNA dependency that makes CRISPR so powerful is also the source of its mitochondrial limitation. TALEN (Transcription Activator-Like Effector Nuclease) technology, by contrast, uses a protein scaffold — not RNA — to recognize and bind target DNA sequences. Proteins can be engineered to cross the mitochondrial double membrane. RNA cannot.</p>
+      <p>Edgene's platform, <strong>esTALED</strong> (enhanced safety TALED), takes this protein-based approach and combines it with base editing — the ability to chemically convert one DNA base (nucleotide) into another without making double-strand cuts, which reduces the risk of off-target effects. The original TALED technology was developed by Prof. Kim's team at IBS; esTALED, published in the journal Cell in January 2024, is the company's significantly improved version that reduces off-target activity — the primary safety concern for any gene editing therapeutic.</p>
+
+      <div class="pipeline-grid">
+        <div class="pipeline-card">
+          <div class="pipeline-badge">Platform Layer</div>
+          <div class="pipeline-card-title">esTALED — Enhanced Safety TALED</div>
+          <div class="pipeline-card-body">Protein-based mitochondrial base editor. Uses TALE (Transcription Activator-Like Effector) protein scaffold to recognize target mitochondrial DNA sequences; paired with a deaminase enzyme that converts the mutant base to normal without making double-strand cuts. Published in Cell (January 2024). Exclusive IBS license. 4 patents filed (as of 2025).</div>
+        </div>
+        <div class="pipeline-card">
+          <div class="pipeline-badge">Delivery Layer</div>
+          <div class="pipeline-card-title">AAV Vector — Ocular Injection</div>
+          <div class="pipeline-card-body">The esTALED editing components are packaged inside an AAV (adeno-associated virus) vector and injected directly into the eye. The AAV enters retinal ganglion cells, reaches the mitochondria, and delivers the editing proteins. Clinical-grade (GMP) AAV production is the primary capital requirement for the upcoming Series A: estimated cost ₩10B (~$7.3M).</div>
+        </div>
+        <div class="pipeline-card">
+          <div class="pipeline-badge">Lead Indication</div>
+          <div class="pipeline-card-title">LHON — Leber's Optic Neuropathy</div>
+          <div class="pipeline-card-body">Rare inherited disease causing sudden, severe vision loss in young adults (typically age 15–35). Caused by mitochondrial DNA mutations, most commonly in the ND4 gene (~70% of cases). No approved gene therapy exists. ~1,000 patients in Korea; well-organized patient community for clinical enrollment. Edgene's ND4-targeted editing is the lead clinical candidate.</div>
+        </div>
+        <div class="pipeline-card">
+          <div class="pipeline-badge">Pipeline</div>
+          <div class="pipeline-card-title">Leigh Syndrome + MIDD</div>
+          <div class="pipeline-card-body">Leigh syndrome (리 증후군): severe neurological disorder causing infant death; caused by mitochondrial mutations. MIDD (mitochondrial diabetes): ~1% of all diabetic patients carry causative mitochondrial variants — potentially a mass-market application if Edgene's editing platform proves safe and scalable. Both are early-pipeline targets post-LHON.</div>
+        </div>
+      </div>
+
+      <h2>The December 2025 Breakthrough: World's First In-Vivo Proof</h2>
+      <p>In December 2025, Edgene and collaborators at Korea University Medical School (Prof. Lee Hyun-ji, 이현지 교수) and Seoul National University College of Veterinary Medicine published results from the first in-vivo demonstration of mitochondrial gene correction treating a disease. The team engineered mice carrying the same ND4 mitochondrial mutation that causes LHON in human patients. These mice progressively lose retinal ganglion cells — the neurons that transmit visual signals from the eye to the brain — mirroring the human disease course.</p>
+      <p>After injecting esTALED-loaded AAV into the eyes of these mice, the team observed two outcomes that together constitute a clinical proof-of-concept: <strong>damaged retinal ganglion cells recovered toward normal morphology</strong>, and <strong>visual function measurably improved</strong>. This was not a cell culture experiment. It was a living animal with a human-equivalent genetic disease, treated with the company's lead candidate, demonstrating functional recovery.</p>
+      <p>The significance of this result for the field is difficult to overstate. Multiple research groups worldwide have attempted mitochondrial gene editing in cells. None had previously demonstrated therapeutic efficacy in an animal model of disease. Edgene's December 2025 publication is, as of this writing, the first.</p>
+
+      <div class="pull-quote">
+        <p>Edgene's mouse experiment didn't just demonstrate gene editing inside mitochondria. It showed that the editing reverses disease. That is a different, and far more commercially significant, proof point.</p>
+      </div>
+
+      <h2>Funding and the Path to Clinical Trials</h2>
+      <p>Edgene has raised approximately <strong>₩8.5 billion (~$6.2M)</strong> in cumulative funding since its 2022 founding — through a combination of private bridge investments, undisclosed Seed round participation, and government grants. The company is also a recipient of <strong>TIPS Deep Tech Track (딥테크 팁스)</strong> selection from Korea's Ministry of SMEs and Startups, which provides up to ₩1.5B in R&D funding over three years plus commercialization support. Five national R&D projects have been awarded, covering mitochondrial gene editing and base-editing technology development.</p>
+      <p>The funding picture to date reflects the typical early-stage biotech profile: bootstrapped through grants and small private rounds, with the team focused on building scientific proof rather than scaling commercial operations. Edgene has 13 employees as of May 2026 — an intentionally lean team for a company whose primary output is research data and platform development.</p>
+      <p>The next inflection point is capital-intensive. To advance LHON from preclinical to clinical stage requires two major expenditures: producing clinical-grade AAV vector in a GMP (Good Manufacturing Practice) facility at an estimated cost of <strong>₩10 billion (~$7.3M)</strong>, and completing non-clinical safety (IND-enabling) studies including formal toxicology testing. Together, these steps require <strong>₩20 billion or more</strong> in new capital — the target for a Series A planned to launch in 2026.</p>
+      <p>The company's commercial timeline is calibrated to regulatory environments that offer expedited pathways for rare disease gene therapies: Korea allows conditional marketing approval after Phase 2 data; Japan offers conditional approval after Phase 1 alone. Both regulatory structures reduce the time and capital required between clinical entry and commercial revenue — a deliberate strategic choice that distinguishes Edgene's development plan from the longer US FDA pathway.</p>
+
+      <table class="milestone-table">
+        <thead>
+          <tr><th>Date</th><th>Milestone</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>May 2022</td>
+            <td>Edgene incorporated in Incheon (Songdo Innovation Valley). Prof. Kim Jin-soo founds the company following TALED development at IBS; exclusive license secured.</td>
+          </tr>
+          <tr>
+            <td>Jun 2023</td>
+            <td>CEO Kim Young-ho joins as representative director. Led Toolgen's KOSDAQ listing as prior role — providing Edgene with its commercial leadership layer.</td>
+          </tr>
+          <tr>
+            <td>Jan 2024</td>
+            <td>esTALED published in Cell — enhanced-safety mitochondrial base editing platform, with significantly reduced off-target activity vs. original TALED. Edgene recognized in global gene editing community.</td>
+          </tr>
+          <tr>
+            <td>Oct 2023</td>
+            <td>Seed investment round completed. Cumulative raised reaches low single-digit billions of won. TIPS Deep Tech Track selected; ₩1.7B government support confirmed.</td>
+          </tr>
+          <tr>
+            <td>Dec 2025</td>
+            <td>World's first in-vivo proof: esTALED restores retinal ganglion cell morphology and visual function in LHON mouse model. Published jointly with Korea University Medical School and Seoul National University Veterinary College.</td>
+          </tr>
+          <tr>
+            <td>Apr 2026</td>
+            <td>FDA clarifies gene therapy regulatory framework — removing a key compliance uncertainty for companies like Edgene planning US regulatory pathways in parallel. Coverage in JoongAng Ilbo interview with Prof. Kim and CEO Kim Young-ho.</td>
+          </tr>
+          <tr>
+            <td>May 2026</td>
+            <td>Selected for government drug development program (신약개발과제). 13 employees. Series A process initiated targeting ₩20B+.</td>
+          </tr>
+          <tr>
+            <td>2029</td>
+            <td>Target: First-in-human clinical trial initiation for LHON, pending successful IND-enabling studies and Series A close.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Market: Small in Patients, Enormous in Value</h2>
+      <p>Rare disease gene therapy is counterintuitive as a business. Patient populations are small — LHON affects roughly 1,000 people in Korea, and perhaps 25,000–30,000 worldwide. But the economics of gene therapy pricing invert the usual volume-revenue relationship. Approved gene therapies — such as Novartis's Zolgensma (spinal muscular atrophy, ~$2.1M per dose) and bluebird bio's Skysona (cerebral adrenoleukodystrophy, ~$3M per course) — command per-treatment prices in the millions of dollars, with coverage increasingly provided by major payers in the US, EU, and Japan.</p>
+      <p>The logic is straightforward: a one-time treatment that restores sight or prevents infant brain death avoids a lifetime of palliative care, disability support, and societal cost. Payers have demonstrated willingness to reimburse at high prices when efficacy data is robust and patient populations are well-characterized. CEO Kim Young-ho has described the mitochondrial disease therapeutics market as "수조 원 규모" — a market measured in trillions of Korean won — and the addressable opportunity across LHON, Leigh syndrome, and MIDD supports that framing.</p>
+      <p>The 84% figure in Edgene's KPI bar is strategically important: if 84% of mitochondrial genetic diseases are caused by single-nucleotide mutations, and esTALED can correct single-nucleotide mutations, then Edgene's platform is theoretically applicable to the vast majority of the mitochondrial disease landscape. LHON is the lead indication because it has the most favorable combination of patient community organization, regulatory precedent, and ocular delivery (the eye is an immunoprivileged organ with established AAV delivery protocols). But the platform thesis is broader.</p>
+
+      <h2>The Competitive Landscape</h2>
+      <p>No company has an approved mitochondrial gene editing therapeutic. The field is genuinely pre-competitive at the clinical level — which makes Edgene's December 2025 in-vivo proof simultaneously its strongest moat and its most important near-term risk signal (it suggests competition will accelerate now that the proof-of-concept has been established).</p>
+      <p>The most visible global competitor in mitochondrial gene editing is <strong>Pretzel Therapeutics</strong> (US), which is developing mitochondrial-targeted base editors using a different protein scaffold approach. Pretzel raised $65M Series B in 2023 and is further advanced in preclinical development — but has not published in-vivo disease model results comparable to Edgene's LHON mouse data as of this writing. <strong>Shift Bioscience</strong> (UK) and several academic spinouts in the Netherlands and Germany are also working on mitochondrial editing approaches, but none have demonstrated in-vivo therapeutic efficacy.</p>
+      <p>Edgene's geographic and regulatory positioning — Korea and Japan first, US FDA pathway later — is a deliberate strategy to generate clinical data in environments where approval timelines are shorter and trial costs are lower, before competing head-on with better-capitalized Western companies in the US market.</p>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Why This Company Is Worth Watching</div>
+        <ul class="signal-list">
+          <li><strong>Genuinely first:</strong> Edgene's December 2025 LHON mouse result is the world's first demonstration that protein-based mitochondrial gene editing can treat disease in a living animal. This is a scientific milestone, not just a startup claim — it was co-published with Korea University Medical School and SNU Veterinary College.</li>
+          <li><strong>Unambiguous moat technology:</strong> esTALED is the only published, patent-protected protein-based mitochondrial base editing system with demonstrated in-vivo efficacy. The IBS exclusive license gives Edgene a legal and technical head start on competitors.</li>
+          <li><strong>Founder pedigree is exceptional:</strong> Prof. Kim Jin-soo founded Toolgen in 1999 — Korea's first gene scissors company — and is a Clarivate Highly Cited Researcher. CEO Kim Young-ho led that company's KOSDAQ IPO. This is a founding pair that has built and listed a gene editing company before.</li>
+          <li><strong>Platform breadth:</strong> LHON is the lead indication, but esTALED is applicable to 84% of mitochondrial genetic diseases. If the LHON proof-of-concept advances to human trials, the valuation upside comes from the platform, not just one disease.</li>
+          <li><strong>FDA and Korea regulatory tailwinds:</strong> April 2026 FDA clarification on gene therapy regulations reduces compliance uncertainty. Korea's conditional approval after Phase 2 and Japan's after Phase 1 create faster commercialization paths than the US for first-in-class rare disease therapies.</li>
+          <li><strong>Series A catalytic moment:</strong> ₩20B+ target provides the capital to reach IND (Investigational New Drug) filing — the gateway to human trials. For global biotech investors, this is the classic inflection point: pre-IND assets in a field with no approved competitors and a platform applicable to a multi-trillion-won market.</li>
+        </ul>
+      </div>
+
+      <h2>The Investment Thesis</h2>
+      <p>Edgene is a pre-clinical deeptech biotech at the Seed-to-Series-A inflection point. The risks are real and material: the gap between mouse model and human clinical trial is wide; GMP-grade AAV manufacturing is expensive and prone to delays; and gene therapy funding markets globally have been volatile since 2021. The company has 13 employees and no commercial revenue.</p>
+      <p>But the opportunity is also genuinely exceptional. Edgene has done something no company in the world had previously done: demonstrated that a protein-based mitochondrial gene editor can restore function in a disease model. That result changes the scientific credibility of the entire program. The founding team has built and listed a gene editing company before. The IP is protected and exclusively licensed. The regulatory environment favors rare disease gene therapy in both Korea and Japan. And the platform, if successful in LHON, is applicable to the majority of a disease category with no currently approved treatments and per-treatment pricing in the millions of dollars.</p>
+      <p>For global VC and angel investors monitoring Korea's biotech sector, Edgene represents a specific type of opportunity: a world-class scientific platform, built by a repeat-founder team, at the moment when preclinical proof has been established and clinical capital is required. That combination — credible science, experienced team, clear capital gap — is what the best Series A biotech investments look like before they become known.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">TwelveLabs (트웰브랩스)</div>
+          <div class="otw-stage">Series B · Video AI</div>
+        </div>
+        <div class="otw-tagline">$100M Series B — Korea's most-funded AI startup of Q2 2026</div>
+        <div class="otw-body">TwelveLabs builds video AI infrastructure: models that can understand, search, and reason over video content at scale. The company's core technology stack combines video recognition, memory, and reasoning into a unified multimodal system — enabling applications from sports analytics and media search to enterprise security and education. In July 2026, TwelveLabs closed a $100M (~₩1,500억) Series B led by NEA and Naver Ventures, with Amazon participating as a strategic investor. Quadrille Capital and Red Bull Ventures joined as new names. The round pushed cumulative funding past ₩300B (~$220M) — making TwelveLabs the largest-funded Korean AI startup of the year to date. The capital is earmarked for expanding video reasoning capabilities, AWS Trainium chip optimization, and a beta launch of "Rodeo," an AI-powered video creation tool that extends the platform from API infrastructure into end-user applications.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> Amazon's participation signals deep AWS integration — a distribution channel that gives TwelveLabs access to the enterprise cloud customer base without a dedicated enterprise sales force. As video becomes the primary data type for AI training and inference, owning the video understanding layer becomes a durable infrastructure position.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Carbon Six (카본식스)</div>
+          <div class="otw-stage">Series A · Physical AI</div>
+        </div>
+        <div class="otw-tagline">₩62.3B Series A — the physical AI bet on Korean manufacturing</div>
+        <div class="otw-body">Carbon Six develops Physical AI for industrial manufacturing: AI-driven automation systems that can be deployed in factories, assembly lines, and quality control environments without environment-specific retraining. The company's core product, Sigma Kit, enables manufacturers to collect structured operational data from existing production lines and continuously improve AI models against real-world manufacturing variance. Founded by Moon Tae-yeon (문태연), who previously founded SuaLab — a computer vision startup acquired by US machine vision giant Cognex in 2019 — Carbon Six raised ₩62.3B (~$45M) Series A in July 2026, led by DSC Investment and LB Investment, with IMM, KDB (Korea Development Bank), SV Investment, and US-based Cortentia and ASQ participating. The round is one of the largest Series A raises in Korean deeptech manufacturing for 2026.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> Moon Tae-yeon's Cognex acquisition history de-risks the founder narrative significantly. Korea's manufacturing sector — with dense factory infrastructure in electronics, automotive, and steel — provides a natural proving ground for physical AI systems that Western competitors cannot access at the same iteration speed. The KDB participation signals government alignment with the deeptech manufacturing thesis.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">LinkAlpha (링크알파)</div>
+          <div class="otw-stage">Series A · Financial AI</div>
+        </div>
+        <div class="otw-tagline">MTEB world #1 — the financial AI agent with Fidelity and BNP Paribas as clients</div>
+        <div class="otw-body">LinkAlpha builds AI agent infrastructure for financial services: search, embedding, and retrieval systems optimized for financial document analysis, regulatory compliance, and investment research workflows. The company's proprietary search-and-embedding model achieved the world #1 ranking on MTEB (Massive Text Embedding Benchmark) — the industry-standard benchmark for embedding and retrieval model quality — differentiating it from generic LLM wrappers applied to financial tasks. The client roster includes Fidelity and BNP Paribas — two of the world's largest institutional asset managers. In July 2026, LinkAlpha raised ₩34B (~$24M) Series A, co-led by Atinum Investment, GFT Ventures, and France-based AVP, with strategic participation from the VC arms of Mirae Asset, Hana, Shinhan, NH, and Samsung — an exceptionally broad financial group SI lineup that suggests the round is partly a distribution deal with Korea's five largest financial conglomerates.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> The combination of a verifiable global technical benchmark (#1 MTEB) and named global institutional clients (Fidelity, BNP Paribas) removes the two most common doubts about Korean AI B2B startups selling into financial services: can the technology compete globally, and can a Korean company close enterprise deals in Western institutions? LinkAlpha's answer to both is yes.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Round / Type</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">TwelveLabs (트웰브랩스)</div>
+            <div class="deal-round">Series B</div>
+          </td>
+          <td class="deal-amount">$100M<br><small>~₩1,500억</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Led by NEA and Naver Ventures; Amazon as strategic investor. Quadrille Capital and Red Bull Ventures new entrants. Cumulative funding surpasses ₩300B — Korea's single largest AI venture raise of Q2 2026. Funds video reasoning platform expansion and "Rodeo" AI video creation tool beta.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Carbon Six (카본식스)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td class="deal-amount">₩623억<br><small>~$45M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Led by DSC Investment and LB Investment; IMM, KDB, SV Investment, US-based Cortentia and ASQ participating. Physical AI for manufacturing automation. Founded by Moon Tae-yeon (SuaLab, sold to Cognex 2019). Sigma Kit enables continuous AI model improvement from live factory data.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">ImmunApps (이뮨앱스)</div>
+            <div class="deal-round">Series C</div>
+          </td>
+          <td class="deal-amount">₩380억<br><small>~$27M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Antibody drug developer. Series C funds Phase 2 clinical trials in the US and Europe. Active Korean clinical-stage biotech in the immunology space. Investor composition not yet fully disclosed.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">LinkAlpha (링크알파)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td class="deal-amount">₩340억<br><small>~$24M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Co-led by Atinum Investment, GFT Ventures, France-based AVP. Strategic participation from VC arms of Mirae Asset, Hana, Shinhan, NH, and Samsung. MTEB world #1 ranking on search/embedding benchmark. Clients include Fidelity and BNP Paribas — rare global institutional client validation for a Korean AI startup.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Caps Bio (캅스바이오)</div>
+            <div class="deal-round">Series B</div>
+          </td>
+          <td class="deal-amount">₩290억<br><small>~$21M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Drug discovery company. Series B closed one year after first institutional investment; existing investors followed on in full — a strong signal of internal confidence. Exact indication and pipeline not publicly disclosed.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">FuriosaAI (퓨리오사AI)</div>
+            <div class="deal-round gov">Pre-IPO · Policy Finance</div>
+          </td>
+          <td class="deal-amount">₩200억<br><small>~$14.5M</small></td>
+          <td>Pre-IPO<br><small>Jul 2026</small></td>
+          <td class="deal-note">Korea Export-Import Bank direct investment — the first time in the bank's history that it has directly invested in a venture company. AI semiconductor designer targeting inference chip market. Government's 3 Major Mega-Projects designation and National Growth Fund backing position FuriosaAI as strategic national infrastructure. IPO timing still TBD.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">AB180 (에이비일팔공)</div>
+            <div class="deal-round">Series C</div>
+          </td>
+          <td class="deal-amount">₩214억<br><small>~$15.5M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">AI marketing analytics platform. Series C brings cumulative funding to ₩413B (~$30M). Company is evaluating IPO and M&A pathways for 2027. Builds customer behavior analytics and campaign optimization AI for Korean consumer brands.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- All Issues Nav -->
+<section class="all-issues-section">
+  <div class="all-issues-inner">
+    <div class="all-issues-header">
+      <span class="all-issues-label">All Issues</span>
+      <a href="index.html" class="all-issues-link">koreastartupthesis.com →</a>
+    </div>
+    <div class="all-issues-grid">
+    <a href="article.html" class="nav-issue-item">
+      <span class="nav-issue-num">#001</span>
+      <span class="nav-issue-title">Rebellions: The SpaceX Founder Building Korea's Answer to Nvidia</span>
+      <span class="nav-issue-date">Jun 24, 2026</span>
+    </a>
+    <a href="article2.html" class="nav-issue-item">
+      <span class="nav-issue-num">#002</span>
+      <span class="nav-issue-title">Toss: The Dentist Who Dismantled Korea's Banking Oligopoly</span>
+      <span class="nav-issue-date">Jun 24, 2026</span>
+    </a>
+    <a href="article3.html" class="nav-issue-item">
+      <span class="nav-issue-num">#003</span>
+      <span class="nav-issue-title">S2W: The KAIST Lab That Mapped the Dark Web for INTERPOL</span>
+      <span class="nav-issue-date">Jun 26, 2026</span>
+    </a>
+    <a href="article4.html" class="nav-issue-item">
+      <span class="nav-issue-num">#004</span>
+      <span class="nav-issue-title">BioNexus: The Genomics Veteran Building Korea's AI Drug Discovery Engine</span>
+      <span class="nav-issue-date">Jul 1, 2026</span>
+    </a>
+    <a href="article5.html" class="nav-issue-item">
+      <span class="nav-issue-num">#005</span>
+      <span class="nav-issue-title">DEEPX: The Apple M1 Architect Who Came Back to Build the ARM of Edge AI</span>
+      <span class="nav-issue-date">Jul 2, 2026</span>
+    </a>
+    <a href="article6.html" class="nav-issue-item">
+      <span class="nav-issue-num">#006</span>
+      <span class="nav-issue-title">MedicalPark: The Surgeon Who Built Korea's Full-Stack Breast Diagnostics Company</span>
+      <span class="nav-issue-date">Jul 3, 2026</span>
+    </a>
+    <a href="article7.html" class="nav-issue-item">
+      <span class="nav-issue-num">#007</span>
+      <span class="nav-issue-title">Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable</span>
+      <span class="nav-issue-date">Jul 6, 2026</span>
+    </a>
+    <a href="article8.html" class="nav-issue-item">
+      <span class="nav-issue-num">#008</span>
+      <span class="nav-issue-title">SMT Bio: The Off-the-Shelf NK Cell Company Targeting the Cancer Chemotherapy Can&#39;t Crack</span>
+      <span class="nav-issue-date">Jul 8, 2026</span>
+    </a>
+    <a href="article9.html" class="nav-issue-item">
+      <span class="nav-issue-num">#009</span>
+      <span class="nav-issue-title">Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea&#39;s Full-Stack Drug Design Engine</span>
+      <span class="nav-issue-date">Jul 10, 2026</span>
+    </a>
+    <a href="article10.html" class="nav-issue-item">
+      <span class="nav-issue-num">#010</span>
+      <span class="nav-issue-title">Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer</span>
+      <span class="nav-issue-date">Jul 12, 2026</span>
+    </a>
+    <a href="article11.html" class="nav-issue-item">
+      <span class="nav-issue-num">#011</span>
+      <span class="nav-issue-title">Intellisia: The Daejeon Lab Cloning Consumers With AI</span>
+      <span class="nav-issue-date">Jul 15, 2026</span>
+    </a>
+    <a href="article12.html" class="nav-issue-item nav-issue-active">
+      <span class="nav-issue-num">#012</span>
+      <span class="nav-issue-title">Edgene: The Incheon Lab Going Where CRISPR Can't</span>
+      <span class="nav-issue-date">Jul 17, 2026</span>
+    </a>
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe -->
+<section class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Korea Startup Thesis</h3>
+    <p>One Korean startup, deeply analyzed. Every week, free.</p>
+    <form class="sub-form" onsubmit="handleSubscribe(event)">
+      <input type="email" id="emailInput" placeholder="you@fund.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-meta" id="subMsg">No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+  </div>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+
+<script>
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  window.addEventListener('scroll', () => {
+    const fab = document.getElementById('fab');
+    const fabTop = document.getElementById('fabTop');
+    if (window.scrollY > 400) fab.classList.add('visible');
+    else fab.classList.remove('visible');
+    if (fabTop) {
+      if (window.scrollY > 400) fabTop.classList.add('visible');
+      else fabTop.classList.remove('visible');
+    }
+  });
+
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value.trim();
+    const msg = document.getElementById('subMsg');
+    msg.textContent = 'Subscribing...';
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article12' })
+      });
+      if (res.ok || res.status === 409) {
+        msg.textContent = res.status === 409 ? 'Already subscribed!' : 'Done! You\'re on the list.';
+        document.getElementById('emailInput').value = '';
+      } else {
+        msg.textContent = 'Something went wrong. Try again.';
+      }
+    } catch {
+      msg.textContent = 'Network error. Please try again.';
+    }
+  }
+</script>
+
+<button class="fab-top" id="fabTop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</body>
+</html>
