@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article13.html">
+
+  <meta name="description" content="Song Ki-young sold SUALAB to Cognex for $195M. Now he's raised Korea's largest-ever Series A — ₩155B — to build FRIDAY, a wheeled humanoid that skips legs and bets everything on dexterous hands for factory automation.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Holiday Robotics, 홀리데이로보틱스, FRIDAY, humanoid robot, Song Ki-young, 송기영, SUALAB, factory automation, physical AI, VLS, Korea robotics, K-Humanoid">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs">
+  <meta property="og:description" content="Song Ki-young sold SUALAB to Cognex for $195M. Now he's raised ₩155B — Korea's biggest Series A ever — to prove humanoid robots should master hands before legs.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article13.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article13.png">
+  <meta property="article:published_time" content="2026-07-20T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Robotics">
+  <meta property="article:tag" content="Physical AI">
+  <meta property="article:tag" content="Manufacturing">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs">
+  <meta name="twitter:description" content="₩155B Series A. 64 DoF. 100 robots by year-end. FRIDAY is Korea's humanoid moment — and it rolls, not walks.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article13.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs",
+    "description": "Song Ki-young sold his computer vision startup SUALAB to Cognex for $195M. Now he's raised ₩155 billion — Korea's largest-ever Series A — to build FRIDAY, a wheeled humanoid robot with 20-DoF hands and full-palm tactile sensors, designed to work alongside humans on factory floors. The company's insight: in manufacturing, hands create more value than legs.",
+    "datePublished": "2026-07-20T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article13.html",
+    "about": [{ "@type": "Organization", "name": "Holiday Robotics", "alternateName": "홀리데이로보틱스" }],
+    "keywords": "Holiday Robotics, humanoid robot, FRIDAY, Song Ki-young, SUALAB, factory automation, physical AI, Korea robotics"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #4f46e5;
+      --accent-light: #e0e7ff;
+      --accent-dark: #3730a3;
+      --nav-dark: #1e1b4b;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #eef2ff;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .spec-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 16px 20px; background: var(--gray-5);
+    }
+    .spec-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-2); margin-bottom: 4px; }
+    .spec-value { font-size: 18px; font-weight: 500; color: var(--accent); letter-spacing: -0.3px; }
+    .spec-note { font-size: 12px; color: var(--gray-1); margin-top: 3px; line-height: 1.5; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 80px; }
+
+    .roadmap-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    .roadmap-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; text-align: center;
+    }
+    .roadmap-card.active { background: var(--accent-light); border-color: var(--accent); }
+    .roadmap-day { font-size: 22px; font-weight: 500; color: var(--accent); margin-bottom: 6px; }
+    .roadmap-market { font-size: 12px; font-weight: 500; color: var(--black); margin-bottom: 6px; }
+    .roadmap-desc { font-size: 11px; color: var(--gray-2); line-height: 1.5; }
+    .roadmap-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent); color: #fff;
+      padding: 2px 8px; border-radius: var(--radius-sm); margin-top: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-round.strategic { background: #e0f2fe; color: #0c4a6e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(79,70,229,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .roadmap-row { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+
+    /* ALL ISSUES NAV */
+    .all-issues-section {
+      border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+      padding: 40px;
+    }
+    .all-issues-inner { max-width: 760px; margin: 0 auto; }
+    .all-issues-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .all-issues-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-2);
+    }
+    .all-issues-link { font-size: 12px; color: var(--gray-2); }
+    .all-issues-link:hover { color: var(--black); }
+    .all-issues-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .nav-issue-item {
+      display: grid; grid-template-columns: 36px 1fr auto;
+      gap: 10px; align-items: baseline;
+      padding: 10px 12px; border-radius: var(--radius-md);
+      transition: background 0.12s;
+    }
+    .nav-issue-item:hover { background: var(--gray-4); }
+    .nav-issue-active { background: var(--accent-light) !important; }
+    .nav-issue-num {
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .nav-issue-active .nav-issue-num { color: var(--accent-dark); }
+    .nav-issue-title {
+      font-size: 12px; color: var(--black); line-height: 1.4;
+      overflow: hidden; display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+    .nav-issue-active .nav-issue-title { font-weight: 500; color: var(--accent-dark); }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .all-issues-section { padding: 28px 20px; }
+      .all-issues-grid { grid-template-columns: 1fr; }
+      .nav-issue-item { grid-template-columns: 36px 1fr; }
+      .nav-issue-date { display: none; }
+    }
+
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #013 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs</h1>
+    <div class="hero-meta">
+      <span>July 20, 2026</span>
+      <span>Robotics</span>
+      <span>Physical AI</span>
+      <span>Manufacturing</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">₩1,550억</div>
+    <div class="kpi-label">Series A raised — Korea's largest-ever Series A, closed July 13, 2026. Cumulative total ~₩1,725억 including seed.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">64 DoF</div>
+    <div class="kpi-label">Total degrees of freedom in FRIDAY — including 20-DoF hands weighing just 500g each, with full-palm tactile sensing.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">100 units</div>
+    <div class="kpi-label">FRIDAY production target for H2 2026 — the first commercial deployment of Korea's first humanoid robot at scale.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">₩52조</div>
+    <div class="kpi-label">Projected global humanoid market by 2035 (~$34.6B) — and Holiday Robotics intends to be a top-10 global player.</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The $195M Idea That Changed Everything</h2>
+      <p>In 2019, <strong>Song Ki-young (송기영)</strong> sold his computer vision startup <strong>SUALAB (수아랩)</strong> to Cognex — a US machine vision giant — for approximately $195 million (₩2,300억). SUALAB had spent six years teaching factory cameras to detect defects on production lines using machine learning: replacing human inspectors with algorithms that never blinked, never tired, and could spot a 0.1mm scratch at 1,000 frames per second.</p>
+      <p>The Cognex exit made Song one of Korea's most successful deep-tech founders. It also crystallized a specific frustration: after solving the vision problem for factory inspection, Song found himself staring at the next, harder problem. Cameras could see the defects. But <strong>the robots assigned to handle the defective parts were still dumb</strong>. They moved on fixed paths, required meticulous environment calibration, and could not adapt to the slight variations in object position, orientation, or texture that any human worker handles without thinking.</p>
+      <p>The bottleneck in factory automation, Song concluded, was not vision. It was <strong>hands</strong>.</p>
+      <p>In March 2024, Song founded <strong>Holiday Robotics (홀리데이로보틱스)</strong> with a specific thesis: the humanoid robot that wins in manufacturing will not be the one that walks most convincingly. It will be the one that touches most precisely. In July 2026, the market answered: IMM Investment, Stonebridge Ventures, Korea Development Bank, Goodwater Capital, and more than a dozen other institutional investors deployed ₩1,550억 (~$103.4M) in what became the largest Series A in South Korean startup history.</p>
+
+      <div class="pull-quote">
+        <p>"Chinese companies are doing really well at walking. But in industrial sites, most of the value comes from the hands. We focused on the precision of 'grasping, turning, and feeling' rather than walking."<br>— Song Ki-young, CEO, Holiday Robotics</p>
+      </div>
+
+      <h2>The Founder: A Second-Time Builder Betting on Physics</h2>
+      <p>Song Ki-young's background is unusual for a humanoid robotics founder. He is not a roboticist by training. He is a machine learning engineer who spent his career at the intersection of computer vision and industrial quality control. SUALAB's core product — deep learning-based defect detection on manufacturing lines — was the first Korean startup to achieve a large-scale enterprise exit in the applied machine vision space.</p>
+      <p>What distinguishes Song from the typical humanoid founder is his first-principles focus on manufacturing economics. He has spent years inside Korean factories — automotive plants, electronics fabrication lines, semiconductor packaging facilities — and his insight into where humanoids can create immediate return on investment (ROI) is grounded in that direct exposure. The question he brings to Holiday Robotics is not "how do we make a robot that looks like a person?" but "what does a factory actually need a robot to do, and what is the minimal viable form factor to do it economically?"</p>
+      <p>The answer he arrived at: a robot that can move efficiently through factory aisles (wheels beat legs for speed and uptime), that can lift and manipulate objects with human-equivalent dexterity (hence the 20-DoF hands), and that can work alongside humans on existing production lines without requiring environment reconstruction (hence the wheeled base rather than the more disruptive bipedal form). FRIDAY, the product of this thinking, is not a general-purpose humanoid. It is a manufacturing co-worker.</p>
+      <p>Around Song, Holiday Robotics has assembled approximately <strong>50 researchers, engineers, and manufacturing and business development personnel</strong>, drawing talent from MIT, Seoul National University, KAIST, and Samsung Electronics — a talent concentration unusual for a two-year-old startup and a reflection of both Song's reputation and the genuine magnetism of the humanoid robotics moment.</p>
+
+      <h2>FRIDAY: The Wheeled Humanoid That Skips Legs</h2>
+      <p>FRIDAY is Holiday Robotics' flagship product. It stands <strong>176cm tall and weighs 115kg</strong> — of which 66kg is the low-center-of-gravity wheeled mobile base designed for stability on flat factory floors. It is not a walking robot. It is a <strong>wheeled humanoid manipulator</strong>: the upper body (torso, arms, hands, head) is designed to human proportions to fit within human-designed workspaces; the lower body replaces legs with differential-drive wheels that allow speeds up to <strong>1.9 meters per second</strong> and, critically, <strong>continuous 24/7 operation via hot-swappable batteries</strong>.</p>
+      <p>That last specification is commercially significant. Bipedal humanoids typically operate for under an hour before requiring recharge. A robot that can run continuously — by hot-swapping batteries like a walkie-talkie — can be deployed in three shifts without the downtime that would otherwise require three robots to cover one production slot.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Height / Weight</div>
+          <div class="spec-value">176cm / 115kg</div>
+          <div class="spec-note">Mobile base weighs 66kg for low center of gravity. Upper body proportioned to fit human-designed workspaces.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Total Degrees of Freedom</div>
+          <div class="spec-value">64 DoF</div>
+          <div class="spec-note">Includes head, torso, arms, and hands. Entire arm-hand system engineered for backdrivability — soft compliance with external forces.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Hand Dexterity</div>
+          <div class="spec-value">20 DoF / 500g</div>
+          <div class="spec-note">Each hand has 20 degrees of freedom and weighs only 500g. Full-palm tactile sensors detect forces as light as 0.05N (≈5g) at 1,900Hz.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Payload</div>
+          <div class="spec-value">5kg / arm</div>
+          <div class="spec-note">5kg per arm payload; up to 20kg proximal payload at closer range. Covers the vast majority of assembly and logistics tasks in electronics and auto manufacturing.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Speed / Uptime</div>
+          <div class="spec-value">1.9 m/s · 24/7</div>
+          <div class="spec-note">Hot-swappable battery enables continuous operation. Bipedal competitors typically achieve &lt;1 hour runtime before recharge.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Tactile Sensor Cost</div>
+          <div class="spec-value">₩30,000 / unit</div>
+          <div class="spec-note">~$21. Magnetic-on-silicon design achieves full-palm sensing at a cost that makes mass deployment economically viable — a key differentiator from competitors using expensive force sensors.</div>
+        </div>
+      </div>
+
+      <p>The tactile sensor specification deserves particular attention. Most robots either have no sense of touch, or use expensive force-torque sensors at the wrist that provide limited spatial resolution. FRIDAY's hands use a magnetic sensor design on silicon — covering the entire finger and palm surface — that costs approximately ₩30,000 (~$21) per sensor to manufacture. This approach enables what Song describes as the critical capability for factory manipulation: the ability to detect contact across the entire hand surface, not just at the fingertips, so the robot can handle delicate, irregular, or undefined objects without dropping or crushing them.</p>
+
+      <h2>The Software Stack: VLS Over VLA</h2>
+      <p>If FRIDAY's hardware is defined by a practical philosophy, so is its software. The dominant approach in embodied AI research is <strong>VLA (Vision-Language-Action)</strong>: train a single large neural network to take visual inputs, process natural language instructions, and output direct motor commands. The appeal is generality: one model, many tasks.</p>
+      <p>Song is explicitly skeptical of VLA for industrial deployment. "VLA is a black box," he told ZDNet Korea, "so it's hard to predict and guarantee safety." In a factory where a humanoid works alongside human operators, an unpredictable black-box motor controller is an unacceptable liability — both practically and from a regulatory standpoint.</p>
+      <p>Holiday Robotics is instead building a <strong>VLS (Vision-Language-Skill)</strong> architecture. In this system, a language model interprets operator instructions and selects from a library of pre-verified manipulation <strong>skills</strong> — discrete, validated motion primitives like "grasp," "rotate," "insert," "push," and "place." Each skill has been verified for safety before deployment. The AI selects and sequences skills; it does not generate raw motor commands. This "Whitebox" approach combines the adaptability of generative AI with the predictability of classical control — a deliberate design choice that Song believes is essential for manufacturing safety certification.</p>
+      <p>To train these skills at scale, Holiday Robotics is building <strong>Holiday Sim</strong> — a proprietary simulation environment designed to close the "sim-to-real" gap. The specific engineering challenge is soft-body contact modeling: simulating how a robot hand interacts with a compliant, irregular, or deformable object. Standard physics engines like MuJoCo handle rigid bodies well, but fail on the kind of soft contacts that dominate real manufacturing tasks (flexible cables, fabric, gaskets, packaged components). Holiday Sim is being engineered to model these contacts accurately enough that skills trained in simulation transfer to physical hardware without performance degradation.</p>
+
+      <h2>Funding: Korea's Largest-Ever Series A</h2>
+      <p>Holiday Robotics closed its <strong>₩1,550억 (~$103.4M) Series A on July 13, 2026</strong> — the largest Series A in South Korean startup history, and the largest single round ever raised by a Korean dedicated humanoid company. The round came just over two years after founding, and just over a year after the August 2024 seed round of ₩175억 (~$11.6M) that provided the initial runway to build FRIDAY's prototype and begin PoC discussions with industrial customers.</p>
+      <p>The investor lineup spans Korea's leading venture capital firms, US-based international capital, and Korean policy financial institutions:</p>
+      <p><strong>New investors:</strong> IMM Investment, SL Investment, KB Investment, Bon Angels Venture Partners, Premier Partners, Ulmus Investment, SJ Investment Partners, Dasung Ventures, Atinum Capital Partners, Goodwater Capital (US), Korea Development Bank (KDB), Industrial Bank of Korea (IBK)</p>
+      <p><strong>Existing investors (following on):</strong> Stonebridge Ventures, Atinum Investment, Intervest, SpringCamp</p>
+      <p>The participation of KDB and IBK is symbolically important: it signals that Korean policy finance recognizes humanoid robotics as strategic national technology, not just a venture bet. Goodwater Capital's participation — a US fund based in Menlo Park, California — provides international imprimatur and opens distribution relationships beyond Korea.</p>
+
+      <table class="milestone-table">
+        <thead>
+          <tr><th>Date</th><th>Milestone</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mar 2024</td>
+            <td>Holiday Robotics founded by Song Ki-young in Seoul. Initial team of ~10 engineers from SNU, KAIST, Samsung Electronics. Core thesis: win manufacturing humanoid market by prioritizing hand dexterity over bipedal locomotion.</td>
+          </tr>
+          <tr>
+            <td>Aug 2024</td>
+            <td>Seed round closes at ₩175억 (~$11.6M). Led by Stonebridge Ventures. Funds first FRIDAY prototype development, hardware component sourcing, and early simulation work.</td>
+          </tr>
+          <tr>
+            <td>Oct 2025</td>
+            <td>FRIDAY publicly unveiled. Key specs disclosed: 176cm, 115kg, 64 DoF, 20-DoF hands, 1900Hz tactile sensors at 0.05N sensitivity. Song gives first detailed media interviews on VLS architecture and manufacturing-first strategy.</td>
+          </tr>
+          <tr>
+            <td>Nov 2025</td>
+            <td>FRIDAY begins undisclosed PoC tests with major domestic and international companies in automotive, semiconductor, and logistics sectors. NDA prevents disclosure of counterparties.</td>
+          </tr>
+          <tr>
+            <td>Dec 2025</td>
+            <td>Bipedal version testing initiated. Song confirms wheeled version remains commercial priority; bipedal is a parallel R&D track for environments that require stair-climbing or uneven terrain.</td>
+          </tr>
+          <tr>
+            <td>Jul 13, 2026</td>
+            <td>Series A closes at ₩1,550억 — Korea's largest-ever Series A. 15+ investors including IMM Investment, KDB, IBK, Goodwater Capital. Commercialization of 100 units announced for H2 2026.</td>
+          </tr>
+          <tr>
+            <td>H2 2026</td>
+            <td>Target: 100-unit commercial production run at Seongsu-dong facility. Initial delivery to PoC pilot customers. FRIDAY price target: ~₩1억 per unit (~$66,500).</td>
+          </tr>
+          <tr>
+            <td>2027</td>
+            <td>Target: Annual production capacity of 1,000 units. Broader deployment across automotive, electronics manufacturing, and logistics. Long-term goal: 10,000-unit annual capacity.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>The Roadmap: Friday, Saturday, Sunday</h2>
+      <p>Song's product roadmap is embedded in the company name itself. "Holiday" is not arbitrary — it maps to a three-product, three-market strategy where each product is named for a day of the weekend:</p>
+
+      <div class="roadmap-row">
+        <div class="roadmap-card active">
+          <div class="roadmap-day">Friday</div>
+          <div class="roadmap-market">Industrial / Manufacturing</div>
+          <div class="roadmap-desc">Factory lines, automotive assembly, semiconductor packaging, logistics warehouses. The current product. Commercial launch H2 2026.</div>
+          <div class="roadmap-badge">Active</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-day">Saturday</div>
+          <div class="roadmap-market">Services</div>
+          <div class="roadmap-desc">Restaurants, retail, hospitality, healthcare support. Uses manufacturing learnings on manipulation and skill-library AI to address structured service environments.</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-day">Sunday</div>
+          <div class="roadmap-market">Home Assistants</div>
+          <div class="roadmap-desc">General-purpose home robot. The hardest market, deferred until Friday and Saturday establish platform maturity, price points, and skill database depth.</div>
+        </div>
+      </div>
+
+      <p>The logic is disciplined: manufacturing is the most structured, highest-ROI, and most tractable deployment environment for a first-generation humanoid. Service robots require less precision but more environmental adaptability. Home robots require both — and are commercially addressable only when platform costs are low enough for consumer price points. Starting with Friday is not a limitation; it is deliberate sequencing.</p>
+
+      <h2>The Competitive Landscape</h2>
+      <p>Holiday Robotics enters a global humanoid market that has, in the past 18 months, attracted more capital and engineering talent than at any prior point in robotics history. The competitive set is formidable:</p>
+      <p><strong>US competitors:</strong> <strong>Tesla Optimus</strong> is the most well-capitalized competitor globally, with Elon Musk setting aggressive timelines for mass production. <strong>Figure AI</strong> (backed by Microsoft, OpenAI, and NVIDIA at a $2.6B valuation) is pursuing BMW manufacturing deployments. <strong>Apptronik</strong> (backed by Google DeepMind) and <strong>Agility Robotics</strong> (backed by Amazon and now filing for a $2.5B SPAC) round out the US field.</p>
+      <p><strong>Chinese competitors:</strong> <strong>AGIBOT</strong> recently shipped its 15,000th robot and is livestreaming production lines. <strong>Unitree Robotics</strong> — which pursued a similar wheeled-body strategy with the G1-D — has achieved aggressive pricing at sub-$20,000 and is ramping production rapidly.</p>
+      <p>Against this field, Holiday Robotics' differentiation rests on three factors: <strong>tactile precision</strong> (the 1900Hz, 0.05N full-palm sensing system is not matched by any competitor at comparable cost); <strong>VLS safety architecture</strong> (the only major player explicitly building a non-black-box AI system for industrial certification); and <strong>Korean industrial access</strong> (the company can iterate with Samsung, Hyundai, SK, and LG manufacturing partners at a speed that Western competitors — and, critically, Chinese competitors facing geopolitical headwinds — cannot replicate in Korean facilities).</p>
+      <p>Unitree's wheeled strategy shows the market is moving toward FRIDAY's form factor. But Unitree competes on price; Holiday Robotics is competing on capability, safety, and ROI per deployed unit — a very different value proposition targeting enterprise customers who want a robot that works reliably, not just cheaply.</p>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Why This Company Is Worth Watching</div>
+        <ul class="signal-list">
+          <li><strong>Repeat-founder credibility:</strong> Song Ki-young's SUALAB exit to Cognex for $195M is the most relevant prior in Korean deep-tech. He built a computer vision company that was good enough for a global industrial giant to pay $195M for it. Now he is building the robot that uses that vision — with manufacturing access and customer trust already established.</li>
+          <li><strong>Largest Korean Series A ever:</strong> ₩1,550억 from 15+ investors including KDB and a US fund is not a market signal to ignore. The breadth of the cap table — spanning Korean VC, policy finance, and international capital — means multiple sophisticated investors independently underwrite the thesis.</li>
+          <li><strong>VLS vs. VLA — a real technical bet:</strong> Most humanoid companies are racing toward VLA (Vision-Language-Action) black-box models. Holiday's VLS (Vision-Language-Skill) architecture is a deliberate departure — betting that industrial customers will pay a premium for predictability and safety certification that black-box VLA cannot currently provide.</li>
+          <li><strong>Tactile sensing at $21/sensor:</strong> The cost-effective magnetic-on-silicon tactile sensor is a manufacturing insight born of SUALAB's industrial DNA. Making full-palm sensing economically viable at scale is the kind of hardware innovation that compounds into durable competitive advantage as production volumes rise.</li>
+          <li><strong>Korea as proving ground:</strong> Samsung Electronics, Hyundai Motor, SK Hynix, and LG Electronics are all within hours of Seoul. No other humanoid company has equivalent access to Fortune 100-scale manufacturing customers willing to run PoCs. The PoCs currently underway in automotive, semiconductor, and logistics are the field tests that will determine whether FRIDAY's ROI thesis is real.</li>
+          <li><strong>100 units by year-end:</strong> Most humanoid companies are still showing demo videos. Holiday Robotics is shipping commercial units in 2026. That gap between "demo" and "deployed" is where most robotics startups fail — and Holiday Robotics is already crossing it.</li>
+        </ul>
+      </div>
+
+      <h2>The Investment Thesis</h2>
+      <p>Holiday Robotics is a pre-revenue, capital-intensive hardware startup with an aggressive commercialization timeline. The risks are real: manufacturing 100 humanoids that work reliably in actual factory environments is an extraordinarily difficult engineering problem; the ₩1억 price point requires cost structures that are not yet proven at scale; and competitors with larger capital bases are moving fast. Song is betting that "manipulation-first" beats "locomotion-first" — a thesis that is intellectually compelling but not yet empirically validated at scale.</p>
+      <p>What makes Holiday Robotics a compelling watchlist item, however, is the convergence of factors that rarely align this cleanly: a repeat founder with direct domain expertise and a relevant prior exit; a product design grounded in real manufacturing economics rather than academic robotics; a hardware innovation (the tactile sensor) with cost economics that enable mass deployment; a software architecture designed for the industrial safety certification requirements that will ultimately gate enterprise adoption; and a capitalization event — Korea's largest-ever Series A — that provides runway to reach the 100-unit commercial milestone that will determine whether the thesis is right.</p>
+      <p>For global investors watching Korea's deep-tech evolution, Holiday Robotics is precisely the type of company that tends to look obvious in hindsight: a serial founder solving a specific industrial problem he spent years living inside, with a product designed from manufacturing economics rather than robotics aesthetics, raised at a size that suggests sophisticated capital is paying close attention. The next milestone to watch is whether FRIDAY's PoC tests convert to commercial contracts — and whether the 100-unit production target is hit on schedule in H2 2026.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Dnotitia (드노티티아)</div>
+          <div class="otw-stage">Series A · AI Semiconductor</div>
+        </div>
+        <div class="otw-tagline">₩900억 Series A — Korea's first VDPU chip company preparing for IPO</div>
+        <div class="otw-body">Dnotitia is building the world's first VDPU (Vector Data Processing Unit) — a dedicated chip designed to accelerate vector database operations and data retrieval in generative AI environments. The insight is architectural: as LLMs grow and RAG (Retrieval-Augmented Generation) becomes standard, the bottleneck moves from generation to retrieval. CPU and GPU architectures are not designed for high-dimensional vector search at the speeds generative AI inference demands. Dnotitia's VDPU is purpose-built for this layer. The company completed VDPU tape-out in December 2025, targeting first silicon by June 2026 and commercialization in early 2027. In April 2026, it raised ₩900억 (~$61M) Series A led by Elohim Partners — with Kiwoom Investment, Shinhan Venture Investment, FuturePlay, and nine additional firms participating. The company has also launched Seahorse Cloud — a SaaS vector database service that received Korea's top-grade GS software certification — as a revenue bridge ahead of chip commercialization. Korea Investment &amp; Securities and Shinhan Investment &amp; Securities have been named co-lead underwriters for an IPO track.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> VDPU is a new semiconductor category the way GPU was a new category before CUDA. The question is not whether vector retrieval acceleration matters — it does, and every major cloud provider is building around RAG — but whether Dnotitia can commercialize before hyperscalers build equivalent silicon internally. The ₩900억 Series A and imminent first-silicon milestone make 2026-2027 the critical period.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">LigaChem Biosciences (리가켐바이오)</div>
+          <div class="otw-stage">Growth · ADC · KOSDAQ-listed</div>
+        </div>
+        <div class="otw-tagline">$357M from Korea's sovereign growth fund — the first direct investment in a listed biotech</div>
+        <div class="otw-body">LigaChem Biosciences is Korea's leading antibody-drug conjugate (ADC) platform company. ADCs are the fastest-growing class of cancer therapeutics — they combine a tumor-targeting antibody with a cytotoxic payload, delivering chemotherapy precisely to cancer cells while sparing healthy tissue. LigaChem's ConjuAll platform is one of the most clinically validated ADC linker-payload technologies in Asia, with multiple licensed programs to global pharmaceutical partners. In July 2026, LigaChem received a $357M (~₩5,300억) direct investment from the Korea National Growth Fund — marking the first time the sovereign fund has directly invested in a publicly listed biotech company. The investment is interpreted as a policy signal that Korea's government recognizes biopharmaceutical IP as strategic national infrastructure. LigaChem trades on KOSDAQ and is actively out-licensing its ADC linker technology to major international pharma companies seeking to build ADC pipelines without developing the chemistry in-house.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> ADC is the most active deal category in global oncology licensing — Pfizer, AstraZeneca, and Johnson &amp; Johnson have collectively committed over $50B in ADC deals since 2022. LigaChem's ConjuAll platform is positioned as infrastructure for this wave: a plug-in linker-payload system that any antibody company can license. The Korea National Growth Fund's ₩5,300억 bet signals that at least one major institutional investor believes LigaChem's global licensing pipeline is undervalued relative to its technology depth.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Autonomous a2z (오토노머스에이투지)</div>
+          <div class="otw-stage">Series B · Autonomous Driving AI</div>
+        </div>
+        <div class="otw-tagline">$27.4M — the Korean AV startup going after unsolved domains: airports and ports</div>
+        <div class="otw-body">Autonomous a2z develops autonomous driving AI for complex operational environments — specifically, controlled but high-density environments like airports, ports, logistics hubs, and industrial campuses where consumer AV regulations do not apply and ROI can be demonstrated without waiting for full public-road regulatory clearance. The company's approach differs from consumer autonomous vehicle startups: rather than chasing Level 4 public-road autonomy, it focuses on geofenced operational domains where the environmental complexity is bounded and the economic case for automation is immediate. In March 2026, Autonomous a2z raised approximately $27.4M (~₩400억) in a round that included both domestic Korean VCs and strategic partners in the automotive and logistics sectors. The company is currently in commercial trials at Korean airports and port logistics facilities.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> The regulatory barrier that has stalled consumer AV companies does not apply in geofenced private environments. Airports, ports, and logistics hubs operate under different rules, have clear economic incentives to automate, and offer high-density use cases where per-vehicle economics are favorable. Autonomous a2z is taking the path of least regulatory resistance to accumulate real operational data and commercial revenue — a strategy that consumer AV startups that burned through billions on public-road testing never considered.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Round / Type</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">Holiday Robotics (홀리데이로보틱스)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td class="deal-amount">₩1,550억<br><small>~$103.4M</small></td>
+          <td>Venture<br><small>Jul 13, 2026</small></td>
+          <td class="deal-note">Korea's largest-ever Series A. 15+ investors including IMM Investment, Stonebridge Ventures, KB Investment, Bon Angels, Goodwater Capital (US), KDB, and IBK. FRIDAY humanoid robot targeting 100-unit production in H2 2026. Founder Song Ki-young previously sold SUALAB to Cognex for $195M.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">LigaChem Biosciences (리가켐바이오)</div>
+            <div class="deal-round gov">Korea National Growth Fund</div>
+          </td>
+          <td class="deal-amount">$357M<br><small>~₩5,300억</small></td>
+          <td>Sovereign Fund<br><small>Jul 2026</small></td>
+          <td class="deal-note">First-ever direct investment by Korea's sovereign growth fund in a KOSDAQ-listed biotech. ADC (antibody-drug conjugate) platform company; ConjuAll linker-payload technology licensed to multiple global pharma partners. Signals government recognition of biopharmaceutical IP as strategic national infrastructure.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Dnotitia (드노티티아)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td class="deal-amount">₩900억<br><small>~$61M</small></td>
+          <td>Venture<br><small>Apr 21, 2026</small></td>
+          <td class="deal-note">Led by Elohim Partners with 10+ co-investors. World's first VDPU (Vector Data Processing Unit) chip for generative AI retrieval acceleration. VDPU tape-out completed Dec 2025; first silicon targeted Jun 2026. IPO underwriters appointed: Korea Investment &amp; Securities and Shinhan Investment &amp; Securities. Seahorse Cloud (SaaS vector DB) launched as revenue bridge.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">워트인텔리전스 (Wart Intelligence)</div>
+            <div class="deal-round">Series B</div>
+          </td>
+          <td class="deal-amount">₩165억<br><small>~$11.2M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Led by Altos Ventures. AI platform enabling IP (intellectual property) companies to transition to AI-native workflows — analyzing patent portfolios, prior art, and FTO (freedom-to-operate) assessments at scale. Addresses the intersection of Korea's patent-intensive deep-tech sector and AI productivity tooling.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Autonomous a2z (오토노머스에이투지)</div>
+            <div class="deal-round">Series B</div>
+          </td>
+          <td class="deal-amount">~$27.4M<br><small>~₩400억</small></td>
+          <td>Venture<br><small>Mar 2026</small></td>
+          <td class="deal-note">Autonomous driving AI for geofenced operational environments: airports, ports, logistics hubs. Bypasses public-road regulatory barriers by targeting private infrastructure where economic ROI is immediate. Commercial trials ongoing at Korean airports and port facilities. Automotive and logistics strategic investors participated.</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">이터나퓨전 (Eterna Fusion)</div>
+            <div class="deal-round">Seed</div>
+          </td>
+          <td class="deal-amount">₩23억<br><small>~$1.6M</small></td>
+          <td>Venture<br><small>Jul 2026</small></td>
+          <td class="deal-note">Nuclear fusion energy startup. Seed round backed by Company K Partners, BluepointPartners, and Seoul National University TLO. One of a wave of Korean deep-physics startups emerging from SNU and KAIST research labs into venture-backed commercialization. Fusion energy is now a designated Super-Gap sector in Korea's government startup program.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- All Issues Nav -->
+<section class="all-issues-section">
+  <div class="all-issues-inner">
+    <div class="all-issues-header">
+      <span class="all-issues-label">All Issues</span>
+      <a href="index.html" class="all-issues-link">koreastartupthesis.com →</a>
+    </div>
+    <div class="all-issues-grid">
+    <a href="article.html" class="nav-issue-item">
+      <span class="nav-issue-num">#001</span>
+      <span class="nav-issue-title">Rebellions: The SpaceX Founder Building Korea's Answer to Nvidia</span>
+      <span class="nav-issue-date">Jun 24, 2026</span>
+    </a>
+    <a href="article2.html" class="nav-issue-item">
+      <span class="nav-issue-num">#002</span>
+      <span class="nav-issue-title">Toss: The Dentist Who Dismantled Korea's Banking Oligopoly</span>
+      <span class="nav-issue-date">Jun 24, 2026</span>
+    </a>
+    <a href="article3.html" class="nav-issue-item">
+      <span class="nav-issue-num">#003</span>
+      <span class="nav-issue-title">S2W: The KAIST Lab That Mapped the Dark Web for INTERPOL</span>
+      <span class="nav-issue-date">Jun 26, 2026</span>
+    </a>
+    <a href="article4.html" class="nav-issue-item">
+      <span class="nav-issue-num">#004</span>
+      <span class="nav-issue-title">BioNexus: The Genomics Veteran Building Korea's AI Drug Discovery Engine</span>
+      <span class="nav-issue-date">Jul 1, 2026</span>
+    </a>
+    <a href="article5.html" class="nav-issue-item">
+      <span class="nav-issue-num">#005</span>
+      <span class="nav-issue-title">DEEPX: The Apple M1 Architect Who Came Back to Build the ARM of Edge AI</span>
+      <span class="nav-issue-date">Jul 2, 2026</span>
+    </a>
+    <a href="article6.html" class="nav-issue-item">
+      <span class="nav-issue-num">#006</span>
+      <span class="nav-issue-title">MedicalPark: The Surgeon Who Built Korea's Full-Stack Breast Diagnostics Company</span>
+      <span class="nav-issue-date">Jul 3, 2026</span>
+    </a>
+    <a href="article7.html" class="nav-issue-item">
+      <span class="nav-issue-num">#007</span>
+      <span class="nav-issue-title">Meditrics: The Samsung Psychiatrist Who Spent 27 Years Making Mental Health Measurable</span>
+      <span class="nav-issue-date">Jul 6, 2026</span>
+    </a>
+    <a href="article8.html" class="nav-issue-item">
+      <span class="nav-issue-num">#008</span>
+      <span class="nav-issue-title">SMT Bio: The Off-the-Shelf NK Cell Company Targeting the Cancer Chemotherapy Can&#39;t Crack</span>
+      <span class="nav-issue-date">Jul 8, 2026</span>
+    </a>
+    <a href="article9.html" class="nav-issue-item">
+      <span class="nav-issue-num">#009</span>
+      <span class="nav-issue-title">Arontier: The Physics-Meets-AI Lab Quietly Becoming Korea&#39;s Full-Stack Drug Design Engine</span>
+      <span class="nav-issue-date">Jul 10, 2026</span>
+    </a>
+    <a href="article10.html" class="nav-issue-item">
+      <span class="nav-issue-num">#010</span>
+      <span class="nav-issue-title">Centrics Bio: The Seoul Lab Reprogramming Macrophages to Fight Cancer</span>
+      <span class="nav-issue-date">Jul 12, 2026</span>
+    </a>
+    <a href="article11.html" class="nav-issue-item">
+      <span class="nav-issue-num">#011</span>
+      <span class="nav-issue-title">Intellisia: The Daejeon Lab Cloning Consumers With AI</span>
+      <span class="nav-issue-date">Jul 15, 2026</span>
+    </a>
+    <a href="article12.html" class="nav-issue-item">
+      <span class="nav-issue-num">#012</span>
+      <span class="nav-issue-title">Edgene: The Incheon Lab Going Where CRISPR Can't</span>
+      <span class="nav-issue-date">Jul 17, 2026</span>
+    </a>
+    <a href="article13.html" class="nav-issue-item nav-issue-active">
+      <span class="nav-issue-num">#013</span>
+      <span class="nav-issue-title">Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs</span>
+      <span class="nav-issue-date">Jul 20, 2026</span>
+    </a>
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe -->
+<section class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Korea Startup Thesis</h3>
+    <p>One Korean startup, deeply analyzed. Every week, free.</p>
+    <form class="sub-form" onsubmit="handleSubscribe(event)">
+      <input type="email" id="emailInput" placeholder="you@fund.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-meta" id="subMsg">No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+  </div>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+
+<script>
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  window.addEventListener('scroll', () => {
+    const fab = document.getElementById('fab');
+    const fabTop = document.getElementById('fabTop');
+    if (window.scrollY > 400) fab.classList.add('visible');
+    else fab.classList.remove('visible');
+    if (fabTop) {
+      if (window.scrollY > 400) fabTop.classList.add('visible');
+      else fabTop.classList.remove('visible');
+    }
+  });
+
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value.trim();
+    const msg = document.getElementById('subMsg');
+    msg.textContent = 'Subscribing...';
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article13' })
+      });
+      if (res.ok || res.status === 409) {
+        msg.textContent = res.status === 409 ? 'Already subscribed!' : 'Done! You\'re on the list.';
+        document.getElementById('emailInput').value = '';
+      } else {
+        msg.textContent = 'Something went wrong. Try again.';
+      }
+    } catch {
+      msg.textContent = 'Network error. Please try again.';
+    }
+  }
+</script>
+
+<button class="fab-top" id="fabTop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</body>
+</html>
