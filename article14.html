@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article14.html">
+
+  <meta name="description" content="Kim Tae-soon, former MSD executive who led Syntekabio to IPO, is building the world's first AI-based magnetic field-radiation fusion therapy device from a lab in Chuncheon — challenging proton therapy at a fraction of the cost.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Radexel, 라덱셀, Kim Tae-soon, 김태순, magnetic field radiation therapy, MMRT, RDX-001, cancer treatment, radiation oncology, Korea medtech, Kangwon, Syntekabio">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer">
+  <meta property="og:description" content="A former pharma executive with an IPO pedigree is betting that magnetic fields can redirect radiation and cut side effects by 30% — without the ₩1,000억+ price tag of proton therapy.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article14.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article14.png">
+  <meta property="article:published_time" content="2026-07-27T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Medtech">
+  <meta property="article:tag" content="Radiation Oncology">
+  <meta property="article:tag" content="Cancer Treatment">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer">
+  <meta name="twitter:description" content="Pre-A. 9 patents. World's first AI-based magnetic field-radiation fusion device. Radexel wants to reshape radiation oncology from Chuncheon.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article14.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer",
+    "description": "Kim Tae-soon — formerly at MSD and then CEO of Syntekabio — founded Radexel in Chuncheon in 2018 with a bet that magnetic fields could fundamentally improve radiation therapy safety. The company's MMRT device (RDX-001) attaches to existing radiotherapy machines and uses magnetic field technology to redirect radiation away from healthy tissue, reducing adjacent-tissue dose by up to 30%. With a Pre-A round of over ₩70 billion and 9 patents, Radexel is building a wedge into a global radiation therapy market forecast to reach $28.4B by 2035.",
+    "datePublished": "2026-07-27T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article14.html",
+    "about": [{ "@type": "Organization", "name": "Radexel", "alternateName": "라덱셀" }],
+    "keywords": "Radexel, radiation therapy, magnetic field, MMRT, Kim Tae-soon, cancer treatment, Korea medtech, radiation oncology"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #0d9488;
+      --accent-light: #ccfbf1;
+      --accent-dark: #0f766e;
+      --nav-dark: #134e4a;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #f0fdfa;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .spec-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 16px 20px; background: var(--gray-5);
+    }
+    .spec-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-2); margin-bottom: 4px; }
+    .spec-value { font-size: 18px; font-weight: 500; color: var(--accent); letter-spacing: -0.3px; }
+    .spec-note { font-size: 12px; color: var(--gray-1); margin-top: 3px; line-height: 1.5; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 80px; }
+
+    .product-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .product-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; text-align: center;
+    }
+    .product-card.active { background: var(--accent-light); border-color: var(--accent); }
+    .product-name { font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+    .product-code { font-size: 11px; color: var(--gray-2); margin-bottom: 8px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+    .product-desc { font-size: 12px; color: var(--gray-1); line-height: 1.5; }
+    .product-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent); color: #fff;
+      padding: 2px 8px; border-radius: var(--radius-sm); margin-top: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-round.strategic { background: #e0f2fe; color: #0c4a6e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(13,148,136,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .product-row { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+
+    /* ALL ISSUES NAV */
+    .all-issues-section {
+      border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+      padding: 40px;
+    }
+    .all-issues-inner { max-width: 760px; margin: 0 auto; }
+    .all-issues-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .all-issues-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-2);
+    }
+    .all-issues-link { font-size: 12px; color: var(--gray-2); }
+    .all-issues-link:hover { color: var(--black); }
+    .all-issues-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .nav-issue-item {
+      display: grid; grid-template-columns: 36px 1fr auto;
+      gap: 10px; align-items: baseline;
+      padding: 10px 12px; border-radius: var(--radius-md);
+      transition: background 0.12s;
+    }
+    .nav-issue-item:hover { background: var(--gray-4); }
+    .nav-issue-active { background: var(--accent-light) !important; }
+    .nav-issue-num {
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .nav-issue-active .nav-issue-num { color: var(--accent-dark); }
+    .nav-issue-title {
+      font-size: 12px; color: var(--black); line-height: 1.4;
+      overflow: hidden; display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+    .nav-issue-active .nav-issue-title { font-weight: 500; color: var(--accent-dark); }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .all-issues-section { padding: 28px 20px; }
+      .all-issues-grid { grid-template-columns: 1fr; }
+      .nav-issue-item { grid-template-columns: 36px 1fr; }
+      .nav-issue-date { display: none; }
+    }
+
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #014 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer</h1>
+    <div class="hero-meta">
+      <span>July 27, 2026</span>
+      <span>Medtech</span>
+      <span>Radiation Oncology</span>
+      <span>Cancer Treatment</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">$4.7M+</div>
+    <div class="kpi-label">Pre-A raised (₩70억+) — closed September 2022. Foreign institutional investors also in active discussions, per CEO interviews.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">30%</div>
+    <div class="kpi-label">Reduction in radiation dose to adjacent healthy tissue achieved via magnetic field guidance — the core clinical advantage of MMRT (RDX-001).</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">9 Patents</div>
+    <div class="kpi-label">Filed as of early 2025 — covering magnetic-modulated radiation therapy, compact intraoperative devices, and AI treatment planning software.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">$28.4B</div>
+    <div class="kpi-label">Projected global radiation therapy market by 2035 (₩43조) — growing at ~12% CAGR as cancer incidence rises and precision oncology scales.</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Problem: Radiation Therapy's Unavoidable Trade-Off</h2>
+      <p>Radiation therapy is one of cancer medicine's most effective tools. Used in roughly half of all cancer cases at some point during treatment, it works by delivering high-energy radiation directly at a tumor to destroy cancer cells. The physics are well understood. The problem is geometry: tumors are often adjacent to vital organs, and radiation doesn't stop at the tumor boundary.</p>
+      <p>For decades, the industry's answer to this geometry problem has been expensive precision machinery. Proton beam therapy and heavy ion therapy can deliver radiation with far greater spatial accuracy than conventional X-ray-based systems — but they cost <strong>hundreds of billions of won per installation</strong>. A hospital acquiring a proton therapy center commits to a capital investment in the range of ₩500–₩1,000 billion, and charges patients ₩30–₩50 million per course of treatment. The result: precision radiation therapy remains out of reach for the majority of cancer patients worldwide.</p>
+      <p>The conventional linear accelerator (linac) — the workhorse of radiation oncology — is far more accessible, with thousands of units installed globally. But its limitation is real: the electron beam from a conventional linac cannot be precisely steered once emitted. It goes where it's aimed, and healthy tissue between the entry point and the tumor absorbs a significant dose.</p>
+      <p>This is the gap <strong>Radexel (라덱셀)</strong> is targeting: a device that brings physics-based precision dose control to the existing installed base of conventional radiotherapy machines, without the multi-hundred-billion-won price tag of proton therapy.</p>
+
+      <div class="pull-quote">
+        <p>"There is strong demand for a radiation therapy system that can treat cancer safely at low cost, without major side effects. Using magnetic fields, radiation cancer treatment can be made significantly safer."<br>— Kim Tae-soon (김태순), CEO, Radexel</p>
+      </div>
+
+      <h2>The Founder: From MSD Boardroom to Radiation Lab in Chuncheon</h2>
+      <p><strong>Kim Tae-soon (김태순)</strong> arrived at cancer care through pharmaceutical operations. A physician by training, he spent years as an executive at <strong>MSD (Merck Sharp & Dohme)</strong> — one of the world's largest pharmaceutical companies — where he developed deep expertise in oncology drug development and go-to-market strategy in Korea. He later became CEO of <strong>Syntekabio (신테카바이오)</strong>, a Korean AI-driven drug discovery company, where he led the company's successful IPO listing on KOSDAQ — establishing him as one of the few Korean biotech executives with both pharma operations experience and capital markets execution on his record.</p>
+      <p>What brought Kim from AI drug discovery to radiation therapy hardware was a specific clinical insight that emerged during his time in pharma: the biggest unmet need in cancer treatment is not a new drug. It is the ability to deliver existing therapeutic modalities — radiation included — with less collateral damage to healthy tissue. The pharmaceutical industry has spent decades and billions trying to engineer cancer-selective drugs. Kim bet that the same selectivity could be achieved in radiation therapy using a physical mechanism — magnetic fields — that was well understood in theory but had never been engineered into a clinical device.</p>
+      <p>In May 2018, Kim founded Radexel in <strong>Chuncheon, Gangwon Province</strong> — home to Kangwon National University Hospital, which became an early clinical partner. The founding team included <strong>Dr. Jung Noo-ri-hyun (정누리현)</strong>, who serves as Radexel's Chief Medical Officer (CMO) while also holding the position of Chair of Radiation Oncology at Kangwon National University Hospital — an arrangement that gives Radexel both clinical direction and direct access to real patient environments for device validation.</p>
+      <p>As of May 2026, Radexel employs <strong>16 people</strong> — small for a medical device company, but large relative to its funding stage and consistent with a capital-efficient hardware-first approach that prioritizes IP depth and clinical proof over headcount. The team draws from physics, electrical engineering, clinical oncology, and software.</p>
+
+      <h2>The Science: How Magnetic Fields Redirect Radiation</h2>
+      <p>The physics underlying Radexel's core technology rests on a well-documented but previously un-commercialized interaction between magnetic fields and electron beams. When a linear accelerator fires high-energy electrons toward a tumor, the electrons travel through tissue. If a magnetic field is applied in the treatment zone, the Lorentz force — the same physical principle that governs how charged particles move in magnetic fields — causes the electrons to curve. The direction of curvature depends on the field orientation and the geometry of the body.</p>
+      <p>Radexel's insight is that this curvature can be engineered. In prostate cancer treatment, for example, the prostate is surrounded by the rectum and bladder — organs that are highly sensitive to radiation damage, and that are routinely harmed in standard radiotherapy. By positioning a magnetic device to create a specific field geometry in the treatment zone, Radexel's system bends the electron path so that it concentrates radiation on the tumor while the electrons traveling toward healthy tissue at the margins are deflected away.</p>
+      <p>The clinical result, as described in Radexel's research and its collaboration with Kangwon National University Hospital: <strong>up to 30% reduction in radiation dose delivered to adjacent healthy tissue</strong>, without reducing dose to the tumor itself. Separately, the system also allows physicians to adjust total radiation dose delivery by up to 30% — giving clinicians a dose-modulation lever they do not currently have with standard linac setups.</p>
+      <p>Importantly, Radexel's approach is not a replacement for existing radiotherapy machines. It is an <strong>add-on module</strong>. The MMRT device attaches to existing linear accelerators — which means adoption does not require hospitals to retire their installed base, but simply to add Radexel's hardware to what they already own.</p>
+
+      <h2>Two-Track Product Strategy: MMRT and Robotic endo-RT</h2>
+      <p>Radexel is pursuing two distinct product programs in parallel, targeting different clinical settings and market entry points:</p>
+
+      <div class="product-row">
+        <div class="product-card active">
+          <div class="product-name">MMRT</div>
+          <div class="product-code">RDX-001</div>
+          <div class="product-desc">Magnetic Modulated Radiation Therapy. An add-on device that attaches to existing large-format linear accelerators. Uses magnetic field to redirect electron path, reducing adjacent-tissue dose by up to 30%. Initial focus: prostate cancer. Designed for large hospital radiotherapy departments.</div>
+          <div class="product-badge">Primary Program</div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Robotic endo-RT</div>
+          <div class="product-code">RDX-002</div>
+          <div class="product-desc">Compact Intraoperative Radiation Therapy. A smaller, robotic-assisted radiation device for intraoperative use (during surgery). Uses the same magnetic dose-modulation principle. Initial focus: oral cancer, skin cancer. Designed for smaller clinical settings without large linac infrastructure.</div>
+          <div class="product-badge" style="background:var(--gray-2)">In Development</div>
+        </div>
+      </div>
+
+      <p>The two-track strategy is tactically logical. MMRT (RDX-001) targets the large installed base of hospital radiotherapy departments worldwide — an addressable market of roughly 14,000 linear accelerators in the top 50 radiation oncology markets globally. The add-on model reduces the barrier to adoption: no new room construction, no regulatory clearance for a full radiotherapy system, and a capital commitment orders of magnitude smaller than proton therapy.</p>
+      <p>RDX-002 (Robotic endo-RT) opens a separate market — intraoperative radiation therapy (IORT) — that is currently served by a small number of highly specialized and expensive systems. By miniaturizing the radiation source and integrating magnetic dose control, Radexel aims to make IORT accessible to hospitals that lack the infrastructure for conventional IORT systems.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Primary Target Indication</div>
+          <div class="spec-value">Prostate Cancer</div>
+          <div class="spec-note">Initial clinical validation focus. Extension to other solid tumors (lung, breast, GI) planned as clinical data matures.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Dose Reduction</div>
+          <div class="spec-value">Up to 30%</div>
+          <div class="spec-note">Reduction in radiation dose to adjacent healthy tissue (rectum, bladder) in prostate radiotherapy. Confirmed in pre-clinical models.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Deployment Model</div>
+          <div class="spec-value">Add-On</div>
+          <div class="spec-note">Attaches to existing linear accelerators. Does not require hospital to replace existing radiotherapy infrastructure.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Treatment Software</div>
+          <div class="spec-value">AI Planning</div>
+          <div class="spec-note">Proprietary AI-based treatment planning software developed alongside the hardware — critical for optimizing magnetic field geometry per patient anatomy.</div>
+        </div>
+      </div>
+
+      <h2>Funding & Clinical Development Timeline</h2>
+      <p>Radexel has taken a measured path through its early capital structure. The company raised its Pre-A round in September 2022 — more than <strong>₩70 billion ($4.7M+)</strong>, with investor identity undisclosed — reflecting the capital-efficient and IP-first development approach Kim Tae-soon has consistently articulated. As of 2023, the CEO noted in public interviews that foreign institutional investors were also actively seeking to invest in the company.</p>
+
+      <table class="milestone-table">
+        <thead><tr><th>Date</th><th>Milestone</th></tr></thead>
+        <tbody>
+          <tr><td>May 2018</td><td>Radexel founded in Chuncheon, Gangwon Province. CEO Kim Tae-soon assembles founding team from clinical oncology, physics, and engineering.</td></tr>
+          <tr><td>2022</td><td>Partnership with Varian Medical Systems (acquired by Siemens for ~₩17 trillion) and Gangwon Technopark. MMRT prototype development begins.</td></tr>
+          <tr><td>Sep 2022</td><td>Pre-A funding closed — ₩70억+ ($4.7M+). Launches joint research center with Kangwon National University Hospital ("Radiation Fusion Cancer Treatment Research Center").</td></tr>
+          <tr><td>Dec 2022</td><td>MOU signed with Varian Medical Systems and Gangwon Technopark for cancer treatment medical industry development and regulatory rationalization.</td></tr>
+          <tr><td>2023</td><td>MMRT (RDX-001) prototype completion. Clinical validation with prostate cancer patients begins at Kangwon National University Hospital under CMO Dr. Jung Noo-ri-hyun.</td></tr>
+          <tr><td>2024</td><td>Robotic endo-RT (RDX-002) prototype development. 9 patents filed covering MMRT, endo-RT, and AI treatment planning systems.</td></tr>
+          <tr><td>2025</td><td>Two national R&D projects awarded: "Radiation Side Effect Mitigation" and "Surface Dose Minimization / Skin Protection Radiation Therapy." Selected for Gangwon Province AI medical data ecosystem program.</td></tr>
+          <tr><td>Jul 2025</td><td>Highlighted as one of Gangwon Province's marquee AI medical technology companies. Cited by media as "world's first AI-based magnetic field-radiation fusion therapy device."</td></tr>
+          <tr><td>Aug 2025</td><td>Participates in Southeast Asia market entry program organized by Gangwon Information & Culture Industry Promotion Agency — signaling early international commercialization interest.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The Market: Breaking into a ₩43조 Opportunity</h2>
+      <p>The global radiation therapy market — encompassing radiotherapy equipment, treatment planning software, and related services — was valued at approximately <strong>$8.1 billion (₩12.2조)</strong> in 2025 and is projected to reach <strong>$28.4 billion (₩43조)</strong> by 2035, growing at a compound annual rate of approximately 12–13%. The primary drivers are rising global cancer incidence (particularly in aging populations across Asia, Europe, and North America), expanding access to radiotherapy infrastructure in middle-income countries, and a clinical push toward increasingly precise, personalized treatment protocols.</p>
+      <p>Within this market, <strong>radiation therapy devices</strong> represent the largest segment. The conventional linac market alone is served by a handful of global oligopolists: Varian (Siemens Healthineers), Elekta, and Accuray account for the vast majority of the global installed base. New entrants typically attack the market from one of two angles: superior precision (proton/heavy ion) or cost reduction (smaller, more accessible systems). Radexel's positioning is distinct from both: an <strong>add-on enhancement layer</strong> for the existing installed base, competing on precision improvement without requiring hardware replacement.</p>
+      <p>Korea's domestic radiation oncology market is itself substantial. South Korea has one of the world's highest cancer treatment rates and a well-developed national healthcare system (NHIS) that covers radiotherapy costs. The Gangwon Province ecosystem — where Radexel is based — has explicitly designated AI medical technology as a regional priority industry, with the provincial government funding a multi-phase "Data-Driven AI Healthcare Ecosystem Program" that includes Radexel as a featured company.</p>
+
+      <h2>Competitive Landscape</h2>
+      <p>Radexel's competitive environment spans three distinct categories of competing approaches to the same core problem — radiation precision and side effect reduction:</p>
+      <p><strong>Proton and Heavy Ion Therapy:</strong> The gold-standard in radiation precision. Systems from IBA (Belgium), Varian/Siemens, Hitachi, and Toshiba can deliver radiation with millimeter-scale accuracy and dramatically reduced exit dose. The clinical evidence is strong. The barrier is cost: proton therapy centers require ₩500–₩1,000+ billion in capital, take years to build, and serve only the highest-acuity or highest-paying patients. Radexel's MMRT is not trying to match proton therapy's physics — it is targeting the >90% of radiation therapy patients who cannot access proton centers.</p>
+      <p><strong>MRI-Linac Systems:</strong> A newer class of hybrid systems — notably the MRIdian (ViewRay) and the Unity (Elekta) — that integrate MRI scanners directly with linear accelerators for real-time tumor visualization and adaptive treatment. These systems achieve remarkable precision but cost ₩30–₩60 billion per unit and require specialized shielding, infrastructure, and clinical expertise. They represent a partially overlapping competitive threat to the long-term Radexel vision, though they serve a much higher price point.</p>
+      <p><strong>Conventional Linac Optimization:</strong> The incumbent players (Varian, Elekta) continuously improve their linac offerings — IMRT, VMAT, stereotactic radiosurgery — and their AI treatment planning software. These improvements narrow the dose conformity gap but do not address the fundamental physics problem that Radexel is targeting with magnetic field guidance.</p>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Signal Box — Why Radexel Matters</div>
+        <ul class="signal-list">
+          <li><strong>Physics-first differentiation:</strong> Radexel's MMRT is not a software optimization or a workflow improvement — it is a new physical mechanism for redirecting radiation. That creates a moat that cannot be replicated purely through software updates to existing systems. Nine patents filed in six years suggests a deliberate IP capture strategy.</li>
+          <li><strong>Add-on model = lower adoption barrier:</strong> The single largest obstacle to medical device adoption in hospital settings is capital expenditure on new infrastructure. Radexel's device attaches to existing linacs — dramatically lowering the financial and operational barrier to a first purchase, and enabling a broad installed-base addressable market.</li>
+          <li><strong>Founder-market fit is real:</strong> Kim Tae-soon is not an academic physicist who wandered into commercialization. He is a pharma executive who led a listed biotech company, with deep relationships in hospital systems and the Korean healthcare establishment. That background is precisely what medical device commercialization in Asia's most demanding regulated markets requires.</li>
+          <li><strong>CMO-as-co-founder structure:</strong> Having the CMO of the company also serve as Radiation Oncology Chair at the partner hospital gives Radexel clinical access, patient data, and regulatory credibility that most pre-clinical medtech companies spend years trying to acquire through partnerships.</li>
+          <li><strong>Government validation in AI healthcare:</strong> Two national R&D projects awarded, participation in Gangwon Province AI medical ecosystem, and Southeast Asia commercialization support through provincial export programs signal that Radexel has navigated Korea's government-backed deep tech support system effectively — a prerequisite for later-stage fundraising in Korea's medtech landscape.</li>
+          <li><strong>Global RT market tailwinds:</strong> Cancer incidence is rising globally; radiation therapy access in middle-income markets is expanding; and the clinical imperative to reduce treatment-related morbidity is intensifying as survivorship improves. Radexel's clinical proposition (same cancer control, fewer side effects, at existing linac price points) addresses all three simultaneously.</li>
+        </ul>
+      </div>
+
+      <h2>Investment Thesis</h2>
+      <p>Radexel is a pre-revenue medical device company in active clinical validation. The risks are characteristic of the asset class: regulatory pathways are long (Korea's MFDS, then potentially FDA or CE Mark for global commercialization), clinical trial timelines are measured in years rather than months, and the company competes in a capital-intensive space with well-funded incumbents who control distribution through entrenched hospital relationships. Hardware manufacturing scale-up — particularly for precision medical equipment — is a perennial challenge for early-stage medtech.</p>
+      <p>What makes Radexel worth tracking against these risks is an unusual convergence of factors: a founding team that combines pharmaceutical executive experience with clinical oncology leadership in the same company; a technology mechanism that addresses a real, well-understood clinical problem (collateral radiation damage) through a novel but physics-sound approach; a commercialization model (add-on to existing linacs) that is meaningfully more capital-efficient to adopt than competing precision solutions; and a patent estate that suggests management understands the IP dynamics of medical device competition.</p>
+      <p>The company has also demonstrated an ability to build institutional relationships — with Varian (now Siemens Healthineers), with Korea's national R&D apparatus, and with the regional government AI healthcare ecosystem — that are the necessary preconditions for medtech commercialization at scale.</p>
+      <p>The milestones that matter next: completion of clinical validation at Kangwon National University Hospital, regulatory submission filing in Korea, and the quality of the Series A round that follows. Foreign institutional interest noted by the CEO in public interviews suggests the investor base is not exclusively Korean — which matters for later-stage rounds requiring global healthcare sector credibility.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Frazer Therapeutics (프레이저테라퓨틱스)</div>
+          <div class="otw-stage">Pre-IPO · $33.3M (₩500억)</div>
+        </div>
+        <div class="otw-tagline">Korea's TPD biotech is heading toward public markets with a protein degradation pipeline</div>
+        <div class="otw-body">
+          <p>Frazer Therapeutics closed a Pre-IPO round of ₩500 billion ($33.3M) in July 2026, positioning for a KOSDAQ or KOSPI listing within 12–18 months. The company's core technology is targeted protein degradation (TPD) — a rapidly advancing oncology modality that uses bifunctional molecules (PROTACs and molecular glues) to selectively degrade disease-causing proteins rather than merely inhibiting them. TPD has attracted billions in global VC and pharma partnership capital over the past five years, with the hypothesis that "degrading" a target protein produces more durable responses than blocking its activity with a small molecule.</p>
+          <p>Frazer is building a pipeline of TPD candidates in oncology, targeting proteins that are considered "undruggable" by conventional inhibitor approaches. The Pre-IPO round values the company at a stage where institutional confidence in the clinical pipeline is high enough to support public market preparation, a meaningful signal in Korea's highly biotech-literate investor base.</p>
+        </div>
+        <div class="otw-signal"><strong>Signal:</strong> Global pharma TPD partnerships (Arvinas, Nurix, C4 Therapeutics) have validated the modality; Korean execution with ₩500억 Pre-IPO suggests Frazer's pipeline has differentiated enough to attract pre-public capital. Watch for clinical data readouts as listing timing approaches.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Flexel Space (플렉셀스페이스)</div>
+          <div class="otw-stage">Series A · $16.7M (₩250억)</div>
+        </div>
+        <div class="otw-tagline">Perovskite solar cells for satellites — lighter, cheaper, and more radiation-tolerant than silicon</div>
+        <div class="otw-body">
+          <p>Flexel Space raised ₩250 billion ($16.7M) in a Series A round in July 2026 to accelerate commercialization of its perovskite-based space solar cell technology. Conventional satellite solar panels use triple-junction GaAs cells — highly efficient but expensive to manufacture and heavy. Perovskite solar cells offer a compelling alternative: significantly lighter, potentially cheaper at scale, and with radiation tolerance properties that make them viable for the orbital environment.</p>
+          <p>The timing of Flexel's raise aligns with a structural demand surge: the satellite constellation deployment boom driven by Starlink, OneWeb, and a wave of Asian sovereign and commercial space programs has created a supply-demand imbalance in space-grade solar technology. If Flexel's perovskite cells can meet space qualification requirements — the critical technical hurdle — the addressable market is substantial and growing.</p>
+        </div>
+        <div class="otw-signal"><strong>Signal:</strong> Korea has emerging strength in satellite components and launch services, and the government has identified space technology as a national strategic priority. Flexel's Series A from primarily Korean institutional investors suggests early commercial traction or strong IP position. Key milestone: ESA or NASA qualification testing results.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Arqen Biosciences (아크젠바이오사이언스)</div>
+          <div class="otw-stage">Series A · $6.7M (₩100억)</div>
+        </div>
+        <div class="otw-tagline">Next-generation immuno-oncology pipeline targeting cancer's immune escape mechanisms</div>
+        <div class="otw-body">
+          <p>Arqen Biosciences closed a Series A of ₩100억 ($6.7M) in July 2026 to advance its immuno-oncology pipeline. The company is working in the immune checkpoint and tumor microenvironment space — seeking to address the large proportion of patients who fail to respond to or develop resistance to existing checkpoint inhibitors (anti-PD-1, anti-PD-L1). The Series A at this size for an immuno-oncology company suggests clinical-stage or late-IND-enabling data that justifies institutional follow-on beyond seed.</p>
+          <p>Immuno-oncology is Korea's most active biotech sub-sector, with multiple KOSDAQ-listed companies (HLB, Bioxcel-adjacent names) and strong export of clinical-stage assets to global pharma partnerships. Arqen's positioning in next-generation immuno-oncology — beyond first-generation checkpoints — targets a problem that the global oncology community has identified as the defining challenge of the next decade: durable complete responses in solid tumors.</p>
+        </div>
+        <div class="otw-signal"><strong>Signal:</strong> ₩100억 Series A in immuno-oncology at current Korean capital market conditions implies genuine differentiation in mechanism or preclinical data. Watch for IND filing timing and any pharma partnership discussions, which are the typical de-risking events in Korean clinical-stage biotech.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Sector</th>
+          <th>Round</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">Radexel (라덱셀)</div>
+            <div class="deal-note">Magnetic field-radiation fusion therapy device; AI treatment planning software. Kangwon National Univ. Hospital clinical partner. This issue's main feature.</div>
+          </td>
+          <td>Medical Device<br>Radiation Oncology</td>
+          <td><span class="deal-round">Pre-A</span></td>
+          <td>
+            <div class="deal-amount">$4.7M+ (₩70억+)</div>
+            <div class="deal-note">Amount undisclosed; ₩70억+ per CEO interview. Foreign institutions also in discussions.</div>
+          </td>
+          <td>Sep 2022</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Frazer Therapeutics (프레이저테라퓨틱스)</div>
+            <div class="deal-note">Targeted protein degradation (TPD) oncology pipeline. PROTACs / molecular glues targeting "undruggable" proteins. Pre-IPO stage.</div>
+          </td>
+          <td>Biopharma<br>Oncology</td>
+          <td><span class="deal-round">Pre-IPO</span></td>
+          <td>
+            <div class="deal-amount">$33.3M (₩500억)</div>
+          </td>
+          <td>Jul 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Flexel Space (플렉셀스페이스)</div>
+            <div class="deal-note">Perovskite-based space solar cells. Lighter, cheaper alternative to conventional GaAs triple-junction solar for satellite constellations.</div>
+          </td>
+          <td>Space Tech<br>Deep Tech</td>
+          <td><span class="deal-round">Series A</span></td>
+          <td>
+            <div class="deal-amount">$16.7M (₩250억)</div>
+          </td>
+          <td>Jul 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">J-Labs (제이랩스)</div>
+            <div class="deal-note">Defense-grade RF (radio frequency) modules. Targets Korean defense procurement and export markets as Korea's defense tech ecosystem matures.</div>
+          </td>
+          <td>Defense Tech<br>RF / Semiconductors</td>
+          <td><span class="deal-round strategic">Pre-IPO</span></td>
+          <td>
+            <div class="deal-amount">$8.0M (₩120억)</div>
+          </td>
+          <td>Jul 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Arqen Biosciences (아크젠바이오사이언스)</div>
+            <div class="deal-note">Next-generation immuno-oncology. Targeting immune escape mechanisms and tumor microenvironment beyond first-generation checkpoint inhibitors.</div>
+          </td>
+          <td>Biopharma<br>Immuno-Oncology</td>
+          <td><span class="deal-round">Series A</span></td>
+          <td>
+            <div class="deal-amount">$6.7M (₩100억)</div>
+          </td>
+          <td>Jul 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Novatech (노바테크)</div>
+            <div class="deal-note">Industrial robot orchestration platform. Software layer for coordinating multi-robot deployments in factory and warehouse environments.</div>
+          </td>
+          <td>Industrial AI<br>Robotics Software</td>
+          <td><span class="deal-round">Series A</span></td>
+          <td>
+            <div class="deal-amount">$4.7M (₩70억)</div>
+          </td>
+          <td>Jul 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ALL ISSUES NAV -->
+<section class="all-issues-section">
+  <div class="all-issues-inner">
+    <div class="all-issues-header">
+      <span class="all-issues-label">All Issues</span>
+      <a href="index.html#archive" class="all-issues-link">View archive →</a>
+    </div>
+    <div class="all-issues-grid">
+      <a href="article.html" class="nav-issue-item">
+        <span class="nav-issue-num">#001</span>
+        <span class="nav-issue-title">Lunit: The AI Pathology Company That Convinced FDA, Roche, and AstraZeneca</span>
+        <span class="nav-issue-date">Sep 1, 2024</span>
+      </a>
+      <a href="article2.html" class="nav-issue-item">
+        <span class="nav-issue-num">#002</span>
+        <span class="nav-issue-title">Kakao Brain → Kakao AI: How Korea's Most-Watched Pivot Is Playing Out</span>
+        <span class="nav-issue-date">Sep 8, 2024</span>
+      </a>
+      <a href="article3.html" class="nav-issue-item">
+        <span class="nav-issue-num">#003</span>
+        <span class="nav-issue-title">S2W: The Dark Web Intelligence Company Quietly Powering Global Cybersecurity</span>
+        <span class="nav-issue-date">Sep 15, 2024</span>
+      </a>
+      <a href="article4.html" class="nav-issue-item">
+        <span class="nav-issue-num">#004</span>
+        <span class="nav-issue-title">BioNexus: Reimagining How Drugs Cross the Blood-Brain Barrier</span>
+        <span class="nav-issue-date">Sep 22, 2024</span>
+      </a>
+      <a href="article5.html" class="nav-issue-item">
+        <span class="nav-issue-num">#005</span>
+        <span class="nav-issue-title">Korbit: The AI Tutor That's Trying to Fix STEM Education at Scale</span>
+        <span class="nav-issue-date">Sep 29, 2024</span>
+      </a>
+      <a href="article6.html" class="nav-issue-item">
+        <span class="nav-issue-num">#006</span>
+        <span class="nav-issue-title">Nota: The Chip Efficiency Startup That Made Edge AI Practical</span>
+        <span class="nav-issue-date">Oct 6, 2024</span>
+      </a>
+      <a href="article7.html" class="nav-issue-item">
+        <span class="nav-issue-num">#007</span>
+        <span class="nav-issue-title">Meditrics: The Clinical AI Company Turning Unstructured Hospital Data Into Decisions</span>
+        <span class="nav-issue-date">Oct 13, 2024</span>
+      </a>
+      <a href="article8.html" class="nav-issue-item">
+        <span class="nav-issue-num">#008</span>
+        <span class="nav-issue-title">SMT Bio: The Microbiome Company Treating What Antibiotics Can't</span>
+        <span class="nav-issue-date">Oct 20, 2024</span>
+      </a>
+      <a href="article9.html" class="nav-issue-item">
+        <span class="nav-issue-num">#009</span>
+        <span class="nav-issue-title">Arontier: Veterinary AI That's Teaching Machines to Read Animal Scans</span>
+        <span class="nav-issue-date">Oct 27, 2024</span>
+      </a>
+      <a href="article10.html" class="nav-issue-item">
+        <span class="nav-issue-num">#010</span>
+        <span class="nav-issue-title">Centrics Bio: Precision Cancer Immunotherapy Built on a New Target Class</span>
+        <span class="nav-issue-date">Nov 3, 2024</span>
+      </a>
+      <a href="article11.html" class="nav-issue-item">
+        <span class="nav-issue-num">#011</span>
+        <span class="nav-issue-title">Intellisia: The Semiconductor Startup Building AI Chips for Korea's Defense Industry</span>
+        <span class="nav-issue-date">Nov 10, 2024</span>
+      </a>
+      <a href="article12.html" class="nav-issue-item">
+        <span class="nav-issue-num">#012</span>
+        <span class="nav-issue-title">Edgene: The Genome Editing Company That Skipped Viral Vectors</span>
+        <span class="nav-issue-date">Jul 17, 2026</span>
+      </a>
+      <a href="article13.html" class="nav-issue-item">
+        <span class="nav-issue-num">#013</span>
+        <span class="nav-issue-title">Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs</span>
+        <span class="nav-issue-date">Jul 20, 2026</span>
+      </a>
+      <a href="article14.html" class="nav-issue-item nav-issue-active">
+        <span class="nav-issue-num">#014</span>
+        <span class="nav-issue-title">Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer</span>
+        <span class="nav-issue-date">Jul 27, 2026</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE SECTION -->
+<div class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>One deep dive a week. Korea's most fundable startups.</h3>
+    <p>Every issue covers one company in depth — technology, funding, market, and investment thesis — plus the deals and names worth watching.</p>
+    <div class="sub-form">
+      <input type="email" id="sub-email" placeholder="you@fund.com">
+      <button onclick="handleSubscribe()">Subscribe</button>
+    </div>
+    <p class="sub-meta" id="sub-msg">Free. No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+  </div>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+<button class="fab-top" id="fab-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 400;
+    document.getElementById('fab').classList.toggle('visible', show);
+    document.getElementById('fab-top').classList.toggle('visible', show);
+  });
+
+  async function handleSubscribe() {
+    const email = document.getElementById('sub-email').value.trim();
+    const msg = document.getElementById('sub-msg');
+    if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email.'; return; }
+    msg.textContent = 'Subscribing…';
+    try {
+      const res = await fetch('https://ymnejijoctfjqjxeqdpd.supabase.co/rest/v1/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article14', subscribed_at: new Date().toISOString() })
+      });
+      if (res.ok || res.status === 201) {
+        msg.textContent = '✓ You\'re subscribed. Welcome!';
+        document.getElementById('sub-email').value = '';
+        window.location.href = 'thankyou.html';
+      } else {
+        const err = await res.json();
+        if (err.code === '23505') { msg.textContent = 'You\'re already subscribed!'; }
+        else { msg.textContent = 'Something went wrong. Please try again.'; }
+      }
+    } catch(e) { msg.textContent = 'Network error. Please try again.'; }
+  }
+</script>
+</body>
+</html>
