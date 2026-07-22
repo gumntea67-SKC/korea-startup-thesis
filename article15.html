@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article15.html">
+
+  <meta name="description" content="Seoul National University emeritus professor Lee Dong-ho built Asia's first stool bank and Korea's leading FMT manufacturing platform — now pivoting from hospital supply contracts to a clinical-stage microbiome drug pipeline targeting C. difficile and antibiotic resistance.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="BioBank Healing, 바이오뱅크힐링, Lee Dong-ho, 이동호, FMT, fecal microbiota transplantation, 분변이식, stool bank, 대변은행, BBH-MS01, microbiome therapeutics, CDI, C. difficile, Korea biotech">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine">
+  <meta property="og:description" content="Asia's first stool bank, a 90% success rate in C. difficile cases, and an oral microbiome drug in development — meet the Korean biotech redefining how we fight infections.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article15.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article15.png">
+  <meta property="article:published_time" content="2026-08-03T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Microbiome">
+  <meta property="article:tag" content="Biotech">
+  <meta property="article:tag" content="Drug Development">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine">
+  <meta name="twitter:description" content="Pre-A. Asia's first stool bank. ~90% FMT success rate. BioBank Healing is building a microbiome drug platform from Korea's largest repository of healthy donor stool.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article15.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine",
+    "description": "Lee Dong-ho — emeritus professor at Seoul National University College of Medicine and a pioneer of gut microbiome research in Korea — founded BioBank Healing in 2016 with a singular thesis: that healthy human gut bacteria, properly collected, characterized, and manufactured, could treat diseases that antibiotics cannot. The company built Asia's first stool bank (대변은행) and Korea's largest FMT (fecal microbiota transplantation) manufacturing operation, supplying 10+ hospitals with ~90% success rates in C. difficile infection. Now the pipeline is expanding: BBH-MS01, an oral microbiome complex drug, is targeting CDI treatment and prevention alongside antibiotic resistance — with longer-term indications in dementia, autism, and immuno-oncology.",
+    "datePublished": "2026-08-03T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article15.html",
+    "about": [{ "@type": "Organization", "name": "BioBank Healing", "alternateName": "바이오뱅크힐링" }],
+    "keywords": "BioBank Healing, FMT, fecal microbiota transplantation, stool bank, microbiome therapeutics, BBH-MS01, CDI, C. difficile, Lee Dong-ho, Korea biotech"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #059669;
+      --accent-light: #d1fae5;
+      --accent-dark: #047857;
+      --nav-dark: #064e3b;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #ecfdf5;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .spec-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 16px 20px; background: var(--gray-5);
+    }
+    .spec-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-2); margin-bottom: 4px; }
+    .spec-value { font-size: 18px; font-weight: 500; color: var(--accent); letter-spacing: -0.3px; }
+    .spec-note { font-size: 12px; color: var(--gray-1); margin-top: 3px; line-height: 1.5; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 80px; }
+
+    .product-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .product-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; text-align: center;
+    }
+    .product-card.active { background: var(--accent-light); border-color: var(--accent); }
+    .product-name { font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+    .product-code { font-size: 11px; color: var(--gray-2); margin-bottom: 8px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+    .product-desc { font-size: 12px; color: var(--gray-1); line-height: 1.5; }
+    .product-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent); color: #fff;
+      padding: 2px 8px; border-radius: var(--radius-sm); margin-top: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-round.strategic { background: #e0f2fe; color: #0c4a6e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(5,150,105,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .product-row { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+
+    /* ALL ISSUES NAV */
+    .all-issues-section {
+      border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+      padding: 40px;
+    }
+    .all-issues-inner { max-width: 760px; margin: 0 auto; }
+    .all-issues-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .all-issues-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-2);
+    }
+    .all-issues-link { font-size: 12px; color: var(--gray-2); }
+    .all-issues-link:hover { color: var(--black); }
+    .all-issues-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .nav-issue-item {
+      display: grid; grid-template-columns: 36px 1fr auto;
+      gap: 10px; align-items: baseline;
+      padding: 10px 12px; border-radius: var(--radius-md);
+      transition: background 0.12s;
+    }
+    .nav-issue-item:hover { background: var(--gray-4); }
+    .nav-issue-active { background: var(--accent-light) !important; }
+    .nav-issue-num {
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .nav-issue-active .nav-issue-num { color: var(--accent-dark); }
+    .nav-issue-title {
+      font-size: 12px; color: var(--black); line-height: 1.4;
+      overflow: hidden; display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+    .nav-issue-active .nav-issue-title { font-weight: 500; color: var(--accent-dark); }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .all-issues-section { padding: 28px 20px; }
+      .all-issues-grid { grid-template-columns: 1fr; }
+      .nav-issue-item { grid-template-columns: 36px 1fr; }
+      .nav-issue-date { display: none; }
+    }
+
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #015 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine</h1>
+    <div class="hero-meta">
+      <span>August 3, 2026</span>
+      <span>Microbiome</span>
+      <span>Biotech</span>
+      <span>Drug Development</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">$1.7M+</div>
+    <div class="kpi-label">Pre-A raised (₩25억) — closed July 2021. Led by Soosung Asset Management and NH Investment & Securities to expand stool bank operations and advance drug pipeline.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">~90%</div>
+    <div class="kpi-label">FMT success rate in C. difficile infection (CDI) — the clinical benchmark that established BioBank Healing as Korea's leading FMT supplier to major hospitals.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">10+ Hospitals</div>
+    <div class="kpi-label">FMT supply partnerships with Korea's leading institutions, including Bundang Seoul National University Hospital, Seoul National University Hospital, and Seoul Boramae Hospital.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">$2B (₩2.7조)</div>
+    <div class="kpi-label">Global FMT market size (2023) — projected to expand rapidly as clinical evidence grows across CDI, inflammatory bowel disease, metabolic disorders, and oncology.</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Problem: When Antibiotics Make Things Worse</h2>
+      <p>Antibiotics are one of modern medicine's most powerful tools — and one of its most dangerous double-edged swords. Every course of antibiotics doesn't just kill the target pathogen. It also disrupts the gut microbiome: the trillions of bacteria that colonize the human digestive tract and regulate everything from immune function to neurotransmitter production. In many patients, this disruption is temporary. In some, it creates an opening for something far more dangerous.</p>
+      <p><strong>Clostridioides difficile</strong> — C. difficile, or CDI — is a bacterial pathogen that causes severe colitis and is responsible for roughly 500,000 infections and 30,000 deaths annually in the United States alone. CDI is, in a brutal irony, primarily an antibiotic-associated disease: it thrives in the disrupted gut environment left behind by broad-spectrum antibiotics. Standard treatment is yet more antibiotics — but recurrence rates are high, and some patients develop multi-drug-resistant CDI that cannot be treated with any available antibiotic.</p>
+      <p>This is where <strong>fecal microbiota transplantation (FMT)</strong> — transferring healthy gut bacteria from a screened donor into a patient — has emerged as a breakthrough intervention. FMT success rates in recurrent CDI consistently exceed 80–90% in clinical studies, far outperforming any antibiotic regimen. The FDA approved the first commercial FMT product (Rebyota) in late 2022. But in Korea, the pharmaceutical and regulatory infrastructure to manufacture, bank, and supply FMT has been almost entirely absent — until one company decided to build it.</p>
+
+      <div class="pull-quote">
+        <p>"The gut microbiome is the key to the treatment of diseases that modern medicine cannot yet cure. Our goal is to make microbiome-based medicine practical — starting with the world's most reliable collection of healthy donor bacteria."<br>— Lee Dong-ho (이동호), CEO, BioBank Healing</p>
+      </div>
+
+      <h2>The Founder: Korea's Leading Gut Microbiome Scientist Turns Entrepreneur</h2>
+      <p><strong>Lee Dong-ho (이동호)</strong> did not arrive at microbiome therapeutics as an outsider. He spent his career as a gastroenterologist and researcher at <strong>Seoul National University College of Medicine (서울대학교 의과대학)</strong> — Korea's most prestigious medical institution — where he became one of the country's foremost experts on gut microbiome research and was eventually named an <strong>Emeritus Professor (명예교수)</strong>. During his academic career, he was among the first Korean physicians to conduct clinical FMT procedures and to study the therapeutic mechanisms of gut microbiota transfer.</p>
+      <p>That clinical foundation is critical context. Most microbiome startups are built by scientists working at the interface of biology and drug chemistry — but without firsthand experience performing FMT on real patients, understanding the donor screening protocols that determine product quality, or managing the cold-chain and manufacturing constraints that make FMT a uniquely difficult product to commercialize. Lee Dong-ho entered BioBank Healing with all three.</p>
+      <p>In <strong>October 2016</strong>, Lee founded BioBank Healing in <strong>Seongnam, Gyeonggi Province</strong> — close to Bundang Seoul National University Hospital, which became the company's anchor clinical partner. The founding premise was specific: Korea had no stool bank, no FMT manufacturing infrastructure, and no regulatory framework for FMT as a pharmaceutical product. BioBank Healing would build all three simultaneously, using the clinical relationships Lee had spent decades cultivating as its primary competitive moat.</p>
+
+      <h2>The Science: What FMT Actually Does — and Why It's Hard to Make</h2>
+      <p>Fecal microbiota transplantation is, at its simplest, the transfer of processed stool from a healthy, thoroughly screened donor to a patient whose gut microbiome has been disrupted. The mechanism of action — unlike conventional drugs — is not a single molecule acting on a single target. FMT introduces a complex ecosystem of thousands of bacterial species, each interacting with the host's immune system, mucosal lining, and existing microbiota. The therapeutic effect is the restoration of a healthy, diverse microbial community.</p>
+      <p>That complexity makes FMT extraordinarily difficult to standardize. The challenge is not the transplantation procedure itself — which can be delivered colonoscopically, via nasogastric tube, or in capsule form. The challenge is the product: ensuring that donor stool is collected from individuals with genuinely healthy microbiomes, processed using techniques that preserve microbial viability, tested for pathogens that could harm immunocompromised recipients, and stored in ways that maintain product integrity across delivery to multiple hospital sites.</p>
+      <p>This is what a <strong>stool bank (대변은행)</strong> does. BioBank Healing built <strong>Asia's first and Korea's largest stool bank</strong>, establishing donor screening protocols, processing and cryopreservation infrastructure, and quality assurance systems that meet the standards required for hospital procurement. The result is a manufacturing operation capable of supplying standardized FMT product at consistent quality to hospitals across Korea — a capability that did not exist in the country before BioBank Healing built it.</p>
+      <p>The company has also developed a <strong>next-generation probiotics platform</strong> alongside its FMT manufacturing business: using its unique repository of characterized gut microbial strains to identify and culture specific bacterial species that drive FMT's therapeutic effects, with the goal of eventually producing defined-composition products (rather than full-stool transplants) with more predictable and regulatable pharmacology.</p>
+
+      <h2>The Pipeline: From Hospital Supplier to Drug Developer</h2>
+      <p>BioBank Healing's immediate revenue comes from its FMT supply business — a B2B model that sells processed FMT product to hospitals performing transplantation procedures. With 10+ hospital partners and ~90% clinical success rates in CDI, this business has established the company as Korea's dominant FMT supplier and generated the clinical data that underpins the drug development program.</p>
+      <p>The clinical-stage pipeline centers on <strong>BBH-MS01</strong> — an oral microbiome complex drug targeting two related therapeutic applications:</p>
+
+      <div class="product-row">
+        <div class="product-card active">
+          <div class="product-name">BBH-MS01</div>
+          <div class="product-code">Primary Program</div>
+          <div class="product-desc">An oral microbiome complex drug derived from BioBank Healing's stool bank repository. Primary indication: treatment and prevention of C. difficile infection (CDI). Secondary application: antibiotic resistance — restoring gut microbiome diversity to reduce colonization by drug-resistant pathogens. Preclinical efficacy data for 25+ bacterial strains in development.</div>
+          <div class="product-badge">In Development</div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Organoid Platform</div>
+          <div class="product-code">Enabling Technology</div>
+          <div class="product-desc">3D organoid culture system using stem cells and next-generation tissue culture techniques for intractable disease research. Enables in vitro testing of microbiome interactions with intestinal tissue — a platform technology supporting both the drug pipeline and potential future licensing or partnering opportunities.</div>
+          <div class="product-badge" style="background:var(--gray-2)">Platform</div>
+        </div>
+      </div>
+
+      <p>Beyond CDI and antibiotic resistance, BioBank Healing is pursuing extended indications that reflect the emerging scientific evidence linking gut microbiome composition to systemic disease. The company has disclosed research directions in <strong>dementia</strong> (the gut-brain axis is one of the most active areas of microbiome science), <strong>autism spectrum disorder</strong> (multiple clinical trials have shown microbiome interventions affecting behavioral markers), and <strong>immuno-oncology</strong> (gut microbiome composition is now established as a predictor of checkpoint inhibitor response in solid tumor patients).</p>
+      <p>The immuno-oncology direction is particularly strategically interesting. Multiple Phase III trials — and the clinical practices of oncology centers at Memorial Sloan Kettering, MD Anderson, and several European cancer institutes — have shown that patients with high gut microbiome diversity respond significantly better to anti-PD-1 therapy than patients with disrupted microbiomes. This has created a window for FMT-based microbiome restoration as an adjunct to checkpoint inhibitor therapy — a combination that could dramatically expand both the addressable patient population and the pricing power of microbiome therapeutics.</p>
+
+      <h2>Strategic Partnership: Samyang Foods and Sarcopenia</h2>
+      <p>In an indication of how seriously Korean corporates are engaging with the microbiome space, BioBank Healing has been in discussions with <strong>Samyang Foods (삼양식품)</strong> — the food and health products conglomerate best known internationally for its Buldak (fire chicken) noodles — on a joint research agreement covering <strong>sarcopenia</strong> (근감소증, age-related muscle loss) microbiome therapy and related health functional food development.</p>
+      <p>The scientific basis: research published in 2024–2025 established clear associations between specific gut bacterial strains (particularly Lacticaseibacillus and Faecalibacterium) and muscle health markers, with FMT interventions demonstrating measurable effects on age-related muscle disorder in animal models. For Samyang, which has been building a health and functional food portfolio alongside its consumer food business, microbiome-based muscle health represents a large-TAM product opportunity. For BioBank Healing, the partnership opens a commercialization pathway for microbiome research into the consumer health segment — a much shorter route to revenue than full pharmaceutical development.</p>
+
+      <h2>Funding & Development Timeline</h2>
+      <p>BioBank Healing has raised across three funding rounds, with the most recent being a <strong>Pre-Series A of ₩25억 ($1.7M)</strong> closed in July 2021, led by Soosung Asset Management and NH Investment & Securities. Investors across the company's history include <strong>Boryung (보령)</strong> — one of Korea's major pharmaceutical companies — and <strong>Aurelia (아우렐리아)</strong>, a healthcare-focused venture firm, among others (total: 4 institutional investors per THE VC).</p>
+
+      <table class="milestone-table">
+        <thead><tr><th>Date</th><th>Milestone</th></tr></thead>
+        <tbody>
+          <tr><td>Oct 2016</td><td>BioBank Healing founded in Seongnam, Gyeonggi Province by Lee Dong-ho (이동호), Emeritus Professor at Seoul National University College of Medicine.</td></tr>
+          <tr><td>2017–2019</td><td>Construction of Korea's first commercial stool bank (대변은행). Donor screening, processing, and cryopreservation protocols established. First hospital FMT supply agreements signed.</td></tr>
+          <tr><td>2019–2020</td><td>FMT supply network expands to 10+ hospitals including Bundang Seoul National University Hospital, Seoul National University Hospital (본원), and Seoul Boramae Hospital. Clinical success rate in CDI reaches ~90%.</td></tr>
+          <tr><td>2020</td><td>Company profiled as "Asia's first, Korea's largest stool bank" in Korean biotech media. Early media coverage establishes the company's positioning in the microbiome sector.</td></tr>
+          <tr><td>Jul 2021</td><td>Pre-Series A of ₩25억 ($1.7M) closed. Led by Soosung Asset Management and NH Investment & Securities. Capital directed to stool bank capacity expansion and BBH-MS01 preclinical program.</td></tr>
+          <tr><td>2022–2023</td><td>BBH-MS01 preclinical efficacy data development — targeting 25+ characterized bacterial strains with activity against CDI and antibiotic-resistant pathogens. Organoid platform established as enabling technology.</td></tr>
+          <tr><td>2023–2024</td><td>Investment by Boryung (보령) and Aurelia (아우렐리아). Extended indications research disclosed: gut-brain axis (dementia), autism spectrum disorder, and immuno-oncology combination therapy.</td></tr>
+          <tr><td>2024–2025</td><td>Samyang Foods (삼양식품) partnership discussions on sarcopenia microbiome research and health functional food development. Scientific evidence linking gut microbiota to muscle health supports joint program.</td></tr>
+          <tr><td>2026</td><td>Company operates as Korea's definitive microbiome therapeutics platform — bridging FMT clinical supply, a drug development pipeline, and corporate health food partnerships.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>The Market: $2B (₩2.7조) and Expanding Fast</h2>
+      <p>The global FMT market was valued at approximately <strong>$2 billion (₩2.7조)</strong> in 2023 and is projected to grow at a double-digit CAGR through the end of the decade, driven by FDA approval of commercial FMT products, expanding clinical indications, and growing recognition of the gut microbiome's role in systemic disease. The CDI indication — BioBank Healing's primary commercial focus — represents the most developed and largest immediate segment, but the long-term opportunity is far broader.</p>
+      <p>The broader microbiome therapeutics market — encompassing defined bacterial consortia products, FMT-derived drugs, and microbiome-modulating small molecules — is projected to reach <strong>$9–12 billion ($12–16조)</strong> by 2030 as the science matures and regulatory frameworks for live biotherapeutic products (LBPs) solidify globally. Korea's domestic market, while smaller, benefits from a healthcare system (NHIS) with strong coverage of advanced therapeutics and a hospital network that is already accustomed to FMT as a clinical procedure through BioBank Healing's supply infrastructure.</p>
+      <p>Korea's regulatory environment for FMT is evolving. The Ministry of Food and Drug Safety (MFDS / 식약처) has been developing LBP regulatory guidelines consistent with international standards, a development that BioBank Healing — as the market's established infrastructure provider — is positioned to benefit from as clinical products move toward formal IND filing and approval pathways.</p>
+
+      <h2>Competitive Landscape</h2>
+      <p>BioBank Healing operates in a global microbiome therapeutics space that has attracted significant capital and several well-funded players — but its Korea-specific positioning and manufacturing infrastructure give it meaningful local advantages:</p>
+      <p><strong>Global FMT Drug Leaders:</strong> Ferring Pharmaceuticals (Rebyota — FDA-approved 2022) and Seres Therapeutics (Vowst — FDA-approved 2023) have established the first commercial LBP products for CDI in the US market. Both are defined-composition products derived from donor stool, rather than full FMT — similar to the direction BioBank Healing's BBH-MS01 is heading. These companies have validated the regulatory pathway and commercial market, but are not directly competing in Korea's hospital FMT supply market, where BioBank Healing is the dominant incumbent.</p>
+      <p><strong>Korean Competition:</strong> The microbiome therapeutics space in Korea is nascent. Issue #008 covered SMT Bio (에스엠티바이오), another Korean microbiome company — but SMT Bio's focus is on defined probiotic formulations for different indications, rather than stool banking and FMT supply. The two companies occupy different parts of the value chain.</p>
+      <p><strong>International Stool Banks:</strong> OpenBiome (US) was the world's leading stool bank before transitioning to a research model; Rebiotix (acquired by Ferring) and other players have moved toward manufactured products rather than raw FMT supply. BioBank Healing's Asia-first positioning means it faces no direct stool banking competition in Korea's hospital market — a structural advantage that has compounded over nearly a decade of operational history.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Primary Clinical Focus</div>
+          <div class="spec-value">CDI / C. difficile</div>
+          <div class="spec-note">C. difficile infection with ~90% FMT success rate. Extension to antibiotic resistance prevention is the next clinical priority for BBH-MS01.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Manufacturing Advantage</div>
+          <div class="spec-value">Asia's First</div>
+          <div class="spec-note">Korea's largest stool bank. Nearly a decade of donor characterization data — the most valuable and hardest-to-replicate asset in the FMT supply chain.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Pipeline Breadth</div>
+          <div class="spec-value">5 Indications</div>
+          <div class="spec-note">CDI, antibiotic resistance, dementia, autism, immuno-oncology combination therapy — each grounded in published peer-reviewed evidence of gut-microbiome links.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Corporate Partner</div>
+          <div class="spec-value">Samyang Foods</div>
+          <div class="spec-note">Joint research on sarcopenia (근감소증) treatment — linking microbiome science to the mass-market health functional food sector and creating a non-pharma revenue pathway.</div>
+        </div>
+      </div>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Signal Box — Why BioBank Healing Matters</div>
+        <ul class="signal-list">
+          <li><strong>The stool bank is the moat:</strong> A decade of donor recruitment, screening, and characterization cannot be replicated quickly. BioBank Healing's repository of characterized microbial strains is the foundational asset from which every future product will be derived — and it has a ~10-year head start on any potential Korean competitor attempting to build equivalent infrastructure.</li>
+          <li><strong>Hospital relationships = distribution:</strong> The 10+ hospital FMT supply contracts are not just revenue — they are clinical data pipelines, regulatory endorsements, and distribution channels for future pharmaceutical products. Every hospital that currently uses BioBank Healing's FMT supply is a potential launch customer for BBH-MS01.</li>
+          <li><strong>Founder credibility is clinical, not academic:</strong> Lee Dong-ho is not a laboratory scientist who pivoted to entrepreneurship. He is one of Korea's most respected gastroenterologists, with decades of clinical FMT experience and relationships with the hospital medical directors who make procurement decisions. That is a meaningful advantage over biotech founders who need to build clinical credibility from scratch.</li>
+          <li><strong>FDA/MFDS pathway is now cleared:</strong> The approval of Rebyota and Vowst in the US has de-risked the regulatory story for microbiome LBPs globally. Korean MFDS is developing a parallel framework. BioBank Healing's drug development program now has regulatory precedent to follow — a critical advantage that didn't exist when the company was founded.</li>
+          <li><strong>Immuno-oncology adjacency is underappreciated:</strong> The gut microbiome-checkpoint inhibitor connection is one of the most exciting developments in oncology. If BioBank Healing can demonstrate that FMT-based microbiome restoration improves checkpoint inhibitor response rates, the addressable market expands dramatically — into combination therapy protocols at cancer hospitals that already partner with the company for CDI treatment.</li>
+          <li><strong>The Samyang partnership signals corporate demand:</strong> When a major food company with a $5B+ market cap starts a joint R&D program with a microbiome startup, it signals that the science has matured enough to attract non-pharma capital and distribution networks. Samyang's involvement could provide BioBank Healing with a consumer health revenue stream that partially de-risks the longer pharma timeline.</li>
+        </ul>
+      </div>
+
+      <h2>Investment Thesis</h2>
+      <p>BioBank Healing sits at the intersection of two inflection points: a microbiome therapeutics sector that is transitioning from scientific curiosity to approved pharmaceutical products, and a Korean healthcare market where the company has a decade of operational and clinical infrastructure that no competitor can replicate quickly.</p>
+      <p>The risks are real. FMT drug development is early-stage by global pharmaceutical standards — BBH-MS01 has not yet entered clinical trials, and the path from preclinical data to commercial approval in Korea (and potentially globally) is measured in years, not months. The company's Pre-A capital base is modest relative to the capital requirements of a full pharmaceutical development program, and a Series A round that funds IND-enabling studies and a Phase I trial will be the company's most important near-term milestone. Investor appetite for microbiome therapeutics in Korea — while growing — has historically been cautious relative to oncology, where clinical biomarkers and regulatory pathways are more established.</p>
+      <p>What makes BioBank Healing worth tracking against these risks is a structural positioning that most biotech startups cannot build: the stool bank creates a defensible, cash-generating asset that funds the drug development program while simultaneously generating the clinical data and regulatory relationships that the drug program needs. The company is not burning cash on a single clinical bet — it has an operating business that validates the therapeutic approach daily across 10+ hospitals.</p>
+      <p>The milestones to watch: IND filing for BBH-MS01 in Korea, the structure and size of the Series A round, the specifics of any Samyang partnership announcement, and whether BioBank Healing can position itself as the microbiome supply infrastructure partner for Korean immuno-oncology programs — a role that could transform its strategic relevance from a CDI specialist to a platform company at the center of Korea's most active cancer therapeutic sector.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Asteromorph (애스터로모프)</div>
+          <div class="otw-stage">Seed · $31.4M (₩420억)</div>
+        </div>
+        <div class="otw-tagline">Building AI that can conduct scientific research autonomously — and Korea's government is betting on it</div>
+        <div class="otw-body">
+          <p>Asteromorph closed a ₩420억 (~$31.4M) seed round in May 2026 — one of the largest seed rounds in Korean startup history — to build what the company describes as "scientific superintelligence": AI systems capable of autonomously conducting the full scientific research cycle, from hypothesis generation through experimental design and data interpretation. Lead investor Bon Angels was joined by Future Play, Mirae Asset Venture Investment, IMM Investment, Korea Development Bank, STIC Ventures, and SV Investment, among others.</p>
+          <p>The strategic significance extends beyond the funding amount. CEO Lee Min-hyung was subsequently appointed as the project director for the AI scientist mission of <strong>K-Moonshot</strong> — the South Korean government's flagship national AI research initiative. That appointment effectively makes Asteromorph the private-sector anchor of Korea's bet that AI-driven scientific discovery can become a national capability rather than a capability that Korea imports from US and European labs.</p>
+        </div>
+        <div class="otw-signal"><strong>Signal:</strong> A ₩420억 seed with KDB participation and K-Moonshot project leadership is an unusual convergence of private and public capital on a single company. The scientific superintelligence thesis — AI that can run the research loop, not just assist researchers — is either the next major productivity technology or premature. The combination of that capital base and government mandate means Asteromorph will generate definitive evidence one way or another within 2–3 years.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Galux (갤럭스)</div>
+          <div class="otw-stage">Series B · $29M (₩420억)</div>
+        </div>
+        <div class="otw-tagline">De novo AI antibody design — building a drug discovery platform that starts from scratch instead of screening libraries</div>
+        <div class="otw-body">
+          <p>Galux closed a ₩420억 ($29M) Series B in February 2026, bringing total funding to ₩680억 ($46M). The company's platform — GaluxDesign — uses AI to design protein structures de novo: rather than screening millions of existing compounds for desired drug properties, Galux starts with a target protein and designs new molecules from first principles to have the desired therapeutic function. The Series B included Korea Investment & Securities as co-lead (an IPO underwriter signal), with Yuanta Investment, Korea Development Bank, Mirae Asset Securities, STIC Ventures, and LigaChem BioSciences (strategic investor) also participating.</p>
+          <p>The strategic investor angle is notable: LigaChem BioSciences is one of Korea's leading ADC (antibody-drug conjugate) companies, with multiple global pharma co-development and licensing deals. LigaChem's involvement as both a co-development partner and investor in Galux's Series B suggests that the GaluxDesign platform has generated antibody candidates of sufficient quality to attract a partner with rigorous commercial standards. The presence of Korea Investment & Securities as IPO underwriter signals active KOSDAQ listing preparation.</p>
+        </div>
+        <div class="otw-signal"><strong>Signal:</strong> De novo protein design is the frontier of AI drug discovery — AlphaFold's impact on structure prediction was the proof-of-concept; Galux is betting that the same deep learning advances can drive therapeutic design from first principles. The LigaChem strategic investment and IPO preparation suggest the clinical pipeline is maturing faster than the funding timeline alone implies. Watch for technology transfer or out-licensing announcements in H2 2026.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">BreezeBio (formerly GenEdit)</div>
+          <div class="otw-stage">Series B · $60M (₩800억)</div>
+        </div>
+        <div class="otw-tagline">Precision genetic medicine with organ-targeting delivery — taking immune tolerance for Type 1 diabetes into IND-enabling studies</div>
+        <div class="otw-body">
+          <p>BreezeBio (formerly GenEdit) announced a $60M (~₩800억) Series B in February 2026 to advance its NanoGalaxy organ-targeting delivery platform and its lead program BRZ-101 — a genetic medicine designed to restore immune tolerance in Type 1 diabetes. The NanoGalaxy platform delivers mRNA encoding autoantigens and tolerogenic co-factors directly to antigen-presenting cells, with the goal of inducing antigen-specific regulatory T cells that block the autoimmune response driving T1D — without broadly suppressing the immune system.</p>
+          <p>Preclinical data showed antigen-specific immune tolerance induction in autoimmune disease models including a mouse model of diabetes, with good tolerability in mice and nonhuman primates. The Series B, led by Yuanta Investment and DSC Investment with participation from STIC Ventures, Kiwoom Investment, Korea Investment Partners, KDB Silicon Valley, and ACVC Partners, funds IND-enabling studies targeting a clinical trial initiation. The company's rebrand from GenEdit to BreezeBio signals a deliberate positioning shift from gene editing toward the broader precision genetic medicine category.</p>
+        </div>
+        <div class="otw-signal"><strong>Signal:</strong> Type 1 diabetes immune tolerance is one of immunology's most ambitious targets — if you can shut down the autoimmune attack without global immunosuppression, the therapeutic and commercial implications are enormous. BreezeBio's delivery platform (NanoGalaxy) is the asset to watch — organ-targeting mRNA delivery is the capability that could extend this technology beyond T1D into a broad range of autoimmune and tolerance-related diseases. IND filing timeline and preclinical data publication are the next key milestones.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Sector</th>
+          <th>Round</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">BioBank Healing (바이오뱅크힐링)</div>
+            <div class="deal-note">Asia's first stool bank. FMT manufacturer and supplier to 10+ Korean hospitals. BBH-MS01 oral microbiome drug in development for CDI and antibiotic resistance. This issue's main feature.</div>
+          </td>
+          <td>Microbiome<br>Therapeutics</td>
+          <td><span class="deal-round">Pre-A</span></td>
+          <td>
+            <div class="deal-amount">$1.7M (₩25억)</div>
+            <div class="deal-note">Led by Soosung Asset Management and NH Investment & Securities. 3 rounds total; also backed by Boryung (보령) and Aurelia (아우렐리아).</div>
+          </td>
+          <td>Jul 2021</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Asteromorph (애스터로모프)</div>
+            <div class="deal-note">Scientific superintelligence AI platform. CEO Lee Min-hyung appointed K-Moonshot project director. Backed by Bon Angels, Mirae Asset, IMM Investment, KDB, STIC Ventures.</div>
+          </td>
+          <td>AI<br>Deep Tech</td>
+          <td><span class="deal-round">Seed</span></td>
+          <td>
+            <div class="deal-amount">$31.4M (₩420억)</div>
+            <div class="deal-note">One of Korea's largest-ever seed rounds. National AI moonshot mandate included.</div>
+          </td>
+          <td>May 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Galux (갤럭스)</div>
+            <div class="deal-note">AI de novo antibody design platform (GaluxDesign). Strategic investor LigaChem BioSciences (ADC co-development). IPO underwriter Korea Investment Securities co-led the round.</div>
+          </td>
+          <td>AI Drug Discovery<br>Biopharma</td>
+          <td><span class="deal-round">Series B</span></td>
+          <td>
+            <div class="deal-amount">$29M (₩420억)</div>
+            <div class="deal-note">Total funding ₩680억 ($46M). IPO listing preparation underway on KOSDAQ.</div>
+          </td>
+          <td>Feb 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">BreezeBio (formerly GenEdit)</div>
+            <div class="deal-note">NanoGalaxy organ-targeting mRNA delivery platform. Lead program BRZ-101 for Type 1 diabetes immune tolerance. IND-enabling studies funded. Led by Yuanta Investment and DSC Investment.</div>
+          </td>
+          <td>Precision Genetic Medicine<br>Autoimmune</td>
+          <td><span class="deal-round">Series B</span></td>
+          <td>
+            <div class="deal-amount">$60M (₩800억)</div>
+            <div class="deal-note">Korea's largest biotech Series B in H1 2026. Investors include KDB Silicon Valley and ACVC Partners.</div>
+          </td>
+          <td>Feb 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Autonomous a2z (오토노머스에이투지)</div>
+            <div class="deal-note">Autonomous driving software for commercial vehicles and logistics. AI-based perception and decision systems for trucks, shuttles, and last-mile delivery. Korean-market deployment focus.</div>
+          </td>
+          <td>Autonomous Driving<br>AI / Mobility</td>
+          <td><span class="deal-round strategic">Series C</span></td>
+          <td>
+            <div class="deal-amount">$27.4M (₩360억)</div>
+            <div class="deal-note">Focused on commercial vehicle segment where regulatory pathway is clearer than passenger robotaxi.</div>
+          </td>
+          <td>Mar 2026</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Celloid (셀로이드)</div>
+            <div class="deal-note">Biotech / healthcare platform company in cell therapy or cellular diagnostics. Part of Korea's growing Series A biotech cohort alongside broader H1 2026 biotech investment rebound.</div>
+          </td>
+          <td>Biotech<br>Healthcare</td>
+          <td><span class="deal-round">Series A</span></td>
+          <td>
+            <div class="deal-amount">$6.1M (₩80억)</div>
+            <div class="deal-note">Part of ₩3.7조 Korea H1 2026 startup investment — biotech and AI remain the two dominant sectors.</div>
+          </td>
+          <td>Mar 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ALL ISSUES NAV -->
+<section class="all-issues-section">
+  <div class="all-issues-inner">
+    <div class="all-issues-header">
+      <span class="all-issues-label">All Issues</span>
+      <a href="index.html#archive" class="all-issues-link">View archive →</a>
+    </div>
+    <div class="all-issues-grid">
+      <a href="article.html" class="nav-issue-item">
+        <span class="nav-issue-num">#001</span>
+        <span class="nav-issue-title">Lunit: The AI Pathology Company That Convinced FDA, Roche, and AstraZeneca</span>
+        <span class="nav-issue-date">Sep 1, 2024</span>
+      </a>
+      <a href="article2.html" class="nav-issue-item">
+        <span class="nav-issue-num">#002</span>
+        <span class="nav-issue-title">Kakao Brain → Kakao AI: How Korea's Most-Watched Pivot Is Playing Out</span>
+        <span class="nav-issue-date">Sep 8, 2024</span>
+      </a>
+      <a href="article3.html" class="nav-issue-item">
+        <span class="nav-issue-num">#003</span>
+        <span class="nav-issue-title">S2W: The Dark Web Intelligence Company Quietly Powering Global Cybersecurity</span>
+        <span class="nav-issue-date">Sep 15, 2024</span>
+      </a>
+      <a href="article4.html" class="nav-issue-item">
+        <span class="nav-issue-num">#004</span>
+        <span class="nav-issue-title">BioNexus: Reimagining How Drugs Cross the Blood-Brain Barrier</span>
+        <span class="nav-issue-date">Sep 22, 2024</span>
+      </a>
+      <a href="article5.html" class="nav-issue-item">
+        <span class="nav-issue-num">#005</span>
+        <span class="nav-issue-title">Korbit: The AI Tutor That's Trying to Fix STEM Education at Scale</span>
+        <span class="nav-issue-date">Sep 29, 2024</span>
+      </a>
+      <a href="article6.html" class="nav-issue-item">
+        <span class="nav-issue-num">#006</span>
+        <span class="nav-issue-title">Nota: The Chip Efficiency Startup That Made Edge AI Practical</span>
+        <span class="nav-issue-date">Oct 6, 2024</span>
+      </a>
+      <a href="article7.html" class="nav-issue-item">
+        <span class="nav-issue-num">#007</span>
+        <span class="nav-issue-title">Meditrics: The Clinical AI Company Turning Unstructured Hospital Data Into Decisions</span>
+        <span class="nav-issue-date">Oct 13, 2024</span>
+      </a>
+      <a href="article8.html" class="nav-issue-item">
+        <span class="nav-issue-num">#008</span>
+        <span class="nav-issue-title">SMT Bio: The Microbiome Company Treating What Antibiotics Can't</span>
+        <span class="nav-issue-date">Oct 20, 2024</span>
+      </a>
+      <a href="article9.html" class="nav-issue-item">
+        <span class="nav-issue-num">#009</span>
+        <span class="nav-issue-title">Arontier: Veterinary AI That's Teaching Machines to Read Animal Scans</span>
+        <span class="nav-issue-date">Oct 27, 2024</span>
+      </a>
+      <a href="article10.html" class="nav-issue-item">
+        <span class="nav-issue-num">#010</span>
+        <span class="nav-issue-title">Centrics Bio: Precision Cancer Immunotherapy Built on a New Target Class</span>
+        <span class="nav-issue-date">Nov 3, 2024</span>
+      </a>
+      <a href="article11.html" class="nav-issue-item">
+        <span class="nav-issue-num">#011</span>
+        <span class="nav-issue-title">Intellisia: The Semiconductor Startup Building AI Chips for Korea's Defense Industry</span>
+        <span class="nav-issue-date">Nov 10, 2024</span>
+      </a>
+      <a href="article12.html" class="nav-issue-item">
+        <span class="nav-issue-num">#012</span>
+        <span class="nav-issue-title">Edgene: The Genome Editing Company That Skipped Viral Vectors</span>
+        <span class="nav-issue-date">Jul 17, 2026</span>
+      </a>
+      <a href="article13.html" class="nav-issue-item">
+        <span class="nav-issue-num">#013</span>
+        <span class="nav-issue-title">Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs</span>
+        <span class="nav-issue-date">Jul 20, 2026</span>
+      </a>
+      <a href="article14.html" class="nav-issue-item">
+        <span class="nav-issue-num">#014</span>
+        <span class="nav-issue-title">Radexel: The Korean Startup Using Magnetic Fields to Make Radiation Therapy Safer</span>
+        <span class="nav-issue-date">Jul 27, 2026</span>
+      </a>
+      <a href="article15.html" class="nav-issue-item nav-issue-active">
+        <span class="nav-issue-num">#015</span>
+        <span class="nav-issue-title">BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine</span>
+        <span class="nav-issue-date">Aug 3, 2026</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE SECTION -->
+<div class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>One deep dive a week. Korea's most fundable startups.</h3>
+    <p>Every issue covers one company in depth — technology, funding, market, and investment thesis — plus the deals and names worth watching.</p>
+    <div class="sub-form">
+      <input type="email" id="sub-email" placeholder="you@fund.com">
+      <button onclick="handleSubscribe()">Subscribe</button>
+    </div>
+    <p class="sub-meta" id="sub-msg">Free. No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+  </div>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<button class="fab" id="fab" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+<button class="fab-top" id="fab-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 400;
+    document.getElementById('fab').classList.toggle('visible', show);
+    document.getElementById('fab-top').classList.toggle('visible', show);
+  });
+
+  async function handleSubscribe() {
+    const email = document.getElementById('sub-email').value.trim();
+    const msg = document.getElementById('sub-msg');
+    if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email.'; return; }
+    msg.textContent = 'Subscribing…';
+    try {
+      const res = await fetch('https://ymnejijoctfjqjxeqdpd.supabase.co/rest/v1/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article15', subscribed_at: new Date().toISOString() })
+      });
+      if (res.ok || res.status === 201) {
+        msg.textContent = '✓ You\'re subscribed. Welcome!';
+        document.getElementById('sub-email').value = '';
+        window.location.href = 'thankyou.html';
+      } else {
+        const err = await res.json();
+        if (err.code === '23505') { msg.textContent = 'You\'re already subscribed!'; }
+        else { msg.textContent = 'Something went wrong. Please try again.'; }
+      }
+    } catch(e) { msg.textContent = 'Network error. Please try again.'; }
+  }
+</script>
+</body>
+</html>
