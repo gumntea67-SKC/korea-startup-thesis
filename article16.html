@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article16.html">
+
+  <meta name="description" content="Founded in November 2024, IRVIS (아일비스) landed three LG Electronics contracts within its first year and secured dual Seoul–Paris operations before its 18-month birthday — using vision-guided robot control to push factory inspection success rates from 85% to 98%.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="IRVIS, 아일비스, Gukwon Chung, 정국원, AI robotic inspection, vision-guided robot, factory automation, LG Electronics, quality control automation, Korea robotics startup, manufacturing AI, Station F">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots">
+  <meta property="og:description" content="Three LG Electronics contracts in Year 1. A Paris office at Station F. An AI vision system that improved LG's robot measurement success rate from 85% to 98%. Meet IRVIS — Korea's most interesting deep-tech seed company.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article16.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article16.png">
+  <meta property="article:published_time" content="2026-08-10T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Robotics">
+  <meta property="article:tag" content="AI">
+  <meta property="article:tag" content="Manufacturing">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots">
+  <meta name="twitter:description" content="Seed-stage. Three LG contracts. Station F. 85%→98% robot accuracy. IRVIS is moving faster than almost any Korean deep-tech startup we've tracked.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article16.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots",
+    "description": "Founded in November 2024, IRVIS (아일비스) is a Seoul-based AI robotics company that combines vision camera-based coordinate transformation with QC automation algorithms to solve one of manufacturing's most persistent problems: getting robots to perform precise inspection tasks reliably, even when production environments change. The company landed three contracts with LG Electronics within its first year, improved robot measurement success rates from 85% to 98%, and simultaneously opened a Paris office at Station F — all at the seed stage.",
+    "datePublished": "2026-08-10T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article16.html",
+    "about": [{ "@type": "Organization", "name": "IRVIS", "alternateName": "아일비스" }],
+    "keywords": "IRVIS, 아일비스, AI robotic inspection automation, vision-guided robot, LG Electronics, factory QC automation, Korea robotics, deep tech, Station F Paris"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --accent-dark: #1d4ed8;
+      --nav-dark: #1e3a8a;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #eff6ff;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .spec-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 16px 20px; background: var(--gray-5);
+    }
+    .spec-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-2); margin-bottom: 4px; }
+    .spec-value { font-size: 18px; font-weight: 500; color: var(--accent); letter-spacing: -0.3px; }
+    .spec-note { font-size: 12px; color: var(--gray-1); margin-top: 3px; line-height: 1.5; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 80px; }
+
+    .product-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .product-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px; text-align: center;
+    }
+    .product-card.active { background: var(--accent-light); border-color: var(--accent); }
+    .product-name { font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+    .product-code { font-size: 11px; color: var(--gray-2); margin-bottom: 8px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+    .product-desc { font-size: 12px; color: var(--gray-1); line-height: 1.5; }
+    .product-badge {
+      display: inline-block; font-size: 10px; font-weight: 500;
+      background: var(--accent); color: #fff;
+      padding: 2px 8px; border-radius: var(--radius-sm); margin-top: 8px;
+    }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #fef3c7; color: #92400e; }
+    .deal-round.strategic { background: #e0f2fe; color: #0c4a6e; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .product-row { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+
+    /* ALL ISSUES NAV */
+    .all-issues-section {
+      border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+      padding: 40px;
+    }
+    .all-issues-inner { max-width: 760px; margin: 0 auto; }
+    .all-issues-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .all-issues-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-2);
+    }
+    .all-issues-link { font-size: 12px; color: var(--gray-2); }
+    .all-issues-link:hover { color: var(--black); }
+    .all-issues-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .nav-issue-item {
+      display: grid; grid-template-columns: 36px 1fr auto;
+      gap: 10px; align-items: baseline;
+      padding: 10px 12px; border-radius: var(--radius-md);
+      transition: background 0.12s;
+    }
+    .nav-issue-item:hover { background: var(--gray-4); }
+    .nav-issue-active { background: var(--accent-light) !important; }
+    .nav-issue-num {
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .nav-issue-active .nav-issue-num { color: var(--accent-dark); }
+    .nav-issue-title {
+      font-size: 12px; color: var(--black); line-height: 1.4;
+      overflow: hidden; display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+    .nav-issue-active .nav-issue-title { font-weight: 500; color: var(--accent-dark); }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .all-issues-section { padding: 28px 20px; }
+      .all-issues-grid { grid-template-columns: 1fr; }
+      .nav-issue-item { grid-template-columns: 36px 1fr; }
+      .nav-issue-date { display: none; }
+    }
+
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #016 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots</h1>
+    <div class="hero-meta">
+      <span>August 10, 2026</span>
+      <span>Robotics</span>
+      <span>AI</span>
+      <span>Manufacturing</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">$200K+</div>
+    <div class="kpi-label">Revenue from commercial pilots in 2025 — paid contracts with LG Electronics for ESD, audio, and display QC inspection automation systems.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">3 LG Contracts</div>
+    <div class="kpi-label">Three separate LG Electronics contracts signed within the first 12 months of founding — ESD test automation (Feb 2025), audio QA (Jun 2025), display video QC (Oct 2025).</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">85% → 98%</div>
+    <div class="kpi-label">Robot measurement success rate improvement on LG Electronics production lines — a 14-percentage-point gain with precision within ±1mm, achieved by IRVIS's vision-guided control system.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">33% Faster</div>
+    <div class="kpi-label">Testing time reduction vs. prior systems on LG production lines — achieved through 3D full scanning, automated coordinate generation, and database integration in a single workflow.</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Problem: Why Factory Inspection Is Still Mostly Human</h2>
+      <p>Modern manufacturing lines are a paradox. They use extraordinarily precise machines to build extraordinarily precise products — semiconductor chips, consumer electronics, electric vehicle components — and then rely on extraordinarily imprecise methods to verify that those products meet quality standards. The final inspection stage at most production facilities still depends heavily on human judgment: trained workers checking products by eye, by hand, or with simple camera systems that can only detect surface defects under controlled lighting conditions.</p>
+      <p>The problem isn't that robots can't inspect. It's that <strong>robots break down when production environments change</strong>. Automated inspection systems typically rely on fixed-position cameras and pre-programmed motion sequences. If a component shifts slightly on the conveyor belt, if a product variant is slightly larger or smaller than the calibrated model, if the ambient lighting changes — the system fails. The robot either misses defects or flags correct parts as defective. Manufacturers then have to halt the line, recalibrate, or revert to human inspection. In high-volume electronics manufacturing — where LG Electronics alone produces tens of millions of devices per year — even a 1% inspection failure rate has enormous consequences.</p>
+      <p>The deeper problem is software, not hardware. Modern robotic arms are mechanically capable of extraordinary precision. The missing link is intelligence: a system that can look at a product that's slightly out of position, understand its geometry in three dimensions, recalculate the robot's movement path in real time, and execute a precise inspection sequence — all without human intervention. This is the gap IRVIS (아일비스) was built to close.</p>
+
+      <div class="pull-quote">
+        <p>"I will focus on improving product completeness and operational stability. We are exploring step-by-step expansion of overseas partnerships and initial customer cases."<br>— Gukwon Chung (정국원), CEO, IRVIS</p>
+      </div>
+
+      <h2>The Founding Team: A Rare Combination of Engineering, AI, and Industrial Sales</h2>
+      <p>IRVIS was founded in <strong>November 2024</strong> and is headquartered in <strong>Gwanak-gu, Seoul</strong> — specifically at Sillim-ro 117, a building within Seoul National University's Campus Town innovation ecosystem. The company's location is no coincidence: its Technical Advisor, <strong>Taewan Kim (김태완)</strong>, is a professor in Seoul National University's Department of Naval Architecture and Ocean Engineering, and IRVIS's foundational relationship with SNU underpins both its R&D pipeline and its talent network.</p>
+      <p><strong>Gukwon Chung (정국원)</strong>, CEO, holds an MSc from the University of Birmingham and brings hands-on experience managing robotic automation projects in industrial settings. His background as a project manager — rather than a pure researcher — shapes how IRVIS operates: focused on field-ready solutions, not laboratory prototypes. The company's entire go-to-market approach reflects his orientation: don't pitch a concept, build a system that works on the factory floor and let the results speak.</p>
+      <p><strong>Camille Kesseler</strong>, CTO, completed a Master's degree in AI Vision at Seoul National University — an unusual profile, combining European technical education with SNU's AI research environment. Her expertise in bridging AI perception and robotic control is the technical core of IRVIS's differentiation: the ability to make robots "see" production environments intelligently rather than mechanically.</p>
+      <p>The team's international dimension extends beyond the founding founders. The engineering team includes <strong>Antoine Pateyron</strong> (precision mechanism design, ECAM Lyon), <strong>Ilias El Abbassi</strong> (robotic control and embedded systems, Lille University), and <strong>Mathys Vinatier</strong> (AI and robotic control, IPSA). This level of international technical talent composition at a seed-stage Korean company is unusual — and deliberately so. IRVIS's Paris office and HEC Incubation Program selection signal that global expansion is a design principle, not an afterthought.</p>
+      <p>Rounding out the leadership: <strong>Seungwoo Han</strong>, Managing Director, brings 20+ years of global sales and marketing experience in materials science and engineering; and <strong>Hanjung Kwon</strong>, General Manager, holds an MBA from the University of South Dakota and manages the financial foundation for stable growth.</p>
+
+      <h2>The Technology: Vision-Guided Robot Control That Adapts to Change</h2>
+      <p>IRVIS's core technology stack has two interdependent components: <strong>Vision-Guided Robot Control</strong> and <strong>QC Automation Software</strong>. Together, they solve the recalibration problem that makes conventional industrial inspection automation fragile.</p>
+      <p><strong>Vision-Guided Robot Control</strong> is built on coordinate transformation technology. IRVIS's system uses a camera to capture the position, orientation, and geometry of a target object — and then converts that visual information into the robot's control coordinate system in real time. This means the robot can precisely position its end-effector to inspect or test a part even when that part's position has shifted, its size varies within tolerance, or it belongs to a different product variant than the last run. The three technical pillars are: <strong>Coordinate Transformation</strong> (precise 3D scene-to-robot-space conversion), <strong>Adaptive Positioning</strong> (real-time adjustment to object variation), and <strong>Precision Calibration</strong> (sub-millimeter accuracy maintenance over time).</p>
+      <p><strong>QC Automation Software</strong> provides the inspection workflow layer: standardizing complex quality control sequences in software so they can be deployed consistently across multiple production lines and sites, logging and integrating with existing manufacturing execution systems (MES), and enabling quality standardization across shift changes, line configurations, and product variants. The practical result for a customer like LG Electronics is that the same inspection logic runs consistently at 2am on a Monday as it does at 2pm on a Friday — without human variance.</p>
+      <p>The underlying architecture is building toward a <strong>Vision-Language-Action (VLA) model</strong> — a next-generation approach to robot control that enables robots to understand inspection instructions in natural language, map them to visual scene understanding, and generate precise action sequences. This positions IRVIS on the leading edge of what the robotics field calls "foundation model robotics": robots that can be retrained for new inspection tasks through instruction rather than manual reprogramming.</p>
+
+      <div class="product-row">
+        <div class="product-card active">
+          <div class="product-name">Vision-Guided Control</div>
+          <div class="product-code">Core Layer</div>
+          <div class="product-desc">3D coordinate transformation, adaptive positioning, and precision calibration. Converts camera data to robot control coordinates in real time — enabling accurate inspection even when object position or size changes.</div>
+          <div class="product-badge">Deployed at LG</div>
+        </div>
+        <div class="product-card active">
+          <div class="product-name">QC Automation Software</div>
+          <div class="product-code">Workflow Layer</div>
+          <div class="product-desc">Standardizes complex inspection sequences in software. Inspection workflow automation, quality standardization across lines and shifts, and data integration with MES systems. Deployed across ESD, audio, and display inspection use cases.</div>
+          <div class="product-badge">Deployed at LG</div>
+        </div>
+      </div>
+
+      <h2>The LG Electronics Partnership: The Best Early Customer a Robotics Startup Can Have</h2>
+      <p>For a company founded in November 2024, IRVIS's commercial traction is exceptional. By February 2025 — three months after founding — the company had signed its <strong>first contract with LG Electronics</strong> for ESD (Electrostatic Discharge) test automation equipment, and had filed a patent for its core Test Robot System for Device Under Test. The speed from founding to signed contract with a global electronics manufacturer is almost without precedent in Korean deep-tech.</p>
+      <p>The LG relationship did not stop at one contract. A second agreement followed in <strong>June 2025</strong> for an automated audio measurement system. A third in <strong>October 2025</strong> for video measurement software automation. And a fourth in <strong>April 2026</strong> for integrated management software covering various LG Display QC equipment — extending the relationship from LG Electronics into the LG Display subsidiary and from single-use automation into multi-system management software.</p>
+      <p>The performance data from the initial LG deployment is what makes this relationship particularly significant. IRVIS's ESD inspection system increased LG's automated measurement success rate from <strong>85% to 98%</strong> — a 14-percentage-point improvement. It achieved a test precision error rate within <strong>±1mm</strong>. It reduced testing time by <strong>33%</strong>. These are not marginal improvements. They represent the kind of performance delta that justifies replacing existing systems and establishing a strategic supplier relationship.</p>
+      <p>For investors evaluating IRVIS, the LG relationship functions as a proof point that addresses the central risk in early-stage industrial automation startups: the question of whether laboratory performance translates to factory-floor performance under production conditions. IRVIS has answered that question affirmatively, at scale, with one of the world's most demanding electronics manufacturers as its reference customer.</p>
+
+      <h2>The Dual-Hub Strategy: Seoul and Paris</h2>
+      <p>In <strong>April 2026</strong>, IRVIS confirmed tenancy at <strong>Station F</strong> in Paris — the world's largest startup campus, housed in a converted 19th-century railway station in the 13th arrondissement — and was selected for the <strong>HEC Incubation Program</strong>, run by one of Europe's leading business schools. This development, combined with a research internship agreement with <strong>ENS Paris Saclay</strong> (signed December 2025), establishes IRVIS as a genuinely dual-market company at the seed stage.</p>
+      <p>The strategic logic for Europe is straightforward. European manufacturing — particularly in Germany, France, and the Benelux countries — faces a structural inspection automation gap similar to Korea's. Europe's automotive, aerospace, and industrial equipment sectors operate complex quality control requirements with labor-intensive inspection processes. At the same time, European policymakers and manufacturers are actively investing in "Industry 4.0" digital manufacturing — creating both demand and funding programs for exactly the kind of AI-driven inspection automation IRVIS provides.</p>
+      <p>The HEC and ENS Paris Saclay connections give IRVIS something that most Korean deep-tech startups lack when attempting European expansion: credentialed academic and institutional relationships that signal legitimacy to European enterprise procurement teams. And Station F's network — which includes Amazon, BNP Paribas, LVMH, Microsoft, and dozens of European corporate partners operating accelerator programs on-site — provides direct access to European enterprise decision-makers who could become IRVIS's next reference customers.</p>
+      <p>From the Seoul HQ, the global expansion is further supported by <strong>2080 Ventures</strong> — IRVIS's lead Seed investor, a US-headquartered accelerator and VC operating in 10+ countries including Korea — which provides access to East Asian, ASEAN, and Middle Eastern market networks alongside its capital.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Seoul HQ</div>
+          <div class="spec-value">Gwanak-gu</div>
+          <div class="spec-note">Sillim-ro 117, within SNU Campus Town ecosystem. R&D operations, Korean customer development, and the primary engineering team.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Paris Office</div>
+          <div class="spec-value">Station F</div>
+          <div class="spec-note">World's largest startup campus. HEC Incubation Program + ENS Paris Saclay research partnership. European enterprise market development.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Academic Partner</div>
+          <div class="spec-value">Seoul National University</div>
+          <div class="spec-note">SNU Campus Town HERO 3 resident (Jul 2025). New Technology Research Agreement with SNU Office of Research Affairs. CSO Taewan Kim is SNU professor.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Quality Standard</div>
+          <div class="spec-value">ISO 9001:2015</div>
+          <div class="spec-note">Certified December 2025, 13 months after founding. Signals operational maturity and is a prerequisite for procurement at large enterprise customers in regulated industries.</div>
+        </div>
+      </div>
+
+      <h2>Funding & Development Timeline</h2>
+      <p>IRVIS has completed two seed funding rounds. The first, in <strong>November 2025</strong>, was led by <strong>2080 Ventures</strong> — a US-based global accelerator/VC with operations in 10+ countries. The second, in <strong>March 2026</strong>, included participation from <strong>Y&ARCHER</strong>. The company is also a recipient of Korea's <strong>Early-Stage Startup Package</strong> (초기창업패키지), a government matching program selected in July 2025. Specific per-round amounts have not been publicly disclosed; total Seed capital has been reported at approximately $200K+ in revenue from commercial pilots plus undisclosed institutional investment from the two rounds.</p>
+
+      <table class="milestone-table">
+        <thead><tr><th>Date</th><th>Milestone</th></tr></thead>
+        <tbody>
+          <tr><td>Nov 2024</td><td>IRVIS Co., Ltd. (아일비스) incorporated — Gwanak-gu, Seoul. CEO Gukwon Chung (정국원). Focus: AI vision-guided robotic inspection automation.</td></tr>
+          <tr><td>Feb 2025</td><td>Patent filed: Test Robot System for Device Under Test. First LG Electronics contract signed: ESD (Electrostatic Discharge) test automation equipment.</td></tr>
+          <tr><td>Apr 2025</td><td>Dedicated R&D department established. Team begins development of AI learning-based robotic control system alongside commercial deployments.</td></tr>
+          <tr><td>Jun 2025</td><td>Second LG Electronics contract: automated audio measurement system. AI learning-based robotic control system development initiated.</td></tr>
+          <tr><td>Jul 2025</td><td>Selected for Early-Stage Startup Package (government private investment matching). Selected as resident startup for SNU Campus Town HERO 3. New Technology Research Agreement signed with SNU Office of Research Affairs.</td></tr>
+          <tr><td>Sep 2025</td><td>Excellence Award (National Assembly Member's Award) at 7th 2025 Youth Startup Awards. Grand Prize at 2025 SNU Campus Town INVEST ON Competition.</td></tr>
+          <tr><td>Oct 2025</td><td>Third LG Electronics contract: video measurement software automation. LG relationship now covers three separate inspection use cases across ESD, audio, and display QC.</td></tr>
+          <tr><td>Nov 2025</td><td>Seed Investment Round 1 (2080 Ventures). Venture Company certification received. Company is 12 months old with three LG contracts and seed capital secured.</td></tr>
+          <tr><td>Dec 2025</td><td>ISO 9001:2015 quality management certification achieved. ENS Paris Saclay internship research contract signed — European R&D pipeline begins.</td></tr>
+          <tr><td>Mar 2026</td><td>Seed Investment Round 2 (Y&ARCHER). Additional capital to support European expansion and LG Display program development.</td></tr>
+          <tr><td>Apr 2026</td><td>Fourth LG contract: integrated management software for LG Display QC equipment — expanding relationship from LG Electronics into LG Display. Station F tenancy confirmed. Selected for HEC Incubation Program.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Market: Industrial Inspection Automation Is a Decade-Long Opportunity</h2>
+      <p>The market IRVIS is addressing is large, structurally underserved, and growing faster than most investors appreciate. The global <strong>machine vision market</strong> — cameras, lighting, and processing systems used for automated inspection — was valued at approximately <strong>$9.7 billion</strong> in 2025 and is projected to grow to <strong>$15+ billion by 2030</strong>. But machine vision, on its own, is the passive sensing layer. The larger opportunity lies in intelligent robotics: systems that can act on visual data to perform complex inspection tasks, not just detect surface anomalies.</p>
+      <p>The <strong>AI-driven industrial robotics market</strong> — which is what IRVIS participates in — is a rapidly expanding segment within the broader $240+ billion global industrial automation market. Korea's manufacturing sector, which includes some of the world's largest electronics producers (LG Electronics, Samsung Electronics, SK Hynix) and automotive manufacturers (Hyundai, Kia), represents one of the highest-density addressable markets for AI robotic inspection globally: high product volumes, demanding quality requirements, and constant pressure to reduce human labor in quality verification.</p>
+      <p>Europe represents a second large TAM. Germany's automotive and industrial equipment sectors alone spend billions annually on quality inspection infrastructure. France's aerospace and defense manufacturing (Airbus, Safran, Thales) has similarly demanding QC requirements. IRVIS's Station F presence and HEC connections are not early positioning — they are active market development.</p>
+      <p>The competitive moat in this market builds quickly. Once a factory's inspection robots are calibrated to IRVIS's vision-guided control system, and once the QC data from those robots is integrated into the factory's MES, switching costs become very high. This is a software-defined hardware business where initial deployment creates durable customer lock-in — the same dynamic that makes industrial software companies like PTC, Siemens PLM, and Rockwell Automation structurally valuable.</p>
+
+      <h2>Why IRVIS Matters: The Signal Box</h2>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Signal Box — Why IRVIS Is Worth Watching</div>
+        <ul class="signal-list">
+          <li><strong>LG Electronics is the best possible reference customer for this market:</strong> LG produces tens of millions of consumer electronics devices annually across TV, appliances, and mobile products. Getting three contracts with LG Electronics in a company's first year isn't just impressive — it means IRVIS's technology works on production lines that operate 24/7 at scale. Every subsequent enterprise customer pitch starts with "we already work with LG Electronics."</li>
+          <li><strong>The 85%→98% performance improvement is a decision-maker number:</strong> Enterprise procurement is not won with demos. It's won with measurable outcomes. A 14-percentage-point improvement in robot success rate, precision within ±1mm, and 33% faster testing are numbers that finance departments can model and manufacturing VPs can approve capital budgets around.</li>
+          <li><strong>Dual-city seed-stage is rare and strategic:</strong> Most Korean deep-tech startups wait until Series A or B to attempt European expansion. IRVIS opened a Paris office at Station F as a seed-stage company — because its CTO and several engineers are European, its academic partnerships include ENS Paris Saclay, and European manufacturing is a genuine TAM, not a brand exercise. This is a company that understood its geographic strategy early.</li>
+          <li><strong>The VLA model direction aligns with where industrial robotics is heading:</strong> Foundation model robotics — where robots learn from natural language instructions and visual demonstration rather than manual reprogramming — is the most significant long-term shift in industrial automation. IRVIS building toward VLA architecture positions it at the frontier of this transition, not as a lagging adopter.</li>
+          <li><strong>SNU + 2080 Ventures + HEC creates a defensible support network:</strong> Korea's government startup support infrastructure (Campus Town, Early-Stage Package), SNU's R&D relationships, 2080 Ventures' global network, and HEC's European enterprise connections together give IRVIS a support ecosystem that is unusually hard to replicate for a company of its stage.</li>
+          <li><strong>ISO 9001:2015 at 13 months signals operational discipline:</strong> Most hardware startups don't pursue quality management certification until they're preparing for enterprise RFPs. IRVIS achieving ISO 9001:2015 in December 2025 — just over a year after founding — suggests a management team that understands what enterprise customers require and builds toward those requirements early.</li>
+        </ul>
+      </div>
+
+      <p>The investment thesis for IRVIS is straightforward: a seed-stage company has achieved extraordinary early commercial traction (three LG Electronics contracts in Year 1), built a technology that demonstrably outperforms incumbents on real production lines (85%→98%), opened a second market (Station F, Paris) before most startups have found their first, and assembled a team with the right combination of engineering depth and commercial credibility to execute on the opportunity.</p>
+      <p>The primary risk is the one that applies to all hardware startups: scaling from three customer deployments to thirty requires operational infrastructure, supply chain, and service capacity that costs money and takes time to build. The milestones to watch: Series A timing and structure, expansion of the LG relationship into additional LG Group entities (beyond LG Electronics and LG Display), first European customer announcement, and the eventual VLA model deployment on a production line.</p>
+      <p>At the seed stage, IRVIS is one of the most interesting deep-tech companies we've tracked in Korea — precisely because it moved so fast from founding to meaningful commercial revenue with a global manufacturer as its anchor customer.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">Dnotitia (디노타이티아)</span>
+          <span class="otw-stage">Series A · $61.2M</span>
+        </div>
+        <div class="otw-tagline">Korea's answer to Nvidia — a VDPU for next-generation AI infrastructure</div>
+        <div class="otw-body">Dnotitia designs VDPU (Vector Data Processing Unit) chips optimized for generative AI inference and training workloads — a homegrown Korean alternative to Nvidia's GPU architecture for specific AI compute use cases. The company closed a $61.2M Series A in July 2026, one of the largest single AI semiconductor funding rounds in Korean history. Dnotitia's differentiation is architectural: while GPUs are general-purpose accelerators adapted for AI, the VDPU is designed from the ground up for the vector math operations that dominate transformer model inference — offering better energy efficiency and throughput per dollar for specific workloads. This positions the company in the global AI chip race alongside Groq, Tenstorrent, and Graphcore — but with Korean manufacturing relationships and a domestic customer base that includes Korean AI cloud providers and hyperscalers building AI infrastructure in Asia.</div>
+        <div class="otw-signal"><strong>Watch for:</strong> First production tape-out milestones, Korean AI cloud customer announcements, and strategic investment from Samsung or SK Hynix as validation of the silicon architecture.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">프레이저테라퓨틱스 (Fraizer Therapeutics)</span>
+          <span class="otw-stage">Pre-IPO · ₩500억</span>
+        </div>
+        <div class="otw-tagline">Targeted protein degradation drugs — a new category of oncology treatment entering Korea's clinical pipeline</div>
+        <div class="otw-body">Fraizer Therapeutics is developing targeted protein degradation (TPD) therapies — a drug modality that marks disease-causing proteins for destruction by the cell's own proteasome system, rather than blocking them the way conventional drugs do. The approach, using degrader molecules including PROTACs and molecular glues, allows Fraizer to target proteins that have historically been considered "undruggable" — a class that includes many of the most important oncology targets. The company closed a ₩500억 Pre-IPO round in July 2026, signaling preparation for a KOSDAQ listing that would provide liquidity for early investors and additional development capital. Korea's biopharmaceutical sector has produced several successful TPD programs since the field was pioneered by researchers at Yale and the Ciulli lab in Dundee, and Fraizer's large Pre-IPO round reflects both scientific progress and market readiness.</div>
+        <div class="otw-signal"><strong>Watch for:</strong> KOSDAQ IPO filing, Phase 1 clinical trial results for the lead PROTAC program, and potential licensing discussions with global pharma partners in oncology.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">노바테크 (Novatech)</span>
+          <span class="otw-stage">Series A · ₩70억</span>
+        </div>
+        <div class="otw-tagline">Industrial robot orchestration platform — the software layer that makes multi-robot factories manageable</div>
+        <div class="otw-body">While IRVIS solves the individual robot inspection problem, Novatech addresses the coordination layer above it: how do factories manage fleets of robots from different manufacturers, running different tasks, on the same production floor? The industrial robot orchestration platform market has emerged as a critical infrastructure need as factories move from single-robot deployments to multi-robot, multi-vendor environments. Novatech's platform allows production managers to schedule, monitor, and optimize robot workflows across heterogeneous fleets — analogous to what Kubernetes does for containerized software, but for factory robots. The ₩70억 Series A in July 2026 reflects growing enterprise demand from Korean automotive and electronics manufacturers who are rapidly expanding robot density but struggling with the software integration complexity this creates. IRVIS and Novatech are complementary: one handles the robot's vision intelligence, the other manages the fleet.</div>
+        <div class="otw-signal"><strong>Watch for:</strong> Hyundai Motor or Samsung Electronics pilot announcements, integration partnerships with ABB or Fanuc robot hardware vendors, and Series B timing as the fleet management market consolidates.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Round</th>
+          <th>Sector</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="deal-company">홀리데이로보틱스 (Holiday Robotics)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td><div class="deal-amount">$113M (₩1,550억)</div></td>
+          <td>Jul 2026</td>
+          <td>Humanoid Robotics</td>
+          <td><div class="deal-note">Korea's largest single robotics funding round. Humanoid robot platform developer targeting manufacturing and logistics applications. Covered as main topic in Issue #013. Round signals Korea's entry into the global humanoid robotics arms race alongside Figure, Boston Dynamics, and Agility Robotics.</div></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">Dnotitia (디노타이티아)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td><div class="deal-amount">$61.2M</div></td>
+          <td>Jul 13, 2026</td>
+          <td>AI Semiconductor</td>
+          <td><div class="deal-note">VDPU (Vector Data Processing Unit) chip for generative AI environments. One of the largest Korean AI semiconductor rounds of 2026. Targets inference and training workloads with architecture purpose-built for transformer model vector operations. Featured in this issue's Ones to Watch.</div></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">프레이저테라퓨틱스 (Fraizer Therapeutics)</div>
+            <div class="deal-round">Pre-IPO</div>
+          </td>
+          <td><div class="deal-amount">$36M (₩500억)</div></td>
+          <td>Jul 2026</td>
+          <td>Biotech / Oncology</td>
+          <td><div class="deal-note">Targeted protein degradation (TPD) drug developer — PROTAC and molecular glue modalities targeting "undruggable" oncology proteins. Pre-IPO round precedes expected KOSDAQ listing. Featured in this issue's Ones to Watch.</div></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">플렉셀스페이스 (Plexel Space)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td><div class="deal-amount">$18M (₩250억)</div></td>
+          <td>Jul 2026</td>
+          <td>Space Tech</td>
+          <td><div class="deal-note">Space solar cell technology company developing high-efficiency photovoltaic systems for satellite and space station power applications. One of very few Korean space deep-tech companies to attract Series A capital. Reflects growing global interest in space infrastructure as a near-term investment category.</div></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">노바테크 (Novatech)</div>
+            <div class="deal-round">Series A</div>
+          </td>
+          <td><div class="deal-amount">$5.1M (₩70억)</div></td>
+          <td>Jul 2026</td>
+          <td>Industrial Robotics</td>
+          <td><div class="deal-note">Industrial robot orchestration platform for multi-robot, multi-vendor factory environments. Complementary to IRVIS in the manufacturing AI stack — IRVIS handles per-robot vision intelligence; Novatech manages fleet-level coordination. Featured in this issue's Ones to Watch.</div></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="deal-company">IRVIS (아일비스)</div>
+            <div class="deal-round strategic">Seed 2nd</div>
+          </td>
+          <td><div class="deal-amount">Undisclosed</div></td>
+          <td>Mar 2026</td>
+          <td>AI Robotic Inspection</td>
+          <td><div class="deal-note">This issue's main deep dive. Seed Round 2 led by Y&ARCHER, following Seed Round 1 by 2080 Ventures (Nov 2025). Capital supporting European expansion (Station F, Paris) and LG Display integrated QC management software development. Three LG Electronics contracts in Year 1.</div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ALL ISSUES NAV -->
+<section class="all-issues-section">
+  <div class="all-issues-inner">
+    <div class="all-issues-header">
+      <span class="all-issues-label">All Issues</span>
+      <a href="index.html#archive" class="all-issues-link">View archive →</a>
+    </div>
+    <div class="all-issues-grid">
+      <a href="article.html" class="nav-issue-item">
+        <span class="nav-issue-num">#001</span>
+        <span class="nav-issue-title">Introducing Korea Startup Thesis</span>
+        <span class="nav-issue-date">Mar 23, 2025</span>
+      </a>
+      <a href="article2.html" class="nav-issue-item">
+        <span class="nav-issue-num">#002</span>
+        <span class="nav-issue-title">Moloco: Korea's Quiet Advertising AI Giant</span>
+        <span class="nav-issue-date">Mar 30, 2025</span>
+      </a>
+      <a href="article3.html" class="nav-issue-item">
+        <span class="nav-issue-num">#003</span>
+        <span class="nav-issue-title">S2W: Reading the Dark Web So You Don't Have To</span>
+        <span class="nav-issue-date">Apr 6, 2025</span>
+      </a>
+      <a href="article4.html" class="nav-issue-item">
+        <span class="nav-issue-num">#004</span>
+        <span class="nav-issue-title">BioNexus: Liquid Biopsy Meets Korean Precision Medicine</span>
+        <span class="nav-issue-date">Apr 13, 2025</span>
+      </a>
+      <a href="article5.html" class="nav-issue-item">
+        <span class="nav-issue-num">#005</span>
+        <span class="nav-issue-title">Wrtn Technologies: Korea's Consumer AI Moment</span>
+        <span class="nav-issue-date">Apr 20, 2025</span>
+      </a>
+      <a href="article6.html" class="nav-issue-item">
+        <span class="nav-issue-num">#006</span>
+        <span class="nav-issue-title">Humanscape: The Health Data Platform Hiding in Plain Sight</span>
+        <span class="nav-issue-date">Apr 27, 2025</span>
+      </a>
+      <a href="article7.html" class="nav-issue-item">
+        <span class="nav-issue-num">#007</span>
+        <span class="nav-issue-title">Meditrics: The AI Cardiologist Built From 10 Million ECGs</span>
+        <span class="nav-issue-date">May 4, 2025</span>
+      </a>
+      <a href="article8.html" class="nav-issue-item">
+        <span class="nav-issue-num">#008</span>
+        <span class="nav-issue-title">SMT Bio: Engineering the Next Generation of Probiotics</span>
+        <span class="nav-issue-date">May 11, 2025</span>
+      </a>
+      <a href="article9.html" class="nav-issue-item">
+        <span class="nav-issue-num">#009</span>
+        <span class="nav-issue-title">Arontier: AI Drug Discovery Built on Protein Structure</span>
+        <span class="nav-issue-date">May 18, 2025</span>
+      </a>
+      <a href="article10.html" class="nav-issue-item">
+        <span class="nav-issue-num">#010</span>
+        <span class="nav-issue-title">Centrics Bio: Cracking the Immune Code for Solid Tumors</span>
+        <span class="nav-issue-date">May 25, 2025</span>
+      </a>
+      <a href="article11.html" class="nav-issue-item">
+        <span class="nav-issue-num">#011</span>
+        <span class="nav-issue-title">Intellisia: The Korean Startup Rebuilding How Satellites See Earth</span>
+        <span class="nav-issue-date">Jun 1, 2025</span>
+      </a>
+      <a href="article12.html" class="nav-issue-item">
+        <span class="nav-issue-num">#012</span>
+        <span class="nav-issue-title">엣진 (Atjin): The AI Company Making Korea's Bureaucracy Usable</span>
+        <span class="nav-issue-date">Jun 8, 2025</span>
+      </a>
+      <a href="article13.html" class="nav-issue-item">
+        <span class="nav-issue-num">#013</span>
+        <span class="nav-issue-title">Holiday Robotics: Korea's Humanoid Robot Bet</span>
+        <span class="nav-issue-date">Jun 22, 2025</span>
+      </a>
+      <a href="article14.html" class="nav-issue-item">
+        <span class="nav-issue-num">#014</span>
+        <span class="nav-issue-title">Radixel: The Korean Startup Rebuilding Radiation Therapy with AI</span>
+        <span class="nav-issue-date">Jul 6, 2025</span>
+      </a>
+      <a href="article15.html" class="nav-issue-item">
+        <span class="nav-issue-num">#015</span>
+        <span class="nav-issue-title">BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine</span>
+        <span class="nav-issue-date">Aug 3, 2026</span>
+      </a>
+      <a href="article16.html" class="nav-issue-item nav-issue-active">
+        <span class="nav-issue-num">#016</span>
+        <span class="nav-issue-title">IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots</span>
+        <span class="nav-issue-date">Aug 10, 2026</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Get Korea Startup Thesis in your inbox</h3>
+    <p>One deep dive per week. Korean startups worth watching for global VC and angel investors.</p>
+    <div class="sub-form">
+      <input type="email" id="emailInput" placeholder="you@example.com">
+      <button onclick="handleSubscribe()">Subscribe</button>
+    </div>
+    <p class="sub-meta" id="subMsg"></p>
+    <p class="sub-meta">No spam. Unsubscribe any time.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+  </div>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<!-- FABs -->
+<button class="fab" id="fabSub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe() {
+    const email = document.getElementById('emailInput').value.trim();
+    const msg = document.getElementById('subMsg');
+    if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email.'; return; }
+    msg.textContent = 'Subscribing…';
+    try {
+      const r = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article16' })
+      });
+      if (r.ok || r.status === 409) {
+        msg.textContent = r.status === 409 ? "You're already subscribed!" : '✓ Subscribed! Welcome.';
+        document.getElementById('emailInput').value = '';
+      } else { msg.textContent = 'Something went wrong. Please try again.'; }
+    } catch(e) { msg.textContent = 'Network error. Please try again.'; }
+  }
+
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  const fabSub = document.getElementById('fabSub');
+  const fabTop = document.getElementById('fabTop');
+  const sub = document.querySelector('.subscribe-section');
+  window.addEventListener('scroll', () => {
+    const subTop = sub.getBoundingClientRect().top;
+    const scrolled = window.scrollY > 300;
+    fabSub.classList.toggle('visible', subTop > window.innerHeight && scrolled);
+    fabTop.classList.toggle('visible', scrolled);
+  });
+</script>
+</body>
+</html>
