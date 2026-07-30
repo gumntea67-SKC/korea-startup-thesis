@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article18.html">
+
+  <meta name="description" content="OpenM (오픈엠) spent 10 years engineering OpenCast™ — an open-lattice thermoplastic orthopedic cast that is waterproof, breathable, and custom-fit in under 5 minutes. With 11 domestic patents, CE certification, national health insurance coverage, and 70+ hospital deployments, it is now replacing plaster in Korea and exporting to 9 countries.">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="OpenM, 오픈엠, OpenCast, 오픈캐스트, thermoplastic cast, orthopedic cast Korea, MedTech Korea, fracture cast innovation, Korean medical device startup, Daejeon startup">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast">
+  <meta property="og:description" content="10 years of R&D. 11 patents. Waterproof, breathable, and custom-fit in 5 minutes. OpenM is building the new standard for orthopedic casting — one hospital at a time.">
+  <meta property="og:url" content="https://koreastartupthesis.com/article18.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article18.png">
+  <meta property="article:published_time" content="2026-09-14T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="MedTech">
+  <meta property="article:tag" content="Orthopaedics">
+  <meta property="article:tag" content="Patient Experience">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast">
+  <meta name="twitter:description" content="A waterproof, breathable, custom-fit cast that hardens in 5 minutes. OpenM (오픈엠) spent 10 years engineering the orthopedic product that plaster couldn't be.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article18.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast",
+    "description": "OpenM (오픈엠), founded in 2007 in Daejeon's Daedeok Research Zone, developed OpenCast™ — an open-lattice thermoplastic orthopedic cast. The 20cm×40cm sheets heat to 70°C, become malleable, wrap to the patient's limb, and harden in 5 minutes. The result is waterproof, breathable, skin-visible, and custom-fit — properties that traditional plaster cannot offer. The company holds 11 domestic and 34 international patents, carries CE and ISO 13485 certifications, and has been covered under Korea's national health insurance (선별급여) since 2019.",
+    "datePublished": "2026-09-14T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article18.html",
+    "about": [{ "@type": "Organization", "name": "OpenM", "alternateName": "오픈엠" }],
+    "keywords": "OpenM, 오픈엠, OpenCast, thermoplastic cast, orthopedic MedTech, Korea medical startup, waterproof cast, Daedeok"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #059669;
+      --accent-light: #d1fae5;
+      --accent-dark: #047857;
+      --nav-dark: #065f46;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    .hero {
+      background: #f0fdf4;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 20px; height: 2px; background: var(--accent); border-radius: 1px;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 500; letter-spacing: -0.8px; line-height: 1.2;
+      color: var(--nav-dark); margin-bottom: 20px; max-width: 640px;
+    }
+    .hero-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--gray-2); }
+    .hero-meta span::before { content: '·'; margin-right: 16px; color: var(--gray-3); }
+    .hero-meta span:first-child::before { display: none; }
+
+    .kpi-bar {
+      max-width: 760px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-4); border-top: 1px solid var(--gray-4);
+    }
+    .kpi-item { padding: 24px 28px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+    .kpi-label { font-size: 11px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      max-width: 760px; margin: 0 auto;
+      display: flex; border-bottom: 1px solid var(--gray-4);
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      padding: 14px 24px; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s;
+    }
+    .tab-btn:hover { color: var(--black); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    .prose h2 { font-size: 18px; font-weight: 500; letter-spacing: -0.3px; margin: 40px 0 12px; color: var(--black); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 15px; line-height: 1.8; color: #333; margin-bottom: 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { font-weight: 500; color: var(--black); }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px; margin: 32px 0;
+      background: var(--accent-light);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .pull-quote p { font-size: 16px; line-height: 1.7; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    .spec-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .spec-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 16px 20px; background: var(--gray-5);
+    }
+    .spec-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-2); margin-bottom: 4px; }
+    .spec-value { font-size: 18px; font-weight: 500; color: var(--accent); letter-spacing: -0.3px; }
+    .spec-note { font-size: 12px; color: var(--gray-1); margin-top: 3px; line-height: 1.5; }
+
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .milestone-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 1px solid var(--gray-4);
+    }
+    .milestone-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; color: #333; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; width: 72px; }
+
+    .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .cert-card {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 16px 20px;
+    }
+    .cert-badge {
+      font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--accent-dark); background: var(--accent-light);
+      display: inline-block; padding: 2px 8px; border-radius: var(--radius-sm); margin-bottom: 6px;
+    }
+    .cert-title { font-size: 13px; font-weight: 500; color: var(--black); margin-bottom: 3px; }
+    .cert-body { font-size: 12px; color: var(--gray-1); line-height: 1.5; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .compare-table th {
+      text-align: left; padding: 10px 14px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .compare-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child { font-weight: 500; color: var(--black); }
+    .compare-table .old { color: var(--gray-2); }
+    .compare-table .new { color: var(--accent-dark); font-weight: 500; }
+
+    .signal-box {
+      border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      padding: 20px 24px; margin: 32px 0;
+    }
+    .signal-box-title {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--gray-2); margin-bottom: 12px;
+    }
+    .signal-list { list-style: none; }
+    .signal-list li {
+      font-size: 14px; color: #333; line-height: 1.6;
+      padding: 6px 0; border-bottom: 1px solid var(--gray-4);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .signal-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .signal-list li::before { content: '→'; color: var(--accent); font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+
+    .otw-grid { display: flex; flex-direction: column; gap: 0; }
+    .otw-item { padding: 24px 0; border-bottom: 1px solid var(--gray-4); }
+    .otw-item:last-child { border-bottom: none; }
+    .otw-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; gap: 16px; }
+    .otw-name { font-size: 16px; font-weight: 500; letter-spacing: -0.2px; }
+    .otw-stage {
+      font-size: 11px; font-weight: 500; padding: 2px 8px;
+      background: var(--accent-light); color: var(--accent-dark);
+      border-radius: var(--radius-sm); white-space: nowrap; flex-shrink: 0;
+    }
+    .otw-tagline { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); margin-top: 8px; }
+    .otw-signal strong { color: var(--black); font-weight: 500; }
+
+    .deal-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .deal-table th {
+      text-align: left; padding: 8px 12px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gray-2); border-bottom: 2px solid var(--gray-4); background: var(--gray-5);
+    }
+    .deal-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); vertical-align: top; }
+    .deal-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); }
+    .deal-round {
+      display: inline-block; font-size: 11px; font-weight: 500;
+      background: var(--accent-light); color: var(--accent-dark);
+      padding: 2px 7px; border-radius: var(--radius-sm); margin-top: 2px;
+    }
+    .deal-round.gov { background: #e0f2fe; color: #0c4a6e; }
+    .deal-round.preipo { background: #f3e8ff; color: #6b21a8; }
+    .deal-amount { font-weight: 500; color: var(--accent); }
+    .deal-note { font-size: 12px; color: var(--gray-2); margin-top: 3px; }
+
+    .subscribe-section { background: var(--nav-dark); padding: 48px 40px; }
+    .subscribe-inner { max-width: 480px; margin: 0 auto; text-align: center; }
+    .subscribe-inner h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+    .subscribe-inner p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .sub-form { display: flex; gap: 8px; }
+    .sub-form input {
+      flex: 1; font-size: 14px; padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.07); color: #fff; outline: none;
+    }
+    .sub-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .sub-form input:focus { border-color: var(--accent); }
+    .sub-form button {
+      font-size: 14px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 10px 20px; cursor: pointer; white-space: nowrap;
+    }
+    .sub-form button:hover { background: var(--accent-dark); }
+    .sub-meta { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    footer {
+      border-top: 1px solid var(--gray-4); padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-left { font-size: 13px; font-weight: 500; }
+    .footer-right { font-size: 12px; color: var(--gray-3); }
+    .footer-nav { display: flex; gap: 20px; }
+    .footer-nav a { font-size: 12px; color: var(--gray-3); }
+    .footer-nav a:hover { color: var(--gray-1); }
+
+    .fab {
+      position: fixed; bottom: 32px; right: 32px;
+      background: var(--accent); color: #fff;
+      border: none; border-radius: 50px; padding: 12px 20px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(5,150,105,0.35);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .fab.visible { opacity: 1; pointer-events: auto; }
+    .fab:hover { background: var(--accent-dark); }
+
+    .back-link { max-width: 760px; margin: 0 auto; padding: 16px 40px 0; }
+    .back-link a { font-size: 13px; color: var(--gray-2); display: inline-flex; align-items: center; gap: 4px; }
+    .back-link a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { padding: 40px 20px 36px; }
+      .kpi-bar { grid-template-columns: repeat(2, 1fr); }
+      .article-body { padding: 28px 20px 60px; }
+      .back-link { padding: 16px 20px 0; }
+      .tab-btn { padding: 12px 14px; font-size: 12px; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .sub-form { flex-direction: column; }
+      .subscribe-section { padding: 40px 20px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px; }
+      .fab { bottom: 20px; right: 20px; }
+    }
+
+    /* ALL ISSUES NAV */
+    .all-issues-section {
+      border-top: 1px solid var(--gray-4);
+      background: var(--gray-5);
+      padding: 40px;
+    }
+    .all-issues-inner { max-width: 760px; margin: 0 auto; }
+    .all-issues-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .all-issues-label {
+      font-size: 11px; font-weight: 500; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-2);
+    }
+    .all-issues-link { font-size: 12px; color: var(--gray-2); }
+    .all-issues-link:hover { color: var(--black); }
+    .all-issues-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    }
+    .nav-issue-item {
+      display: grid; grid-template-columns: 36px 1fr auto;
+      gap: 10px; align-items: baseline;
+      padding: 10px 12px; border-radius: var(--radius-md);
+      transition: background 0.12s;
+    }
+    .nav-issue-item:hover { background: var(--gray-4); }
+    .nav-issue-active { background: var(--accent-light) !important; }
+    .nav-issue-num {
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.04em; white-space: nowrap;
+    }
+    .nav-issue-active .nav-issue-num { color: var(--accent-dark); }
+    .nav-issue-title {
+      font-size: 12px; color: var(--black); line-height: 1.4;
+      overflow: hidden; display: -webkit-box;
+      -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+    .nav-issue-active .nav-issue-title { font-weight: 500; color: var(--accent-dark); }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; }
+    @media (max-width: 600px) {
+      .all-issues-section { padding: 28px 20px; }
+      .all-issues-grid { grid-template-columns: 1fr; }
+      .nav-issue-item { grid-template-columns: 36px 1fr; }
+      .nav-issue-date { display: none; }
+    }
+
+    /* BACK TO TOP FAB */
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 201;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gray-5); color: var(--gray-1);
+      border: 1px solid var(--gray-4); cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .fab-top.visible { opacity: 1; pointer-events: auto; }
+    .fab-top:hover { background: var(--gray-4); color: var(--black); }
+    @media (max-width: 600px) { .fab-top { bottom: 76px; right: 20px; } }
+  </style>
+  <!-- Vercel Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo"><a href="index.html">Korea Startup Thesis</a></span>
+  <div class="nav-right">
+    <a href="index.html#archive" class="nav-link">Archive</a>
+    <a href="index.html" class="nav-link">About</a>
+    <button class="btn-sub" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+  </div>
+</nav>
+
+<div class="back-link"><a href="index.html">← All issues</a></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #018 &nbsp;·&nbsp; Company Deep Dive</div>
+    <h1>OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast</h1>
+    <div class="hero-meta">
+      <span>September 14, 2026</span>
+      <span>MedTech</span>
+      <span>Orthopaedics</span>
+      <span>Patient Experience</span>
+    </div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item">
+    <div class="kpi-value">100M Patients/Year</div>
+    <div class="kpi-label">The global addressable population of fracture patients requiring casting annually — OpenM's OpenCast™ targets this as the next standard of care, replacing plaster and fiberglass worldwide.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">10 Years R&D</div>
+    <div class="kpi-label">Years of engineering from founding (2007) through commercial launch (June 2022) — the depth of materials science beneath a product that looks deceptively simple.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">11 Patents</div>
+    <div class="kpi-label">Domestic Korean patents held, plus 34 international patent filings — covering the open-lattice thermoplastic structure, forming process, and clinical application methods.</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-value">9 Countries</div>
+    <div class="kpi-label">Active export markets as of 2019, generating $494,910 in export revenue within the first year of commercial distribution — before the domestic rollout was complete.</div>
+  </div>
+</div>
+
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Problem: A 170-Year-Old Device That Medicine Never Replaced</h2>
+      <p>The plaster cast (석고붕대) was introduced in 1851 by Dutch military surgeon Antonius Mathijsen. In the 175 years since, it has become one of the most recognizable medical devices on Earth — and one of the least improved. When a patient fractures a bone today, the clinical procedure is nearly identical to what a field medic would have done in the 19th century: wet strips of plaster-impregnated bandage are wrapped around the limb, left to set for 15–20 minutes, and worn for 6–8 weeks.</p>
+      <p>The problems with this approach are well-documented and widely tolerated. Traditional plaster is heavy, typically adding 1–3 kg to the affected limb. It is not waterproof: patients cannot shower without elaborate wrapping rituals and risk mold, skin maceration, and cast disintegration if moisture penetrates. It is opaque, meaning clinicians cannot visually inspect the skin beneath without removing the cast — which requires cutting and re-casting, adding clinical cost and patient discomfort. And it is not custom-fit: the wrapping process approximates the limb shape, but gaps between cast and skin create pressure points, friction, and, in severe cases, pressure ulcers.</p>
+      <p>Fiberglass casts (arrived in the 1970s) addressed the weight issue — they are roughly 40% lighter than plaster — but reproduced the same fundamental constraints: non-waterproof, opaque, not breathable, not custom-fit. After five decades, fiberglass remains the current clinical standard. The orthopedic casting market has not had a meaningful technological inflection since Gerald Scholten and 3M introduced synthetic casting tape in 1975.</p>
+      <p>This is the market that Park Jong-chil (박종칠) and OpenM (오픈엠) decided to disrupt — with 10 years of R&D, a materials science breakthrough, and a product called OpenCast™.</p>
+
+      <h2>The Product: OpenCast™ — Open, Lightweight, Waterproof, Custom-Fit</h2>
+      <p>OpenCast™ is an open-lattice thermoplastic orthopedic cast. The "open" in the name is literal: the cast material is perforated — a mesh-like structure with gaps throughout — rather than a solid shell. This single design decision unlocks properties that solid plaster and fiberglass cannot replicate.</p>
+      <p>The product comes as a 20cm × 40cm sheet of thermoplastic polymer, packaged and stored at room temperature. Application is a straightforward clinical workflow. The sheet is placed in warm water heated to approximately <strong>70°C</strong> — the activation temperature — where it becomes soft and malleable within 90 seconds. The clinician removes it from the water, positions it around the patient's limb, and shapes it to the exact contour of that specific anatomy. Within approximately <strong>5 minutes</strong>, the material re-hardens at body temperature into a rigid, load-bearing cast that mirrors the patient's limb geometry precisely. Excess material is pinned and trimmed. No additional equipment is needed beyond a warm-water basin.</p>
+      <p>The clinical properties that result from this process are materially different from anything traditional casting offers. OpenCast™ is <strong>waterproof</strong> — patients shower, swim, and bathe normally. It is <strong>breathable</strong> — air circulates through the lattice, eliminating the trapped-moisture environment that causes skin breakdown and odor in traditional casts. It is <strong>skin-visible</strong> — clinicians can inspect the underlying tissue at any time without cast removal. It is <strong>lightweight</strong> — the open-lattice structure uses significantly less material than equivalent solid casts. And it is <strong>custom-fit</strong> — because the material conforms to each patient's specific limb geometry while malleable, the cast follows individual anatomy rather than approximating it.</p>
+
+      <div class="pull-quote">
+        <p>"We want to make the open cast the new standard." — CEO Park Jong-chil (박종칠) <span style="font-size:0.85em;opacity:0.75;">("우리는 플랫폼이 되어 새로운 시장을 만드는 것이 목표")</span></p>
+      </div>
+
+      <h2>The Technology: Thermoplastic Lattice Engineering</h2>
+      <p>The engineering beneath OpenCast™ is more complex than the application workflow suggests. The central challenge is a material science trade-off: a thermoplastic polymer must be rigid enough at body temperature to immobilize a fractured limb, yet soft enough at 70°C to be safely handled and shaped in a clinical setting. It must set within 5 minutes at body temperature, not drift or deform once hardened, and maintain structural integrity when wet. And it must achieve all of this in an open-lattice geometry — which introduces stress concentration points that a solid sheet does not have.</p>
+      <p>OpenM spent the years from 2007 through 2017 developing and testing the specific polymer compound and lattice geometry that meets all of these requirements simultaneously. The lattice structure itself required iterative optimization — cell size, wall thickness, and hole geometry each affect both mechanical stiffness (too flexible and the cast fails to immobilize; too rigid and it cannot be shaped) and clinical properties (airflow, visibility, weight). The 5,000-patient beta test that preceded commercial launch was not marketing — it was the final phase of clinical validation for a materials engineering problem.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Sheet Size</div>
+          <div class="spec-value">20cm × 40cm</div>
+          <div class="spec-note">Standard sheet covers most adult upper and lower limb fracture applications; trimmed and pinned to fit the specific injury site</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Activation Temperature</div>
+          <div class="spec-value">~70°C</div>
+          <div class="spec-note">Warm water immersion for ~90 seconds makes the sheet fully malleable; safe to handle immediately after removal</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Setting Time</div>
+          <div class="spec-value">~5 Minutes</div>
+          <div class="spec-note">Full rigidity achieved at body temperature within 5 minutes of application — comparable to fast-set plaster, with none of the endothermic risk</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Structure</div>
+          <div class="spec-value">Open Lattice</div>
+          <div class="spec-note">Perforated mesh geometry provides breathability and skin visibility while maintaining load-bearing rigidity for fracture immobilization</div>
+        </div>
+      </div>
+
+      <p>One under-appreciated advantage of the thermoplastic approach is the absence of the exothermic reaction associated with traditional plaster. Plaster of Paris (calcium sulfate hemihydrate) generates heat as it sets — a chemical reaction that can cause thermal burns in thick applications, particularly in pediatric patients. OpenCast™ sets by physical hardening as temperature drops from 70°C to body temperature, with no heat generated. The clinical risk profile is fundamentally different.</p>
+      <p>The June 2024 launch of "OpenCast Short Leg" — a variant optimized for lower leg and ankle fractures — indicates that OpenM is now extending the product line across specific anatomical indications, a strategy consistent with building a platform product family rather than a single SKU.</p>
+
+      <h2>OpenCast vs. Traditional Casting: The Full Comparison</h2>
+      <p>The contrast between OpenCast™ and existing casting modalities is instructive not just clinically but commercially — because each limitation of traditional materials represents a patient complaint that orthopedic clinicians deal with constantly.</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Traditional Plaster</th>
+            <th>Fiberglass</th>
+            <th>3D Printed Cast</th>
+            <th>OpenCast™</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Weight</td>
+            <td class="old">Heavy (1–3 kg typical)</td>
+            <td class="old">Lighter (~40% vs. plaster)</td>
+            <td class="new">Very light</td>
+            <td class="new">Lightweight (open lattice)</td>
+          </tr>
+          <tr>
+            <td>Waterproof</td>
+            <td class="old">No — degrades in moisture</td>
+            <td class="old">No — padding layer absorbs water</td>
+            <td class="new">Yes (material-dependent)</td>
+            <td class="new">Yes — shower, swim, bathe freely</td>
+          </tr>
+          <tr>
+            <td>Breathable</td>
+            <td class="old">No — sealed environment</td>
+            <td class="old">No — sealed environment</td>
+            <td class="new">Yes (open design)</td>
+            <td class="new">Yes — air circulates through lattice</td>
+          </tr>
+          <tr>
+            <td>Skin Visibility</td>
+            <td class="old">No — opaque, requires removal</td>
+            <td class="old">No — opaque, requires removal</td>
+            <td class="new">Yes (open design)</td>
+            <td class="new">Yes — inspect tissue at any time</td>
+          </tr>
+          <tr>
+            <td>Custom Fit</td>
+            <td class="old">Approximate — wrapping method</td>
+            <td class="old">Approximate — wrapping method</td>
+            <td class="new">Precise — scan-to-print</td>
+            <td class="new">Precise — conforms while malleable</td>
+          </tr>
+          <tr>
+            <td>Application Time</td>
+            <td class="old">15–20 min set time</td>
+            <td class="old">5–7 min set time</td>
+            <td class="old">Hours (scan → print → ship)</td>
+            <td class="new">~5 min from water to rigid cast</td>
+          </tr>
+          <tr>
+            <td>Equipment Required</td>
+            <td class="old">Bandage, water basin</td>
+            <td class="old">Gloves, water basin</td>
+            <td class="old">3D scanner, 3D printer, logistics</td>
+            <td class="new">Warm water basin only</td>
+          </tr>
+          <tr>
+            <td>NHI Coverage (Korea)</td>
+            <td class="old">Yes (standard)</td>
+            <td class="old">Yes (standard)</td>
+            <td class="old">No (experimental)</td>
+            <td class="new">Yes — 선별급여 since Aug 2019</td>
+          </tr>
+          <tr>
+            <td>Cost (patient)</td>
+            <td class="old">Lowest</td>
+            <td class="old">Low-moderate</td>
+            <td class="old">High (non-covered)</td>
+            <td class="new">Moderate (NHI-subsidized)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The 3D-printed cast comparison is particularly important for the investor narrative. Several well-funded startups (Cortex, Xkelet, and others) have attempted to bring custom orthopedic casts to market via scan-to-print workflows. The approach produces excellent results in the lab — anatomically precise, lightweight, breathable — but has encountered a consistent commercialization barrier: the gap between the point of injury and the point of cast delivery. A patient presenting at an emergency department with a fresh fracture cannot wait 24–48 hours for a printed cast to arrive. OpenCast™ delivers most of the functional advantages of a 3D-printed cast in a workflow that takes 5 minutes and requires no specialized equipment beyond warm water.</p>
+
+      <h2>Business Model: Platform, Not Single Product</h2>
+      <p>OpenM describes itself as a platform company — a framing that becomes legible once you understand the distribution model. OpenCast™ is not sold directly to patients or even primarily to hospitals as a consumable. Instead, OpenM provides the sheet material and know-how to certified partner clinicians and rehabilitation specialists, who then apply the cast as a service. Partners sell the application service and absorb the material cost; OpenM earns revenue from materials supplied to partners and shares in the value created downstream.</p>
+      <p>This model has several structural advantages. It aligns OpenM's incentives with clinical adoption: the faster OpenCast™ spreads across the partner network, the more material volume OpenM sells. It creates a recurring revenue stream from each partner relationship — because every fracture patient who walks through a partner clinic's door represents a potential OpenCast™ application. And it builds a defensible distribution moat: as partners train their clinical staff on the application technique and integrate OpenCast™ into their workflow, switching costs increase.</p>
+      <p>The platform framing also extends to what OpenM calls "application development." The thermoplastic sheet material that forms OpenCast™ can be shaped into forms beyond traditional casts — splints, braces, custom orthotic supports, rehabilitation positioning devices. Partners who develop proprietary applications on top of the base material create new use cases that OpenM captures through material supply. CEO Park Jong-chil's stated ambition is not merely to sell a better cast — it is to become the infrastructure on which Korean rehabilitation medicine's customization layer is built.</p>
+
+      <h2>Go-to-Market: Hospital-First via 한림MS Distribution</h2>
+      <p>OpenM's commercial launch in June 2022 was structured around a distribution partnership with 한림MS (Hallim MS), a Korean medical supply distributor with existing hospital channel relationships. This decision reflects a classic medtech go-to-market logic: rather than building direct hospital sales force from scratch, leverage a partner with established trust relationships to accelerate clinical adoption during the critical early commercialization phase.</p>
+      <p>The hospital-first strategy was deliberate. Orthopedic casting decisions in Korea are made by attending physicians and rehabilitation specialists — not purchasing departments. Clinical champion acquisition is the primary sales motion: one orthopedic chief willing to pilot OpenCast™ in their department can generate data, testimonials, and peer referrals that a marketing campaign cannot replicate. OpenM's 70+ hospital deployments as of the research date represent 70 clinical champions who have converted to the product — a foundation for the network effects the platform model requires.</p>
+      <p>The national health insurance coverage (선별급여) achieved in August 2019 — three years before the commercial launch — was a strategic priority that preceded commercial distribution. Without NHI coverage, patient adoption would require out-of-pocket payment for a premium product in a market where the insured alternative (plaster, fiberglass) is effectively free. With 선별급여, OpenCast™ is reimbursable, removing the primary economic barrier for patient adoption and making hospital adoption a clinical decision rather than a budget one.</p>
+
+      <h2>Traction and Milestones: 2007 to 2024</h2>
+
+      <table class="milestone-table">
+        <thead><tr><th>Year</th><th>Milestone</th></tr></thead>
+        <tbody>
+          <tr><td>2007</td><td>OpenM (오픈엠) founded by CEO Park Jong-chil (박종칠) in Daejeon's Daedeok Research Zone (대덕연구개발특구). R&D begins on thermoplastic orthopedic casting material.</td></tr>
+          <tr><td>2007–2017</td><td>10-year R&D and materials science development phase. Iterative testing of polymer compounds, lattice geometries, and clinical application methods. No commercial revenue during this period.</td></tr>
+          <tr><td>2017–2022</td><td>5,000-patient beta test across partner clinical sites. Clinical validation of efficacy, safety, and application workflow. IP portfolio built: 11 domestic and 34 international patent filings initiated.</td></tr>
+          <tr><td>Aug 2019</td><td>Korean National Health Insurance (NHI) selectively covers OpenCast™ under 선별급여 — a critical regulatory milestone achieved before commercial launch that removes the primary patient cost barrier.</td></tr>
+          <tr><td>2019</td><td>First export revenue: $494,910 USD (약 ₩6.5억) across 9 countries. Export activity precedes domestic commercial rollout, indicating international demand pull.</td></tr>
+          <tr><td>Jun 2022</td><td>Commercial launch in Korea via distribution partnership with 한림MS (Hallim MS). First revenue from domestic hospital sales. Certifications in place: CE, ISO 13485, ISO 9001.</td></tr>
+          <tr><td>2022–2024</td><td>Hospital rollout: 70+ Korean hospitals adopt OpenCast™. Partner network expanded across orthopedic departments and rehabilitation clinics. Platform model established with revenue share structure.</td></tr>
+          <tr><td>Jun 2024</td><td>Launch of "OpenCast Short Leg" — a product variant optimized for lower leg and ankle fracture indications. First evidence of product line extension strategy.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>IP and Certifications: A Defensible Technical Foundation</h2>
+      <p>OpenM's IP portfolio is the primary competitive moat for a hardware company in a market where distribution and clinical relationships matter but can be replicated. The combination of domestic and international filings creates legal defensibility in both the Korean home market and the export markets where OpenM has already demonstrated revenue.</p>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-badge">Domestic IP · KIPO</div>
+          <div class="cert-title">11 Korean Patents Filed and Registered</div>
+          <div class="cert-body">Korean Intellectual Property Office (KIPO) portfolio covers the core thermoplastic open-lattice material composition, the casting application method, and specific anatomical variants. Provides domestic legal protection during market development phase.</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">Global IP · PCT</div>
+          <div class="cert-title">34 International Patent Filings</div>
+          <div class="cert-body">34 international patent applications protect OpenCast™ across global markets — a filing volume consistent with a company that takes export ambition seriously. Critical for defensibility in the EU, US, and East Asian markets where casting volume is highest.</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">Medical Device · CE + ISO</div>
+          <div class="cert-title">CE Certified, ISO 13485 + ISO 9001</div>
+          <div class="cert-body">CE certification enables commercial sale across the European Union — the world's largest single medical device regulatory market. ISO 13485 (medical device quality management system) and ISO 9001 (general quality management) complete the standard international compliance stack for hospital-grade medical device sales.</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">Reimbursement · NHI Korea</div>
+          <div class="cert-title">National Health Insurance 선별급여 Coverage</div>
+          <div class="cert-body">Selected coverage under Korea's National Health Insurance since August 2019 — a designation that subsidizes patient cost and classifies OpenCast™ alongside established casting modalities for reimbursement purposes. Without this, OpenCast™ would be a premium out-of-pocket product in an insured commodity market. With it, adoption becomes a clinical decision.</div>
+        </div>
+      </div>
+
+      <h2>Market Opportunity: ₩600B to ₩1T Domestically, $2.5B+ Globally</h2>
+      <p>Orthopedic fracture casting is a high-volume, mature market with a structural technology gap — the kind of setup that typically rewards the first mover who solves the gap with a clinically deployable product rather than a laboratory demonstration. OpenM estimates the Korean domestic addressable market at 1 million fracture patients per year. At 3–5% market penetration, that translates to ₩600B to ₩1T (approximately $450M to $750M) in domestic revenue potential at current pricing and reimbursement levels.</p>
+      <p>The global addressable market is approximately 100 million fracture patients annually, based on World Health Organization fracture incidence data. The global orthopedic casting market is estimated at $2.5B–$3.5B depending on methodology. Within that total, the thermoplastic segment is the fastest-growing category — driven by the same patient experience demands (waterproof, breathable, lighter) that OpenCast™ directly addresses. OpenM's early export revenue across 9 countries suggests the product translates across clinical contexts with minimal modification.</p>
+      <p>The pediatric fracture segment deserves specific mention. Children account for a disproportionate share of fracture patients globally (roughly 30% of all fractures occur in patients under 18, with Colles' and greenstick fractures overrepresented). Pediatric patients are also the population where traditional casting causes the most friction: kids swim, play, and sweat; they resist the activity restrictions traditional casts impose; and the appearance and social stigma of a large plaster cast is a documented quality-of-life issue. OpenCast™'s waterproof, breathable, lower-profile design addresses each of these pediatric-specific pain points. A hospital orthopedics department that adopts OpenCast™ for one indication frequently expands to pediatric applications next.</p>
+
+      <h2>The Thesis: Infrastructure for the Next Generation of Orthopedic Care</h2>
+      <p>OpenM is not primarily a hardware company — it is a materials science company that has solved a clinical problem that the incumbent materials (plaster, fiberglass) cannot solve, and has packaged the solution into a workflow that fits directly into existing clinical practice without requiring new equipment, new training, or new reimbursement pathways.</p>
+      <p>The 10-year R&D horizon that preceded launch is both a risk and a signal. It is a risk because it represents significant capital consumed before revenue. It is a signal because it reflects the genuine engineering difficulty of the problem: if a waterproof, breathable, custom-fit cast were easy to make, it would have existed before 2022. The difficulty of the problem is the moat. The 11 domestic and 34 international patents reflect legal protection of a specific, hard-won solution to a specific, hard-won engineering challenge.</p>
+      <p>The platform business model — in which partners apply OpenCast™ rather than patients purchasing a consumer product — mirrors the logic of B2B medical supply infrastructure. It creates predictable, recurring revenue from consumable material sales, limits OpenM's direct-to-patient marketing cost, and aligns the company's incentives with the clinical adoption rate. As the number of certified partner clinicians grows, the material volume grows proportionally. The analogy is not to a device company selling a durable product — it is to a platform company selling the substrate on which clinical services are built.</p>
+      <p>The near-term watch signal for OpenM is the product line extension trajectory. OpenCast Short Leg (launched June 2024) is the first evidence of SKU proliferation. If the company moves systematically across anatomical indications — wrist (Colles' fracture), pediatric forearm, shoulder immobilizer, ankle — while maintaining the same platform distribution model, the market coverage expands without requiring a fundamental change in clinical relationships or manufacturing infrastructure. Each new variant is a new revenue stream on an existing partner network.</p>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Why This Matters for Investors</div>
+        <ul class="signal-list">
+          <li>10 years of R&D and a 5,000-patient beta test represent a genuine technical validation barrier — this is not a product that a well-funded competitor can replicate in 12 months.</li>
+          <li>NHI 선별급여 coverage transforms OpenCast™ from a premium option to a reimbursed alternative — the single most important commercial de-risking milestone for any Korean medical device.</li>
+          <li>70+ hospital deployments pre-scale represents a clinical champion network that traditional MedTech distribution takes years to build from scratch.</li>
+          <li>Export revenue of $494,910 before domestic launch completion signals international demand pull — the product travels without significant localization.</li>
+          <li>The platform model (recurring material supply to partner clinicians) creates a revenue profile more similar to SaaS infrastructure than hardware — high gross margin on consumable material, low marginal cost per additional partner.</li>
+          <li>CEO Park Jong-chil's stated ambition to "become the platform" and "create a new market" indicates founder vision calibrated to category creation, not market share capture within an existing segment.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="prose">
+      <h2>Three Korean MedTech and Deep Tech Startups to Watch This Week</h2>
+      <p>Beyond OpenM, the broader Korean startup ecosystem is producing a cluster of companies in healthcare robotics, wearable diagnostics, and industrial automation that are worth tracking. Here are three that surfaced this week.</p>
+    </div>
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">LN Robotics <span style="font-size:0.82em;opacity:0.7;">(엘앤로보틱스)</span></span>
+          <span class="otw-stage">Medical Robotics</span>
+        </div>
+        <div class="otw-tagline">AI-assisted robotic navigation for cardiovascular intervention</div>
+        <div class="otw-body">LN Robotics is developing an assistant robot system for cardiovascular catheterization procedures. The device assists interventional cardiologists in navigating catheters through coronary and peripheral vasculature — a procedure that currently depends heavily on individual physician skill and exposes operating teams to cumulative radiation from fluoroscopic imaging. The robotic assistance layer reduces operator radiation dose, improves navigation consistency, and opens the possibility of remote or teleoperated cardiac procedures for patients in underserved geographies. Korea's cardiovascular intervention market is substantial: coronary artery disease remains the leading cause of death, and catheterization volume has grown consistently. LN Robotics is positioned at the intersection of robotics, AI-assisted imaging, and structural heart disease — a category where global incumbents (Intuitive, Corindus/Siemens) have focused on the US and European markets, leaving Korean clinical development space open for a local champion.</div>
+        <div class="otw-signal"><strong>Watch signal:</strong> Cardiovascular intervention robotics is one of the highest-value niches in surgical robotics. Clinical validation partnerships with top-tier Korean cardiology centers (Seoul National University Hospital, Asan Medical Center) would be the key milestone to watch.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">Sky Labs <span style="font-size:0.82em;opacity:0.7;">(스카이랩스)</span></span>
+          <span class="otw-stage">Wearable Diagnostics · MFDS Approved</span>
+        </div>
+        <div class="otw-tagline">Ring-type wearable for continuous blood pressure monitoring — approved 2023</div>
+        <div class="otw-body">Sky Labs developed CART-I, a ring-form wearable that continuously monitors blood pressure using photoplethysmography (PPG)-based cuffless measurement. The device received MFDS (Ministry of Food and Drug Safety) approval in 2023 — making it one of the first cuffless continuous blood pressure monitors to achieve regulatory clearance anywhere in the world, ahead of more publicized competitors in the US and Europe. Continuous blood pressure monitoring has been a clinical and consumer wearable holy grail for years: hypertension is the leading modifiable cardiovascular risk factor globally, and intermittent cuff measurements catch only a snapshot of a highly variable parameter. A validated, comfortable, ring-form device that passively monitors BP 24/7 changes hypertension management fundamentally — enabling medication titration, white-coat hypertension identification, and nocturnal dipping detection in a way that clinical cuff measurements cannot. Sky Labs' MFDS approval is a genuine regulatory first-mover advantage.</div>
+        <div class="otw-signal"><strong>Watch signal:</strong> The gap between MFDS approval (Korea) and FDA clearance (US) is the primary commercial scale limiter. An FDA 510(k) or De Novo submission filing would signal readiness for the market where continuous BP monitoring has the largest commercial addressable population.</div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <span class="otw-name">Novatech <span style="font-size:0.82em;opacity:0.7;">(노바테크)</span></span>
+          <span class="otw-stage">Series A · ₩70억</span>
+        </div>
+        <div class="otw-tagline">Industrial robot orchestration platform for smart factory environments</div>
+        <div class="otw-body">Novatech builds software that orchestrates heterogeneous fleets of industrial robots across smart factory environments — a coordination layer that sits above individual robot controllers and optimizes task allocation, path planning, and failure recovery across multiple robot types from multiple vendors. Korea's manufacturing sector is one of the most robotically dense in the world (the country consistently ranks in the top 3 globally for robot density per manufacturing worker), and the transition from fixed-line automation to flexible multi-robot cells is generating significant demand for exactly the kind of orchestration middleware Novatech provides. The company raised ₩70억 (approximately $5M) in a Series A, indicating institutional conviction in the market thesis. The orchestration layer is the software equivalent of the integration problem in cloud infrastructure: as factory automation becomes heterogeneous and dynamic, the value migrates from individual device capability to the intelligence that coordinates the fleet.</div>
+        <div class="otw-signal"><strong>Watch signal:</strong> Enterprise software in Korean manufacturing scales through large integrator partnerships (Hyundai, Samsung, LG facilities integrators). A named anchor customer in a tier-1 Korean conglomerate's manufacturing network would validate the enterprise go-to-market motion.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <div class="prose">
+      <h2>Korea Startup Deals — Late July to Early August 2026</h2>
+      <p>Six deals closed or announced across biotech, climate tech, satellite AI, and consumer platforms in the most recent two-week window. Drug development and deep tech continue to attract the largest round sizes; fashion and lifestyle platforms show continued Series B momentum.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="deal-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Round</th>
+            <th>Amount</th>
+            <th>What They Do</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="deal-company">Frazier Therapeutics <span style="font-size:0.85em;font-weight:400;opacity:0.7;">(프레이저테라퓨틱스)</span></div>
+              <div class="deal-round preipo">Pre-IPO</div>
+            </td>
+            <td></td>
+            <td class="deal-amount">$36M</td>
+            <td class="deal-note">Targeted protein degradation drug platform. The company develops PROTAC (Proteolysis Targeting Chimera) and molecular glue-based degraders — a therapeutic modality that can eliminate previously "undruggable" disease proteins by recruiting the cell's own ubiquitin-proteasome system. The $36M Pre-IPO round is the largest in this week's tracker and reflects both clinical pipeline maturity and Korea's deepening capital market access for late-stage biotechs.</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="deal-company">G2G Bio <span style="font-size:0.85em;font-weight:400;opacity:0.7;">(지투지바이오)</span></div>
+              <div class="deal-round">Series B</div>
+            </td>
+            <td></td>
+            <td class="deal-amount">$14M</td>
+            <td class="deal-note">Next-generation drug delivery platform. G2G Bio develops novel drug delivery systems designed to improve pharmacokinetics, reduce off-target toxicity, and extend drug half-life for both small molecules and biologics. The Series B positions the company to advance lead programs through IND-enabling studies and into first-in-human clinical trials.</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="deal-company">Telepics <span style="font-size:0.85em;font-weight:400;opacity:0.7;">(텔레픽스)</span></div>
+              <div class="deal-round preipo">Pre-IPO</div>
+            </td>
+            <td></td>
+            <td class="deal-amount">$11M</td>
+            <td class="deal-note">Satellite AI data analytics platform. Telepics processes Earth observation imagery from commercial satellite constellations using AI models trained on multi-spectral and synthetic aperture radar data — generating analytics products for agriculture, infrastructure monitoring, and defense intelligence customers. The Pre-IPO round reflects maturity in a segment where Korea has quietly become a global competitor.</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="deal-company">Cheiron <span style="font-size:0.85em;font-weight:400;opacity:0.7;">(체이런)</span></div>
+              <div class="deal-round">Seed</div>
+            </td>
+            <td></td>
+            <td class="deal-amount">$8M</td>
+            <td class="deal-note">AI-native drug development platform. Cheiron applies large language model and generative AI architectures to de novo molecular design and drug candidate optimization — compressing the preclinical hypothesis-to-candidate timeline. The $8M seed round for an AI biotech reflects global investor appetite for AI-accelerated drug discovery, with Korean AI talent increasingly competitive with US and UK counterparts in this space.</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="deal-company">BIND <span style="font-size:0.85em;font-weight:400;opacity:0.7;">(바인드)</span></div>
+              <div class="deal-round">Series B</div>
+            </td>
+            <td></td>
+            <td class="deal-amount">$7M</td>
+            <td class="deal-note">Men's fashion platform targeting the Korean premium casualwear segment. BIND has built a direct-to-consumer brand with strong repeat purchase metrics in the 25–40 male demographic — a segment that Korean e-commerce has historically underserved relative to women's fashion. The Series B funds international expansion into Southeast Asian markets where Korean fashion content influence has created pre-existing brand awareness.</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="deal-company">GREEN-DA <span style="font-size:0.85em;font-weight:400;opacity:0.7;">(그린다)</span></div>
+              <div class="deal-round">Seed</div>
+            </td>
+            <td></td>
+            <td class="deal-amount">$3.3M</td>
+            <td class="deal-note">Sustainable aviation fuel (SAF) feedstock production from non-food biomass. GREEN-DA develops the upstream feedstock processing layer that is the cost and availability bottleneck for Korea's SAF mandate compliance — Korean airlines face regulatory SAF blending requirements that existing domestic supply cannot meet, creating immediate demand for domestic feedstock infrastructure. The seed round positions GREEN-DA to demonstrate first pilot-scale production.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ALL ISSUES NAV -->
+<section class="all-issues-section">
+  <div class="all-issues-inner">
+    <div class="all-issues-header">
+      <span class="all-issues-label">All Issues</span>
+      <a href="index.html#archive" class="all-issues-link">View archive →</a>
+    </div>
+    <div class="all-issues-grid">
+      <a href="article.html" class="nav-issue-item">
+        <span class="nav-issue-num">#001</span>
+        <span class="nav-issue-title">Introducing Korea Startup Thesis</span>
+        <span class="nav-issue-date">Mar 23, 2025</span>
+      </a>
+      <a href="article2.html" class="nav-issue-item">
+        <span class="nav-issue-num">#002</span>
+        <span class="nav-issue-title">Moloco: Korea's Quiet Advertising AI Giant</span>
+        <span class="nav-issue-date">Mar 30, 2025</span>
+      </a>
+      <a href="article3.html" class="nav-issue-item">
+        <span class="nav-issue-num">#003</span>
+        <span class="nav-issue-title">S2W: Reading the Dark Web So You Don't Have To</span>
+        <span class="nav-issue-date">Apr 6, 2025</span>
+      </a>
+      <a href="article4.html" class="nav-issue-item">
+        <span class="nav-issue-num">#004</span>
+        <span class="nav-issue-title">BioNexus: Liquid Biopsy Meets Korean Precision Medicine</span>
+        <span class="nav-issue-date">Apr 13, 2025</span>
+      </a>
+      <a href="article5.html" class="nav-issue-item">
+        <span class="nav-issue-num">#005</span>
+        <span class="nav-issue-title">Wrtn Technologies: Korea's Consumer AI Moment</span>
+        <span class="nav-issue-date">Apr 20, 2025</span>
+      </a>
+      <a href="article6.html" class="nav-issue-item">
+        <span class="nav-issue-num">#006</span>
+        <span class="nav-issue-title">Humanscape: The Health Data Platform Hiding in Plain Sight</span>
+        <span class="nav-issue-date">Apr 27, 2025</span>
+      </a>
+      <a href="article7.html" class="nav-issue-item">
+        <span class="nav-issue-num">#007</span>
+        <span class="nav-issue-title">Meditrics: The AI Cardiologist Built From 10 Million ECGs</span>
+        <span class="nav-issue-date">May 4, 2025</span>
+      </a>
+      <a href="article8.html" class="nav-issue-item">
+        <span class="nav-issue-num">#008</span>
+        <span class="nav-issue-title">SMT Bio: Engineering the Next Generation of Probiotics</span>
+        <span class="nav-issue-date">May 11, 2025</span>
+      </a>
+      <a href="article9.html" class="nav-issue-item">
+        <span class="nav-issue-num">#009</span>
+        <span class="nav-issue-title">Arontier: AI Drug Discovery Built on Protein Structure</span>
+        <span class="nav-issue-date">May 18, 2025</span>
+      </a>
+      <a href="article10.html" class="nav-issue-item">
+        <span class="nav-issue-num">#010</span>
+        <span class="nav-issue-title">Centrics Bio: Cracking the Immune Code for Solid Tumors</span>
+        <span class="nav-issue-date">May 25, 2025</span>
+      </a>
+      <a href="article11.html" class="nav-issue-item">
+        <span class="nav-issue-num">#011</span>
+        <span class="nav-issue-title">Intellisia: The Korean Startup Rebuilding How Satellites See Earth</span>
+        <span class="nav-issue-date">Jun 1, 2025</span>
+      </a>
+      <a href="article12.html" class="nav-issue-item">
+        <span class="nav-issue-num">#012</span>
+        <span class="nav-issue-title">엣진 (Atjin): The AI Company Making Korea's Bureaucracy Usable</span>
+        <span class="nav-issue-date">Jun 8, 2025</span>
+      </a>
+      <a href="article13.html" class="nav-issue-item">
+        <span class="nav-issue-num">#013</span>
+        <span class="nav-issue-title">Holiday Robotics: Korea's Humanoid Robot Bet</span>
+        <span class="nav-issue-date">Jun 22, 2025</span>
+      </a>
+      <a href="article14.html" class="nav-issue-item">
+        <span class="nav-issue-num">#014</span>
+        <span class="nav-issue-title">Radixel: The Korean Startup Rebuilding Radiation Therapy with AI</span>
+        <span class="nav-issue-date">Jul 6, 2025</span>
+      </a>
+      <a href="article15.html" class="nav-issue-item">
+        <span class="nav-issue-num">#015</span>
+        <span class="nav-issue-title">BioBank Healing: The Korean Startup Turning Healthy Gut Bacteria Into Medicine</span>
+        <span class="nav-issue-date">Aug 3, 2026</span>
+      </a>
+      <a href="article16.html" class="nav-issue-item">
+        <span class="nav-issue-num">#016</span>
+        <span class="nav-issue-title">IRVIS: The Korean Startup Automating Factory Quality Control with AI Vision and Robots</span>
+        <span class="nav-issue-date">Aug 10, 2026</span>
+      </a>
+      <a href="article17.html" class="nav-issue-item">
+        <span class="nav-issue-num">#017</span>
+        <span class="nav-issue-title">ZeroOne's SonicWand: The Korean FoodTech Startup Bringing Molecular-Level Cooking to Commercial Kitchens</span>
+        <span class="nav-issue-date">Aug 17, 2026</span>
+      </a>
+      <a href="article18.html" class="nav-issue-item nav-issue-active">
+        <span class="nav-issue-num">#018</span>
+        <span class="nav-issue-title">OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast</span>
+        <span class="nav-issue-date">Sep 14, 2026</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe-section">
+  <div class="subscribe-inner">
+    <h3>Get Korea Startup Thesis in your inbox</h3>
+    <p>One deep dive per week. Korean startups worth watching for global VC and angel investors.</p>
+    <div class="sub-form">
+      <input type="email" id="emailInput" placeholder="you@example.com">
+      <button onclick="handleSubscribe()">Subscribe</button>
+    </div>
+    <p class="sub-meta" id="subMsg"></p>
+    <p class="sub-meta">No spam. Unsubscribe any time.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Korea Startup Thesis</div>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#archive">Archive</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+  <div class="footer-right">© 2026 Korea Startup Thesis</div>
+</footer>
+
+<button class="fab" id="fabBtn" onclick="document.querySelector('.subscribe-section').scrollIntoView({behavior:'smooth'})">Subscribe →</button>
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  const fab = document.getElementById('fabBtn');
+  const fabTop = document.getElementById('fabTop');
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 400;
+    fab.classList.toggle('visible', show);
+    fabTop.classList.toggle('visible', show);
+  });
+
+  const SUPABASE_URL = 'https://ymnejijoctfjqjxeqdpd.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU';
+
+  async function handleSubscribe() {
+    const email = document.getElementById('emailInput').value.trim();
+    const msg = document.getElementById('subMsg');
+    if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email.'; return; }
+    msg.textContent = 'Subscribing…';
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article18' })
+      });
+      if (res.ok || res.status === 409) {
+        msg.textContent = res.status === 409 ? 'You\'re already subscribed!' : 'You\'re in. See you next week.';
+        document.getElementById('emailInput').value = '';
+      } else { msg.textContent = 'Something went wrong. Please try again.'; }
+    } catch { msg.textContent = 'Network error. Please try again.'; }
+  }
+</script>
+</body>
+</html>
