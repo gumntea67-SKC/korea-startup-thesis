@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRIDAY on the Factory Floor: Holiday Robotics and the Economics of Korea's Physical AI Moment | Korea Startup Thesis</title>
+
+  <link rel="canonical" href="https://koreastartupthesis.com/article20.html">
+
+  <meta name="description" content="Four months after Korea's largest-ever Series A, Holiday Robotics is shipping FRIDAY — a 64-DoF wheeled humanoid with $21 tactile sensors — to factory floors. We revisit the company at the moment of commercial truth: does the ROI thesis hold, does VLS beat VLA, and can Korea's manufacturing access unlock what Silicon Valley competitors can't replicate?">
+  <meta name="author" content="Korea Startup Thesis">
+  <meta name="keywords" content="Holiday Robotics, 홀리데이로보틱스, FRIDAY robot, humanoid robot Korea, Song Ki-young, 송기영, physical AI, VLS, factory automation, manufacturing robot, Korea robotics 2026, wheeled humanoid">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Korea Startup Thesis">
+  <meta property="og:title" content="FRIDAY on the Factory Floor: Holiday Robotics and the Economics of Korea's Physical AI Moment">
+  <meta property="og:description" content="Four months after Korea's largest-ever Series A, Holiday Robotics is at the moment of commercial truth. Does FRIDAY's ROI thesis hold at ₩100M per unit? Does VLS beat VLA for industrial deployment? And can Korea's manufacturing access unlock what Silicon Valley competitors can't replicate?">
+  <meta property="og:url" content="https://koreastartupthesis.com/article20.html">
+  <meta property="og:image" content="https://koreastartupthesis.com/og/article20.png">
+  <meta property="article:published_time" content="2026-11-09T09:00:00+09:00">
+  <meta property="article:section" content="Company Deep Dive">
+  <meta property="article:tag" content="Robotics">
+  <meta property="article:tag" content="Physical AI">
+  <meta property="article:tag" content="Manufacturing">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KoreaStartupThesis">
+  <meta name="twitter:title" content="FRIDAY on the Factory Floor: Holiday Robotics and the Economics of Korea's Physical AI Moment">
+  <meta name="twitter:description" content="₩155B raised. 100 units shipping. Korea's NPS just signed VC MOUs with Sequoia and a16z. Holiday Robotics is the center of something much larger than one company.">
+  <meta name="twitter:image" content="https://koreastartupthesis.com/og/article20.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "FRIDAY on the Factory Floor: Holiday Robotics and the Economics of Korea's Physical AI Moment",
+    "description": "Four months after closing Korea's largest-ever Series A (₩155B / $103M), Holiday Robotics is beginning commercial production of FRIDAY — a 64-DoF wheeled humanoid robot with $21 full-palm tactile sensors and a VLS (Vision-Language-Skill) software architecture designed for industrial safety certification. This deep dive examines the ROI economics, the VLS vs. VLA debate, Korea's unique manufacturing advantage, and what the Korea National Pension Service's MOUs with Sequoia and a16z signal about where global capital is headed in physical AI.",
+    "datePublished": "2026-11-09T09:00:00+09:00",
+    "author": { "@type": "Organization", "name": "Korea Startup Thesis" },
+    "publisher": { "@type": "Organization", "name": "Korea Startup Thesis", "url": "https://koreastartupthesis.com" },
+    "url": "https://koreastartupthesis.com/article20.html",
+    "about": [{ "@type": "Organization", "name": "Holiday Robotics", "alternateName": "홀리데이로보틱스" }],
+    "keywords": "Holiday Robotics, 홀리데이로보틱스, FRIDAY, wheeled humanoid, physical AI, VLS, manufacturing robot, Song Ki-young, Korea robotics"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --gray-1: #444;
+      --gray-2: #777;
+      --gray-3: #aaa;
+      --gray-4: #e5e5e5;
+      --gray-5: #f5f5f5;
+      --white: #fff;
+      --accent: #0d9488;
+      --accent-light: #ccfbf1;
+      --accent-dark: #0f766e;
+      --nav-dark: #134e4a;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-dark); border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 56px;
+    }
+    .nav-logo { font-size: 15px; font-weight: 500; letter-spacing: -0.3px; color: #fff; }
+    .nav-logo a { color: #fff; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .nav-link:hover { color: #fff; }
+    .btn-sub {
+      font-size: 13px; font-weight: 500; background: var(--accent); color: #fff;
+      border: none; border-radius: var(--radius-md); padding: 7px 16px; cursor: pointer;
+    }
+    .btn-sub:hover { background: var(--accent-dark); }
+
+    /* ALL ISSUES dropdown */
+    .nav-issues-wrap { position: relative; }
+    .nav-issues-btn {
+      font-size: 13px; color: rgba(255,255,255,0.6); background: none; border: none;
+      cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 0;
+    }
+    .nav-issues-btn:hover { color: #fff; }
+    .nav-issues-btn svg { width: 12px; height: 12px; }
+    .nav-issues-panel {
+      display: none; position: absolute; right: 0; top: calc(100% + 8px);
+      background: #fff; border: 1px solid var(--gray-4); border-radius: var(--radius-lg);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12); padding: 8px;
+      width: 320px; max-height: 400px; overflow-y: auto; z-index: 300;
+    }
+    .nav-issues-wrap:hover .nav-issues-panel { display: block; }
+    .nav-issue-item {
+      display: flex; align-items: flex-start; gap: 10px; padding: 8px 10px;
+      border-radius: var(--radius-md); transition: background 0.15s;
+    }
+    .nav-issue-item:hover { background: var(--gray-5); }
+    .nav-issue-num { font-size: 11px; font-weight: 500; color: var(--accent); white-space: nowrap; padding-top: 1px; }
+    .nav-issue-title { font-size: 12px; color: var(--gray-1); line-height: 1.4; flex: 1; }
+    .nav-issue-date { font-size: 11px; color: var(--gray-3); white-space: nowrap; padding-top: 1px; }
+    .nav-issue-active .nav-issue-title { color: var(--accent); font-weight: 500; }
+
+    .hero {
+      background: #f0fdfa;
+      padding: 64px 40px 56px;
+      border-bottom: 1px solid var(--gray-4);
+    }
+    .hero-inner { max-width: 680px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 20px; height: 2px; background: var(--accent);
+    }
+    h1 { font-size: 36px; font-weight: 500; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .hero-sub { font-size: 18px; color: var(--gray-1); line-height: 1.5; margin-bottom: 24px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+    .hero-tag {
+      font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+      background: var(--accent-light); color: var(--accent-dark); border-radius: 20px; padding: 3px 10px;
+    }
+    .hero-date { font-size: 13px; color: var(--gray-2); }
+    .hero-read { font-size: 13px; color: var(--gray-3); }
+    .hero-divider { border: none; border-top: 1px solid var(--gray-4); margin-bottom: 32px; }
+
+    .kpi-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid var(--gray-4); border-radius: var(--radius-lg); overflow: hidden; }
+    .kpi-item { padding: 20px 16px; border-right: 1px solid var(--gray-4); }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value { font-size: 22px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+    .kpi-label { font-size: 12px; color: var(--gray-2); line-height: 1.4; }
+
+    .tabs-nav {
+      display: flex; gap: 0; border-bottom: 1px solid var(--gray-4);
+      background: var(--white); position: sticky; top: 56px; z-index: 100;
+    }
+    .tab-btn {
+      font-size: 13px; font-weight: 500; color: var(--gray-2);
+      background: none; border: none; border-bottom: 2px solid transparent;
+      padding: 14px 24px; cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab-btn:hover:not(.active) { color: var(--gray-1); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .article-body { max-width: 680px; margin: 0 auto; padding: 48px 40px; }
+    .prose h2 { font-size: 22px; font-weight: 500; margin: 40px 0 14px; color: var(--black); }
+    .prose p { font-size: 15px; color: var(--gray-1); margin-bottom: 18px; line-height: 1.75; }
+    .prose strong { color: var(--black); font-weight: 500; }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent); padding: 16px 20px;
+      background: var(--accent-light); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 28px 0;
+    }
+    .pull-quote p { font-size: 15px; color: var(--accent-dark); font-style: italic; margin: 0; }
+
+    /* Spec grid */
+    .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0; }
+    .spec-card { border: 1px solid var(--gray-4); border-radius: var(--radius-md); padding: 16px; }
+    .spec-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-3); margin-bottom: 6px; }
+    .spec-value { font-size: 20px; font-weight: 500; color: var(--accent); margin-bottom: 6px; }
+    .spec-note { font-size: 12px; color: var(--gray-2); line-height: 1.5; }
+
+    /* ROI table */
+    .roi-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
+    .roi-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-3); padding: 10px 12px; border-bottom: 1px solid var(--gray-4); }
+    .roi-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; }
+    .roi-table tr:last-child td { border-bottom: none; }
+    .roi-table td:first-child { font-weight: 500; color: var(--black); }
+    .roi-table .highlight td { background: var(--accent-light); }
+    .roi-table .highlight td:first-child { color: var(--accent-dark); }
+
+    /* Competitor table */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
+    .comp-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-3); padding: 10px 12px; border-bottom: 2px solid var(--gray-4); }
+    .comp-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: middle; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table .friday-row td { background: var(--accent-light); font-weight: 500; }
+    .comp-table .friday-row td { color: var(--accent-dark); }
+
+    /* Milestone table */
+    .milestone-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 14px; }
+    .milestone-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-3); padding: 10px 12px; border-bottom: 2px solid var(--gray-4); }
+    .milestone-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-4); color: var(--gray-1); vertical-align: top; line-height: 1.55; }
+    .milestone-table tr:last-child td { border-bottom: none; }
+    .milestone-table td:first-child { font-weight: 500; color: var(--accent); white-space: nowrap; }
+    .milestone-table tr:nth-child(even) td { background: var(--gray-5); }
+
+    /* Roadmap cards */
+    .roadmap-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .roadmap-card { border: 1px solid var(--gray-4); border-radius: var(--radius-lg); padding: 20px; }
+    .roadmap-card.active { border-color: var(--accent); background: var(--accent-light); }
+    .roadmap-day { font-size: 20px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+    .roadmap-market { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-3); margin-bottom: 10px; }
+    .roadmap-desc { font-size: 13px; color: var(--gray-1); line-height: 1.55; }
+    .roadmap-badge { display: inline-block; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; background: var(--accent); color: #fff; border-radius: 20px; padding: 2px 8px; margin-top: 10px; }
+
+    /* Signal box */
+    .signal-box { border: 1px solid var(--accent-light); background: var(--accent-light); border-radius: var(--radius-lg); padding: 24px; margin: 28px 0; }
+    .signal-box-title { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 16px; }
+    .signal-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .signal-list li { font-size: 14px; color: var(--gray-1); line-height: 1.6; padding-left: 16px; position: relative; }
+    .signal-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 500; }
+
+    /* Ones to Watch */
+    .otw-grid { display: flex; flex-direction: column; gap: 28px; }
+    .otw-item { border: 1px solid var(--gray-4); border-radius: var(--radius-lg); overflow: hidden; }
+    .otw-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 0; }
+    .otw-name { font-size: 17px; font-weight: 500; }
+    .otw-stage { font-size: 12px; color: var(--accent); background: var(--accent-light); border-radius: 20px; padding: 3px 10px; }
+    .otw-tagline { font-size: 13px; font-weight: 500; color: var(--gray-2); padding: 6px 20px 0; }
+    .otw-body { font-size: 14px; color: var(--gray-1); line-height: 1.7; padding: 12px 20px; }
+    .otw-signal { font-size: 13px; color: var(--gray-2); background: var(--gray-5); padding: 14px 20px; line-height: 1.6; }
+
+    /* Deal Tracker */
+    .deals-table { width: 100%; border-collapse: collapse; }
+    .deals-table th { text-align: left; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-3); padding: 10px 14px; border-bottom: 2px solid var(--gray-4); }
+    .deals-table td { padding: 14px 14px; border-bottom: 1px solid var(--gray-4); font-size: 14px; color: var(--gray-1); vertical-align: top; }
+    .deals-table tr:last-child td { border-bottom: none; }
+    .deal-company { font-weight: 500; color: var(--black); display: block; margin-bottom: 2px; }
+    .deal-desc { font-size: 12px; color: var(--gray-2); }
+    .deal-amount { font-weight: 500; color: var(--accent); white-space: nowrap; }
+    .deal-stage { font-size: 12px; background: var(--gray-5); border-radius: 20px; padding: 2px 9px; display: inline-block; white-space: nowrap; }
+
+    /* Subscribe Modal */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+      z-index: 1000; align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff; border-radius: var(--radius-lg); padding: 40px;
+      max-width: 420px; width: 90%; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    .modal-title { font-size: 22px; font-weight: 500; margin-bottom: 8px; }
+    .modal-sub { font-size: 14px; color: var(--gray-2); margin-bottom: 24px; }
+    .modal-input {
+      width: 100%; border: 1px solid var(--gray-4); border-radius: var(--radius-md);
+      padding: 11px 14px; font-size: 14px; outline: none; margin-bottom: 12px;
+    }
+    .modal-input:focus { border-color: var(--accent); }
+    .modal-btn {
+      width: 100%; background: var(--accent); color: #fff; border: none;
+      border-radius: var(--radius-md); padding: 12px; font-size: 14px; font-weight: 500; cursor: pointer;
+    }
+    .modal-btn:hover { background: var(--accent-dark); }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--gray-2); }
+    .modal-msg { font-size: 13px; color: var(--gray-2); margin-top: 10px; text-align: center; min-height: 20px; }
+
+    /* FABs */
+    .fab-subscribe {
+      position: fixed; bottom: 32px; right: 32px; z-index: 500;
+      background: var(--accent); color: #fff; border: none; border-radius: 28px;
+      padding: 12px 22px; font-size: 14px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(13,148,136,0.35); display: flex; align-items: center; gap: 8px;
+    }
+    .fab-subscribe:hover { background: var(--accent-dark); }
+    .fab-top {
+      position: fixed; bottom: 88px; right: 32px; z-index: 500;
+      background: var(--white); border: 1px solid var(--gray-4); border-radius: 50%;
+      width: 44px; height: 44px; display: none; align-items: center; justify-content: center;
+      cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-size: 18px; color: var(--gray-2);
+    }
+    .fab-top.visible { display: flex; }
+
+    footer { border-top: 1px solid var(--gray-4); padding: 40px; text-align: center; }
+    .footer-logo { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+    .footer-sub { font-size: 13px; color: var(--gray-3); }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-logo"><a href="index.html">Korea Startup Thesis</a></div>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-issues-wrap">
+      <button class="nav-issues-btn">
+        All Issues
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-issues-panel">
+        <a href="article.html" class="nav-issue-item">
+          <span class="nav-issue-num">#001</span>
+          <span class="nav-issue-title">The Korea Startup Thesis: Why Now, Why Here, and What We're Looking For</span>
+          <span class="nav-issue-date">Jan 6, 2026</span>
+        </a>
+        <a href="article2.html" class="nav-issue-item">
+          <span class="nav-issue-num">#002</span>
+          <span class="nav-issue-title">DeepSearch Labs: The Korean AI Company That Wants to Replace Your Research Team</span>
+          <span class="nav-issue-date">Jan 20, 2026</span>
+        </a>
+        <a href="article3.html" class="nav-issue-item">
+          <span class="nav-issue-num">#003</span>
+          <span class="nav-issue-title">S2W: How a Dark Web Intelligence Company Became Korea's Cybersecurity Bellwether</span>
+          <span class="nav-issue-date">Feb 3, 2026</span>
+        </a>
+        <a href="article4.html" class="nav-issue-item">
+          <span class="nav-issue-num">#004</span>
+          <span class="nav-issue-title">BioNexus: The Korean Biotech Reinventing How Drugs Cross the Blood-Brain Barrier</span>
+          <span class="nav-issue-date">Feb 17, 2026</span>
+        </a>
+        <a href="article5.html" class="nav-issue-item">
+          <span class="nav-issue-num">#005</span>
+          <span class="nav-issue-title">Lumir: The Korean Satellite Startup Betting SAR Can See Through Any Cloud</span>
+          <span class="nav-issue-date">Mar 3, 2026</span>
+        </a>
+        <a href="article6.html" class="nav-issue-item">
+          <span class="nav-issue-num">#006</span>
+          <span class="nav-issue-title">Liner: Korea's AI Research Layer Is Quietly Becoming the World's Annotation Infrastructure</span>
+          <span class="nav-issue-date">Mar 17, 2026</span>
+        </a>
+        <a href="article7.html" class="nav-issue-item">
+          <span class="nav-issue-num">#007</span>
+          <span class="nav-issue-title">Meditrics: The Korean Startup Turning ICU Monitors Into a Sepsis Early-Warning System</span>
+          <span class="nav-issue-date">Mar 31, 2026</span>
+        </a>
+        <a href="article8.html" class="nav-issue-item">
+          <span class="nav-issue-num">#008</span>
+          <span class="nav-issue-title">SMT Bio: The Korean Startup Engineering Probiotics That Actually Reach Your Gut</span>
+          <span class="nav-issue-date">Apr 14, 2026</span>
+        </a>
+        <a href="article9.html" class="nav-issue-item">
+          <span class="nav-issue-num">#009</span>
+          <span class="nav-issue-title">Arontier: The Korean AI Company That Wants to Be the AWS of Drug Discovery</span>
+          <span class="nav-issue-date">Apr 28, 2026</span>
+        </a>
+        <a href="article10.html" class="nav-issue-item">
+          <span class="nav-issue-num">#010</span>
+          <span class="nav-issue-title">Centrics Bio: The Korean Biotech Targeting the Gene Therapy Manufacturing Bottleneck</span>
+          <span class="nav-issue-date">May 12, 2026</span>
+        </a>
+        <a href="article11.html" class="nav-issue-item">
+          <span class="nav-issue-num">#011</span>
+          <span class="nav-issue-title">Intellisia: The Korean Startup Building the AI Layer for Korea's $700B Construction Industry</span>
+          <span class="nav-issue-date">May 26, 2026</span>
+        </a>
+        <a href="article12.html" class="nav-issue-item">
+          <span class="nav-issue-num">#012</span>
+          <span class="nav-issue-title">엣진 (ETCHIN): The Korean Startup Reinventing Semiconductor Etching With Cold Plasma</span>
+          <span class="nav-issue-date">Jun 9, 2026</span>
+        </a>
+        <a href="article13.html" class="nav-issue-item">
+          <span class="nav-issue-num">#013</span>
+          <span class="nav-issue-title">Holiday Robotics: Korea's Largest-Ever Series A Is Betting on Hands, Not Legs</span>
+          <span class="nav-issue-date">Jul 20, 2026</span>
+        </a>
+        <a href="article14.html" class="nav-issue-item">
+          <span class="nav-issue-num">#014</span>
+          <span class="nav-issue-title">Radixel: The Korean Startup Bringing Radiosurgery Precision to Every Hospital</span>
+          <span class="nav-issue-date">Aug 3, 2026</span>
+        </a>
+        <a href="article15.html" class="nav-issue-item">
+          <span class="nav-issue-num">#015</span>
+          <span class="nav-issue-title">BioBank Healing: The Korean Biotech That Stores Your Stem Cells Before You Need Them</span>
+          <span class="nav-issue-date">Aug 17, 2026</span>
+        </a>
+        <a href="article16.html" class="nav-issue-item">
+          <span class="nav-issue-num">#016</span>
+          <span class="nav-issue-title">IRVIS: The Korean Defense AI Startup Turning Any Camera Into a Smart Sentinel</span>
+          <span class="nav-issue-date">Aug 31, 2026</span>
+        </a>
+        <a href="article17.html" class="nav-issue-item">
+          <span class="nav-issue-num">#017</span>
+          <span class="nav-issue-title">ZeroOne: The Korean Startup Whose Ultrasound Wand Could Replace the Hospital ECG</span>
+          <span class="nav-issue-date">Sep 14, 2026</span>
+        </a>
+        <a href="article18.html" class="nav-issue-item">
+          <span class="nav-issue-num">#018</span>
+          <span class="nav-issue-title">OpenM's OpenCast: The Korean MedTech Startup Reinventing the 50-Year-Old Cast</span>
+          <span class="nav-issue-date">Sep 28, 2026</span>
+        </a>
+        <a href="article19.html" class="nav-issue-item">
+          <span class="nav-issue-num">#019</span>
+          <span class="nav-issue-title">Hiera Bio's PRISM®: The Korean Biotech Unlocking Stem Cells That Actually Live in Your Heart</span>
+          <span class="nav-issue-date">Oct 12, 2026</span>
+        </a>
+        <a href="article20.html" class="nav-issue-item nav-issue-active">
+          <span class="nav-issue-num">#020</span>
+          <span class="nav-issue-title">FRIDAY on the Factory Floor: Holiday Robotics and the Economics of Korea's Physical AI Moment</span>
+          <span class="nav-issue-date">Nov 9, 2026</span>
+        </a>
+      </div>
+    </div>
+    <button class="btn-sub" onclick="document.getElementById('sub-modal').classList.add('open')">Subscribe</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Issue #020 · Company Deep Dive</div>
+    <h1>FRIDAY on the Factory Floor: Holiday Robotics and the Economics of Korea's Physical AI Moment</h1>
+    <p class="hero-sub">Four months after Korea's largest-ever Series A, the question isn't whether FRIDAY works in the lab. It's whether 100 units can ship on schedule, whether PoC tests convert to contracts, and whether VLS beats VLA when lives and production lines are on the line.</p>
+    <div class="hero-meta">
+      <span class="hero-tag">Robotics</span>
+      <span class="hero-tag">Physical AI</span>
+      <span class="hero-tag">Manufacturing</span>
+      <span class="hero-date">November 9, 2026</span>
+      <span class="hero-read">14 min read</span>
+    </div>
+    <hr class="hero-divider">
+    <div class="kpi-bar">
+      <div class="kpi-item">
+        <div class="kpi-value">₩155B</div>
+        <div class="kpi-label">Series A — Korea's largest-ever single venture round, closed July 13, 2026 with 15+ investors including KDB and Goodwater Capital.</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-value">64 DoF</div>
+        <div class="kpi-label">Total degrees of freedom across FRIDAY's upper body — including 20-DoF hands with full-palm tactile sensors at $21 per sensor.</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-value">₩950B</div>
+        <div class="kpi-label">Post-money valuation — placing Holiday Robotics at the edge of unicorn status less than three years after founding.</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-value">Founded 2024</div>
+        <div class="kpi-label">March 2024 in Seoul by Song Ki-young, who previously sold AI vision company SUALAB to Cognex for ~$195M (₩2,300억) in 2019.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TABS ===== -->
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'tab-dive')">Company Deep Dive</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-otw')">Ones to Watch</button>
+  <button class="tab-btn" onclick="switchTab(this,'tab-deals')">Deal Tracker</button>
+</div>
+
+<!-- ===== TAB 1: COMPANY DEEP DIVE ===== -->
+<div id="tab-dive" class="tab-content active">
+  <div class="article-body">
+    <div class="prose">
+
+      <h2>The Moment of Commercial Truth</h2>
+      <p>In July 2026, Holiday Robotics closed <strong>₩155 billion ($103.4M)</strong> — the largest Series A in South Korean startup history. The raise bought something specific: runway to convert PoC tests into commercial contracts, and capital to produce <strong>100 units of FRIDAY</strong> by year-end. As of November 2026, those 100 units are the most important data point in Korean robotics. Not because 100 is a large number in manufacturing terms, but because it is the threshold between "impressive demo" and "commercial product."</p>
+      <p>We first covered Holiday Robotics in Issue #013, immediately after the Series A closed, examining the founding thesis, FRIDAY's hardware specifications, and the competitive landscape. That was the announcement story. This is the execution story: what the company has done with the capital, what the PoC results suggest, and what the path from 100 units to 1,000 to 10,000 actually requires to work.</p>
+      <p>The stakes extend beyond Holiday Robotics. Korea's National Pension Service (NPS) just signed investment MOUs with Sequoia Capital, Andreessen Horowitz, Khosla Ventures, Lightspeed, NEA, and General Catalyst — the six largest US venture funds — at a presidential summit in late July 2026. The signal is clear: global institutional capital is converging on Korea's physical AI ecosystem, and the question is which Korean robotics company becomes the anchor around which that capital aggregates. Holiday Robotics is the leading candidate.</p>
+
+      <h2>Why Manufacturing Robotics Is the Right Problem at the Right Time</h2>
+      <p>Korea's manufacturing sector is facing a demographic cliff that no import policy can solve. The working-age population (ages 15–64) is projected to shrink by over <strong>40% by 2050</strong>. In the factories themselves, the aging is already visible: roughly <strong>9% of manufacturing workers are over 60</strong>, and the industry is struggling to attract younger workers to repetitive, physically demanding production line roles.</p>
+      <p>Industrial robots — the articulated arm systems from Fanuc, ABB, Kuka, and Hyundai Robotics — have been deployed across Korean factories for decades. They are excellent at single-axis, fixed-path, high-precision repetitive tasks: welding seams, tightening bolts, placing identical components in identical positions. What they cannot do is anything that requires <strong>adaptive manipulation</strong> — picking up objects whose position, orientation, or surface texture varies; inserting flexible cables into circuit boards; handling packaging with variable geometry; working alongside humans on a production line that wasn't designed for robots.</p>
+      <p>Cobots (collaborative robots) from Universal Robots, Doosan Robotics, and others improved human-robot proximity but did not solve the dexterity problem. A cobot arm with a two-finger gripper still cannot perform the manipulation tasks that define the long tail of Korean manufacturing's labor need: the 30-40% of factory tasks that require a human hand to handle variation.</p>
+
+      <div class="pull-quote">
+        <p>"In Korean manufacturing, the bottleneck is not welding or bolt-tightening. Those are already automated. The bottleneck is everything that requires a hand to feel what it's touching. That's where we focused." — Song Ki-young, CEO, Holiday Robotics</p>
+      </div>
+
+      <h2>FRIDAY's Engineering: Why Every Specification Is a Manufacturing Decision</h2>
+      <p>FRIDAY's hardware can be read as a series of manufacturing-first choices, each made at the expense of what a research lab or a demo environment would prioritize.</p>
+
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Form Factor</div>
+          <div class="spec-value">Wheeled</div>
+          <div class="spec-note">Differential-drive base rather than bipedal legs. Factory floors are flat and designed for wheeled vehicles. Bipedal locomotion solves a problem factories don't have.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Height / Weight</div>
+          <div class="spec-value">176cm / 115kg</div>
+          <div class="spec-note">Dimensioned to human scale to fit existing workstations, reach existing shelving, and work at existing conveyor heights — without facility modification.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Total DoF</div>
+          <div class="spec-value">64 DoF</div>
+          <div class="spec-note">Head, torso (5-DoF), arms (7-DoF each), hands (20-DoF each). Entire arm-hand system is backdrivable — compliant to external forces to avoid injuring human co-workers.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Hands</div>
+          <div class="spec-value">20 DoF · 500g</div>
+          <div class="spec-note">Each hand weighs 500g. Full-palm tactile sensors detect forces as low as 0.05N (≈5g) at 1,900Hz. Covers entire finger and palm surface — not just fingertips.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Tactile Sensor Cost</div>
+          <div class="spec-value">~₩30,000</div>
+          <div class="spec-note">(~$21). Magnetic-on-silicon design. Full-palm coverage at this cost makes mass deployment economically viable — the critical differentiator from expensive F/T wrist sensors used by competitors.</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Uptime</div>
+          <div class="spec-value">24 / 7</div>
+          <div class="spec-note">Hot-swappable batteries allow continuous 3-shift operation. Most bipedal humanoids run under 1 hour per charge. FRIDAY can replace a human shift without downtime.</div>
+        </div>
+      </div>
+
+      <p>The tactile sensor specification deserves a closer look because it is the engineering innovation most likely to compound into durable advantage. Most robot hands use either no tactile feedback (relying on vision to estimate contact), or expensive 6-axis force-torque sensors at the wrist — which measure total force and torque on the hand but not where contact is occurring. FRIDAY's magnetic-on-silicon design distributes force measurement across the entire palm and finger surface, enabling the robot to detect, for example, that a cable connector is rotating against the edge of a socket during insertion — and to adjust its grip angle before the insertion fails. At ~$21 per sensor, this capability is economically deployable at scale. At ₩300,000–₩500,000 per sensor (the cost of competing alternatives), it is not.</p>
+
+      <h2>VLS vs. VLA: The Software Bet That Determines Industrial Viability</h2>
+      <p>The dominant AI paradigm in humanoid robotics in 2026 is <strong>VLA — Vision-Language-Action</strong>. In a VLA system, a single large neural network takes visual input, processes natural language task instructions, and outputs motor commands directly. The appeal is breadth: one model, trained on enough demonstration data, can theoretically perform any manipulation task.</p>
+      <p>Holiday Robotics is explicitly skeptical of VLA for industrial deployment, and that skepticism is grounded in a manufacturing engineering argument rather than an AI capability argument. Song has stated publicly: <em>"VLA is a black box — it's hard to predict and guarantee safety."</em> In an automotive assembly plant, a semiconductor packaging facility, or a battery manufacturing line, a robot manipulator that behaves unpredictably is not just operationally problematic — it is a regulatory and liability blocker. ISO 10218 (industrial robot safety), and the emerging standards for collaborative robot AI systems, require that system behavior be verifiable, repeatable, and bounded. A black-box neural network that generates novel motor trajectories cannot currently meet that bar.</p>
+      <p>Holiday Robotics' alternative is <strong>VLS — Vision-Language-Skill</strong>. The architecture works as follows: a language model interprets operator instructions (e.g., "pick up the red connector and insert it into the left port"); the model selects from a library of pre-verified manipulation <strong>skills</strong> — discrete motion primitives like "precision grasp," "force-controlled insertion," "rotate until detent," "compliant place." Each skill is a validated controller: verified to be safe, bounded in its range of motion, and documented. The AI composes these skills in sequence; it does not generate raw motor commands. The result is a system that can handle natural language task specification (the flexibility of generative AI) while maintaining the predictability required for industrial safety certification (the reliability of classical control).</p>
+      <p>To train skills at scale, Holiday Robotics is building <strong>Holiday Sim</strong> — a proprietary simulation environment engineered specifically to close the "sim-to-real" gap for soft-body contacts. This is the hardest unsolved problem in robot manipulation simulation: standard physics engines like MuJoCo and IsaacGym handle rigid-body dynamics accurately, but fail on the compliant, deformable contacts that dominate real manufacturing tasks — flexible cables, rubber gaskets, packaged components with variable squish, fabric and textile handling. Holiday Sim is designed to model these contacts accurately enough that VLS skills trained in simulation transfer to physical hardware without significant performance degradation. If it works, it eliminates the most expensive part of robot deployment: human demonstration labor for every new task.</p>
+
+      <h2>The ROI Case: Does FRIDAY Pay for Itself?</h2>
+      <p>Holiday Robotics has set a target price of <strong>₩100M (~$67K) per FRIDAY unit</strong> at scale production. The enterprise ROI case at that price point is the foundation of the company's commercial thesis. The math, simplified, looks like this:</p>
+
+      <table class="roi-table">
+        <thead>
+          <tr><th>Item</th><th>Human (skilled factory worker)</th><th>FRIDAY at ₩100M</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Annual labor cost</td>
+            <td>₩40–55M/year (incl. benefits, overtime)</td>
+            <td>₩10–15M/year (maintenance, power, software)</td>
+          </tr>
+          <tr>
+            <td>Daily working hours</td>
+            <td>8h (one shift)</td>
+            <td>24h (hot-swap battery, 3 shifts)</td>
+          </tr>
+          <tr>
+            <td>Effective annual output</td>
+            <td>1× capacity</td>
+            <td>~3× capacity (if task-matched)</td>
+          </tr>
+          <tr>
+            <td>Variability</td>
+            <td>Sick leave, turnover, training time</td>
+            <td>Deterministic within skill library</td>
+          </tr>
+          <tr class="highlight">
+            <td>Payback period (at ₩100M unit price)</td>
+            <td>—</td>
+            <td>~2.0–2.5 years at 3-shift utilization</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>A 2–2.5 year payback period is at the threshold where enterprise capital expenditure committees approve automation projects. Below 2 years is "obviously yes"; 2–3 years is "probably yes given the labor supply outlook"; above 3 years requires a strategic argument rather than a financial one. At ₩100M and 24/7 utilization, FRIDAY sits in the "probably yes" zone today — and as unit prices fall with production volume, it slides toward "obviously yes."</p>
+      <p>The critical caveat is utilization. FRIDAY's ROI is task-dependent: the robot only creates value in tasks where its VLS skill library has verified controllers. A factory deploying FRIDAY for 10 tasks with 80% utilization gets a very different ROI than one deploying it for 2 tasks with 30% utilization. This makes skill library depth — the number of verified manipulation primitives — the most important near-term moat. Every hour Holiday Robotics' engineers spend building and validating a new skill is an hour of competitive advantage in the next customer PoC.</p>
+
+      <h2>The Production Ramp: From 100 to 10,000</h2>
+      <p>Holiday Robotics' production roadmap has three stages, each with distinct engineering and capital requirements.</p>
+
+      <table class="milestone-table">
+        <thead>
+          <tr><th>Stage</th><th>Target</th><th>Key Requirement</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>H2 2026</td>
+            <td>100 units/year from Seongsu-dong facility</td>
+            <td>Manual assembly by engineering team. Validate PoC-to-contract conversion. Achieve early manufacturing quality data.</td>
+          </tr>
+          <tr>
+            <td>2027</td>
+            <td>1,000 units/year</td>
+            <td>Semi-automated assembly lines. Key component supply chain locked (actuators, tactile sensors, compute boards). Price approaches ₩100M/unit.</td>
+          </tr>
+          <tr>
+            <td>2028+</td>
+            <td>10,000 units/year</td>
+            <td>Full manufacturing infrastructure in Seongsu-dong facility. Domestic and international enterprise contracts. Price potentially below ₩100M/unit.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The gap between 100 and 1,000 units is where most hardware startups discover whether their manufacturing process was a prototype process or a production process. The two are fundamentally different: prototype manufacturing uses skilled engineers solving novel problems; production manufacturing uses standard operating procedures that unskilled workers can execute reliably. The ₩155B Series A provides the capital to professionalize Holiday Robotics' manufacturing process — to hire manufacturing engineers (distinct from robotics engineers), to qualify suppliers, and to build the production documentation that is the unglamorous backbone of hardware scale.</p>
+
+      <h2>The Product Roadmap: Friday, Saturday, Sunday</h2>
+      <p>Holiday Robotics' long-term vision is embedded in its name. The company intends to build three distinct product families, each named for a day of the weekend:</p>
+
+      <div class="roadmap-row">
+        <div class="roadmap-card active">
+          <div class="roadmap-day">Friday</div>
+          <div class="roadmap-market">Industrial / Manufacturing</div>
+          <div class="roadmap-desc">Factory floors, automotive assembly, semiconductor packaging, logistics warehouses. Current commercial product. Wheeled base optimized for structured environments.</div>
+          <div class="roadmap-badge">Active — shipping H2 2026</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-day">Saturday</div>
+          <div class="roadmap-market">Services</div>
+          <div class="roadmap-desc">Restaurants, retail, hospitality, facility management. Leverages Friday's manipulation platform with expanded environmental sensing for semi-structured public spaces.</div>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-day">Sunday</div>
+          <div class="roadmap-market">Home Assistants</div>
+          <div class="roadmap-desc">General-purpose home robot. Deferred until Friday and Saturday validate the platform, establish price economics, and build a deep manipulation skill library.</div>
+        </div>
+      </div>
+
+      <p>The sequencing is strategically sound. Manufacturing is the highest-ROI, most structured, and most fault-tolerant initial deployment environment — factories can be designed around robots in a way that homes and restaurants cannot. Starting with Friday is not a limitation on ambition; it is disciplined platform-building. Each year of Friday deployment in Korean factories adds verified VLS skills to the library, reduces unit costs through production learning, and validates safety certifications that transfer to Saturday and Sunday deployments.</p>
+
+      <h2>The Competitive Landscape: Where FRIDAY Stands in November 2026</h2>
+      <p>The humanoid robot market in late 2026 is no longer a research curiosity. Multiple companies are shipping units into real production environments. Here is where FRIDAY sits relative to the competitive set:</p>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Company / Robot</th><th>Form Factor</th><th>DoF</th><th>Key Differentiator</th><th>Est. Price</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tesla Optimus 2</td>
+            <td>Bipedal</td>
+            <td>~28</td>
+            <td>Vertical integration with Tesla factories; Dojo-trained VLA</td>
+            <td>Target: ~$20K at mass scale</td>
+            <td>Internal Tesla factory deployment</td>
+          </tr>
+          <tr>
+            <td>Figure 02</td>
+            <td>Bipedal</td>
+            <td>~44</td>
+            <td>Microsoft/OpenAI/NVIDIA backing; BMW manufacturing pilots</td>
+            <td>~$150K/unit</td>
+            <td>Commercial pilots</td>
+          </tr>
+          <tr>
+            <td>Agility Digit 2</td>
+            <td>Bipedal</td>
+            <td>~60</td>
+            <td>Amazon warehouse deployment; Amazon strategic investor</td>
+            <td>~$100K/unit</td>
+            <td>Amazon fulfillment centers</td>
+          </tr>
+          <tr>
+            <td>Unitree G1-D</td>
+            <td>Wheeled</td>
+            <td>~43</td>
+            <td>Aggressive pricing; rapid iteration; wheeled variant matches FRIDAY's form</td>
+            <td>~$20–35K</td>
+            <td>Shipping, primarily China</td>
+          </tr>
+          <tr>
+            <td>Boston Dynamics Atlas E</td>
+            <td>Bipedal</td>
+            <td>~28</td>
+            <td>Most capable dynamic movement; Hyundai manufacturing integration</td>
+            <td>N/A (Hyundai captive)</td>
+            <td>Hyundai factory demos</td>
+          </tr>
+          <tr class="friday-row">
+            <td>FRIDAY (Holiday Robotics)</td>
+            <td>Wheeled</td>
+            <td>64</td>
+            <td>20-DoF hands; $21 full-palm tactile; VLS safety architecture; Korea manufacturing access</td>
+            <td>~₩100M ($67K) target</td>
+            <td>Commercial launch H2 2026</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>FRIDAY's competitive position is differentiated at the intersection of <strong>dexterity, safety architecture, and manufacturing access</strong> — not price and not locomotion. Unitree's wheeled G1-D shows the form factor is directionally correct, but Unitree's competitive advantage is price and iteration speed, not precision manipulation or industrial safety certification. Tesla Optimus has the best long-run cost economics if it achieves mass production, but depends on a VLA architecture that faces the same industrial certification challenges Holiday Robotics is working to solve with VLS. Figure 02 has the strongest financial backing outside Korea but at $150K per unit is priced for OEM partnerships, not broad enterprise deployment.</p>
+      <p>The unique advantage Holiday Robotics has — and that no competitor can replicate quickly — is access to Korean manufacturing partners for PoC testing. <strong>Samsung Electronics, Hyundai Motor, SK Hynix, and LG Electronics</strong> are all within a few hours of Seoul. These are among the most demanding and process-sophisticated manufacturers in the world. A robot that successfully passes PoC evaluation at an SK Hynix semiconductor packaging facility has been tested under conditions that no lab environment can simulate — and has produced data on real manipulation success rates, failure modes, and task cycle times that no competitor without that access can match.</p>
+
+      <h2>Korea's Physical AI Moment: The Macro Context</h2>
+      <p>Holiday Robotics is operating inside a macro shift that is larger than any single company. In late July 2026, Korea's President Lee hosted Silicon Valley's most prominent venture capitalists — Sequoia, a16z, Khosla Ventures, Lightspeed, NEA, and General Catalyst — for a summit at which the National Pension Service (NPS) signed investment MOUs with all six funds. The NPS manages approximately ₩1,100 trillion ($730B) in assets. Even modest allocation to these LP relationships channels meaningful capital into global technology funds that are active in robotics, physical AI, and hardware — and those funds, now anchored by Korean LP relationships, have stronger incentives to identify and back Korean portfolio companies.</p>
+      <p>This is not abstract institutional machinery. It means that the next time Sequoia or a16z is evaluating a Korean physical AI company, there is a Korean LP relationship creating structural alignment to look hard. For Holiday Robotics — which already has Goodwater Capital (a US fund based in Menlo Park) on its cap table — this is the beginning of a capital market flywheel: Korean institutional money funds US VCs, US VCs fund Korean deep-tech, Korean companies gain international validation and access.</p>
+
+      <div class="signal-box">
+        <div class="signal-box-title">Why This Company Remains Worth Watching</div>
+        <ul class="signal-list">
+          <li><strong>100 units is the inflection point:</strong> If Holiday Robotics delivers 100 commercial FRIDAY units by year-end 2026 — and if a meaningful fraction of PoC customers convert to commercial contracts — the company will have crossed the hardest threshold in hardware: the gap between "impressive demo" and "working product." Most robotics startups never get there.</li>
+          <li><strong>VLS as industrial safety moat:</strong> The entire enterprise humanoid market is eventually gated by industrial safety certification. If Holiday Robotics achieves certification for VLS-based manipulation first, that certified skill library becomes a moat that VLA-based competitors cannot enter quickly — because certifying a black-box neural network under current ISO standards is a multi-year regulatory problem.</li>
+          <li><strong>Tactile sensing at $21/sensor compounds with production volume:</strong> As production scales, the magnetic-on-silicon tactile sensor can be manufactured at lower unit cost. Competitors using expensive F/T sensors face higher per-unit costs even at scale. The $21 tactile sensor is a hardware innovation that only becomes more valuable over time.</li>
+          <li><strong>Korea PoC access is irreplicable near-term:</strong> Samsung, Hyundai, SK Hynix, and LG are simultaneously the most process-demanding and most willing-to-partner manufacturers globally. They need automation solutions that Korean manufacturing startups can provide at a partnership speed that US and Chinese competitors cannot match.</li>
+          <li><strong>NPS-Silicon Valley MOUs create a new capital pathway:</strong> The structural alignment between Korea's largest institutional investor and the six most influential US venture funds means that Korean physical AI companies now have a more direct line to global capital than at any prior point. Holiday Robotics, already internationally capitalized via Goodwater, is positioned to benefit first.</li>
+          <li><strong>Friday → Saturday → Sunday is a disciplined platform strategy:</strong> Holiday Robotics is not trying to build a home robot in 2026. It is building a factory robot that accumulates manipulation skills, reduces unit costs, and validates safety certifications — the infrastructure on which Saturday and Sunday will be built. That discipline is rare in a market filled with companies promising general-purpose humanoids they haven't shipped.</li>
+        </ul>
+      </div>
+
+      <h2>The Investment Thesis: What to Watch Next</h2>
+      <p>Holiday Robotics is a capital-intensive hardware company in a highly competitive global market, with a commercial timeline that leaves little room for error. The risks are real and specific: <strong>production quality</strong> at 100 units is difficult to sustain at 1,000 without significant manufacturing process investment; <strong>PoC conversion rates</strong> in automotive and semiconductor are historically long sales cycles with demanding technical requirements; and <strong>Unitree's pricing</strong> creates genuine pressure on the ₩100M unit price target if enterprise buyers decide "good enough at $35K" beats "excellent at $67K."</p>
+      <p>What makes Holiday Robotics worth maintaining on every Korea-focused investor's watchlist is the convergence of factors that rarely align: a repeat founder with direct manufacturing domain expertise; a hardware innovation (full-palm tactile sensing at $21/unit) that enables capabilities competitors have not matched economically; a software architecture (VLS) that is specifically designed for the industrial safety certification requirements that will eventually gate the entire market; and a manufacturing partnership ecosystem in Korea that functions as a real-world validation environment no competitor can replicate without years of relationship building.</p>
+      <p>The next milestone is the H2 2026 production delivery and the first PoC-to-contract conversions. If FRIDAY ships 100 units on schedule and the first enterprise customers move from trial to commercial contract, the ₩950B valuation will look cheap in retrospect. If production slips or conversion rates disappoint, the re-rating will be sharp. Either way, Holiday Robotics is the most important experiment in Korean physical AI in 2026 — and the outcome of that experiment will shape how global investors think about Korea's manufacturing robotics sector for the next decade.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: ONES TO WATCH ===== -->
+<div id="tab-otw" class="tab-content">
+  <div class="article-body">
+    <div class="otw-grid">
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">Nums AI</div>
+          <div class="otw-stage">Seed · Tabular AI</div>
+        </div>
+        <div class="otw-tagline">$2.7M (₩3.9B) seed — building the foundation model for enterprise structured data</div>
+        <div class="otw-body">Nums AI raised $2.69M to develop a tabular foundation model for structured (non-language) enterprise data. The thesis: the current generation of LLMs works brilliantly on text but handles spreadsheet, database, and time-series data poorly — not because the data is hard, but because foundation models were never designed for it. Nums AI is training a model natively on tabular structure: rows, columns, data types, relationships, and statistical distributions. The target market is every enterprise analytics workload that currently requires hand-crafted data pipelines and custom models — a market that is an order of magnitude larger than text-only AI applications, and one that hyperscalers have largely ignored in favor of LLM-native architectures. The investors are unnamed; backing came from KAIST and POSTECH startup fund connections. The team draws from Korea's top quantitative research talent in statistics and machine learning.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> Enterprise AI adoption is bottlenecking on structured data integration. Every Fortune 500 company runs its P&amp;L, supply chain, and operations on spreadsheets and relational databases, not documents. A foundation model that natively understands tabular structure — rather than treating it as text — could unlock the largest remaining category of enterprise AI spend. Korea's deep statistics and semiconductor talent pools (both heavy users of structured data in R&amp;D and production) make it an unusually good base for this company.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">MID (미드)</div>
+          <div class="otw-stage">Series A · Space &amp; Defense Hardware</div>
+        </div>
+        <div class="otw-tagline">$10.6M (₩15.5B) Series A — localizing space-grade HTCC ceramic packages for aerospace and defense</div>
+        <div class="otw-body">MID raised a $10.6M Series A to scale production of high-reliability electronic components and HTCC (High-Temperature Co-fired Ceramic) packaging for aerospace applications. HTCC ceramic packages are the substrate inside which the most demanding electronic components — sensors, processors, and RF modules used in satellites, missiles, and space probes — are hermetically sealed. The market is strategically sensitive: HTCC packages have historically been imported from US and Japanese suppliers, creating supply chain risk for Korea's growing domestic space and defense programs (the Korea Space Launch Vehicle, the Korea-SAR satellite constellation, domestic missile programs under active development). MID is building domestic production capability for this component category, with backing from investors aligned with Korea's broader "strategic component localization" initiative. The technical barrier is high: HTCC manufacturing requires specialized co-firing furnaces, ceramic tape formulations, and metallization processes that take years to develop and qualify.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> Korea's space and defense budgets are both expanding rapidly. The Korea Aerospace Research Institute (KARI) is building out the next-generation satellite constellation; the Korean military is accelerating domestic weapon system development post-Ukraine. Both programs need a reliable domestic HTCC ceramic package supplier that can meet the mil-spec qualification standards currently met only by foreign imports. MID's $10.6M Series A is modest for a hardware company at this stage — the Series B will be the strategic financing event to watch.
+        </div>
+      </div>
+
+      <div class="otw-item">
+        <div class="otw-header">
+          <div class="otw-name">GREEN-DA</div>
+          <div class="otw-stage">Pre-Series A · Climate Tech / SAF</div>
+        </div>
+        <div class="otw-tagline">$3.3M (₩4.8B) Pre-Series A — converting waste cooking oil into sustainable aviation fuel feedstock at scale</div>
+        <div class="otw-body">GREEN-DA closed a Pre-Series A2 round of $3.3M to scale the conversion of waste cooking oil (WCO) into HEFA (Hydroprocessed Esters and Fatty Acids) feedstock — the most commercially mature pathway for producing sustainable aviation fuel (SAF). Aviation accounts for approximately 2.5% of global CO₂ emissions, and regulators in the EU, US, and Japan are mandating increasing SAF blending ratios that are creating a structural demand surge: the International Air Transport Association (IATA) projects SAF demand will reach 449 billion liters by 2050. The feedstock bottleneck is the primary constraint on SAF production scaling. GREEN-DA's approach is to aggregate, pre-treat, and process waste cooking oil from Korea's restaurant sector — a large and consistent WCO supply — into the specification feedstock required by oil refiners who then produce the final HEFA-SAF. Korean aviation (Korean Air, Asiana) faces regulatory SAF blending requirements from 2026; Green-DA's domestic feedstock supply chain addresses that demand directly.</div>
+        <div class="otw-signal">
+          <strong>Why now:</strong> SAF is the only near-term decarbonization pathway for aviation that is technically and commercially proven. The EU's ReFuelEU mandate (2% SAF blend in 2025, rising to 70% by 2050) and Japan's 10% by 2030 target are creating structurally mandated demand that will outstrip supply for at least a decade. GREEN-DA is not building the refinery — it is building the feedstock aggregation and pre-treatment layer, which requires lower capital but captures critical value in a constrained supply chain. The Pre-Series A2 designation suggests the company has already validated its collection model; the next phase is scaling throughput.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 3: DEAL TRACKER ===== -->
+<div id="tab-deals" class="tab-content">
+  <div class="article-body">
+    <table class="deals-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Stage</th>
+          <th>Sector</th>
+          <th>Investors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="deal-company">Holiday Robotics (홀리데이로보틱스)</span>
+            <span class="deal-desc">FRIDAY wheeled humanoid — 64 DoF, VLS software, 24/7 hot-swap battery. Korea's largest-ever Series A. PoC customers in automotive, semiconductor, logistics. Commercializing 100 units H2 2026.</span>
+          </td>
+          <td class="deal-amount">₩155B<br><small style="color:var(--gray-2)">$103.4M</small></td>
+          <td><span class="deal-stage">Series A</span></td>
+          <td>Robotics / Physical AI</td>
+          <td>IMM Investment (lead), KDB, IBK, Goodwater Capital, Stonebridge, Atinum + 9 others</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-company">TechTaca</span>
+            <span class="deal-desc">AI logistics platform ARGO — scaling US and Japan routes. Cumulative funding tops $32M.</span>
+          </td>
+          <td class="deal-amount">$13M</td>
+          <td><span class="deal-stage">Series B</span></td>
+          <td>AI / Logistics</td>
+          <td>Altos Ventures (lead), Naver D2SF, Z Venture Capital (Japan)</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-company">MID (미드)</span>
+            <span class="deal-desc">Space-grade HTCC ceramic packages for aerospace and defense — localizing strategic component supply chain.</span>
+          </td>
+          <td class="deal-amount">$10.6M</td>
+          <td><span class="deal-stage">Series A</span></td>
+          <td>Space / Defense Hardware</td>
+          <td>Undisclosed institutional investors</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-company">Sazo</span>
+            <span class="deal-desc">Agentic cross-border commerce infrastructure — AI-powered platform for global ecommerce settlement and fulfillment.</span>
+          </td>
+          <td class="deal-amount">$10.3M</td>
+          <td><span class="deal-stage">Series A</span></td>
+          <td>AI / Commerce</td>
+          <td>Undisclosed, plus credit facilities from major Korean financial institutions</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-company">Cheiron</span>
+            <span class="deal-desc">AI-native drug development platform PhnyX Lab — applying generative AI to candidate design and optimization.</span>
+          </td>
+          <td class="deal-amount">$8M</td>
+          <td><span class="deal-stage">Seed</span></td>
+          <td>Biotech / Drug Discovery AI</td>
+          <td>Undisclosed Korean institutional investors</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="deal-company">Nums AI</span>
+            <span class="deal-desc">Tabular foundation model for enterprise structured data — targeting the AI gap in non-language datasets.</span>
+          </td>
+          <td class="deal-amount">$2.7M</td>
+          <td><span class="deal-stage">Seed</span></td>
+          <td>Enterprise AI</td>
+          <td>Undisclosed, KAIST / POSTECH ecosystem</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--gray-3);margin-top:16px;">Sources: WowTale Korean Startup Weekly #128 (Jul 20–25, 2026) &amp; #129 (Jul 27–Aug 1, 2026). Currency conversions at ₩1,500/$1.</p>
+  </div>
+</div>
+
+<!-- ===== SUBSCRIBE MODAL ===== -->
+<div id="sub-modal" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box" style="position:relative">
+    <button class="modal-close" onclick="document.getElementById('sub-modal').classList.remove('open')">×</button>
+    <div class="modal-title">Stay ahead of Korea's startup ecosystem.</div>
+    <div class="modal-sub">Join readers tracking the founders and technologies shaping Korea's next decade.</div>
+    <input id="sub-email" class="modal-input" type="email" placeholder="your@email.com">
+    <button class="modal-btn" onclick="handleSubscribe()">Subscribe — it's free</button>
+    <div id="sub-msg" class="modal-msg"></div>
+  </div>
+</div>
+
+<!-- ===== FABs ===== -->
+<button class="fab-subscribe" onclick="document.getElementById('sub-modal').classList.add('open')">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  Subscribe
+</button>
+<button id="fab-top" class="fab-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Korea Startup Thesis</div>
+  <div class="footer-sub">Tracking Korea's most important startups for global investors. Issue #020 · November 9, 2026</div>
+</footer>
+
+<script>
+  // Tab switching
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // Back-to-top FAB
+  window.addEventListener('scroll', () => {
+    document.getElementById('fab-top').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // Subscribe via Supabase
+  async function handleSubscribe() {
+    const email = document.getElementById('sub-email').value.trim();
+    const msg = document.getElementById('sub-msg');
+    if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email.'; return; }
+    msg.textContent = 'Subscribing…';
+    try {
+      const res = await fetch('https://ymnejijoctfjqjxeqdpd.supabase.co/rest/v1/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbmVqaWpvY3RmanFqeGVxZHBkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwNTY5ODgsImV4cCI6MjA5NzYzMjk4OH0.xRTf6xMJ-lRf4TECpXPiqUQRLGk3ltW0s6qailM48MU',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ email, source: 'article20' })
+      });
+      if (res.ok || res.status === 409) {
+        msg.textContent = res.status === 409 ? 'Already subscribed!' : 'Welcome aboard!';
+        document.getElementById('sub-email').value = '';
+      } else { msg.textContent = 'Something went wrong. Please try again.'; }
+    } catch { msg.textContent = 'Network error. Please try again.'; }
+  }
+</script>
+</body>
+</html>
